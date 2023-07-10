@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta name="google-site-verification" content="_tlvtjqFT1OiTJbgwrthCi6VKRpfT5n7QSbKtX_dF88" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +26,7 @@
   <div class="container">
     <div class="columns">
       <div class="column">
-        <a href="Pages/Zipfile">
+        <a href="Pages/Zipfile.html">
           <h2>File Zipper</h2>
           <p>Creating a zip file involves compressing one or more files or directories into a single archive file with the ".zip" extension. The process of creating a zip file helps reduce 
             file size and makes it easier to store, transfer, and organize multiple files together.</p>
@@ -40,15 +41,15 @@
         </a>
       </div>
       <div class="column">
-        <a href="Pages/WebP-Png">
+        <a href="Pages/WebP-Png.html">
           <h2>WebP to PNG</h2>
           <p>Converting a WebP file to PNG involves changing the image file format from WebP (a modern image format developed by Google) to PNG (Portable Network Graphics). 
             This conversion can be useful in situations where PNG format is preferred over WebP, such as compatibility requirements or the need for lossless compression.</p>
         </a>
       </div>
-      <div style="background-color: beige" class="column">
-        <a href="Pages/Png-Webp">
-          <h2>PNG to Webp</h2>
+      <div  class="column">
+        <a href="Pages/Png-Webp.html">
+          <h2>PNG to WebP</h2>
           <p>Converting a PNG to WebP file involves changing the image file format from PNG (Portable Network Graphics) to WebP (a modern image format developed by Google). 
           This conversion can be useful in situations where PNG format is preferred over WebP, such as compatibility requirements or the need for lossless compression.</p>
         </a>
@@ -61,7 +62,7 @@
         </a>
       </div>
       <div class="column">
-        <a href="Pages/CamCase">
+        <a href="Pages/CamCase.html">
           <h2>Camel Case Conversion</h2>
           <p>Camel case conversion is a naming convention used in computer programming and other contexts where multiple words are combined to form a single identifier. 
             In camel case, each word in the identifier is written without spaces, and the first letter of each word, except the first word, is capitalized. </p>
@@ -93,9 +94,14 @@
   </div>
 </body>
 <style>
+
+
+
   .column{
-    box-shadow: 2px 2px 2px;
+    box-shadow: 1px 1px 1px;
+    /* border: 1px solid; */
   }
+
   /* Reset default styles */
   body {
     margin: 0;
@@ -178,6 +184,11 @@
   .column:nth-child(3) {
     background-color: #ccccff;
   }
+
+  .column:nth-child(4) {
+    background-color: #ffd5fc;
+  }
+  
   
   /* Button styles */
   .column a {
@@ -188,7 +199,7 @@
   /* Responsive styles */
   @media (max-width: 768px) {
     .column {
-      flex-basis: 48%;
+      flex-basis: 100%;
     }
   }
   
