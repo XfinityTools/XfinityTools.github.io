@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentence Capitalization</title>
+    <link href="Css/StyleSheet1.css" rel="stylesheet"/>
+</head>
+<body>
+    
+  <div class="header">
+    <a  href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+    <p>Sentence Capitalization</p>
+  </div>
+<br><br><br><br>
+  <div class="container">
+    <div class="sidebar">
+      <!-- Sidebar content goes here -->
+      <h2 style="text-align: center;">Utilities</h2>
+     
+      <a href="Zipfile.html" class="utilities hover-red">File Zipper</a><br><br>
+      <a href="Png-Jpeg.html" class="utilities hover-red" >PNG to JPEG</a><br><br>
+      <a href="WebP-Png.html" class="utilities hover-red">WebP to PNG</a><br><br>
+      <a href="Png-Webp.html" class="utilities hover-red">PNG to Webp</a><br><br>
+      <a href="SentenceCap.html" class="utilities hover-red" style="color: green; font-weight:bold ;">Sentence Capitalization</a>
+      
+    </div>
+    <div class="main-content">
+      <!-- <h1>Webp to PNG</h1> -->
+      <form>
+        <!-- <label for="inputField">Enter text</label><br> -->
+        <input class="input" type="text" id="inputField" placeholder="Enter Text" onkeydown="capitalizeAllLetters(event)" />
+        <!-- <button type="button" onclick="capitalizeAllLetters(event)">Capitalize</button> -->
+      </form>
+      <br><br><div class="result" style=" width: 50%;" id="result"></div>
+
+    </div>
+ 
+ 
+  </div>
+    
+</body>
+
+
+<style>
+
+  .utilities{
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+  }
+
+  .utilities:hover{
+    
+  }
+
+  .hover-red:hover{
+    color: #E36587;
+  }
+
+  .input{
+  position: relative;
+  width: 95%;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px  #BBB;
+  text-align: center;
+  background-color: #DDD;
+  cursor: pointer;
+  border-radius: 5px 5px;
+  height: auto;
+  line-height: 2;
+  }
+
+  input:hover{
+    background-color: #e66788;
+    
+  }
+
+  .result{
+    position: relative;
+  width:200px;
+  padding: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px  #BBB;
+  /* background-color: #DDD; */
+  /* cursor: pointer; */
+  border-radius: 2px 2px;
+  border: 2px solid;
+  
+ 
+  }
+
+canvas{
+  left: 30px;;
+}
+
+  /* Header styles */
+  .header {
+    background-color: #e36587;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+  }
+
+  /* Container styles */
+  .container {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Sidebar styles */
+  .sidebar {
+    flex: 0 0 200px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  /* Main content styles */
+  .main-content {
+    flex: 1;
+    padding: 29px;
+  }
+
+  /* Heading styles */
+  h1 {
+    text-align: center;
+  }
+
+  /* File input styles */
+  .file-input {
+    margin-bottom: 10px;
+    display: inline-block;
+  padding: 8px 16px;
+  background-color: #f5f5f5;
+  border: 2px solid #ddd;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  }
+
+  .file-name {
+  display: inline-block;
+  margin-left: 10px;
+  color: #666;
+}
+
+.custom-file-input + .file-name {
+  display: none;
+}
+
+  .custom-file-input:hover {
+  background-color: #e0e0e0;
+}
+
+  /* Download button styles */
+  .download-button {
+    display: block;
+    width: 30%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .download-button:hover {
+    background-color: #45a049;
+  }
+
+  /* File list styles */
+  #fileList {
+    margin-top: 10px;
+    list-style-type: none;
+  }
+
+  /* Reset default styles */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+ 
+</style>
+<script>
+  function capitalizeAllLetters(event) {
+    // Check if the Enter key was pressed (key code 13)
+    if (event.keyCode === 13) {
+      // Prevent the form from submitting
+      event.preventDefault();
+
+      // Get the input value
+      const input = document.getElementById('inputField').value;
+
+      // Capitalize all letters
+      const capitalizedInput = input.toUpperCase();
+
+      // Display the capitalized result
+      document.getElementById('result').textContent = capitalizedInput;
+    }
+  }
+</script>
+</html>
