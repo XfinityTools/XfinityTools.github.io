@@ -1,1 +1,244 @@
-var _0x56f5=["\x6B\x65\x79\x43\x6F\x64\x65","\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74","\x76\x61\x6C\x75\x65","\x69\x6E\x70\x75\x74\x46\x69\x65\x6C\x64","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x74\x6F\x55\x70\x70\x65\x72\x43\x61\x73\x65","\x74\x65\x78\x74\x43\x6F\x6E\x74\x65\x6E\x74","\x72\x65\x73\x75\x6C\x74","\x20","\x73\x70\x6C\x69\x74","\x74\x6F\x4C\x6F\x77\x65\x72\x43\x61\x73\x65","\x6C\x65\x6E\x67\x74\x68","\x73\x6C\x69\x63\x65","","\x6A\x6F\x69\x6E","\x6B\x65\x79","\x45\x6E\x74\x65\x72","\x63\x61\x6E\x76\x61\x73","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x32\x64","\x67\x65\x74\x43\x6F\x6E\x74\x65\x78\x74","\x6F\x6E\x6C\x6F\x61\x64","\x77\x69\x64\x74\x68","\x68\x65\x69\x67\x68\x74","\x64\x72\x61\x77\x49\x6D\x61\x67\x65","\x69\x6D\x61\x67\x65\x2F\x6A\x70\x65\x67","\x74\x6F\x44\x61\x74\x61\x55\x52\x4C","\x61","\x68\x72\x65\x66","\x64\x6F\x77\x6E\x6C\x6F\x61\x64","\x2E\x70\x6E\x67","\x2E\x6A\x70\x65\x67","\x72\x65\x70\x6C\x61\x63\x65","\x6E\x61\x6D\x65","\x63\x6C\x69\x63\x6B","\x73\x72\x63","\x63\x72\x65\x61\x74\x65\x4F\x62\x6A\x65\x63\x74\x55\x52\x4C","\x69\x6E\x70\x75\x74\x46\x69\x6C\x65","\x64\x6F\x77\x6E\x6C\x6F\x61\x64\x42\x75\x74\x74\x6F\x6E","\x70\x72\x65\x76\x69\x65\x77\x49\x6D\x61\x67\x65","\x63\x68\x61\x6E\x67\x65","\x66\x69\x6C\x65\x73","\x74\x61\x72\x67\x65\x74","\x72\x65\x61\x64\x41\x73\x44\x61\x74\x61\x55\x52\x4C","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x50\x6C\x65\x61\x73\x65\x20\x73\x65\x6C\x65\x63\x74\x20\x61\x20\x66\x69\x6C\x65\x2E","\x73\x65\x61\x72\x63\x68\x62\x61\x72","\x63\x6F\x6E\x74\x65\x6E\x74","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x73\x42\x79\x43\x6C\x61\x73\x73\x4E\x61\x6D\x65","\x69\x6E\x63\x6C\x75\x64\x65\x73","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x64\x69\x73\x70\x6C\x61\x79","\x73\x74\x79\x6C\x65","\x6E\x6F\x6E\x65","\x69\x6E\x6C\x69\x6E\x65","\x44\x4F\x4D\x43\x6F\x6E\x74\x65\x6E\x74\x4C\x6F\x61\x64\x65\x64","\x66\x69\x6C\x65\x49\x6E\x70\x75\x74","\x63\x6F\x6E\x76\x65\x72\x74\x42\x75\x74\x74\x6F\x6E","\x64\x6F\x77\x6E\x6C\x6F\x61\x64\x4C\x69\x6E\x6B","\x64\x69\x73\x61\x62\x6C\x65\x64","\x69\x6D\x61\x67\x65\x2F\x70\x6E\x67","\x69\x6D\x61\x67\x65\x2E\x70\x6E\x67"];function capitalizeAllLetters(_0x8005x2){if(_0x8005x2[_0x56f5[0]]=== 13){_0x8005x2[_0x56f5[1]]();const _0x8005x3=document[_0x56f5[4]](_0x56f5[3])[_0x56f5[2]];const _0x8005x4=_0x8005x3[_0x56f5[5]]();document[_0x56f5[4]](_0x56f5[7])[_0x56f5[6]]= _0x8005x4}}function convertToCamelCase(){const _0x8005x6=document[_0x56f5[4]](_0x56f5[3])[_0x56f5[2]];const _0x8005x7=_0x8005x6[_0x56f5[10]]()[_0x56f5[9]](_0x56f5[8]);for(let _0x8005x8=1;_0x8005x8< _0x8005x7[_0x56f5[11]];_0x8005x8++){_0x8005x7[_0x8005x8]= _0x8005x7[_0x8005x8][0][_0x56f5[5]]()+ _0x8005x7[_0x8005x8][_0x56f5[12]](1)};const _0x8005x9=_0x8005x7[_0x56f5[14]](_0x56f5[13]);document[_0x56f5[4]](_0x56f5[7])[_0x56f5[6]]= _0x8005x9}function handleKeyPress(_0x8005x2){if(_0x8005x2[_0x56f5[15]]=== _0x56f5[16]){_0x8005x2[_0x56f5[1]]();convertToCamelCase()}}function convertPNGtoJPEG(_0x8005xc){var _0x8005xd= new Image();var _0x8005xe=document[_0x56f5[18]](_0x56f5[17]);var _0x8005xf=_0x8005xe[_0x56f5[20]](_0x56f5[19]);_0x8005xd[_0x56f5[21]]= function(){_0x8005xe[_0x56f5[22]]= _0x8005xd[_0x56f5[22]];_0x8005xe[_0x56f5[23]]= _0x8005xd[_0x56f5[23]];_0x8005xf[_0x56f5[24]](_0x8005xd,0,0);var _0x8005x10=_0x8005xe[_0x56f5[26]](_0x56f5[25],0.8);var _0x8005x11=document[_0x56f5[18]](_0x56f5[27]);_0x8005x11[_0x56f5[28]]= _0x8005x10;_0x8005x11[_0x56f5[29]]= _0x8005xc[_0x56f5[33]][_0x56f5[32]](_0x56f5[30],_0x56f5[31]);_0x8005x11[_0x56f5[34]]()};_0x8005xd[_0x56f5[35]]= URL[_0x56f5[36]](_0x8005xc)}window[_0x56f5[21]]= function(){var _0x8005x12=document[_0x56f5[4]](_0x56f5[37]);var _0x8005x13=document[_0x56f5[4]](_0x56f5[38]);var _0x8005x14=document[_0x56f5[4]](_0x56f5[39]);_0x8005x12[_0x56f5[44]](_0x56f5[40],function(_0x8005x2){var _0x8005xc=_0x8005x2[_0x56f5[42]][_0x56f5[41]][0];if(_0x8005xc){var _0x8005x15= new FileReader();_0x8005x15[_0x56f5[21]]= function(_0x8005x16){_0x8005x14[_0x56f5[35]]= _0x8005x16[_0x56f5[42]][_0x56f5[7]]};_0x8005x15[_0x56f5[43]](_0x8005xc)}else {_0x8005x14[_0x56f5[35]]= _0x56f5[13]}});_0x8005x13[_0x56f5[44]](_0x56f5[34],function(){var _0x8005xc=_0x8005x12[_0x56f5[41]][0];if(_0x8005xc){convertPNGtoJPEG(_0x8005xc)}else {alert(_0x56f5[45])}})};function search_content(){let _0x8005x3=document[_0x56f5[4]](_0x56f5[46])[_0x56f5[2]];_0x8005x3= _0x8005x3[_0x56f5[10]]();let _0x8005x18=document[_0x56f5[48]](_0x56f5[47]);for(i= 0;i< _0x8005x18[_0x56f5[11]];i++){if(!_0x8005x18[i][_0x56f5[50]][_0x56f5[10]]()[_0x56f5[49]](_0x8005x3)){_0x8005x18[i][_0x56f5[52]][_0x56f5[51]]= _0x56f5[53]}else {_0x8005x18[i][_0x56f5[52]][_0x56f5[51]]= _0x56f5[54]}}}document[_0x56f5[44]](_0x56f5[55],function(){var _0x8005x19=document[_0x56f5[4]](_0x56f5[56]);var _0x8005xe=document[_0x56f5[4]](_0x56f5[17]);var _0x8005x1a=document[_0x56f5[4]](_0x56f5[57]);var _0x8005x1b=document[_0x56f5[4]](_0x56f5[58]);_0x8005x19[_0x56f5[44]](_0x56f5[40],function(_0x8005x2){var _0x8005xc=_0x8005x2[_0x56f5[42]][_0x56f5[41]][0];var _0x8005x15= new FileReader();_0x8005x15[_0x56f5[21]]= function(_0x8005x2){var _0x8005x1c= new Image();_0x8005x1c[_0x56f5[21]]= function(){_0x8005xe[_0x56f5[22]]= _0x8005x1c[_0x56f5[22]];_0x8005xe[_0x56f5[23]]= _0x8005x1c[_0x56f5[23]];var _0x8005x1d=_0x8005xe[_0x56f5[20]](_0x56f5[19]);_0x8005x1d[_0x56f5[24]](_0x8005x1c,0,0);_0x8005x1a[_0x56f5[59]]= false};_0x8005x1c[_0x56f5[35]]= _0x8005x2[_0x56f5[42]][_0x56f5[7]]};_0x8005x15[_0x56f5[43]](_0x8005xc)});_0x8005x1a[_0x56f5[44]](_0x56f5[34],function(){var _0x8005x1e=_0x8005xe[_0x56f5[26]](_0x56f5[60]);_0x8005x1b[_0x56f5[28]]= _0x8005x1e;_0x8005x1b[_0x56f5[29]]= _0x56f5[61];_0x8005x1b[_0x56f5[52]][_0x56f5[51]]= _0x56f5[54]})})
+function capitalizeAllLetters(event) {
+    // Check if the Enter key was pressed (key code 13)
+    if (event.keyCode === 13) {
+      // Prevent the form from submitting
+      event.preventDefault();
+
+      // Get the input value
+      const input = document.getElementById('inputField').value;
+
+      // Capitalize all letters
+      const capitalizedInput = input.toUpperCase();
+
+      // Display the capitalized result
+      document.getElementById('result').textContent = capitalizedInput;
+    }}function convertToCamelCase() {
+    // Get the input value
+    const sentence = document.getElementById('inputField').value;
+
+    // Convert the sentence to camel case
+    const words = sentence.toLowerCase().split(" ");
+    for (let i = 1; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+    }
+    const camelCaseSentence = words.join("");
+
+    // Display the camel case result
+    document.getElementById('result').textContent = camelCaseSentence;
+  }function handleKeyPress(event) {
+    // Check if the Enter key was pressed (key code 13)
+    if (event.key === "Enter") {
+      event.preventDefault();
+      convertToCamelCase();
+    }
+  }function convertPNGtoJPEG(file) {
+    var img = new Image();
+    var canvas = document.createElement('canvas');
+    var ctx = canvas.getContext('2d');
+
+    img.onload = function() {
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0);
+
+      var dataURL = canvas.toDataURL('image/jpeg', 0.8);
+      var link = document.createElement('a');
+      link.href = dataURL;
+      link.download = file.name.replace('.png', '.jpeg');
+      link.click();
+    };
+
+    img.src = URL.createObjectURL(file);
+  }
+
+  window.onload = function() {
+    var inputFile = document.getElementById('inputFile');
+    var downloadButton = document.getElementById('downloadButton');
+    var previewImage = document.getElementById('previewImage');
+
+    inputFile.addEventListener('change', function(event) {
+      var file = event.target.files[0];
+      if (file) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          previewImage.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        previewImage.src = '';
+      }
+    });
+
+    downloadButton.addEventListener('click', function() {
+      var file = inputFile.files[0];
+      if (file) {
+        convertPNGtoJPEG(file);
+      } else {
+        alert('Please select a file.');
+      }
+    });
+  };function search_content() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('content');
+    
+    for (i = 0; i < x.length; i++) {
+      if (!x[i].innerHTML.toLowerCase().includes(input)) {
+        x[i].style.display="none";
+      }
+      else {
+        x[i].style.display="inline";				
+      }
+    }
+  }document.addEventListener('DOMContentLoaded', function() {
+    var fileInput = document.getElementById('fileInput');
+    var canvas = document.getElementById('canvas');
+    var convertButton = document.getElementById('convertButton');
+    var downloadLink = document.getElementById('downloadLink');
+
+    fileInput.addEventListener('change', function(event) {
+        var file = event.target.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function(event) {
+            var image = new Image();
+            image.onload = function() {
+                canvas.width = image.width;
+                canvas.height = image.height;
+                var context = canvas.getContext('2d');
+                context.drawImage(image, 0, 0);
+                convertButton.disabled = false;
+            };
+            image.src = event.target.result;
+        };
+
+        reader.readAsDataURL(file);
+    });
+
+    convertButton.addEventListener('click', function() {
+        var imageURL = canvas.toDataURL('image/png');
+        downloadLink.href = imageURL;
+        downloadLink.download = 'image.png';
+        downloadLink.style.display = 'inline';
+    });
+});document.getElementById('pdfMergeForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const fileInput = document.getElementById('pdfFiles');
+  const files = fileInput.files;
+  if (files.length > 0) {
+    const inputPaths = [];
+    for (let i = 0; i < files.length; i++) {
+      inputPaths.push(files[i]);
+    }
+    const outputPath = 'merged.pdf';
+    mergePDFs(inputPaths, outputPath)
+      .then(() => {
+        alert('PDF documents merged successfully!');
+      })
+      .catch((error) => {
+        console.error('Error merging PDF documents:', error);
+        alert('An error occurred while merging PDF documents.');
+      });
+  } else {
+    alert('Please select at least one PDF file.');
+  }
+});
+
+async function mergePDFs(inputPaths, outputPath) {
+  const mergedPdf = await PDFLib.PDFDocument.create();
+
+  for (const inputPath of inputPaths) {
+    const reader = new FileReader();
+    const fileData = await new Promise((resolve) => {
+      reader.onload = () => resolve(new Uint8Array(reader.result));
+      reader.readAsArrayBuffer(inputPath);
+    });
+
+    const pdfDoc = await PDFLib.PDFDocument.load(fileData);
+
+    const copiedPages = await mergedPdf.copyPages(pdfDoc, pdfDoc.getPageIndices());
+    copiedPages.forEach((page) => {
+      mergedPdf.addPage(page);
+    });
+  }
+
+  const mergedPdfBytes = await mergedPdf.save();
+  const mergedPdfData = new Blob([mergedPdfBytes], { type: 'application/pdf' });
+
+  const downloadLink = document.createElement('a');
+  downloadLink.href = URL.createObjectURL(mergedPdfData);
+  downloadLink.download = outputPath;
+  downloadLink.click();
+}function handleDragOver(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  event.currentTarget.classList.add('dragover');
+}
+
+function handleDragLeave(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  event.currentTarget.classList.remove('dragover');
+}
+
+function handleFileDrop(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  event.currentTarget.classList.remove('dragover');
+  const files = event.dataTransfer.files;
+  handleFilesSelected(files);
+}
+
+function handleFileSelection(event) {
+  const files = event.target.files;
+  handleFilesSelected(files);
+}
+
+function handleMergeButtonClick() {
+  const fileInput = document.getElementById('fileInput');
+  fileInput.click();
+}
+
+function handleFilesSelected(files) {
+  if (files.length > 0) {
+    const inputPaths = Array.from(files);
+    const outputPath = 'merged.pdf';
+    mergePDFs(inputPaths, outputPath)
+      .then(() => {
+        alert('PDF documents merged successfully!');
+      })
+      .catch((error) => {
+        console.error('Error merging PDF documents:', error);
+        alert('An error occurred while merging PDF documents.');
+      });
+  } else {
+    alert('Please select at least one PDF file.');
+  }
+}
+
+async function mergePDFs(inputPaths, outputPath) {
+  const mergedPdf = await PDFLib.PDFDocument.create();
+
+  for (const inputPath of inputPaths) {
+    const reader = new FileReader();
+    const fileData = await new Promise((resolve) => {
+      reader.onload = () => resolve(new Uint8Array(reader.result));
+      reader.readAsArrayBuffer(inputPath);
+    });
+
+    const pdfDoc = await PDFLib.PDFDocument.load(fileData);
+
+    const copiedPages = await mergedPdf.copyPages(pdfDoc, pdfDoc.getPageIndices());
+    copiedPages.forEach((page) => {
+      mergedPdf.addPage(page);
+    });
+  }
+
+  const mergedPdfBytes = await mergedPdf.save();
+  const mergedPdfData = new Blob([mergedPdfBytes], { type: 'application/pdf' });
+
+  const downloadLink = document.createElement('a');
+  downloadLink.href = URL.createObjectURL(mergedPdfData);
+  downloadLink.download = outputPath;
+  downloadLink.click();
+}
