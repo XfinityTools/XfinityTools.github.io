@@ -1,4 +1,25 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#dropArea {
+  width: 100%;
+  height: 250px;
+  border: 2px dashed gray;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 
+}
+#dropArea.dragover {
+  background-color: #f2f2f2;
+}
+#fileInput {
+  display: none;
+}
 
 .container-infobox{
     /* display: flex; */
@@ -12,6 +33,20 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
    
+}
+
+.container-infobox-left{
+  /* display: flex; */
+  max-width: 900px;
+  
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: left;
+ 
 }
 
 a, a:hover, a:visited, a:active {
@@ -142,6 +177,10 @@ canvas{
   /* Heading styles */
   h1 {
     text-align: center;
+  }
+
+  .div-left{
+    text-align: left;
   }
 
   /* File input styles */
