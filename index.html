@@ -10,6 +10,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="./Pages/JS/JavaS1.js"></script> 
+<link href="./Pages/Css/index-style.css" rel="stylesheet"/>
+
 <title>Xfinity Tools</title>
  </head>
 <body>
@@ -24,14 +26,14 @@
   
   <div class="container">
     <div class="columns">
-      <div class="column ">
+      <div class=" card column content ">
         <a href="Pages/Zipfile">
           <h2 >File Zipper</h2>
           <p>Creating a zip file involves compressing one or more files or directories into a single archive file with the ".zip" extension. The process of creating a zip file helps reduce 
             file size and makes it easier to store, transfer, and organize multiple files together.</p>
         </a>
       </div>
-      <div class="column content">
+      <div class="card column content">
         <a href="Pages/Png-Jpeg">
           <h2  style="">PNG to JPEG</h2>
           <p>Converting a PNG file to JPEG involves transforming the image file format from PNG (Portable Network Graphics) to JPEG (Joint Photographic Experts Group). 
@@ -39,177 +41,59 @@
           <!-- <p class="button-like-p">Convert</p> -->
         </a>
       </div>
-      <div class="column content">
+      <div class="card column content">
         <a href="Pages/WebP-Png">
           <h2>WebP to PNG</h2>
           <p>Converting a WebP file to PNG involves changing the image file format from WebP (a modern image format developed by Google) to PNG (Portable Network Graphics). 
             This conversion can be useful in situations where PNG format is preferred over WebP, such as compatibility requirements or the need for lossless compression.</p>
         </a>
       </div>
-      <div  class="column content">
+      <div  class="card column content">
         <a href="Pages/Png-Webp">
           <h2>PNG to WebP</h2>
           <p>Converting a PNG to WebP file involves changing the image file format from PNG (Portable Network Graphics) to WebP (a modern image format developed by Google). 
           This conversion can be useful in situations where PNG format is preferred over WebP, such as compatibility requirements or the need for lossless compression.</p>
         </a>
       </div>
-      <div style="background-color: lemonchiffon" class="column content">
+      <div style="background-color: lemonchiffon" class="card column content">
         <a href="Pages/SentenceCap">
           <h2>Sentence Capitalization</h2>
           <p>When an entire sentence is capitalized, it means that all the letters in the sentence are written in uppercase, without any lowercase letters. 
             This style is often used in informal writing, online communication, or to convey emphasis or urgency.</p>
         </a>
       </div>
-      <div class="column content">
+      <div class="card column content">
         <a href="Pages/CamCase">
           <h2>Camel Case Conversion</h2>
           <p>Camel case conversion is a naming convention used in computer programming and other contexts where multiple words are combined to form a single identifier. 
             In camel case, each word in the identifier is written without spaces, and the first letter of each word, except the first word, is capitalized. </p>
         </a>
       </div>
-      <div class="column">
+      <div class="card column content">
         <a href="Pages/MergePDF">
           <h2>PDF Merger</h2>
           <p>PDF merging refers to the process of combining multiple PDF (Portable Document Format) documents into a single PDF file. This merging operation is useful when you want to consolidate several related PDF files or create a cohesive document from separate PDFs.</p>
         </a>
       </div>
-      <!-- <div class="column">
-        <a href="#">
-          <h2>Column 8</h2>
-          <p>This is the content of column 8.</p>
+      <!-- <div class="card column content">
+        <a href="Pages/MergePDF">
+          <h2>PDF Merger</h2>
+          <p>PDF merging refers to the process of combining multiple PDF (Portable Document Format) documents into a single PDF file. This merging operation is useful when you want to consolidate several related PDF files or create a cohesive document from separate PDFs.</p>
         </a>
       </div>
-      <div class="column">
-        <a href="#">
-          <h2>Column 9</h2>
-          <p>This is the content of column 9.</p>
+      <div class="card column content">
+        <a href="Pages/MergePDF">
+          <h2>PDF Merger</h2>
+          <p>PDF merging refers to the process of combining multiple PDF (Portable Document Format) documents into a single PDF file. This merging operation is useful when you want to consolidate several related PDF files or create a cohesive document from separate PDFs.</p>
         </a>
-      </div>
-    </div> -->
-  </div>
+      </div> -->
+    
+    
   
-  <div class="footer">
+  <!-- <div class="footer">
     <p>&copy; 2023 Xfinity. All rights reserved.</p>
-  </div>
+  </div> -->
 </body>
-<style>
-
-
-
-  .column{
-    box-shadow: 1px 1px 1px;
-    /* border: 1px solid; */
-  }
-
-  /* Reset default styles */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Header styles */
-  .header {
-    background-color: #e36587;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Pacifico', cursive;
-  }
-  
-  /* Search bar styles */
-  .search-bar {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-family: 'Pacifico', cursive;
-  }
-  
-  .search-bar input[type="text"] {
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    width: 300px;
-    font-family: 'Pacifico', cursive;
-  }
-  
-  .search-bar button {
-    padding: 8px 12px;
-    border: none;
-    background-color: #555;
-    color: #fff;
-    border-radius: 4px;
-    margin-left: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-family: 'Pacifico', cursive;
-  }
-  
-  /* Page-wide container styles */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Columns container styles */
-  .columns {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  /* Individual column styles */
-  .column {
-    flex-basis: 31%;
-    border-radius: 10px;
-    background-color: #f0f0f0;
-    padding: 20px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    cursor: pointer;
-  }
-  
-  /* Example column styling */
-  .column:nth-child(1) {
-    background-color: #ffcccc;
-  }
-  
-  .column:nth-child(2) {
-    background-color: #ccffcc;
-  }
-  
-  .column:nth-child(3) {
-    background-color: #ccccff;
-  }
-
-  .column:nth-child(4) {
-    background-color: #ffd5fc;
-  }
-  
-  
-  /* Button styles */
-  .column a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .column {
-      flex-basis: 100%;
-    }
-  }
-  
-  /* Footer styles */
-  .footer {
-    background-color: #e36587;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-</style>
 
 
 </html>
