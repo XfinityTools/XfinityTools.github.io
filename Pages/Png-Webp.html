@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="Css/StyleSheet1.css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Png to WebP Conversion</title>
+    <script src="JS/operations.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script src="JS/JavaS1.js"></script>
+</head>
+<body>
+    <div class="header">
+      <a  href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+      <p style="font-size: 110%;">Png to WebP Conversion</p>
+    </div>
+    </div>
+  <br>
+    <div class="container">
+      <div class="sidebar">
+        <!-- Sidebar content goes here -->
+        <h2>Utilities</h2>
+        <a href="Zipfile" class="utilities hover-red">File Zipper</a><br><br>
+      <a href="Png-Jpeg" class="utilities hover-red" >PNG to JPEG</a><br><br>
+      <a href="WebP-Png" class="utilities hover-red">WebP to PNG</a><br><br>
+      <a href="Png-Webp" class="utilities hover-red" style="color: green; font-weight:bold ;">PNG to Webp</a><br><br>
+      <a href="CamCase" class="utilities hover-red">Camel Case Conversion</a><br><br>
+      <a href="SentenceCap" class="utilities hover-red" >Sentence Capitalization</a><br><br>
+      <a href="MergePDF" class="utilities hover-red" >PDF Merger</a><br><br>
+      </div>
+      <div class="main-content">
+       
+        <div id="dropArea" style="border: 2px dashed #ccc; padding: 20px; text-align: center; width: 90%;">
+          <p>Drag and drop PNG files here or click to select files</p>
+          <input type="file" id="inputFile" style="display: none;" accept=".png">
+        </div>
+        <br>
+        <img id="previewImage" style="max-width: 400px; max-height: 300px;">
+        <br>
+        <button class="download-button" id="downloadButton" disabled>Download</button>
+      
+
+       
+      </div>
+    </div>
+  </body>
+
+  <script>
+    
+    var dropArea = document.getElementById('dropArea');
+    var inputFile = document.getElementById('inputFile');
+
+    dropArea.addEventListener('dragover', function(event) {
+      event.preventDefault();
+      dropArea.style.border = '2px dashed #aaa';
+    });
+
+    dropArea.addEventListener('dragleave', function(event) {
+      event.preventDefault();
+      dropArea.style.border = '2px dashed #ccc';
+    });
+
+    dropArea.addEventListener('drop', function(event) {
+      event.preventDefault();
+      dropArea.style.border = '2px dashed #ccc';
+      var files = event.dataTransfer.files;
+      handleFiles(files);
+    });
+
+    // Click functionality
+    dropArea.addEventListener('click', function(event) {
+      inputFile.click();
+    });
+
+    inputFile.addEventListener('change', function(event) {
+      var files = event.target.files;
+      handleFiles(files);
+    });
+
+    // Function to handle dropped or selected files
+    function handleFiles(files) {
+  var file = files[0];
+  if (file && file.type === 'image/png') {
+    var reader = new FileReader();
+    reader.onload = function(event) {
+      var image = document.getElementById('previewImage');
+      image.src = event.target.result;
+      enableDownloadButton();
+      hideDropArea();
+    };
+    reader.readAsDataURL(file);
+  } else {
+    alert('Please select a valid PNG file.');
+  }
+}
+
+// Function to hide the drop area
+function hideDropArea() {
+  var dropArea = document.getElementById('dropArea');
+  dropArea.style.display = 'none';
+}
+
+    // Function to enable the download button
+    function enableDownloadButton() {
+      var downloadButton = document.getElementById('downloadButton');
+      downloadButton.disabled = false;
+    }
+
+    // Event listener for the download button
+    var downloadButton = document.getElementById('downloadButton');
+    downloadButton.addEventListener('click', function() {
+      var image = document.getElementById('previewImage');
+      var canvas = document.createElement('canvas');
+      canvas.width = image.naturalWidth;
+      canvas.height = image.naturalHeight;
+      var ctx = canvas.getContext('2d');
+      ctx.drawImage(image, 0, 0);
+
+      canvas.toBlob(function(blob) {
+        var url = URL.createObjectURL(blob);
+        var link = document.createElement('a');
+        link.href = url;
+        link.download = 'image.webp';
+        link.click();
+        URL.revokeObjectURL(url);
+      }, 'image/webp');
+    });
+
+    
+  </script>
+
+  </html>
