@@ -1,3 +1,11 @@
+.drop-area {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
 .container {
   max-width: 500px;
   margin: 0 auto;
@@ -17,8 +25,8 @@
 #dropArea.dragover {
   background-color: #f2f2f2;
 }
-#fileInput {
-  display: none;
+#dropArea-png-webp{
+  width: 90%;
 }
 
 .container-infobox{
@@ -110,9 +118,9 @@ a, a:hover, a:visited, a:active {
 
   .inputcam{
   top: 10%;
-  left: 10%;
+  /* left: 10%; */
   position: relative;
-  width: 95%;
+  width: 85%;
   padding: 10px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -122,7 +130,7 @@ a, a:hover, a:visited, a:active {
   cursor: pointer;
   border-radius: 5px 5px;
   height: auto;
-  line-height: 2;
+  line-height: 3;
   }
 
   input:hover{
@@ -136,7 +144,7 @@ a, a:hover, a:visited, a:active {
   padding: 20px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  border: 1px  #BBB;
+  /* border: 1px  #BBB; */
   /* background-color: #DDD; */
   /* cursor: pointer; */
   border-radius: 2px 2px;
