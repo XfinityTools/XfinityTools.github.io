@@ -1,66 +1,3 @@
-function createZip() {
-  var input = document.getElementById('file-input');
-  var files = input.files;
-
-  if (files.length === 0) {
-    alert('Please select files to zip.');
-    return;
-  }
-
-  var zip = new JSZip();
-
-  function addFilesToZip(index) {
-    if (index >= files.length) {
-      zip.generateAsync({ type: 'blob' })
-        .then(function(content) {
-          saveAs(content, 'files.zip');
-        })
-        .catch(function(error) {
-          console.error('Error creating zip file:', error);
-        });
-      return;
-    }
-
-    var file = files[index];
-    var reader = new FileReader();
-
-    reader.onload = function() {
-      zip.file(file.name, reader.result);
-      addFilesToZip(index + 1);
-    };
-
-    reader.onerror = function() {
-      console.error('Error reading file:', file);
-      addFilesToZip(index + 1);
-    };
-
-    reader.readAsDataURL(file);
-  }
-
-  addFilesToZip(0);
-}
-
-window.onload = function() {
-  var inputFile = document.getElementById('file-input');
-  var downloadButton = document.getElementById('downloadButton');
-  var fileList = document.getElementById('fileList');
-
-  inputFile.addEventListener('change', function(event) {
-    var files = event.target.files;
-    fileList.innerHTML = '';
-
-    for (var i = 0; i < files.length; i++) {
-      var listItem = document.createElement('li');
-      listItem.textContent = files[i].name;
-      fileList.appendChild(listItem);
-    }
-  });
-
-  downloadButton.addEventListener('click', createZip);
-};
-
-
-
 function capitalizeAllLetters(event) {
     // Check if the Enter key was pressed (key code 13)
     if (event.keyCode === 13) {
@@ -186,7 +123,9 @@ function capitalizeAllLetters(event) {
         downloadLink.download = 'image.png';
         downloadLink.style.display = 'inline';
     });
-});document.getElementById('pdfMergeForm').addEventListener('submit', function(event) {
+});
+
+document.getElementById('pdfMergeForm').addEventListener('submit', function(event) {
   event.preventDefault();
   const fileInput = document.getElementById('pdfFiles');
   const files = fileInput.files;
@@ -307,4 +246,77 @@ async function mergePDFs(inputPaths, outputPath) {
   downloadLink.download = outputPath;
   downloadLink.click();
 }
+
+
+var dropArea = document.getElementById('dropArea');
+    var inputFile = document.getElementById('inputFile');
+
+    dropArea.addEventListener('dragover', function(event) {
+      event.preventDefault();
+      dropArea.style.border = '2px dashed #aaa';
+    });
+
+    dropArea.addEventListener('dragleave', function(event) {
+      event.preventDefault();
+      dropArea.style.border = '2px dashed #ccc';
+    });
+
+    dropArea.addEventListener('drop', function(event) {
+      event.preventDefault();
+      dropArea.style.border = '2px dashed #ccc';
+      var files = event.dataTransfer.files;
+      handleFiles(files);
+    });
+
+    // Click functionality
+    dropArea.addEventListener('click', function(event) {
+      inputFile.click();
+    });
+
+    inputFile.addEventListener('change', function(event) {
+      var files = event.target.files;
+      handleFiles(files);
+    });
+
+    // Function to handle dropped or selected files
+    function handleFiles(files) {
+      var file = files[0];
+      if (file && file.type === 'image/png') {
+        var reader = new FileReader();
+        reader.onload = function(event) {
+          var image = document.getElementById('previewImage');
+          image.src = event.target.result;
+          enableDownloadButton();
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert('Please select a valid PNG file.');
+      }
+    }
+
+    // Function to enable the download button
+    function enableDownloadButton() {
+      var downloadButton = document.getElementById('downloadButton');
+      downloadButton.disabled = false;
+    }
+
+    // Event listener for the download button
+    var downloadButton = document.getElementById('downloadButton');
+    downloadButton.addEventListener('click', function() {
+      var image = document.getElementById('previewImage');
+      var canvas = document.createElement('canvas');
+      canvas.width = image.naturalWidth;
+      canvas.height = image.naturalHeight;
+      var ctx = canvas.getContext('2d');
+      ctx.drawImage(image, 0, 0);
+
+      canvas.toBlob(function(blob) {
+        var url = URL.createObjectURL(blob);
+        var link = document.createElement('a');
+        link.href = url;
+        link.download = 'image.webp';
+        link.click();
+        URL.revokeObjectURL(url);
+      }, 'image/webp');
+    });
 
