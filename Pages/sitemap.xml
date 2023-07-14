@@ -9,23 +9,48 @@
 
 <url>
   <loc>https://xfinitytools.github.io/</loc>
-  <lastmod>2023-07-10T19:35:03+00:00</lastmod>
+  <lastmod>2023-07-14T01:48:21+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://xfinitytools.github.io/Pages/Zipfile</loc>
-  <lastmod>2023-07-10T19:35:03+00:00</lastmod>
+  <lastmod>2023-07-14T01:48:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://xfinitytools.github.io/Pages/Png-Jpeg</loc>
-  <lastmod>2023-07-10T19:35:03+00:00</lastmod>
+  <lastmod>2023-07-14T01:48:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xfinitytools.github.io/Pages/WebP-Png</loc>
+  <lastmod>2023-07-14T01:48:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xfinitytools.github.io/Pages/Png-Webp</loc>
+  <lastmod>2023-07-14T01:48:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://xfinitytools.github.io/Pages/SentenceCap</loc>
-  <lastmod>2023-07-10T19:35:03+00:00</lastmod>
+  <lastmod>2023-07-14T01:48:21+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xfinitytools.github.io/Pages/CamCase</loc>
+  <lastmod>2023-07-14T01:48:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xfinitytools.github.io/Pages/MergePDF</loc>
+  <lastmod>2023-07-14T01:48:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xfinitytools.github.io/Pages/MergePDF.html</loc>
+  <lastmod>2023-07-14T01:48:21+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
