@@ -145,3 +145,14 @@
 /* #gradient1{
   background-image: linear-gradient(to right, #E36587 , #555555);
 } */
+
+
+a{
+  text-decoration: none;
+  color: inherit;
+  display: inline;
+}
+
+.header-links:hover{
+    
+}
