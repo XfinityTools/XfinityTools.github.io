@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" sizes="196x196" href="../Images/Untitled design.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+<link href="Css/StyleSheet1.css" rel="stylesheet"/>
+<title>Excel to PDF Conversion</title>
+  <style>
+    .drop-area {
+      border: 2px dashed #ccc;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      width: 90%;
+      height: 200px;
+      background-image: url('excel-symbol.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 60px;
+    }
+    .drop-area.active {
+      border-color: #007bff;
+    }
+  </style>
+</head>
+<body>
+    <div class="header">
+        <a  href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 110%;">Excel to PDF Conversion</p>
+      </div>
+
+
+      <br><br><br><br>
+  <div class="container">
+    <div class="sidebar">
+      <!-- Sidebar content goes here -->
+      <h2 style="text-align: center;">Utilities</h2>
+     
+      
+      <a href="Png-Jpeg" class="utilities hover-red" >PNG to JPEG</a><br><br>
+      <a href="WebP-Png" class="utilities hover-red">WebP to PNG</a><br><br>
+      <a href="Png-Webp" class="utilities hover-red">PNG to Webp</a><br><br>
+      <a href="CamCase" class="utilities hover-red">Camel Case Conversion</a><br><br>
+      <a href="SentenceCap" class="utilities hover-red" >Sentence Capitalization</a><br><br>
+      <a href="MergePDF" class="utilities hover-red">PDF Merger</a><br><br>
+      <a href="PDF-WaterMark" class="utilities hover-red">PDF WaterMarker</a><br><br>
+      <a href="Excel-PDF" class="utilities hover-red" style="color: green; font-weight:bold ;">Excel to PDF</a>
+    </div>
+    <div class="main-content">
+      
+        <div class="drop-area" id="drop-area">
+            <span>Drag and drop an Excel file here, or click to choose a file</span>
+          </div>
+
+    </div>
+ 
+  </div><br>
+
+  <div class="container-infobox-left">
+    <h1>Excel to PDF Conversion Tool</h1>
+
+  <h2>Description</h2>
+  <p>The Excel to PDF Conversion Tool is a web-based utility that allows you to convert Excel spreadsheets (XLSX format) into PDF documents. It provides a simple and convenient way to convert Excel files to PDF format, which is widely supported for sharing and printing documents.</p>
+
+  <h2>Instructions</h2>
+  <ol>
+    <li>Drag and Drop Method:
+      <ul>
+        <li>Locate an Excel file you want to convert to PDF on your computer.</li>
+        <li>Drag the Excel file and drop it onto the designated drop area below.</li>
+        <li>The drop area will indicate activation by changing its appearance.</li>
+        <li>The conversion process will start automatically, and the PDF file will be downloaded to your computer.</li>
+      </ul>
+    </li>
+    <li>Click Method:
+      <ul>
+        <li>Click on the designated drop area below.</li>
+        <li>A file picker dialog will open. Select the Excel file you want to convert to PDF.</li>
+        <li>The conversion process will start automatically, and the PDF file will be downloaded to your computer.</li>
+      </ul>
+    </li>
+  </ol>
+  </div>
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.8/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/vfs_fonts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/file-saver.js/2.0.5/FileSaver.min.js"></script>
+
+  <script>
+    function handleFile(file) {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: 'array' });
+        const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+        const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+        const docDefinition = {
+          content: [
+            {
+              table: {
+                body: jsonData,
+              },
+            },
+          ],
+        };
+
+        const pdfDocGenerator = pdfMake.createPdf(docDefinition);
+
+        pdfDocGenerator.getBlob(function (blob) {
+          saveAs(blob, 'output.pdf');
+          console.log('PDF file created successfully.');
+        });
+      };
+
+      reader.readAsArrayBuffer(file);
+    }
+
+    const dropArea = document.getElementById('drop-area');
+
+    dropArea.addEventListener('dragenter', function (e) {
+      e.preventDefault();
+      dropArea.classList.add('active');
+    });
+
+    dropArea.addEventListener('dragover', function (e) {
+      e.preventDefault();
+    });
+
+    dropArea.addEventListener('dragleave', function (e) {
+      e.preventDefault();
+      dropArea.classList.remove('active');
+    });
+
+    dropArea.addEventListener('drop', function (e) {
+      e.preventDefault();
+      dropArea.classList.remove('active');
+      const file = e.dataTransfer.files[0];
+      handleFile(file);
+    });
+
+    dropArea.addEventListener('click', function () {
+      fileInput.click();
+    });
+
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.style.display = 'none';
+
+    fileInput.addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      handleFile(file);
+    });
+
+    document.body.appendChild(fileInput);
+  </script>
+</body>
+</html>

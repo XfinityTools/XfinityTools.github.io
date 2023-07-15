@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" sizes="196x196" href="../Images/Untitled design.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+  <script src="JS/pdf-lib.min.js"></script>
+  <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+<script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+<script src="https://unpkg.com/downloadjs@1.4.7"></script>
+<script src="https://unpkg.com/pdf-lib@1.11.0"></script>
+<script src="https://unpkg.com/pdf-lib@1.14.0"></script>
+<script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+<script src="https://unpkg.com/pdf-lib@1.7.0"></script>
+<script src="pdf.min.js"></script> 
+<script src="pdf.worker.min.js"></script>
+<script src="https://unpkg.com/pdf-lib"></script>
+<link href="Css/StyleSheet1.css" rel="stylesheet"/>
+  <title>PDF Watermark</title>
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: flex-start;
+      width: 95%;
+    }
+
+    .drop-area {
+      width: 130px;
+      height: 50px;
+      border: 2px dashed #ccc;
+      border-radius: 5px;
+      text-align: center;
+      padding: 40px;
+      cursor: pointer;
+    }
+
+    .drop-area.highlight {
+      border-color: #009688;
+    }
+
+    .preview-container {
+      /* border: 1px solid #ccc; */
+      padding: 10px;
+      width: 50%;
+      border-left: 3px dashed;
+    }
+
+    .preview {
+      width: 100%;
+      height: 600px;
+    }
+
+
+    @media (max-width: 768px) {
+    .cpreview-container {
+      width: auto;
+    }
+
+  }
+
+
+  /* Styles for the range input */
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    outline: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #999;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #999;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+
+  input[type="range"]::-webkit-slider-thumb:hover,
+  input[type="range"]::-moz-range-thumb:hover {
+    background-color: #999;
+  }
+
+  input[type="range"]::-webkit-slider-thumb:active,
+  input[type="range"]::-moz-range-thumb:active {
+    transform: scale(1.2);
+  }
+
+  /* Style the range track */
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px;
+    background-color: #ccc;
+    border-radius: 2px;
+  }
+
+  input[type="range"]::-moz-range-track {
+    height: 4px;
+    background-color: #ccc;
+    border-radius: 2px;
+  }
+
+  
+  /* Style for the color input */
+  input[type="color"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 4%;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  /* Remove default color input arrow */
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+  /* Style the color input swatch */
+  input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 4px;
+  }
+
+
+</style>
+
+
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib@3.0.0/dist/pdf-lib.js"></script>
+</head>
+<body>
+  <div class="header">
+    <a  href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+    <p style="font-size: 110%;">PDF Watermarker</p>
+  </div><br>
+
+  <div style="width: 95%;" class="container">
+
+    <div class="controls">
+      <div>
+        
+        <input class="input" placeholder="Enter WaterMark" type="text" id="watermark-text">
+      </div>
+  
+      <div>
+        <label for="opacity-range">Opacity:</label>
+        <input type="range" id="opacity-range" min="0" max="1" step="0.1" value="0.5">
+        <span id="opacity-value"></span>
+      </div>
+
+      <div>
+        <label for="size-range">Size:</label>
+        <input type="range" id="size-range" min="10" max="100" step="5" value="50">
+        <span id="size-value"></span>
+      </div>
+  
+      <div>
+        <label for="orientation-select">Orientation:</label>
+        <select id="orientation-select">
+          <option value="horizontal">Horizontal</option>
+          <option value="vertical">Vertical</option>
+          <option value="diagonal">Diagonal</option>
+        </select>
+      </div>
+  
+      <div>
+        <label for="position-x">Position X:</label>
+        <input type="number" id="position-x" min="0">
+      </div>
+  
+      <div>
+        <label for="position-y">Position Y:</label>
+        <input type="number" id="position-y" min="0">
+      </div>
+  
+      <div>
+        <label for="color-input">Color:</label>
+        <input type="color" id="color-input" value="#000000">
+      </div>
+  
+      <div>
+        <label for="hide-drop-area">Hide Drop Area:</label>
+        <input type="checkbox" id="hide-drop-area" onchange="toggleDropArea()">
+      </div>
+
+      <a id="download-link" style="display: none;">Download Watermarked PDF</a>
+      <button onclick="refreshPage()">Refresh</button>
+  
+      <div class="drop-area" id="drop-area" onclick="selectFile(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+        <span>Drop PDF File Here</span>
+      </div><br>
+
+      
+    </div>
+    
+
+    <div class="preview-container">
+      <div id="preview" class="preview"></div>
+      
+    </div>
+
+  </div><br>
+
+    <div class="container-infobox-left">
+      <h1>PDF Watermark - Instruction Manual</h1>
+
+  <h2>Description</h2>
+  <p>
+    The PDF Watermark tool allows you to add a watermark to a PDF file. You can specify the watermark text, opacity, orientation, position, and size to customize the watermark appearance. This tool is useful for branding or adding additional information to your PDF documents.
+  </p>
+
+  <h2>Usage Instructions</h2>
+  <ol>
+    <li>
+      <h3>Upload a PDF File</h3>
+      <p>
+        To get started, either drop a PDF file into the designated drop area or click on the drop area to select a file from your local system. The selected PDF file will be loaded into the tool for further processing.
+      </p>
+    </li>
+
+    <li>
+      <h3>Configure Watermark Settings</h3>
+      <p>
+        Once the PDF file is loaded, you can configure the watermark settings to customize the appearance. The available options are as follows:
+      </p>
+      <ul>
+        <li><strong>Watermark Text:</strong> Enter the desired text for the watermark.</li>
+        <li><strong>Opacity:</strong> Adjust the opacity of the watermark using the range slider.</li>
+        <li><strong>Orientation:</strong> Select the orientation of the watermark (horizontal, vertical, or diagonal) from the dropdown menu.</li>
+        <li><strong>Position X and Y:</strong> Specify the X and Y coordinates to position the watermark on the page. Leave these fields empty for automatic centering.</li>
+        <li><strong>Size:</strong> Adjust the size of the watermark using the range slider.</li>
+      </ul>
+    </li>
+
+    <li>
+      <h3>Preview the Watermarked PDF</h3>
+      <p>
+        As you configure the watermark settings, the preview section will display a real-time preview of the watermarked PDF. This allows you to visualize the placement and appearance of the watermark before downloading the final PDF.
+      </p>
+    </li>
+
+    <li>
+      <h3>Download the Watermarked PDF</h3>
+      <p>
+        Once you are satisfied with the watermark configuration, click on the "Download Watermarked PDF" link. This will download the watermarked PDF file to your local system with the filename "output.pdf".
+      </p>
+    </li>
+
+    <li>
+      <h3>Refresh or Start Over</h3>
+      <p>
+        To start over or reset the tool, click on the "Refresh" button. This will clear all the settings, reset the input fields, hide the preview, and allow you to upload a new PDF file.
+      </p>
+    </li>
+  </ol>
+
+  <h2>Additional Features</h2>
+  <ul>
+    <li>
+      <strong>Hide Drop Area:</strong> If you want to hide the drop area, you can check the "Hide Drop Area" checkbox. This can be useful if you prefer to upload the PDF file using the file input button only.
+    </li>
+  </ul>
+
+  <h2>Browser Compatibility</h2>
+  <p>
+    The PDF Watermark tool is compatible with modern web browsers such as Google Chrome, Mozilla Firefox, Microsoft Edge, and Safari. Please ensure that you have a compatible browser version for optimal performance.
+  </p>
+
+  <h2>Feedback and Support</h2>
+  <p>
+    If you encounter any issues or have any suggestions for improving the PDF Watermark tool, please contact our support team at support@example.com. We value your feedback and are here to assist you.
+  </p>
+    </div>
+  
+    <script>
+      var inputPdfData = null; // Stores the input PDF data
+  
+      async function addWatermark(watermarkText, opacity, orientation, positionX, positionY, size, color) {
+        try {
+          const pdfDoc = await PDFLib.PDFDocument.load(inputPdfData);
+          const font = await pdfDoc.embedFont(PDFLib.StandardFonts.Helvetica);
+  
+          const pages = pdfDoc.getPages();
+  
+          for (let i = 0; i < pages.length; i++) {
+            const page = pages[i];
+  
+            const { width, height } = page.getSize();
+  
+            const textWidth = font.widthOfTextAtSize(watermarkText, size);
+            const textHeight = font.heightAtSize(size);
+  
+            var x, y, rotate;
+  
+            if (orientation === 'horizontal') {
+              x = positionX !== null ? positionX : (width - textWidth) / 2;
+              y = positionY !== null ? positionY : (height - textHeight) / 2;
+              rotate = 0;
+            } else if (orientation === 'vertical') {
+              x = positionX !== null ? positionX : (width - textWidth) / 2;
+              y = positionY !== null ? positionY : (height + textHeight) / 2;
+              rotate = 90;
+            } else if (orientation === 'diagonal') {
+              x = positionX !== null ? positionX : (width - textWidth) / 2;
+              y = positionY !== null ? positionY : (height - textHeight) / 2;
+              rotate = -45;
+            }
+  
+            page.drawText(watermarkText, {
+              x,
+              y,
+              size,
+              font,
+              color: PDFLib.rgb(...hexToRgb(color)), // Convert the hex color to RGB
+              opacity,
+              rotate: PDFLib.degrees(rotate),
+            });
+          }
+  
+          const modifiedPdfData = await pdfDoc.save();
+  
+          var downloadLink = document.getElementById('download-link');
+          downloadLink.href = URL.createObjectURL(new Blob([modifiedPdfData], { type: 'application/pdf' }));
+          downloadLink.download = 'output.pdf';
+          downloadLink.style.display = 'inline'; // Update the display style
+  
+          // Display the watermarked PDF in the preview section
+          var preview = document.getElementById('preview');
+          preview.innerHTML = '<embed src="' + downloadLink.href + '" width="100%" height="100%" type="application/pdf">';
+  
+        } catch (error) {
+          console.error('Error adding watermark:', error);
+        }
+      }
+  
+      function toggleDropArea() {
+        var dropArea = document.getElementById('drop-area');
+        var hideDropArea = document.getElementById('hide-drop-area');
+        dropArea.style.display = hideDropArea.checked ? 'none' : 'block';
+      }
+  
+      function hexToRgb(hex) {
+        // Remove the # symbol if present
+        hex = hex.replace('#', '');
+  
+        // Convert the hex values to decimal values
+        var r = parseInt(hex.substring(0, 2), 16);
+        var g = parseInt(hex.substring(2, 4), 16);
+        var b = parseInt(hex.substring(4, 6), 16);
+  
+        // Return the RGB values as an array
+        return [r / 255, g / 255, b / 255];
+      }
+  
+      function handleDragOver(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        event.target.classList.add('highlight');
+      }
+  
+      function handleDragLeave(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        event.target.classList.remove('highlight');
+      }
+  
+      function handleDrop(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        event.target.classList.remove('highlight');
+  
+        var files = event.dataTransfer.files;
+        if (files.length > 0) {
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            inputPdfData = new Uint8Array(e.target.result);
+            refreshPreview(); // Update the preview with the dropped PDF file
+          };
+          reader.readAsArrayBuffer(files[0]);
+        }
+      }
+  
+      function selectFile() {
+        var input = document.createElement('input');
+        input.type = 'file';
+        input.accept = '.pdf';
+        input.onchange = function(event) {
+          var files = event.target.files;
+          if (files.length > 0) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+              inputPdfData = new Uint8Array(e.target.result);
+              refreshPreview(); // Update the preview with the selected PDF file
+            };
+            reader.readAsArrayBuffer(files[0]);
+          }
+        };
+        input.click();
+      }
+  
+      function refreshPage() {
+        // Reset input fields
+        document.getElementById('watermark-text').value = '';
+        document.getElementById('opacity-range').value = 0.5;
+        document.getElementById('orientation-select').value = 'horizontal';
+        document.getElementById('position-x').value = '';
+        document.getElementById('position-y').value = '';
+        document.getElementById('size-range').value = 50;
+        document.getElementById('color-input').value = '#000000';
+  
+        inputPdfData = null; // Clear the input PDF data
+  
+        // Clear the downloaded PDF link
+        var downloadLink = document.getElementById('download-link');
+        downloadLink.href = '';
+        downloadLink.style.display = 'none'; // Hide the link
+  
+        // Clear the preview section
+        var preview = document.getElementById('preview');
+        preview.innerHTML = '';
+      }
+  
+      function refreshPreview() {
+        var watermarkText = document.getElementById('watermark-text').value;
+        var opacity = parseFloat(document.getElementById('opacity-range').value);
+        var orientation = document.getElementById('orientation-select').value;
+        var positionX = document.getElementById('position-x').value !== '' ? parseFloat(document.getElementById('position-x').value) : null;
+        var positionY = document.getElementById('position-y').value !== '' ? parseFloat(document.getElementById('position-y').value) : null;
+        var size = parseInt(document.getElementById('size-range').value);
+        var color = document.getElementById('color-input').value;
+  
+        if (inputPdfData) {
+          // Update the preview section with the watermarked PDF
+          addWatermark(watermarkText, opacity, orientation, positionX, positionY, size, color);
+        } else {
+          // Clear the preview section
+          var preview = document.getElementById('preview');
+          preview.innerHTML = '';
+        }
+      }
+  
+      var opacityRange = document.getElementById('opacity-range');
+      var opacityValue = document.getElementById('opacity-value');
+      opacityValue.textContent = opacityRange.value;
+  
+      opacityRange.oninput = function() {
+        opacityValue.textContent = this.value;
+        refreshPreview();
+      };
+  
+      var sizeRange = document.getElementById('size-range');
+      var sizeValue = document.getElementById('size-value');
+      sizeValue.textContent = sizeRange.value;
+  
+      sizeRange.oninput = function() {
+        sizeValue.textContent = this.value;
+        refreshPreview();
+      };
+  
+      var inputs = document.getElementsByTagName('input');
+      for (var i = 0; i < inputs.length; i++) {
+        inputs[i].oninput = refreshPreview;
+      }
+  
+      var select = document.getElementById('orientation-select');
+      select.onchange = refreshPreview;
+    </script>
+  
+
+</body>
+</html>
