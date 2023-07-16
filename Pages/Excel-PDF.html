@@ -12,23 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
 <link href="Css/StyleSheet1.css" rel="stylesheet"/>
 <title>Excel to PDF Conversion</title>
-  <style>
-    .drop-area {
-      border: 2px dashed #ccc;
-      padding: 20px;
-      text-align: center;
-      cursor: pointer;
-      width: 90%;
-      height: 200px;
-      background-image: url('excel-symbol.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 60px;
-    }
-    .drop-area.active {
-      border-color: #007bff;
-    }
-  </style>
+  
 </head>
 <body>
     <div class="header">
@@ -39,23 +23,10 @@
 
       <br><br><br><br>
   <div class="container">
-    <div class="sidebar">
-      <!-- Sidebar content goes here -->
-      <h2 style="text-align: center;">Utilities</h2>
-     
-      
-      <a href="Png-Jpeg" class="utilities hover-red" >PNG to JPEG</a><br><br>
-      <a href="WebP-Png" class="utilities hover-red">WebP to PNG</a><br><br>
-      <a href="Png-Webp" class="utilities hover-red">PNG to Webp</a><br><br>
-      <a href="CamCase" class="utilities hover-red">Camel Case Conversion</a><br><br>
-      <a href="SentenceCap" class="utilities hover-red" >Sentence Capitalization</a><br><br>
-      <a href="MergePDF" class="utilities hover-red">PDF Merger</a><br><br>
-      <a href="PDF-WaterMark" class="utilities hover-red">PDF WaterMarker</a><br><br>
-      <a href="Excel-PDF" class="utilities hover-red" style="color: green; font-weight:bold ;">Excel to PDF</a>
-    </div>
+    
     <div class="main-content">
       
-        <div class="drop-area" id="drop-area">
+        <div class="drop-area-excel" id="drop-area">
             <span>Drag and drop an Excel file here, or click to choose a file</span>
           </div>
 
@@ -90,79 +61,56 @@
   </div>
   
 
+  <hr  width="70%">
+<!-- Footer section starts here -->
+<footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+  <div class="footer-container" style="display: flex; justify-content: space-between;">
+    <!-- Info Div -->
+    <div class="info-div" style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+      
+      
+    </div>
+
+    <!-- Other Tools Div -->
+    <div class="other-tools-div" style="flex: 1; max-width: 400px;">
+      
+      <!-- <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center;">
+        
+        <table style="">
+          <tr>
+            <td>
+              <li ><a href="Zipfile">File Zipper</a></li> 
+            </td>
+            <td>
+               <li><a href="MergePDF">PDF Merger</a></li>
+            </td>
+          </tr>
+          <tr>
+            
+           
+          </tr>
+        </table>
+       
+        
+        
+      </ul> -->
+      <p style="display: inline-block">&copy; 2023 Xfinity Tools. All rights reserved.</p>
+    </div>
+
+    <!-- Empty Div -->
+    <div class="empty-div" style="flex: 1;">
+      
+    </div>
+  </div>
+</footer>
+<!-- Footer section ends here -->
+  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.8/xlsx.full.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/pdfmake.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/vfs_fonts.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/file-saver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="JS/JavaS4.js"></script>
 
-  <script>
-    function handleFile(file) {
-      const reader = new FileReader();
-
-      reader.onload = function (e) {
-        const data = new Uint8Array(e.target.result);
-        const workbook = XLSX.read(data, { type: 'array' });
-        const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-        const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-
-        const docDefinition = {
-          content: [
-            {
-              table: {
-                body: jsonData,
-              },
-            },
-          ],
-        };
-
-        const pdfDocGenerator = pdfMake.createPdf(docDefinition);
-
-        pdfDocGenerator.getBlob(function (blob) {
-          saveAs(blob, 'output.pdf');
-          console.log('PDF file created successfully.');
-        });
-      };
-
-      reader.readAsArrayBuffer(file);
-    }
-
-    const dropArea = document.getElementById('drop-area');
-
-    dropArea.addEventListener('dragenter', function (e) {
-      e.preventDefault();
-      dropArea.classList.add('active');
-    });
-
-    dropArea.addEventListener('dragover', function (e) {
-      e.preventDefault();
-    });
-
-    dropArea.addEventListener('dragleave', function (e) {
-      e.preventDefault();
-      dropArea.classList.remove('active');
-    });
-
-    dropArea.addEventListener('drop', function (e) {
-      e.preventDefault();
-      dropArea.classList.remove('active');
-      const file = e.dataTransfer.files[0];
-      handleFile(file);
-    });
-
-    dropArea.addEventListener('click', function () {
-      fileInput.click();
-    });
-
-    const fileInput = document.createElement('input');
-    fileInput.type = 'file';
-    fileInput.style.display = 'none';
-
-    fileInput.addEventListener('change', function (e) {
-      const file = e.target.files[0];
-      handleFile(file);
-    });
-
-    document.body.appendChild(fileInput);
-  </script>
 </body>
 </html>
