@@ -2,9 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <link rel="icon" type="image/x-icon" sizes="196x196" href="../Images/Untitled design.png">
-  <title> Free File Zipper</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" sizes="196x196" href="../Images/Untitled design.png">
+  <title>File Zipper</title>
   <link href="Css/StyleSheet1.css" rel="stylesheet"/>
   <meta name="google-site-verification" content="_tlvtjqFT1OiTJbgwrthCi6VKRpfT5n7QSbKtX_dF88" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,69 +11,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"crossorigin="anonymous"></script>
-  <script>
-    function createZip() {
-      var input = document.getElementById('file-input');
-      var files = input.files;
-
-      if (files.length === 0) {
-        alert('Please select files to zip.');
-        return;
-      }
-
-      var zip = new JSZip();
-
-      function addFilesToZip(index) {
-        if (index >= files.length) {
-          zip.generateAsync({ type: 'blob' })
-            .then(function(content) {
-              saveAs(content, 'files.zip');
-            })
-            .catch(function(error) {
-              console.error('Error creating zip file:', error);
-            });
-          return;
-        }
-
-        var file = files[index];
-        var reader = new FileReader();
-
-        reader.onload = function() {
-          zip.file(file.name, reader.result);
-          addFilesToZip(index + 1);
-        };
-
-        reader.onerror = function() {
-          console.error('Error reading file:', file);
-          addFilesToZip(index + 1);
-        };
-
-        reader.readAsDataURL(file);
-      }
-
-      addFilesToZip(0);
-    }
-
-    window.onload = function() {
-      var inputFile = document.getElementById('file-input');
-      var downloadButton = document.getElementById('downloadButton');
-      var fileList = document.getElementById('fileList');
-
-      inputFile.addEventListener('change', function(event) {
-        var files = event.target.files;
-        fileList.innerHTML = '';
-
-        for (var i = 0; i < files.length; i++) {
-          var listItem = document.createElement('li');
-          listItem.textContent = files[i].name;
-          fileList.appendChild(listItem);
-        }
-      });
-
-      downloadButton.addEventListener('click', createZip);
-    };
-  </script>
 </head>
 <body>
   <div class="header">
@@ -83,23 +19,12 @@
   </div>
 <br>
   <div class="container">
-    <div class="sidebar">
-      <!-- Sidebar content goes here -->
-      
-      <h2>Utilities</h2>
-      <a href="Zipfile" class="utilities hover-red" style="color: green; font-weight:bold ;">File Zipper</a><br><br>
-      <a href="Png-Jpeg" class="utilities hover-red" >PNG to JPEG</a><br><br>
-      <a href="WebP-Png" class="utilities hover-red">WebP to PNG</a><br><br>
-      <a href="Png-Webp" class="utilities hover-red">PNG to Webp</a><br><br>
-      <a href="CamCase" class="utilities hover-red">Camel Case Conversion</a><br><br>
-      <a href="SentenceCap" class="utilities hover-red" >Sentence Capitalization</a><br><br>
-      <a href="MergePDF" class="utilities hover-red" >PDF Merger</a><br><br>
-    </div>
     
-    <div class="main-content">
+    <div style="margin: auto;" class="main-content">
+     
       <input type="file" id="file-input" class="file-input" multiple><br>
-      <ul class="file-input" id="fileList"></ul>
-      <button id="downloadButton" class="download-button">Create Zip</button>
+      <ul style="border: transparent; background-color: transparent; margin: auto;" class="file-input" id="fileList"></ul>
+      <button id="downloadButton" class="download-button">Download Zip</button>
 
   </div>
      
@@ -158,6 +83,52 @@
         </p>
     </div><br>
   </div>
+
+  <hr  width="70%">
+  <!-- Footer section starts here -->
+  <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+    <div class="footer-container" style="display: flex; justify-content: space-between;">
+      <!-- Info Div -->
+      <div class="info-div" style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+        
+        
+      </div>
+  
+      <!-- Other Tools Div -->
+      <div class="other-tools-div" style="flex: 1; max-width: 400px;">
+        
+        <!-- <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center;">
+          
+          <table style="">
+            <tr>
+              <td>
+                <li ><a href="Zipfile">File Zipper</a></li> 
+              </td>
+              <td>
+                 <li><a href="MergePDF">PDF Merger</a></li>
+              </td>
+            </tr>
+            <tr>
+              
+             
+            </tr>
+          </table>
+         
+          
+          
+        </ul> -->
+        <p style="display: inline-block">&copy; 2023 Xfinity Tools. All rights reserved.</p>
+      </div>
+  
+      <!-- Empty Div -->
+      <div class="empty-div" style="flex: 1;">
+        
+      </div>
+    </div>
+  </footer>
+  <!-- Footer section ends here -->
 </body>
+
+<script src="JS/JavaS2.js"></script>
 
 </html>
