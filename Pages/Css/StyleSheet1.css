@@ -1,3 +1,18 @@
+.drop-area-excel {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  width: 95%;
+  height: 200px;
+  background-image: url('excel-symbol.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px;
+}
+.drop-area-excel.active {
+  border-color: #007bff;
+}
 
 
 
@@ -59,7 +74,7 @@
   margin: 0 auto;
   background-color: #fff;
   border-radius: 2px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+ 
   padding: 10px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: left;
