@@ -7,12 +7,17 @@ input[type=file]::file-selector-button {
   color: #fff;
   cursor: pointer;
   transition: background .2s ease-in-out;
+ 
 }
 
 input[type=file]::file-selector-button:hover {
   background: #0d45a5;
 }
 
+input[type=file]{
+  background-color: transparent;
+  border: 1px transparent ;
+}
 
 
 .drop-area-excel {
