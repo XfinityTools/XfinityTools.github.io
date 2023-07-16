@@ -128,3 +128,55 @@ function extractFiles(file) {
         downloadLink.style.display = 'inline';
     });
 });
+
+
+async function addWatermark() {
+  var input = document.getElementById('input-file');
+  var file = input.files[0];
+
+  if (file) {
+    var reader = new FileReader();
+    reader.onload = async function(e) {
+      var inputPdfData = new Uint8Array(e.target.result);
+      var watermarkText = prompt('Enter the watermark text:');
+
+      try {
+        const pdfDoc = await PDFLib.PDFDocument.load(inputPdfData);
+
+        const pages = pdfDoc.getPages();
+        const font = await pdfDoc.embedFont(PDFLib.StandardFonts.HelveticaBold);
+
+        for (let i = 0; i < pages.length; i++) {
+          const page = pages[i];
+
+          const { width, height } = page.getSize();
+
+          const textWidth = font.widthOfTextAtSize(watermarkText, 48);
+          const textHeight = font.heightAtSize(48);
+          const x = (width - textWidth) / 2;
+          const y = (height - textHeight) / 2;
+
+          page.drawText(watermarkText, {
+            x,
+            y,
+            size: 48,
+            font: font,
+            color: PDFLib.rgb(0.5, 0.5, 0.5),
+            opacity: 0.5,
+          });
+        }
+
+        const modifiedPdfData = await pdfDoc.save();
+
+        var downloadLink = document.getElementById('download-link');
+        downloadLink.href = URL.createObjectURL(new Blob([modifiedPdfData], { type: 'application/pdf' }));
+        downloadLink.download = 'output.pdf';
+        downloadLink.style.display = 'inline'; // Update the display style
+
+      } catch (error) {
+        console.error('Error adding watermark:', error);
+      }
+    };
+    reader.readAsArrayBuffer(file);
+  }
+}

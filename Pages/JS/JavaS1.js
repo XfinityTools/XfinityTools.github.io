@@ -320,3 +320,7 @@ var dropArea = document.getElementById('dropArea');
       }, 'image/webp');
     });
 
+
+    
+
+    
