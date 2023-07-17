@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sentence Capitalization</title>
     <link href="Css/StyleSheet1.css" rel="stylesheet"/>
+    
 </head>
 <body>
     
@@ -26,11 +27,25 @@
         <input style="margin: auto;" class="input" type="text" id="inputField" placeholder="Enter Sentence" onkeydown="capitalizeAllLetters(event)" />
         <!-- <button type="button" onclick="capitalizeAllLetters(event)">Capitalize</button> -->
       </form>
-      <br><br><div class="result" style=" width: 50%; margin: auto;" id="result"></div>
+      <br><br><div class="result" style=" width: 50%; margin: auto;" id="result"></div><br>
+      <div style="margin: auto;" class="rating">
+        <input type="radio" name="rating" id="star5" value="5">
+        <label for="star5">&#9733;</label>
+        <input type="radio" name="rating" id="star4" value="4">
+        <label for="star4">&#9733;</label>
+        <input type="radio" name="rating" id="star3" value="3">
+        <label for="star3">&#9733;</label>
+        <input type="radio" name="rating" id="star2" value="2">
+        <label for="star2">&#9733;</label>
+        <input type="radio" name="rating" id="star1" value="1">
+        <label for="star1">&#9733;</label>
+    </div>
 
     </div>
+    
  
   </div><br>
+  
 
   <div class="container-infobox-left">
     <p>The capitalization tool is a web-based utility that allows you to capitalize worded input. It takes a sentence or text input, splits it into individual words, capitalizes the first letter of each word, and converts the rest of the letters to lowercase. The tool helps you quickly and accurately capitalize your text, adhering to proper capitalization rules.</p>
@@ -126,6 +141,42 @@
     
 </body>
 
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
 
+    <script>
+      // Initialize Firebase with your project configuration
+      const firebaseConfig = {
+          apiKey: "AIzaSyBaF-QZVyVVQ8cTQuDhDATrCOhXyRZFJes",
+          authDomain: "xfinitytools.firebaseapp.com",
+          databaseURL: "https://xfinitytools-default-rtdb.firebaseio.com",
+          projectId: "xfinitytools",
+          storageBucket: "xfinitytools.appspot.com",
+          messagingSenderId: "883761973270",
+          appId: "1:883761973270:web:85580b2841cb8e99eb0d37",
+          measurementId: "G-MW6PG5PVGY"
+      };
+      firebase.initializeApp(firebaseConfig);
 
+      const ratingContainer = document.querySelector('.rating');
+      const ratingInput = document.querySelectorAll('.rating input[type="radio"]');
+      const database = firebase.database();
+
+      // Retrieve the saved rating from Firebase and set it
+      database.ref('xfinity_tools_rating').on('value', (snapshot) => {
+          const savedRating = snapshot.val();
+          if (savedRating) {
+              const inputToCheck = ratingContainer.querySelector(`input[value="${savedRating}"]`);
+              if (inputToCheck) {
+                  inputToCheck.checked = true;
+              }
+          }
+      });
+
+      // Save the rating to Firebase when the user changes the rating
+      ratingContainer.addEventListener('change', (event) => {
+          const selectedRating = event.target.value;
+          database.ref('xfinity_tools_rating').set(selectedRating);
+      });
+  </script>
 </html>
