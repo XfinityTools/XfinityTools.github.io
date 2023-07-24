@@ -1,9 +1,17 @@
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 input[type=file]::file-selector-button {
-  margin-right: 20px;
+  /* margin-right: 20px; */
   border: none;
   background: #084cdf;
   padding: 10px 20px;
-  border-radius: 10px;
+ 
   color: #fff;
   cursor: pointer;
   transition: background .2s ease-in-out;
@@ -14,7 +22,7 @@ input[type=file]::file-selector-button:hover {
   background: #0d45a5;
 }
 
-input[type=file]{
+input[type=file],.file-input{
   background-color: transparent;
   border: 1px transparent ;
 }
@@ -102,6 +110,25 @@ input[type=file]{
   text-align: left;
  
 }
+
+.container-infobox-article{
+  /* display: flex; */
+  max-width: 900px;
+  
+  /* margin: 0 auto; */
+  margin-left: 10%;
+  background-color: #fff;
+  border-radius: 2px;
+ 
+  padding: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: left;
+ 
+}
+
+
+
+
 
 .container-infobox-right{
   /* display: flex; */
