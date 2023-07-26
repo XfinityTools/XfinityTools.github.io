@@ -132,13 +132,11 @@ input[type=file],.file-input{
 
 .container-infobox-right{
   /* display: flex; */
-  max-width: 900px;
   
   margin-left: 80%;
-  background-color: #fff;
+  
   border-radius: 2px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-  padding: 10px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: right;
  
