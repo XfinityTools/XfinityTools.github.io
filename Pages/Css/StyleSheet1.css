@@ -126,25 +126,18 @@ input[type=file],.file-input{
  
 }
 
-.float-container {
-    border: 3px solid #fff;
-    padding: 20px;
+.parent {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
 }
-
-
-.float-child-left {
-    width: 50%;
-    float: left;
-    padding: 20px;
-    border: 2px solid red;
-}  
-
-.float-child-right {
-  width: 50%;
-  float: right;
-  padding: 20px;
-  border: 2px solid red;
-} 
+.child {
+  display: inline-block;
+  border: 1px solid red;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
 
 
 
