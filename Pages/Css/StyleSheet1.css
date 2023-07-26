@@ -132,12 +132,19 @@ input[type=file],.file-input{
 }
 
 
-.float-child {
+.float-child-left {
     width: 50%;
     float: left;
     padding: 20px;
     border: 2px solid red;
 }  
+
+.float-child-right {
+  width: 50%;
+  float: right;
+  padding: 20px;
+  border: 2px solid red;
+} 
 
 
 
