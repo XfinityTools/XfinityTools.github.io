@@ -135,7 +135,7 @@ input[type=file],.file-input{
   /* display: flex; */
   min-width:100px;
   
-  margin-right: 10%;
+  margin-right: 5%;
   margin-top: 5%;
   float: right;
   display: inline-block;
