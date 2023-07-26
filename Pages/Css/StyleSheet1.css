@@ -133,7 +133,7 @@ input[type=file],.file-input{
 .container-infobox-right{
   /* display: flex; */
   
-  margin-left: 80%;
+  margin-left: 75%;
   
   border-radius: 2px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
