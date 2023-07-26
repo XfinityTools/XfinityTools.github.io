@@ -126,18 +126,6 @@ input[type=file],.file-input{
  
 }
 
-.parent {
-  
-  margin: 1rem;
-  padding: 2rem 2rem;
-  text-align: center;
-}
-.child {
-  display: inline-block;
-
-  padding: 1rem 1rem;
-  vertical-align: middle;
-}
 
 
 
@@ -145,8 +133,9 @@ input[type=file],.file-input{
 .container-infobox-right{
   /* display: flex; */
   
-  margin-left: 75%;
+  margin-right: 10%;
   float: right;
+  display: inline-block;
   
   border-radius: 2px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
