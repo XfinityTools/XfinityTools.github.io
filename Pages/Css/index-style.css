@@ -24,11 +24,14 @@ body {
 
 /* Header styles */
 .header {
-  background-color: #e36587;
+  background-color: #e60340;
   color: #fff;
   padding: 20px;
   text-align: center;
   font-family: 'Pacifico', cursive;
+  position: relative;
+  box-shadow: 5px 5px;
+
 }
 
 /* Search bar styles */
