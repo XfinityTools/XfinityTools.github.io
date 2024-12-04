@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /Pages/
+
 Disallow: /Pages/Utility%20Pages/About
 
 Sitemap: https://xfinitytools.github.io/sitemap.xml
