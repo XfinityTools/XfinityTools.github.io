@@ -49,6 +49,7 @@ body {
     color: #333;
     background-color: white;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Header Styling */
@@ -60,6 +61,7 @@ body {
     background-color: #e60340;
     color: #fff;
     color: white;
+    width: 100%;
 }
 
     .header h1 {
@@ -91,7 +93,7 @@ body {
     top: 100%;
     background-color: #ffffff;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    min-width: 200px;
+    min-width: 20%;
     z-index: 1;
     border-radius: 4px;
     overflow: hidden;
@@ -117,9 +119,9 @@ body {
 
 /* Main Section */
 section {
-    max-width: 900px;
+    max-width: 75%;
     margin: 50px auto;
-    padding: 18px;
+    padding: 1.5%;
     background: white;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -223,14 +225,14 @@ footer {
 
 /* Card Content */
 .card-content h2 {
-    font-size: 20px;
+    font-size: 0.875em;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
 }
 
 .card-content p {
-    font-size: 14px;
+    font-size: 0.875em;
     color: #555;
     margin-bottom: 20px;
     line-height: 1.5;
@@ -239,10 +241,10 @@ footer {
 /* Button */
 .card-button {
     display: inline-block;
-    background-color: #0078d4; /* Blue color */
+    background-color: #0078d4;
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.875em;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
@@ -252,3 +254,17 @@ footer {
     .card-button:hover {
         background-color: #005a9e; /* Darker blue for hover */
     }
+
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .card-dash {
+        margin-bottom: 20px;
+        width:100%;
+        
+    }
+}
+
