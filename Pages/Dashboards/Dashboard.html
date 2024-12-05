@@ -43,7 +43,7 @@
     <div class="header" style="display: flex; justify-content: space-between; ">
         <a href="/"><h1 style="margin-left: 50px;">Xfinity Tools</h1></a>
 
-        <a style="margin-left:750px;" href="Dashboard2.html">Tools Dashboard</a>
+        <a style="margin-left:750px;" href="DashTwo.html">Tools Dashboard</a>
 
 
     </div>
@@ -59,13 +59,10 @@
                 style="padding: 9px; border: 2px solid #e60340; border-radius: 5px; font-size: 12px; color: black;"
                 onchange="navigateToPage()">
             <option value="1">Page 1</option>
-            <option value="2">Page 2</option>
-            <option value="3">Tools List</option>
-            <!--<option value="3">Page 3</option>
-        <option value="4">Page 4</option>-->
+            
         </select>
 
-        <a href="Dashboard2.html" class="btn btn-secondary btn-md" style="margin-right: 10px;">Next Page &raquo;</a>
+        <a href="DashTwo.html" class="btn btn-secondary btn-md" style="margin-right: 10px;">Next Page &raquo;</a>
 
     </div>
 
@@ -81,7 +78,7 @@
                 file size and makes it easier to store, transfer, and organize multiple files together.
             </p><br />
             <p>
-                <a class="btn btn-default" href="../../Tools/Zipfile.html">Use &raquo;</a>
+                <a class="btn btn-default" href="../Zipfile.html">Use &raquo;</a>
             </p>
         </section>
 
@@ -95,7 +92,7 @@
                 This conversion can be useful in certain scenarios where JPEG format is preferred over PNG, such as reducing file size or compatibility requirements.
             </p><br />
             <p>
-                <a class="btn btn-default" href="../../Tools/Png-Jpeg.html">Use &raquo;</a>
+                <a class="btn btn-default" href="../Png-Jpeg.html">Use &raquo;</a>
             </p>
         </section>
 
@@ -109,7 +106,7 @@
                 This conversion can be useful in situations where PNG format is preferred over WebP, such as compatibility requirements or the need for lossless compression.
             </p><br />
             <p>
-                <a class="btn btn-default" href="../../Tools/WebP-Png.html">Use &raquo;</a>
+                <a class="btn btn-default" href="../WebP-Png.html">Use &raquo;</a>
             </p>
         </section>
 
@@ -126,7 +123,7 @@
                 This conversion can be useful in situations where PNG format is preferred over WebP, such as compatibility requirements or the need for lossless compression
             </p><br />
             <p>
-                <a class="btn btn-default" href="../../Tools/Png-Webp.html">Use &raquo;</a>
+                <a class="btn btn-default" href="../Png-Webp.html">Use &raquo;</a>
             </p>
         </section>
 
@@ -140,7 +137,7 @@
                 This style is often used in informal writing, online communication, or to convey emphasis or urgency.
             </p><br />
             <p>
-                <a class="btn btn-default" href="../../Tools/SentenceCap.html">Use &raquo;</a>
+                <a class="btn btn-default" href="../SentenceCap.html">Use &raquo;</a>
             </p>
         </section>
 
@@ -154,7 +151,7 @@
                 In camel case, each word in the identifier is written without spaces, and the first letter of each word, except the first word, is capitalized.
             </p><br />
             <p>
-                <a class="btn btn-default" href="../../Tools/CamCase.html">Use &raquo;</a>
+                <a class="btn btn-default" href="../CamCase.html">Use &raquo;</a>
             </p>
         </section>
 
@@ -174,28 +171,5 @@
 </body>
 </html>
 
-<script>
-    function navigateToPage() {
-        const selector = document.getElementById("pageSelector");
-        const page = selector.value;
 
-        // Define the URL for each page
-        switch (page) {
-            case "1":
-                window.location.href = "Dashboard.html";
-                break;
-            case "2":
-                window.location.href = "Dashboard2.html";
-                break;
-            case "3":
-                window.location.href = "ToolList.html";
-                break;
-            case "4":
-                window.location.href = "page4.html";
-                break;
-            default:
-                alert("Please select a valid page.");
-        }
-    }
-</script>
 
