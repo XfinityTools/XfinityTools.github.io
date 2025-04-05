@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="canonical" href="https://xfinitytools.github.io/About.html">
+    <script data-cfasync="false" src="/sw.js"></script>
+    <meta name="geo.region" content="JM"> <!-- ISO 3166 Country Code -->
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <meta name="description" content="Learn about Xfinity Tools, its history, mission, and vision. Discover how this Jamaican-founded platform was built to provide 11 efficient online tools for productivity and problem-solving.">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="google-site-verification" content="_tlvtjqFT1OiTJbgwrthCi6VKRpfT5n7QSbKtX_dF88" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <!-- Other -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./Pages/JS/JavaS1.js"></script>
+    <script src="./Pages/JS/HeaderTime.js"></script>
+    <script src="./Pages/JS/DropDownMenu.js"></script>
+    <link href="./Pages/Css/Bootstrap.css" rel="stylesheet" />
+    <link href="./Pages/Css/index-style.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+
+    <title>Contact Us - Xfinity Tools</title>
+</head>
+<body>
+    <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/"><h1 style="margin-left: 50px;">Contact Xfinity Tools</h1></a>
+        <span id="currentDateTime" style="margin-left: 20px; "></span>
+    </div>
+
+    <div style="padding: 30px; margin: 0 auto; margin-left: 40px; max-width: 800px; align-items:center;">
+        <section>
+            <h2>Email</h2>
+            <p>
+                xfinitytools@hotmail.com
+            </p>
+            
+
+            <h2>Facebook</h2>
+            <p>https://www.facebook.com/people/XfinityTools/61570260125821/</p>
+
+            <h2>Twitter / X</h2>
+            <p>
+               
+            </p>
+
+            
+            <div style="margin-top: 20px;">
+                <a href="Pages/Dashboards/Dashboard.html" class="btn btn-primary btn-md" style="margin-right: 10px;">Tools Dashboard &raquo;</a>
+                <a href="Pages/Dashboards/ToolList.html" class="btn btn-primary btn-md" style="margin-right: 10px;">Tools List &raquo;</a>
+                <a href="/" class="btn btn-secondary btn-md" style="margin-right: 10px;">Home &raquo;</a>
+            </div><br />
+        </section>
+    </div>
+
+    <!-- Footer -->
+    
+    <footer style="padding: 15px; margin-top: 30px; margin-left: 30px;">
+        <p>&copy; <span id="currentYear"></span> - Xfinity Tools</p>
+        <script>
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+</html>
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        const date = now.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        const time = now.toLocaleTimeString('en-US', {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false // Use 24-hour format
+        });
+        document.getElementById('currentDateTime').textContent = `${date}, ${time}`;
+    }
+
+    // Update the date and time immediately and then every second
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+
+
