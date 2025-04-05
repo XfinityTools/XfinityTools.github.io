@@ -108,15 +108,18 @@
             - This tool runs entirely on the client-side (in the user's browser). No files are sent to a server during the zip file creation process.
         </p>
 
-        
+
     </div><br>
-    
+
 
     <hr width="70%">
     <!-- Footer section starts here -->
     <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
         <div class="footer-container" style="display: flex; justify-content:center;">
-            <p style="display: inline-block; text-align:center;">&copy; 2024 Xfinity Tools. All rights reserved.</p>
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
         </div>
     </footer>
     <!-- Footer section ends here -->

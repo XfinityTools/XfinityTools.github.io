@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Single Image to PDF Converter</title>
+
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Image-PDF.html">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <link href="Css/StyleSheet1.css" rel="stylesheet" />
+    <script src="JS/JavaS1.js"></script>
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="Use the free Single Image to PDF Converter tool to quickly convert your image to a PDF file." />
+</head>
+<body>
+    <div class="header">
+        <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%;">Single Image to PDF Converter</p>
+        <a href="../Pages/Dashboards/Dashboard.html"><p style="font-size: 85%;">Go Back</p></a>
+
+    </div>
+    <br><br>
+
+    <div class="container">
+        <div class="main-content">
+
+            <h2>Select an image to convert to PDF</h2>
+            <input type="file" id="imageInput" accept="image/*"><br><br>
+            <button class="download-button" onclick="convertToPDF()">Convert to PDF</button>
+
+
+
+        </div>
+    </div><br />
+
+    <div style="" class="container-infobox-left">
+        <p>The "Image to PDF Converter" is a free web-based tool that allows you to convert a single image into a PDF file with no white space or borders. This tool uses client-side JavaScript, meaning your image never leaves your device. It ensures that the image fills the entire PDF page, similar to how a background image might cover a webpage.</p>
+
+        <h1>Instruction Manual:</h1>
+
+        <h3>1. Accessing the Tool:</h3>
+        <p>Open the tool in any modern web browser (such as Chrome, Firefox, Edge, or Safari). There is no need to install any software or register.</p>
+
+        <h3>2. Uploading Your Image:</h3>
+        <p>Click on the designated drop area that says "Drag & drop images here or click to select." A file picker will open. Choose a single image file from your device. You can also drag and drop the image directly onto the drop zone.</p>
+
+        <h3>3. Previewing Your Image:</h3>
+        <p>Once uploaded, a thumbnail preview of your image will appear below the drop zone. This lets you verify that you've selected the correct file before proceeding.</p>
+
+        <h3>4. Converting to PDF:</h3>
+        <p>Click the <strong>"Download PDF"</strong> button. The tool will process the image and generate a PDF file that fills the entire page with your image, removing any white spaces or borders.</p>
+
+        <h3>5. Saving the PDF:</h3>
+        <p>After the PDF is generated, your browser will automatically prompt you to save or download the file. The default file name is <code>images.pdf</code>, but you can rename it if desired.</p>
+
+        <h3>6. Notes and Recommendations:</h3>
+        <ul>
+            <li>This tool is designed for converting a <strong>single image</strong>. If you upload multiple images, only the first will be used.</li>
+            <li>Supported formats include JPG, JPEG, and PNG.</li>
+            <li>For best results, use high-resolution images to maintain quality in the PDF.</li>
+            <li>If you prefer to include multiple images in a single PDF with one per page, use the "Multiple Image to PDF" tool instead.</li>
+        </ul>
+
+        <h3>7. Troubleshooting:</h3>
+        <p>If the PDF download does not start automatically, try the following:</p>
+        <ul>
+            <li>Ensure that JavaScript is enabled in your browser.</li>
+            <li>Try refreshing the page and uploading the image again.</li>
+            <li>Use a different web browser or device if the problem persists.</li>
+        </ul>
+
+        <h3>8. Privacy and Security:</h3>
+        <p>All image processing happens entirely in your browser. Your image is not uploaded or stored on any server, ensuring full privacy.</p>
+    </div>
+
+    
+    <!-- Footer section starts here -->
+    <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+    <!-- Footer section ends here -->
+
+
+</body>
+</html>

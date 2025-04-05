@@ -321,6 +321,28 @@ downloadButton.addEventListener('click', function () {
     }, 'image/webp');
 });
 
+async function convertToPDF() {
+    const { jsPDF } = window.jspdf;
+    const input = document.getElementById('imageInput');
+    if (!input.files.length) return alert("Please select an image.");
+
+    const file = input.files[0];
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        const img = new Image();
+        img.onload = function () {
+            const pdf = new jsPDF({
+                orientation: img.width > img.height ? 'l' : 'p',
+                unit: 'pt',
+                format: [img.width, img.height]
+            });
+            pdf.addImage(img, 'JPEG', 0, 0, img.width, img.height);
+            pdf.save("converted.pdf");
+        };
+        img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+}
 
 
 
