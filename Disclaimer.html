@@ -21,8 +21,7 @@
     <script src="./Pages/JS/HeaderTime.js"></script>
     <script src="./Pages/JS/DropDownMenu.js"></script>
     <link href="./Pages/Css/Bootstrap.css" rel="stylesheet" />
-    <link href="./Pages/Css/index-style.css" rel="stylesheet" />
-    <link href="styles.css" rel="stylesheet" />
+    <link href="Index.css" rel="stylesheet" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
     <script>
@@ -35,10 +34,22 @@
     <title>Xfinity Tools - Free Online Tool Suite</title>
 </head>
 <body>
-    <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
-        <a href="/"><h1 style="margin-left: 50px;">Xfinity Tools Disclaimer</h1></a>
-        <span id="currentDateTime" style="margin-left: 20px; "></span>
+    <div class="header">
+        <a href="index.html"><h1>Xfinity Tools</h1></a>
+
+
+
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="About.html">About</a>
+            <a href="Disclaimer.html">Disclaimer</a>
+            <a href="Contact.html">Contact</a>
+
+            <a href="Pages/Dashboards/ToolList.html">Tools List</a>
+        </div>
     </div>
+
 
     <div style="padding: 30px; margin: 0 auto; margin-left: 40px; max-width: 800px;">
         <section>
@@ -56,7 +67,8 @@
                 <li>No personal information is stored or processed on our site. Xfinity Tools does not use cookies or sessions to collect any personal data.</li>
                 <li>The tools do not save any files after processing. Once you complete a task using our tools, no file is stored or retained on our servers or any third-party servers.</li>
                 <li>The site does not access, modify, or store any files on your device without your explicit interaction.</li>
-                <li>All files processed by the tools are handled solely within your browser, and we do not retain, share, or collect any data related to them.</li><br />
+                <li>All files processed by the tools are handled solely within your browser, and we do not retain, share, or collect any data related to them.</li>
+                <br />
                 <li>
                     <strong>Advertising:</strong> This website may display advertisements to help keep our services free. Ads are served by third-party providers, and Xfinity Tools has no control over the content or behavior of such ads. We recommend exercising caution when interacting with them.
                 </li>

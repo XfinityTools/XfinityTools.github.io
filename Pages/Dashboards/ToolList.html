@@ -30,27 +30,39 @@
     <!-- Other -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./Pages/JS/JavaS1.js"></script>
-    <script src="./Pages/JS/DropDownMenu.js"></script>
+    <script src="DropDownMenu.js"></script>
     <script src="./Pages/JS/search.js"></script>
     <link href="../Css/Bootstrap.css" rel="stylesheet" />
-    <link href="../Css/index-style.css" rel="stylesheet" />
+    
     <link href="../Css/Dashboard.css" rel="stylesheet" />
+    <link href="DashHeader.css" rel="stylesheet" />
 
     <title>Xfinity Tools - Tool List</title>
 
 </head>
 <body>
-    <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
-        <a href="/"><h1 style="margin-left: 50px;">Xfinity Tools</h1></a>
-        <a style="align-self: center;" href="Dashboard.html">Dashboard</a>
+    <div class="header">
+        <a href="index.html"><h1>Xfinity Tools</h1></a>
+
+
+
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="About.html">About</a>
+            <a href="Disclaimer.html">Disclaimer</a>
+            <a href="Contact.html">Contact</a>
+
+            <a href="ToolList.html">Tools List</a>
+        </div>
     </div>
 
     <div style="padding: 30px; margin: 0 auto; margin-left: 40px;">
-        <a href="DashTwo.html" class="btn btn-secondary btn-md" style="margin-right: 10px; display: inline-block;">&laquo Previous Page </a>
+        <a href="Dashboard.html" class="btn btn-secondary btn-md" style="margin-right: 10px; display: inline-block;">&laquo Previous Page </a>
         <h2 style="text-align:center; display:inline-block;">Tools List</h2>
 
         <div class="row">
-            
+
             <section class="content-section">
                 <ol>
                     <li><a href="../CamCase.html">Camel Case Converter</a><br /></li>
@@ -69,11 +81,11 @@
                 </ol>
             </section>
 
-           
+
             <div class="ad-unit">
-               
+
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-                
+
                 <ins class="adsbygoogle"
                      style="display:block"
                      data-ad-client="ca-pub-6760354428989736"

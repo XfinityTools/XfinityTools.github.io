@@ -31,15 +31,25 @@
     <script src="./Pages/JS/HeaderTime.js"></script>
     <script src="./Pages/JS/DropDownMenu.js"></script>
     <link href="./Pages/Css/Bootstrap.css" rel="stylesheet" />
-    <link href="./Pages/Css/index-style.css" rel="stylesheet" />
-    <link href="styles.css" rel="stylesheet" />
+    <link href="Index.css" rel="stylesheet" />
 
     <title>About Us - Xfinity Tools</title>
 </head>
 <body>
-    <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
-        <a href="/"><h1 style="margin-left: 50px;">About Xfinity Tools</h1></a>
-        <span id="currentDateTime" style="margin-left: 20px; "></span>
+    <div class="header">
+        <a href="index.html"><h1>Xfinity Tools</h1></a>
+
+
+
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="About.html">About</a>
+            <a href="Disclaimer.html">Disclaimer</a>
+            <a href="Contact.html">Contact</a>
+
+            <a href="Pages/Dashboards/ToolList.html">Tools List</a>
+        </div>
     </div>
 
     <div style="padding: 30px; margin: 0 auto; margin-left: 40px; max-width: 800px; align-items:center;">
