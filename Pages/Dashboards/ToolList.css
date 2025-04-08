@@ -1,0 +1,7 @@
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .content-section{
+        width:50%;
+        padding:22px;
+    }
+}
