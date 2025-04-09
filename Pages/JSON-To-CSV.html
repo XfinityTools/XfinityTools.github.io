@@ -1,11 +1,155 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/JSON-To-CSV.html">
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="Css/StyleSheet2.css" rel="stylesheet" />
+    <meta name="description" content="Free online file tool that allows you to convert JSON to CSV">
+    <title>JSON to CSV Converter</title>
+
+
+
 </head>
 <body>
+    <!-- Header -->
+    <div class="pdf-header">
+        <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">JSON to CSV Converter</p>
+        <a href="../Pages/Dashboards/Dashboard.html"><p style="font-size: 85%; font-family: 'Pacifico', cursive;">Go Back</p></a>
+    </div>
+    <!-- Header --><br />
+
+
+
+
+    <div class="csv-container">
+        <!--<h1>Enter a Sentence</h1>-->
+        <!-- Input Section -->
+        <textarea id="jsonInput" class="csv-textarea" placeholder="Paste your JSON here"></textarea>
+
+        <button class="csv-button" onclick="clearJsonInput()">Reset</button>
+
+
+        <!-- Options Section -->
+        <h3>Options:</h3>
+        <label for="skipEmptyValues">Skip Empty Values</label>
+        <input type="checkbox" id="skipEmptyValues" class="csv-checkbox">
+
+        <br>
+        <label for="csvDelimiter">CSV Delimiter:</label>
+        <select id="csvDelimiter" class="csv-select">
+            <option value=",">Comma (,)</option>
+            <option value=";">Semicolon (;)</option>
+            <option value="\t">Tab</option>
+        </select>
+
+        <br>
+        <button onclick="convertJsonToCsv()" class="csv-button-action">Convert to CSV</button>
+
+        <!-- CSV Preview Section -->
+        <h3>CSV Preview (First 10 Rows):</h3>
+        <div id="csvPreview" class="csv-preview"></div>
+
+        <!-- Download Section -->
+        <button onclick="downloadCsv()" class="csv-button-action">Download CSV</button>
+    </div><br /><br />
+
+    <div class="container-infobox-left">
+        <p>
+            The JSON to CSV Converter allows you to easily convert structured JSON data into CSV format.
+            This is helpful when working with spreadsheets, databases, or data analysis tools.
+            The tool runs entirely in your browser, no data is uploaded to a server.
+        </p>
+
+        <h1>Instruction Manual:</h1>
+
+        <h3>1. Accessing the Tool:</h3>
+        <ul>
+            <li>Open your web browser.</li>
+            <li>Navigate to the JSON to CSV Converter page.</li>
+        </ul>
+
+        <h3>2. Inputting JSON:</h3>
+        <ul>
+            <li>Copy and paste your JSON data into the large textarea labeled <strong>"Paste your JSON here..."</strong>.</li>
+            <li>Click <strong>"Pretty Print JSON"</strong> to automatically format your JSON for readability (optional).</li>
+        </ul>
+
+        <h3>3. Setting Options:</h3>
+        <ul>
+
+            <li>Check <strong>“Skip Empty Values”</strong> to ignore blank fields in the final CSV.</li>
+            <li>Choose a <strong>CSV Delimiter</strong> (Comma, Semicolon, or Tab).</li>
+
+        </ul>
+
+        <h3>4. Convert to CSV:</h3>
+        <ul>
+            <li>Click the <strong>"Convert to CSV"</strong> button.</li>
+            <li>The first 10 rows will be shown as a preview below.</li>
+            <li>Any validation errors (like invalid JSON) will be shown in a popup alert.</li>
+        </ul>
+
+        <h3>5. Downloading the CSV:</h3>
+        <ul>
+            <li>Click the <strong>"Download CSV"</strong> button to save the file to your device.</li>
+        </ul>
+
+        <h3>6. Resetting Input:</h3>
+        <ul>
+            <li>Use the <strong>"Clear"</strong> button to empty the input field and reset its size.</li>
+        </ul>
+
+        <h3>7. Example JSON Format:</h3>
+        <pre>
+[
+    {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "age": 30
+    },
+    {
+        "name": "Jane Smith",
+        "email": "jane@example.com",
+        "age": 25
+    }
+]
+    </pre>
+
+        <h3>Tips:</h3>
+        <ul>
+            <li>Only valid JSON arrays of objects are supported.</li>
+            <li>Ensure your JSON starts with <code>[</code> and ends with <code>]</code>.</li>
+            <li>You can test your JSON with the <strong>"Pretty Print"</strong> option first to catch formatting issues.</li>
+        </ul>
+    </div>
+
+    <!-- Footer section starts here -->
+    <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+    <!-- Footer section ends here -->
+
 
 </body>
 </html>
+<script src="JS/JavaS5.js"></script>

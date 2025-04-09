@@ -1,11 +1,106 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/PDF-Metadata-Extractor.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Metadata Extractor | Xfinity Tools</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <!--<link href="Css/StyleSheet1.css" rel="stylesheet" />-->
+    <link href="Css/StyleSheet2.css" rel="stylesheet" />
+    <meta name="description" content="Free online file tool that allows you extract the meta data from PDF files">
+    <script src="JS/JavaS8.js"></script>
+
 </head>
 <body>
 
+    <!-- Header -->
+    <div class="pdf-header">
+        <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">PDF Metadata Extractor</p>
+        <a href="../Pages/Dashboards/Dashboard.html"><p style="font-size: 85%; font-family: 'Pacifico', cursive;">Go Back</p></a>
+    </div>
+    <!-- Header -->
+    <!-- PDF Metadata Extractor -->
+    <div class="pdf-container">
+        <h2>Select or Drop a PDF File</h2>
+        <div class="pdf-drop-area" id="dropArea">
+            <p>Drag & Drop PDF Here or Click to Upload</p>
+            <input type="file" id="fileInput" accept="application/pdf" style="display:none;" />
+        </div>
+
+        <div id="output"></div>
+    </div>
+
+    <div class="container-infobox-left">
+        <p>The PDF Metadata Extractor  allows you to quickly view and extract embedded metadata from PDF documents. Many PDF files contain internal properties that describe the file's origin, authorship, version, and more. This tool processes the file directly in your browser and displays the extracted metadata in a readable list.</p>
+
+        <p><strong>Information extracted includes:</strong></p>
+        <ul>
+            <li><strong>Title:</strong> The title of the document.</li>
+            <li><strong>Author:</strong> The name of the individual or organization who authored the document.</li>
+            <li><strong>Subject:</strong> A description or subject assigned to the document.</li>
+            <li><strong>Creator:</strong> The application or tool used to create the original content.</li>
+            <li><strong>Producer:</strong> The software that converted the document to PDF.</li>
+            <li><strong>Creation Date:</strong> The original date the document was created.</li>
+            <li><strong>Modification Date:</strong> The most recent date the document was modified.</li>
+            <li><strong>PDF Version:</strong> The PDF format version (e.g., 1.4, 1.7).</li>
+            <li><strong>Number of Pages:</strong> Total page count of the PDF.</li>
+        </ul>
+
+        <h1>Instruction Manual:</h1>
+
+        <h3>1. Accessing the Tool:</h3>
+        <ul>
+            <li>Open your preferred web browser.</li>
+            <li>Navigate to the website where the <strong>PDF Metadata Extractor</strong> is located.</li>
+        </ul>
+
+        <h3>2. Uploading a PDF File:</h3>
+        <ul>
+            <li>Click the upload box or drag-and-drop a valid <code>.pdf</code> file into the designated area.</li>
+            <li>The tool will process the file automatically and extract available metadata.</li>
+        </ul>
+
+        <h3>3. Viewing Results:</h3>
+        <ul>
+            <li>The extracted metadata will be displayed in a structured list format.</li>
+            <li>If any metadata fields are missing from the PDF, they will be shown as "Not Available."</li>
+        </ul>
+
+        
+
+        <h3>5. Privacy and Security:</h3>
+        <ul>
+            <li>All file processing is done locally in your browser. No files are uploaded or stored externally.</li>
+        </ul>
+    </div>
+
+
+    <!-- Footer section starts here -->
+    <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+    <!-- Footer section ends here -->
+
+
 </body>
 </html>
+<script src="JS/JavaS8.js"></script>

@@ -34,3 +34,7 @@ async function generateHash() {
         alert('An error occurred while generating the hash. Please try again.');
     }
 }
+
+
+    
+

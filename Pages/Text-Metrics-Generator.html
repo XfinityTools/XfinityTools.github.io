@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Text-Metrics-Generator.html">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <title>Text Metrics Generator</title>
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="Text Metrics Generator" />
+    <meta charset="UTF-8">
+    <link href="Css/StyleSheet1.css" rel="stylesheet" />
+    <title>Text Metrics Generator | Xfinity Tools</title>
+    <link href="../Pages/Css/StyleSheet2.css" rel="stylesheet" />
+    <meta name="description" content="Free online file tool that allows you to analyze any sentence or text and get detailed metrics">
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Text Metrics Generator</p>
+        <a href="../Pages/Dashboards/Dashboard.html"><p style="font-size: 85%; font-family: 'Pacifico', cursive;">Go Back</p></a>
+    </div>
+
+    <div class="text-metrics-container">
+        <h2>Enter a Sentence</h2>
+
+        <div class="text-metrics-input-area">
+            <textarea class="text-metrics-input" id="textInput" placeholder="Type your sentence here..." rows="4" cols="50"></textarea>
+        </div>
+
+        <div>
+            <button class="text-metrics-btn" onclick="generateMetrics()">Generate Metrics</button>
+        </div><br /><br />
+        <div style="color:red;" id="error-message"></div>
+        <div id="output"></div>
+    </div>
+
+    <div  class="container-infobox-left">
+        <p>The "Text Metrics Generator" tool allows you to analyze any sentence or text and get detailed metrics. It provides data on the number of characters, words, sentences, vowels, consonants, and more. This tool helps you understand the composition of the text you're working with, offering a quick and easy way to analyze written content.</p>
+
+        <h1>Instruction Manual:</h1>
+
+        <h3>1. Accessing the Tool:</h3>
+        <ul>
+            <li>Open a web browser of your choice.</li>
+            <li>Navigate to the website or web application that hosts the "Text Metrics Generator" tool.</li>
+        </ul>
+
+        <h3>2. Inputting Text:</h3>
+        <ul>
+            <li>Type or paste your text or sentence into the provided input area (the text box).</li>
+        </ul>
+
+        <h3>3. Generating Text Metrics:</h3>
+        <ul>
+            <li>Click the "Generate Metrics" button.</li>
+            <li>The tool will process the text and provide the following metrics:</li>
+            <ul>
+                <li><strong>Character Count:</strong> Total number of characters (including spaces).</li>
+                <li><strong>Word Count:</strong> Total number of words.</li>
+                <li><strong>Sentence Count:</strong> Number of sentences in the text.</li>
+                <li><strong>Vowel Count:</strong> Total number of vowels (a, e, i, o, u).</li>
+                <li><strong>Consonant Count:</strong> Total number of consonants.</li>
+                <li><strong>Average Word Length:</strong> The average number of characters per word in the sentence.</li>
+                <li><strong>Character-to-Word Ratio:</strong> The ratio of characters to words.</li>
+            </ul>
+        </ul>
+
+        <h3>4. Additional Features:</h3>
+        <ul>
+            <li>Works with any text or sentence input.</li>
+            <li>Provides quick analysis for a better understanding of the text's structure.</li>
+        </ul>
+    </div>
+
+    <!-- Footer section starts here -->
+    <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+</body>
+</html>
+<style>
+    #textInput{
+        border:none;background-color:transparent;
+    }
+</style>
+<script src="JS/Exif.js"></script>

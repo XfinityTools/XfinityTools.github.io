@@ -30,8 +30,6 @@
     <!-- Other -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./Pages/JS/JavaS1.js"></script>
-
-    <script src="./Pages/JS/search.js"></script>
     <script src="DropDownMenu.js"></script>
     <link href="../Css/Bootstrap.css" rel="stylesheet" />
     <link href="../Css/Header.css" rel="stylesheet" />
@@ -44,7 +42,7 @@
 <body style="border-left: 5px solid #e60340;">
     <div class="header">
         <a href="/"><h1>Xfinity Tools</h1></a>
-        
+
 
         <button class="hamburger" onclick="toggleMenu()">☰</button>
 
@@ -58,23 +56,24 @@
     </div>
 
     <div id="SearchBarAndPageSelector" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-        
-       
-        <a href="/" class="btn btn-secondary btn-md" style="margin-right: 10px;">Home </a>
 
-        <input type="text"
-               id="searchInput"
-               placeholder="Search Tools" style="padding: 14px; width: 250px; border: 2px solid #e60340; border-radius: 2px; font-size: 12px; color:black;" />
 
+        <a href="/" class="btn btn-secondary btn-md dash-home-button" style="margin-right: 10px;">Home </a>
+
+        <input type="text" class="dash-searchbar" id="searchInput" placeholder="Search Tools" style="padding: 14px; width: 250px; border: 2px solid #e60340; border-radius: 2px; font-size: 12px; color:black;" />
+
+        <button type="button" id="searchButton" class="btn btn-secondary btn-md dash-search-button" style="margin-right: 10px;">
+            Search
+        </button>
 
     </div>
-    
-    
+
+
 
     <div class="row">
         <section id="FileZipper" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>File Zipper</h2>
             <p>
@@ -88,7 +87,7 @@
 
         <section id="PNGtoJPEG" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>PNG to JPEG</h2>
             <p>
@@ -102,7 +101,7 @@
 
         <section id="WebptoPNG" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>WebP to PNG</h2>
             <p>
@@ -119,7 +118,7 @@
     <div class="row">
         <section id="PNGtoWebP" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>PNG to WebP</h2>
             <p>
@@ -133,7 +132,7 @@
 
         <section id="SentenceCapitalization" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>Sentence Capitalization</h2>
             <p>
@@ -147,7 +146,7 @@
 
         <section id="CamelCaseConversion" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>Camel Case Conversion</h2>
             <p>
@@ -161,7 +160,7 @@
 
         <section id="SingleImagePDFConversion" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>Single Image PDF Conversion</h2>
             <p>
@@ -171,22 +170,11 @@
                 <a class="btn btn-default" href="../Single-Image-PDF.html">Use &raquo;</a>
             </p>
         </section>
-        <!--<section id="MultipleImagePDFConversion" class="col-md-4 card-dash">
-            <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
-            </div>
-            <h2>Multiple Image PDF Conversion</h2>
-            <p>
-                Multiple Image PDF Conversion is a utility commonly used in digital workflows where Multiple images needs to be saved or shared in a consistent document format. In this tool, multiple images is converted into a PDF file where the images fills the entire page without white borders. This is especially useful for preserving full-page graphics, scanned documents, or photos in a clean, printable format.
-            </p><br />
-            <p>
-                <a class="btn btn-default" href="../Multiple-Image-PDF.html">Use &raquo;</a>
-            </p>
-        </section>-->
+        
 
         <section id="PDFMerger" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>PDF Merger</h2>
             <p>
@@ -199,7 +187,7 @@
 
         <section id="PDFWatermark" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>PDF Watermark</h2>
             <p>
@@ -219,7 +207,7 @@
 
         <section id="ExceltoPDF" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>Excel to PDF</h2>
             <p>
@@ -233,7 +221,7 @@
 
         <section id="FileCompression" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>File Compression</h2>
             <p>
@@ -249,7 +237,7 @@
 
         <section id="HashingGenerator" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>Hashing Generator</h2>
             <p>
@@ -265,7 +253,7 @@
     <div class="row">
         <section id="TextToCSV" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>Text To CSV Convertor</h2>
             <p>
@@ -278,62 +266,64 @@
 
         <section id="EXIFDataExtractor" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>EXIF Data Extractor</h2>
             <p>
-
+                EXIF data extraction involves retrieving metadata embedded in an image, such as camera settings, date/time, and GPS location. This data helps analyze and organize images by providing details like shutter speed, aperture, and focal length. The extraction process allows users to view the data in a readable format and save it in various formats like text, CSV, or JSON for further use.
             </p><br />
             <p>
-                <!--<a class="btn btn-default" href="../TexttoCSV.html">Use &raquo;</a>-->
+                <a class="btn btn-default" href="../EXIF-Data-Extractor.html">Use &raquo;</a>
             </p>
         </section>
 
         <section id="PDFMetadataExtractor" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>PDF Metadata Extractor</h2>
             <p>
-
+                PDF Metadata Extraction involves retrieving descriptive information embedded within a PDF file, such as the document’s title, author, subject, creator software, producer, creation and modification dates, PDF version, and number of pages. This metadata helps users understand the document’s origin, authorship, and technical details. The extraction process displays this information in a readable format.
             </p><br />
             <p>
-                <!--<a class="btn btn-default" href="../TexttoCSV.html">Use &raquo;</a>-->
+                <a class="btn btn-default" href="../PDF-Metadata-Extractor.html">Use &raquo;</a>
             </p>
         </section>
 
     </div>
 
+    
+    
     <div class="row">
-        <section id="JSON-To-CSV" class="col-md-4 card-dash">
+        <section id="Text-Metrics-Generator" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
-            <h2>JSON To CSV</h2>
+            <h2>Text Metrics Generator</h2>
             <p>
-
+                Text Metrics Generation involves analyzing a body of text to extract useful statistics such as the number of characters, words, sentences, vowels, and consonants. It also calculates metrics like average word length and character-to-word ratio. This analysis helps users better understand the structure and readability of their writing. The extracted data is presented in a clean, readable format for review or further use.
             </p><br />
             <p>
-                <!--<a class="btn btn-default" href="../TexttoCSV.html">Use &raquo;</a>-->
+                <a class="btn btn-default" href="../Text-Metrics-Generator.html">Use &raquo;</a>
             </p>
         </section>
 
-        <section id="JSON To Text" class="col-md-4 card-dash">
+        <section id="JSON-To-CSV" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
-            <h2>JSON To Text</h2>
+            <h2>JSON To CSV</h2>
             <p>
-
+                JSON is a lightweight data-interchange format used primarily for transmitting data between servers and web applications. CSV is a simpler format often used for importing/exporting data into spreadsheets. Converting JSON to CSV makes it easier to read, share, and analyze structured data in tabular form.
             </p><br />
             <p>
-                <!--<a class="btn btn-default" href="../TexttoCSV.html">Use &raquo;</a>-->
+                <a class="btn btn-default" href="../JSON-To-CSV.html">Use &raquo;</a>
             </p>
         </section>
 
         <section id="CSV-To-Json" class="col-md-4 card-dash">
             <div>
-                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
             </div>
             <h2>CSV To Json</h2>
             <p>
@@ -343,39 +333,67 @@
                 <!--<a class="btn btn-default" href="../TexttoCSV.html">Use &raquo;</a>-->
             </p>
         </section>
+
+
+    </div>
+
+    <div class="row">
+        <section id="CSV-To-Json" class="col-md-4 card-dash">
+            <div>
+                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
+            </div>
+            <h2>CSV To Json</h2>
+            <p>
+                CSV to JSON is a versatile tool that enables seamless conversion of CSV (Comma-Separated Values) files into JSON (JavaScript Object Notation) format. This tool efficiently transforms structured data from a tabular format into a hierarchical format, making it easier to integrate with web applications, databases, or APIs. Users can simply upload a CSV file, and the tool generates a clean, structured JSON output. This is especially useful for developers, data analysts, and anyone needing to convert and manipulate CSV data in a more flexible, machine-readable format.
+            </p><br />
+            <p>
+                <!--<a class="btn btn-default" href="../TexttoCSV.html">Use &raquo;</a>-->
+            </p>
+        </section>
+
+        <section id="MultipleImagePDFConversion" class="col-md-4 card-dash">
+        <div>
+            <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
+        </div>
+        <h2>Multiple Image PDF Conversion</h2>
+        <p>
+            Multiple Image PDF Conversion is a utility commonly used in digital workflows where Multiple images needs to be saved or shared in a consistent document format. In this tool, multiple images is converted into a PDF file where the images fills the entire page without white borders. This is especially useful for preserving full-page graphics, scanned documents, or photos in a clean, printable format.
+        </p><br />
+        <p>
+            <!--<a class="btn btn-default" href="../Multiple-Image-PDF.html">Use &raquo;</a>-->
+        </p>
+    </section>
+        
+        <section id="Car-Loan-Calculator" class="col-md-4 card-dash">
+        <div>
+            <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
+        </div>
+        <h2>Car Loan Calculator</h2>
+        <p>
+            Car Loan Calculator is a practical tool designed to assist individuals in estimating monthly payments and total interest when purchasing a vehicle through financing. In this tool, users input key loan details such as vehicle price, down payment, interest rate, and loan term. The calculator then generates a breakdown of monthly installments, total repayment amount, and total interest. This is especially useful for budgeting, comparing loan options, or planning future vehicle purchases with clarity and confidence.
+        </p><br />
+            <p>
+                <!--<a class="btn btn-default" href="../Car-Loan-Calculator.html">Use &raquo;</a>-->
+            </p>
+    </section>
+
     </div>
 
 
+        <!-- Footer -->
 
-    <!-- Footer -->
+        <footer style="padding: 15px; margin-top: 30px; margin-left: 30px;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
 
-    <footer style="padding: 15px; margin-top: 30px; margin-left: 30px;">
-        <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
-        <script>
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-        </script>
-
-    </footer>
+        </footer>
+<script src="../JS/search.js"></script>
 </body>
 
 </html>
-<script>
-    document.getElementById('searchInput').addEventListener('keydown', function (event) {
-        if (event.key === 'Enter') {
-            const searchValue = this.value.toLowerCase();
-            const cards = document.querySelectorAll('.card-dash');
 
-            cards.forEach(function (card) {
-                const id = card.id.toLowerCase();
-                if (id.includes(searchValue)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-    });
-</script>
 
 
 

@@ -133,7 +133,8 @@ footer {
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+ 
+
     .hamburger {
         display: block;
     }
@@ -156,4 +157,14 @@ footer {
 
             font-size:18px;
         }
+
+    .dash-home-button{
+        visibility:hidden;
+    }
+
+
+
+    
+
+    
 }

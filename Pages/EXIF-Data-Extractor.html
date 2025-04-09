@@ -1,11 +1,110 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/EXIF-Data-Extractor.html">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <title>EXIF Data Extractor</title>
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="Free online file tool that allows you extract EXIF data from images" />
+   
+    <meta charset="UTF-8">
+    <title>EXIF Data Extractor | Xfinity Tools</title>
+    <link href="../Pages/Css/StyleSheet2.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
 </head>
 <body>
 
+    <div class="exif-header">
+        <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">EXIF Data Extractor</p>
+        <a href="../Pages/Dashboards/Dashboard.html"><p style="font-size: 85%; font-family: 'Pacifico', cursive;">Go Back</p></a>
+    </div>
+
+    <div class="exif-container">
+        <h2>Select or Drop an Image File</h2>
+
+        <div class="exif-drop-area" id="dropArea">
+            <p>Drag & Drop Image Here or Click to Upload</p>
+            <input type="file" id="imageInput" accept="image/*" style="display:none;">
+        </div>
+
+        <div id="output"></div>
+
+        <div class="exif-btn-group" id="downloadButtons" style="display:none;">
+            <button onclick="downloadText()">Download as TXT</button>
+            <button onclick="downloadCSV()">Download as CSV</button>
+            <button onclick="downloadJSON()">Download as JSON</button>
+        </div>
+    </div>
+
+    <div style="" class="container-infobox-left">
+        <p>The "EXIF Data Extractor" tool is a free web-based utility that allows you to extract EXIF data from image files. EXIF data contains information such as the camera settings, date and time the photo was taken, location (if available), and much more. This tool allows you to upload or drag-and-drop an image, automatically extracts the EXIF data, and presents the information in a table format. Additionally, you can download the extracted data in various formats such as text, CSV, or JSON.</p>
+
+        <h1>Instruction Manual:</h1>
+
+        <h3>1. Accessing the Tool:</h3>
+        <ul>
+            <li>Open a web browser of your choice.</li>
+            <li>Navigate to the website or web application that hosts the "EXIF Data Extractor" tool.</li>
+        </ul>
+
+        <h3>2. Uploading or Dragging and Dropping an Image:</h3>
+        <ul>
+            <li>Click on the "Drag & Drop Image Here or Click to Upload" area. This will open a file dialog allowing you to select an image from your device.</li>
+            <li>Alternatively, you can drag an image from your file manager and drop it directly into the designated area.</li>
+        </ul>
+
+        <h3>3. Extracting EXIF Data:</h3>
+        <ul>
+            <li>Once the image is uploaded or dropped, the tool will automatically begin extracting EXIF data from the image file.</li>
+            <li>If the image contains EXIF data, it will be displayed in a table format with tags and corresponding values.</li>
+            <li>If no EXIF data is found, a message will be displayed indicating this.</li>
+        </ul>
+
+        <h3>4. Downloading EXIF Data:</h3>
+        <ul>
+            <li>Once the EXIF data is displayed, you will have the option to download the data in different formats:</li>
+            <ul>
+                <li><strong>Download as TXT:</strong> Click the "Download as TXT" button to download the EXIF data in plain text format.</li>
+                <li><strong>Download as CSV:</strong> Click the "Download as CSV" button to download the EXIF data in CSV format, which can be opened in spreadsheet applications like Microsoft Excel or Google Sheets.</li>
+                <li><strong>Download as JSON:</strong> Click the "Download as JSON" button to download the EXIF data in JSON format, suitable for use in applications or for further processing.</li>
+            </ul>
+        </ul>
+
+        <h3>5. Additional Features:</h3>
+        <ul>
+            <li>The tool supports multiple image formats, including JPEG, PNG, and GIF.</li>
+            <li>It can display a variety of EXIF tags, such as the camera model, exposure settings, GPS coordinates (if available), and date/time of capture.</li>
+        </ul>
+
+    </div>
+
+    <!-- Footer section starts here -->
+    <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+
 </body>
 </html>
+<script src="JS/Exif.js"></script>
