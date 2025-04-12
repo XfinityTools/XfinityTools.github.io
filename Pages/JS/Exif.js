@@ -101,13 +101,7 @@ function generateMetrics() {
     errorMessage.textContent = "";
     output.innerHTML = "";
 
-    // Check if text contains numbers
-    if (/\d/.test(text)) {
-        errorMessage.textContent = "Error: Please enter only text, no numbers allowed.";
-        return;
-    }
-
-    if (text === "") {
+    if (text.trim() === "") {
         alert("Please enter some text.");
         return;
     }
@@ -117,21 +111,23 @@ function generateMetrics() {
     let sentences = text.split(/[.!?]+/).filter(Boolean).length;
     let vowels = text.match(/[aeiouAEIOU]/g) ? text.match(/[aeiouAEIOU]/g).length : 0;
     let consonants = text.match(/[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/g) ? text.match(/[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/g).length : 0;
+    let digits = text.match(/\d/g) ? text.match(/\d/g).length : 0;
     let avgWordLength = (words > 0) ? (characters / words).toFixed(2) : 0;
     let charToWordRatio = (words > 0) ? (characters / words).toFixed(2) : 0;
 
     let outputHTML = `
-                <h3>Text Metrics:</h3>
-                
-                    <li><strong>Character Count:</strong> ${characters}</li>
-                    <li><strong>Word Count:</strong> ${words}</li>
-                    <li><strong>Sentence Count:</strong> ${sentences}</li>
-                    <li><strong>Vowel Count:</strong> ${vowels}</li>
-                    <li><strong>Consonant Count:</strong> ${consonants}</li>
-                    <li><strong>Average Word Length:</strong> ${avgWordLength} characters</li>
-                    <li><strong>Character-to-Word Ratio:</strong> ${charToWordRatio}</li>
-                
-            `;
+        <h3>Text Metrics:</h3>
+        <ul>
+            <li><strong>Character Count:</strong> ${characters}</li>
+            <li><strong>Word Count:</strong> ${words}</li>
+            <li><strong>Sentence Count:</strong> ${sentences}</li>
+            <li><strong>Vowel Count:</strong> ${vowels}</li>
+            <li><strong>Consonant Count:</strong> ${consonants}</li>
+            <li><strong>Digit Count:</strong> ${digits}</li>
+            <li><strong>Average Word Length:</strong> ${avgWordLength} characters</li>
+            <li><strong>Character-to-Word Ratio:</strong> ${charToWordRatio}</li>
+        </ul>
+    `;
 
     output.innerHTML = outputHTML;
 }
