@@ -1,0 +1,21 @@
+Car-Loan-Calculator
+CamelCaseConversion
+CSV-To-Json
+ExceltoPDF
+EXIFDataExtractor
+FileCompression
+FileZipper
+HashingGenerator
+JSON-To-CSV
+PDFMerger
+PDFMetadataExtractor
+PDFWatermark
+PNGtoJPEG
+PNGtoWebP
+SentenceCapitalization
+SingleImagePDFConversion
+Text To Json
+Text-Metrics-Generator
+TextToCSV
+Text-to-Excel
+WebptoPNG
