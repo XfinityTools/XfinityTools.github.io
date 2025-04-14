@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Ad Revenue Estimator.html">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="Ad Revenue Estimator" />
+    <meta charset="UTF-8">
+    <link href="Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Pages/Css/StyleSheet2.css" rel="stylesheet" />
+    <title>Ad Revenue Estimator</title>
+
+    <style>
+        .adsense-tool {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 12px;
+            background: #f4f4f4;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+            .adsense-tool h2 {
+                text-align: center;
+                font-family: 'Teko', sans-serif;
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            .adsense-tool label {
+                display: block;
+                margin-bottom: 6px;
+                font-weight: bold;
+            }
+
+            .adsense-tool input, .adsense-tool select {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 16px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+            }
+
+            .adsense-tool button {
+                width: 100%;
+                padding: 10px;
+                background: #28a745;
+                color: white;
+                border: none;
+                font-size: 1rem;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+
+                .adsense-tool button:hover {
+                    background: #218838;
+                }
+
+        .result {
+            margin-top: 20px;
+            padding: 12px;
+            background: #fff;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+    </style>
+
+    <script>
+        function calculateEarnings() {
+            const rpm = parseFloat(document.getElementById("rpm").value);
+            const impressions = parseInt(document.getElementById("impressions").value);
+            const ctr = parseFloat(document.getElementById("ctr").value);
+            const cpc = parseFloat(document.getElementById("cpc").value);
+            const currency = document.getElementById("currency").value;
+            const resultDiv = document.getElementById("result");
+
+            if (isNaN(rpm) || isNaN(impressions)) {
+                resultDiv.innerHTML = "<p>Please enter valid RPM and impression values.</p>";
+                return;
+            }
+
+            const earningsFromRPM = (rpm / 1000) * impressions;
+            const projectedRPM = (rpm / 1000) * 1000;
+            const remaining = impressions < 1000 ? 1000 - impressions : 0;
+
+            let clickEarnings = "";
+            if (!isNaN(ctr) && !isNaN(cpc)) {
+                const estimatedClicks = impressions * (ctr / 100);
+                const earningsFromClicks = estimatedClicks * cpc;
+                clickEarnings = `
+                    <p><strong>Estimated Clicks:</strong> ${estimatedClicks.toFixed(2)}</p>
+                    <p><strong>Estimated CPC Earnings:</strong> ${currency}${earningsFromClicks.toFixed(2)}</p>
+                `;
+            }
+
+            resultDiv.innerHTML = `
+                <p><strong>Estimated RPM Earnings:</strong> ${currency}${earningsFromRPM.toFixed(2)}</p>
+                <p><strong>Projected Earnings @ 1000 Impressions:</strong> ${currency}${projectedRPM.toFixed(2)}</p>
+                ${remaining > 0 ? `<p><strong>Impressions Remaining to Reach 1000:</strong> ${remaining}</p>` : ""}
+                ${clickEarnings}
+            `;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></p>
+        <a href="../Pages/Dashboards/Dashboard.html"><p style="font-size: 85%; font-family: 'Pacifico', cursive;">Go Back</p></a>
+    </div>
+
+    <br />
+
+
+    <div class="adsense-tool">
+        <h2>Ad Revenue Estimator</h2>
+
+        <label for="currency">Currency</label>
+        <select id="currency">
+            <option value="$">USD ($)</option>
+            <option value="J$">JMD (J$)</option>
+            <option value="�">GBP (�)</option>
+            <option value="�">EUR (�)</option>
+        </select>
+
+        <label for="rpm">Impression RPM</label>
+        <input type="number" step="0.01" id="rpm" placeholder="e.g. 4.50" required>
+
+        <label for="impressions">Number of Impressions</label>
+        <input type="number" id="impressions" placeholder="e.g. 650" required>
+
+        <label for="ctr">CTR (%) <span style="font-weight: normal;">(optional)</span></label>
+        <input type="number" step="0.01" id="ctr" placeholder="e.g. 2.5">
+
+        <label for="cpc">CPC <span style="font-weight: normal;">(optional)</span></label>
+        <input type="number" step="0.01" id="cpc" placeholder="e.g. 0.15">
+
+        <button onclick="calculateEarnings()">Estimate Earnings</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+
+    <footer style="padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+</body>
+</html>

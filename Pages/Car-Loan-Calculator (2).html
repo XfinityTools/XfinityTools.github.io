@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-language" content="en-us">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="description" content="Free online tool that calculates car loan payments based on car price, interest, period and inflation." />
+
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Text-Metrics-Generator.html">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <link href="Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Pages/Css/StyleSheet2.css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+
+    <!-- Google Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+
+    <title>Car Loan Calculator</title>
+    <style>
+        input, select, button {
+            margin: 10px 0;
+            padding: 8px;
+            width: 250px;
+        }
+
+        .results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-metrics-header">
+        <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Car Loan Calculator</p>
+        <a href="../Pages/Dashboards/Dashboard.html"><p style="font-size: 85%; font-family: 'Pacifico', cursive;">Go Back</p></a>
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            <label>Price of Car:</label><br>
+            <input type="text" id="carPrice" placeholder="e.g., 25000"><br>
+
+            <label>Downpayment:</label><br>
+            <input type="text" id="downpayment" placeholder="Place 0 if there is none"><br>
+
+            <label>Year of Vehicle:</label><br>
+            <input type="text" id="vehicleYear" placeholder="e.g., 2022"><br>
+
+            <label>Loan Period:</label><br>
+            <input type="number" id="loanPeriod" placeholder="e.g., 5"><br>
+
+            <label>Is the loan period in Months or Years?</label><br>
+            <select id="loanType">
+                <option value="years">Years</option>
+                <option value="months">Months</option>
+            </select><br>
+
+            <label>Inflation Rate (optional):</label><br>
+            <input type="number" id="inflationRate" placeholder="e.g., 2.5"><br>
+
+            <label>Car Condition:</label><br>
+            <select id="carCondition">
+                <option value="new">New</option>
+                <option value="used">Used</option>
+            </select><br>
+
+            <label>Interest Rate (%):</label><br>
+            <input type="number" id="interestRate" placeholder="e.g., 6"><br>
+
+            <button onclick="calculateLoan()">Calculate</button>
+            <div class="results" id="results"></div><br />
+
+            <label>Name your file:</label><br>
+            <input type="text" id="filename" placeholder="e.g., car_loan"><br>
+
+            <button onclick="downloadFile('pdf')">Download PDF</button>
+            <button onclick="downloadFile('csv')">Download CSV</button>
+            <button onclick="downloadFile('txt')">Download TXT</button>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        function formatNumber(num) {
+            return Number(num).toLocaleString('en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+        }
+
+        ['carPrice', 'downpayment'].forEach(id => {
+            document.getElementById(id).addEventListener('input', function (e) {
+                const cursorPos = e.target.selectionStart;
+                let val = e.target.value.replace(/,/g, '');
+                if (!isNaN(val) && val.length > 0) {
+                    const formatted = parseFloat(val).toLocaleString('en-US');
+                    e.target.value = formatted;
+                    e.target.setSelectionRange(cursorPos, cursorPos);
+                }
+            });
+        });
+
+        let lastResults = {};
+
+        function calculateLoan() {
+            const carPriceRaw = document.getElementById("carPrice").value.replace(/,/g, '');
+            const downpaymentRaw = document.getElementById("downpayment").value.replace(/,/g, '');
+            const vehicleYear = parseInt(document.getElementById("vehicleYear").value);
+            const loanPeriod = parseFloat(document.getElementById("loanPeriod").value);
+            const loanType = document.getElementById("loanType").value;
+            const inflationRate = parseFloat(document.getElementById("inflationRate").value);
+            const carCondition = document.getElementById("carCondition").value;
+            const interestRate = parseFloat(document.getElementById("interestRate").value);
+
+            const principal = parseFloat(carPriceRaw);
+            const downpayment = parseFloat(downpaymentRaw);
+
+            if (isNaN(principal) || isNaN(downpayment) || isNaN(loanPeriod) || isNaN(interestRate)) {
+                alert("Please enter valid values for price, downpayment, loan period, and interest rate.");
+                return;
+            }
+
+            const months = loanType === 'years' ? loanPeriod * 12 : loanPeriod;
+            const loanYears = loanType === 'years' ? loanPeriod : loanPeriod / 12;
+            const adjustedInterestRate = interestRate / 100 / 12;
+            const inflationFactor = (1 + (isNaN(inflationRate) ? 0 : inflationRate / 100));
+
+            const adjustedPrincipal = principal - downpayment;
+            const monthlyPayment = (adjustedPrincipal * adjustedInterestRate) / (1 - Math.pow(1 + adjustedInterestRate, -months));
+            const totalPayment = monthlyPayment * months * (carCondition === "used" ? 1 : inflationFactor);
+            const totalInterest = totalPayment - adjustedPrincipal;
+
+            const yearAfterLoan = (!isNaN(vehicleYear)) ? vehicleYear + Math.round(loanYears) : 'N/A';
+
+            let resultHTML = `
+            <strong>Price of Car:</strong> $${formatNumber(principal)}<br>
+            <strong>Downpayment:</strong> $${formatNumber(downpayment)}<br>
+            <strong>Year of Vehicle:</strong> ${vehicleYear || 'N/A'}<br>
+            <strong>Year After Loan:</strong> ${yearAfterLoan}<br>
+            <strong>Monthly Payment:</strong> $${formatNumber(monthlyPayment)}<br>
+            <strong>Total Payment:</strong> $${formatNumber(totalPayment)}<br>
+            <strong>Total Interest Paid:</strong> $${formatNumber(totalInterest)}<br>
+            <strong>Interest Rate:</strong> ${interestRate}%<br>
+        `;
+
+            if (!isNaN(inflationRate)) {
+                resultHTML += `<strong>Inflation Rate:</strong> ${inflationRate}%<br>`;
+            }
+
+            document.getElementById("results").innerHTML = resultHTML;
+
+            lastResults = {
+                carPrice: formatNumber(principal),
+                downpayment: formatNumber(downpayment),
+                monthly: formatNumber(monthlyPayment),
+                total: formatNumber(totalPayment),
+                interest: formatNumber(totalInterest),
+                interestRate: interestRate,
+                inflation: isNaN(inflationRate) ? null : inflationRate,
+                condition: carCondition,
+                vehicleYear: vehicleYear || "N/A",
+                yearAfterLoan: yearAfterLoan,
+                loanYears: loanYears
+            };
+        }
+
+
+        const { carPrice, downpayment, monthly, total, interest, interestRate, inflation, condition, vehicleYear, loanYears, yearAfterLoan } = lastResults;
+
+        if (!monthly || !total) {
+            alert("Please calculate the loan before downloading.");
+            return;
+        }
+
+        const lines = [
+            `Price of Car: $${carPrice}`,
+            `Downpayment: $${downpayment}`,
+            `Year of Vehicle: ${vehicleYear}`,
+            `Year After Loan: ${yearAfterLoan}`,
+            `Monthly Payment: $${monthly}`,
+            `Total Payment: $${total}`,
+            `Total Interest Paid: $${interest}`,
+            `Interest Rate: ${interestRate}%`
+        ];
+
+        if (inflation !== null) {
+            lines.push(`Inflation Rate: ${inflation}%`);
+        }
+
+        lines.push(`Summary: Your ${condition} car with a downpayment of $${downpayment} will cost you $${monthly} monthly, with a total interest of $${interest} and a total cost of $${total} over the span of ${loanYears} year(s). The car will be ${yearAfterLoan} years old at the end of the loan.`);
+
+    </script>
+
+    <!-- Footer -->
+    <footer style="padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content: center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+        </div>
+        <script>
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+</html>
