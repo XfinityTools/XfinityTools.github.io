@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/CSV-to-Excel.html">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <link href="Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Pages/Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Pages/Css/StyleSheet3.css" rel="stylesheet" />
+   
+    <title>CSV to Excel Converter</title>
+
+    <!-- SheetJS library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></p>
+        <a href="../Pages/Dashboards/Dashboard.html"><p style="font-size: 85%; font-family: 'Pacifico', cursive;">Go Back</p></a>
+    </div>
+
+    <br />
+
+    <div class="container">
+        <div class="main-content">
+
+
+            <!-- CSV to Excel Tool Starts Here -->
+            <div class="csv-tool">
+                <h2>CSV to Excel Converter</h2>
+                <input type="file" id="csvFileInput" accept=".csv">
+                <br>
+                <button onclick="convertCSVtoExcel()">Convert & Download Excel</button>
+            </div>
+            <!-- CSV to Excel Tool Ends Here -->
+
+        </div>
+    </div>
+
+    <div class="container-infobox-left">
+        <p>The "CSV to Excel Converter" tool transforms comma-separated values (CSV) files into Excel spreadsheets. This allows users to organize, edit, and analyze their CSV data in a structured Excel format. It’s ideal for working with data exports from databases, surveys, financial records, and more.</p>
+
+        <h1>Instruction Manual:</h1>
+
+        <h3>1. Accessing the Tool:</h3>
+        <ul>
+            <li>Open your preferred web browser.</li>
+            <li>Navigate to the page that hosts the "CSV to Excel Converter" tool.</li>
+        </ul>
+
+        <h3>2. Uploading Your CSV File:</h3>
+        <ul>
+            <li>Click the <strong>"Choose File"</strong> or <strong>"Browse"</strong> button.</li>
+            <li>Select a CSV file (<code>.csv</code>) from your computer or device.</li>
+        </ul>
+
+        <h3>3. Converting and Downloading:</h3>
+        <ul>
+            <li>Click the <strong>"Convert & Download Excel"</strong> button.</li>
+            <li>The tool will parse your CSV data and convert it into a formatted Excel spreadsheet.</li>
+            <li>An Excel file (<code>.xlsx</code>) will automatically be generated and downloaded to your device.</li>
+        </ul>
+
+        <h3>4. Opening the Excel File:</h3>
+        <ul>
+            <li>Locate the downloaded file on your computer.</li>
+            <li>Open it using Microsoft Excel, Google Sheets, or any compatible spreadsheet application.</li>
+        </ul>
+
+        <h3>5. Tips:</h3>
+        <ul>
+            <li>Ensure your CSV file is properly formatted with commas separating each value.</li>
+            <li>The tool automatically detects headers and places each value into its own cell.</li>
+            <li>If your data contains special characters or commas within values, ensure it's properly quoted in the CSV.</li>
+        </ul>
+    </div>
+
+
+    <!-- Footer section starts here -->
+    <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+
+    <script>
+        function convertCSVtoExcel() {
+            const fileInput = document.getElementById('csvFileInput');
+            if (!fileInput.files.length) {
+                alert('Please select a CSV file first.');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const csvData = e.target.result;
+                const workbook = XLSX.utils.book_new();
+                const worksheet = XLSX.utils.csv_to_sheet(csvData);
+                XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
+
+                XLSX.writeFile(workbook, "converted_excel_file.xlsx");
+            };
+            reader.readAsText(fileInput.files[0]);
+        }
+    </script>
+
+
+</body>
+</html>
+<script src="Java/JS1.js"></script>

@@ -1,8 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Text-To-JSON">
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/CSV-To-Json.html">
     <meta name="geo.region" content="JM">
     <meta name="geo.placename" content="Kingston, Jamaica">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
@@ -21,14 +20,18 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
     <meta name="description" content="" />
     <meta charset="UTF-8">
-    <script src="Java/JS1.js"></script>
     <link href="Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Pages/Css/StyleSheet2.css" rel="stylesheet" />
-    <link href="../Pages/Css/StyleSheet4.css" rel="stylesheet" />
+    <link href="../Pages/Css/StyleSheet5.css" rel="stylesheet" />
+    <script src="Java/JS1.js"></script>
+
+    <title>CSV to JSON Converter</title>
+
     
-    <title>Text to JSON Converter</title>
 
-
+    <script>
+        
+    </script>
 </head>
 <body>
 
@@ -43,57 +46,58 @@
     <div class="container">
         <div class="main-content">
 
-            <div class="json-text-toolbox">
-                <h2>Text to JSON Converter</h2>
-                <input type="file" id="textFileInput" accept=".txt" />
-                <button onclick="convertTextToJson()">Convert to JSON</button>
-                <button onclick="downloadJson()">Download JSON</button>
-                <textarea id="jsonOutput" readonly placeholder="Your JSON will appear here..."></textarea>
+            <div class="tool-box">
+                <h2>CSV to JSON Converter</h2>
+                <p>Select a CSV file to convert it into JSON format:</p>
+                <input type="file" accept=".csv" onchange="handleCSVUpload(event)" />
+                <label for="jsonOutput"><strong>JSON Output:</strong></label>
+                <textarea id="jsonOutput" readonly></textarea>
+                <button onclick="downloadJSON()">Download JSON</button>
             </div>
 
         </div>
     </div>
 
     <div class="container-infobox-left">
-        <p>The "Text to JSON Converter" tool transforms structured plain text into JSON (JavaScript Object Notation) format. This is useful for developers, data analysts, and content managers who need to work with structured data in a programmatic format. The tool detects headers and formats data into key-value pairs that can be saved and reused in applications.</p>
+        <p>The "CSV to JSON Converter" tool allows you to convert CSV (Comma-Separated Values) data into JSON format. This is especially helpful for developers, data engineers, and web designers who need to transform tabular data into a structured and programmatically usable format. The tool reads the headers and rows, then outputs a JSON array with key-value mappings.</p>
 
         <h1>Instruction Manual:</h1>
 
         <h3>1. Accessing the Tool:</h3>
         <ul>
-            <li>Open any modern web browser such as Chrome, Edge, or Firefox.</li>
-            <li>Navigate to the webpage that hosts the "Text to JSON Converter" tool.</li>
+            <li>Open a web browser such as Chrome, Firefox, Safari, or Edge.</li>
+            <li>Navigate to the webpage where the "CSV to JSON Converter" tool is hosted.</li>
         </ul>
 
-        <h3>2. Inputting Your Text Data:</h3>
+        <h3>2. Uploading Your CSV File:</h3>
         <ul>
-            <li>Copy your structured text data (such as tabular or aligned columns) into your clipboard.</li>
-            <li>Paste the data into the provided input box on the tool’s interface.</li>
+            <li>Click on the <strong>"Choose File"</strong> button.</li>
+            <li>Select a CSV file from your device with properly formatted data (with headers in the first row).</li>
         </ul>
 
         <h3>3. Converting to JSON:</h3>
         <ul>
             <li>Click the <strong>"Convert"</strong> button.</li>
-            <li>The tool will automatically detect headers and generate a structured JSON array.</li>
-            <li>The formatted JSON output will appear in the output box below.</li>
+            <li>The tool reads the CSV file and automatically converts the data into JSON format.</li>
+            <li>The output will be displayed in a readable JSON structure in the output box.</li>
         </ul>
 
         <h3>4. Downloading the JSON File:</h3>
         <ul>
-            <li>Click the <strong>"Download JSON"</strong> button to save the result as a <code>.json</code> file.</li>
-            <li>You can then use this file in applications, databases, or APIs that require JSON input.</li>
+            <li>Click the <strong>"Download JSON"</strong> button to save the output as a <code>.json</code> file.</li>
+            <li>You can now use this file in your applications, APIs, or databases that support JSON.</li>
         </ul>
 
         <h3>5. Tips:</h3>
         <ul>
-            <li>Ensure your text data follows a consistent structure — ideally with headers followed by rows of data.</li>
-            <li>The tool supports automatic header detection and creates objects for each row.</li>
-            <li>Use the output in programming environments or for data transfer between systems.</li>
+            <li>Make sure your CSV file uses commas (,) to separate values, and the first row contains column headers.</li>
+            <li>For best results, avoid empty rows or inconsistent column counts.</li>
+            <li>Use the tool to simplify data exchange between spreadsheet software and web-based systems.</li>
         </ul>
     </div>
 
 
-    <footer style="padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+    <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
         <div class="footer-container" style="display: flex; justify-content:center;">
             <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
             <script>
@@ -102,7 +106,6 @@
         </div>
     </footer>
 
-
-
 </body>
 </html>
+<script src="Java/JS1.js"></script>

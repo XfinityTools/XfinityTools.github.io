@@ -1,0 +1,53 @@
+
+.tool-box {
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.tool-box h2 {
+    font-family: 'Teko', sans-serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.tool-box input[type="file"],
+.tool-box textarea,
+.tool-box button {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.tool-box button {
+    width: 40%;
+}
+
+.tool-box textarea {
+    height: 300px;
+    font-family: monospace;
+    font-size: 14px;
+    padding: 10px;
+    resize: vertical;
+}
+
+.tool-box button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .tool-box button:hover {
+        background-color: #388E3C;
+    }
+
+#jsonOutput {
+    border: 2px solid black;
+}
+
+

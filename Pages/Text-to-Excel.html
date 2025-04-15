@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Text-to-Excel.html">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <link href="Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Pages/Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Pages/Css/StyleSheet3.css" rel="stylesheet" />
+    <title>Text to Excel Converter</title>
+    <script src="Java/JS1.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></p>
+        <a href="../Pages/Dashboards/Dashboard.html"><p style="font-size: 85%; font-family: 'Pacifico', cursive;">Go Back</p></a>
+    </div>
+
+    <br />
+
+    <div class="container">
+        <div class="main-content">
+
+            <div class="tool-box">
+                <h2>Text to Excel Converter</h2>
+                <p>Select a fixed-width text file to convert it into an Excel file:</p>
+                <input type="file" accept=".txt" onchange="handleTxtUpload(event)" />
+                <p><strong>Note:</strong> Excel will automatically download after file is processed.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-infobox-left">
+        <p>The "Text-to-Excel Converter" tool allows users to convert structured or fixed-width plain text files into fully formatted Excel spreadsheets. This is useful for transforming data such as payroll records, tabulated reports, or column-based logs into editable rows and columns that can be analyzed or shared using spreadsheet software like Microsoft Excel.</p>
+
+        <h1>Instruction Manual:</h1>
+
+        <h3>1. Accessing the Tool:</h3>
+        <ul>
+            <li>Open your preferred web browser (e.g., Chrome, Edge, Firefox).</li>
+            <li>Navigate to the page hosting the "Text-to-Excel Converter" tool.</li>
+        </ul>
+
+        <h3>2. Uploading Your Text File:</h3>
+        <ul>
+            <li>Click the <strong>"Choose File"</strong> or <strong>"Browse"</strong> button.</li>
+            <li>Select a plain text (<code>.txt</code>) file from your device that contains structured or fixed-width data.</li>
+        </ul>
+
+        <h3>3. Converting and Downloading:</h3>
+        <ul>
+            <li>Click the <strong>"Convert & Download Excel"</strong> button to begin the conversion process.</li>
+            <li>The tool will automatically detect columns based on spacing and create rows accordingly.</li>
+            <li>An Excel file (<code>.xlsx</code>) will be generated and downloaded to your computer.</li>
+        </ul>
+
+        <h3>4. Opening the Excel File:</h3>
+        <ul>
+            <li>Open the downloaded Excel file in Microsoft Excel, Google Sheets, or any compatible spreadsheet application.</li>
+            <li>Review and edit the content as needed.</li>
+        </ul>
+
+        <h3>5. Tips:</h3>
+        <ul>
+            <li>Ensure that your text file uses consistent spacing for the best column alignment.</li>
+            <li>This tool works best with data formatted in rows with fixed-width or clearly separated values.</li>
+            <li>If needed, clean or reformat your text data slightly before uploading for optimal results.</li>
+        </ul>
+    </div>
+
+
+    <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+</body>
+</html>
+<script src="Java/JS1.js"></script>
