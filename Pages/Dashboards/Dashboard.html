@@ -40,7 +40,7 @@
 
     <title>Xfinity Tools - Tools Dashboard</title>
 </head>
-<body style="border-left: 5px solid #e60340;">
+<body style="border: 5px solid #e60340; border-bottom:none;">
     <div class="header">
         <a href="/"><h1>Xfinity Tools Dashboard</h1></a>
 
@@ -63,9 +63,11 @@
 
         <input type="text" class="dash-searchbar" id="searchInput" placeholder="Search Tools" style="padding: 14px; width: 250px; border: 2px solid #e60340; border-radius: 2px; font-size: 12px; color:black;" />
 
-        <button type="button" id="searchButton" class="btn btn-secondary btn-md dash-search-button" style="margin-right: 10px;">
-            Search
-        </button>
+        <button type="button" id="searchButton" class="btn btn-secondary btn-md dash-search-button" style="margin-right: 10px;">Search </button>
+
+        <a href="Pages/Dashboards/Dashboard.html" id="toolslibrarybutton" class="btn btn-primary btn-mdbtn btn-secondary btn-md dash-search-button" style="margin-right: 10px; display:inline-block;"> Tools Library</a>
+
+
 
     </div>
 
@@ -453,6 +455,18 @@
 </body>
 
 </html>
+
+<style>
+    
+
+    @media (max-width: 768px) {
+        #toolslibrarybutton {
+            width:66px;
+            padding:9px;
+            font-size:11px;
+        }
+    }
+</style>
 
 
 
