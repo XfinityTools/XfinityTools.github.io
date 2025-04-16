@@ -1,0 +1,80 @@
+.diff-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.diff-title {
+    text-align: center;
+    font-family: 'Teko', sans-serif;
+    font-size: 2em;
+}
+
+.diff-inputs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.diff-textarea {
+    width: 100%;
+    height: 200px;
+    font-family: monospace;
+    font-size: 14px;
+    border: 1px solid black;
+    padding: 10px;
+    resize: vertical;
+}
+
+.diff-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+    .diff-buttons button {
+        padding: 8px 16px;
+        border: none;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+        .diff-buttons button:hover {
+            background-color: #555;
+        }
+
+.diff-results {
+    display: flex;
+    gap: 20px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+
+.diff-column {
+    width: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.diff-line-number {
+    display: inline-block;
+    width: 40px;
+    color: gray;
+}
+
+.diff-added {
+    background-color: #d4edda;
+}
+
+.diff-removed {
+    background-color: #f8d7da;
+}
+
+.diff-unchanged {
+    background-color: #fff;
+}

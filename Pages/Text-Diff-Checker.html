@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Dependencies and Logic -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <link href="Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Pages/Css/StyleSheet2.css" rel="stylesheet" />
+
+    <title>Text Diff Checker</title>
+
+    <style>
+        .diffTextArea {
+            width: 48%;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid black;
+            font-family: monospace;
+            white-space: pre;
+        }
+
+        .diffTextAreas, .diffButtons, .diffFileInputs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 10px 0;
+        }
+
+        .diffBlock {
+            width: 32%;
+        }
+
+        .diffBlock h3 {
+            text-align: center;
+        }
+
+        .diffOutput {
+            border: 1px solid black;
+            padding: 10px;
+            background: #ffffff;
+            height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .diffSideBySide {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .diff-added { background-color: #d4fdd4; }
+        .diff-removed { background-color: #ffd6d6; }
+        .diff-line-number { color: gray; padding-right: 10px; }
+        .diffPDFBtn {
+            padding: 8px 20px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="text-metrics-header">
+    <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+    <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Text Difference Checker</p>
+    <a href="../Pages/Dashboards/Dashboard.html"><p style="font-size: 85%; font-family: 'Pacifico', cursive;">Go Back</p></a>
+</div>
+
+<br />
+
+<div class="container">
+    <div class="main-content">
+        <div class="diffTextAreas">
+            <textarea id="text1" class="diffTextArea" placeholder="Enter or upload first text..."></textarea>
+            <textarea id="text2" class="diffTextArea" placeholder="Enter or upload second text..."></textarea>
+        </div>
+
+        <div class="diffFileInputs">
+            <input type="file" id="file1" accept=".txt">
+            <input type="file" id="file2" accept=".txt">
+        </div>
+
+        <div class="diffButtons">
+            <button onclick="compareText()" class="diffPDFBtn">Compare</button>
+            <button onclick="downloadPDF()" class="diffPDFBtn">Download PDF</button>
+        </div>
+
+        <div class="diffSideBySide">
+            <div class="diffBlock">
+                <h3>Text 1</h3>
+                <pre id="diffOutput1" class="diffOutput"></pre>
+            </div>
+            <div class="diffBlock">
+                <h3>Text 2</h3>
+                <pre id="diffOutput2" class="diffOutput"></pre>
+            </div>
+            <div class="diffBlock">
+                <h3>Differences Only</h3>
+                <pre id="diffOnlyOutput" class="diffOutput"></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer section starts here -->
+<footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+    <div class="footer-container" style="display: flex; justify-content:center;">
+        <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+        <script>
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
+    </div>
+</footer>
+
+
+
+
+    <script>
+    function compareText() {
+        const text1 = document.getElementById('text1').value.split('\n');
+        const text2 = document.getElementById('text2').value.split('\n');
+        const maxLength = Math.max(text1.length, text2.length);
+        let out1 = '', out2 = '', diffs = '';
+
+        for (let i = 0; i < maxLength; i++) {
+            const line1 = text1[i] || '';
+            const line2 = text2[i] || '';
+            const lineNum = (i + 1).toString().padStart(3, ' ') + ' | ';
+            const diffLine1 = line1 !== line2 ? `<span class="diff-removed">${line1}</span>` : line1;
+            const diffLine2 = line1 !== line2 ? `<span class="diff-added">${line2}</span>` : line2;
+
+            out1 += `<span class="diff-line-number">${lineNum}</span>${diffLine1}\n`;
+            out2 += `<span class="diff-line-number">${lineNum}</span>${diffLine2}\n`;
+
+            if (line1 !== line2) {
+                diffs += `<span class="diff-line-number">${lineNum}</span>${diffLine1} ↔ ${diffLine2}\n`;
+            }
+        }
+
+        document.getElementById('diffOutput1').innerHTML = out1;
+        document.getElementById('diffOutput2').innerHTML = out2;
+        document.getElementById('diffOnlyOutput').innerHTML = diffs;
+    }
+
+    document.getElementById('file1').addEventListener('change', e => {
+        const reader = new FileReader();
+        reader.onload = () => document.getElementById('text1').value = reader.result;
+        reader.readAsText(e.target.files[0]);
+    });
+
+    document.getElementById('file2').addEventListener('change', e => {
+        const reader = new FileReader();
+        reader.onload = () => document.getElementById('text2').value = reader.result;
+        reader.readAsText(e.target.files[0]);
+    });
+</script>
+
+  </body>
+ </html>
