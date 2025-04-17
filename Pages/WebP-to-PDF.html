@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/WebP-to-PDF.html">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <link href="Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Pages/Css/StyleSheet2.css" rel="stylesheet" />
+    <title>WebP to PDF Converter</title>
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">WebP to PDF Converter</p>
+        <a href="../Pages/Dashboards/Dashboard.html"><p style="font-size: 85%; font-family: 'Pacifico', cursive;">Go Back</p></a>
+    </div>
+
+    <br />
+
+    <div class="container">
+        <div class="main-content">
+
+            <div id="drop-area" style="border: 2px dashed #ccc; padding: 20px; text-align: center; cursor: pointer;">
+                <p>Drag & drop .webp images here or click to upload</p>
+                <input type="file" id="fileElem" multiple accept=".webp" style="display:none">
+            </div>
+            <br />
+            <button id="convertDownloadBtn" style="background-color: green; color: white; border: none; padding: 10px; cursor:pointer;">Convert & Download PDF</button>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+            <script>
+                const dropArea = document.getElementById('drop-area');
+                const fileElem = document.getElementById('fileElem');
+                const convertDownloadBtn = document.getElementById('convertDownloadBtn');
+                let imageFiles = [];
+
+                dropArea.addEventListener('click', () => {
+                    fileElem.click();
+                });
+
+                dropArea.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    dropArea.style.borderColor = 'green';
+                });
+
+                dropArea.addEventListener('dragleave', () => {
+                    dropArea.style.borderColor = '#ccc';
+                });
+
+                dropArea.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    dropArea.style.borderColor = '#ccc';
+                    handleFiles(e.dataTransfer.files);
+                });
+
+                fileElem.addEventListener('change', () => {
+                    handleFiles(fileElem.files);
+                });
+
+                function handleFiles(files) {
+                    imageFiles = [];
+                    for (let file of files) {
+                        if (file.type === 'image/webp') {
+                            imageFiles.push(file);
+                        }
+                    }
+                }
+
+                convertDownloadBtn.addEventListener('click', () => {
+                    if (imageFiles.length === 0) {
+                        alert("Please upload at least one WebP image.");
+                        return;
+                    }
+
+                    const { jsPDF } = window.jspdf;
+                    const pdf = new jsPDF();
+
+                    let processedCount = 0;
+
+                    imageFiles.forEach((file, index) => {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            const img = new Image();
+                            img.onload = function () {
+                                const canvas = document.createElement('canvas');
+                                const ctx = canvas.getContext('2d');
+                                canvas.width = img.width;
+                                canvas.height = img.height;
+                                ctx.drawImage(img, 0, 0);
+
+                                const imgData = canvas.toDataURL('image/jpeg', 1.0);
+                                if (index > 0) pdf.addPage();
+                                pdf.addImage(imgData, 'JPEG', 10, 10, 190, 0);
+
+                                processedCount++;
+                                if (processedCount === imageFiles.length) {
+                                    pdf.save("webp_to_pdf.pdf");
+                                }
+                            };
+                            img.src = e.target.result;
+                        };
+                        reader.readAsDataURL(file);
+                    });
+                });
+            </script>
+
+        </div>
+
+
+    </div>
+
+    <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+</body>
+</html>

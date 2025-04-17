@@ -51,3 +51,44 @@
 }
 
 
+
+.drop-zone {
+    border: 2px dashed #888;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.drop-zone.dragover {
+    background-color: #f0f0f0;
+}
+
+.download-list a {
+    display: inline-block;
+    margin: 8px 0;
+}
+
+.btn.btn-default {
+    background-color: green;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    text-decoration: none;
+    border-radius: 0;
+    transition: background 0.2s ease-in-out;
+}
+
+    .btn.btn-default:hover {
+        background-color: darkgreen;
+    }
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+
+
+

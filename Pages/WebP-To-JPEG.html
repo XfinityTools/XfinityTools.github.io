@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/WebP-To-JPEG.html">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <meta http-equiv="content-language" content="en-us">
+    <meta charset="UTF-8">
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert multiple WebP images to JPEG with drag-and-drop functionality. Easy, fast, and online.">
+
+    <!-- Google Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <link href="Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Pages/Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Pages/Css/StyleSheet5.css" rel="stylesheet" />
+        
+
+    <title>WebP to JPEG </title>
+
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">WebP to JPEG Converter</p>
+        <a href="../Pages/Dashboards/Dashboard.html"><p style="font-size: 85%; font-family: 'Pacifico', cursive;">Go Back</p></a>
+    </div>
+
+    <br />
+
+    <div class="container">
+        <div class="main-content">
+
+            <p>Convert one or multiple WebP images into JPEG format with ease. <br> Use the file input or drag-and-drop area below to start converting.</p>
+
+            <div class="drop-zone" id="dropZone">
+                Drag and drop your .webp files here or click to select.
+                <input type="file" id="webpInput" accept=".webp" multiple hidden>
+            </div>
+
+            <div id="downloadLinks" class="download-list"></div>
+
+            <canvas id="canvas" style="display: none;"></canvas>
+
+            
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+</body>
+</html>
+<script src="Java/JS4.js"></script>
