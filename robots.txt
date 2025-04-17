@@ -1,3 +1,4 @@
 User-agent: *
+Allow: /
 
 Sitemap: https://xfinitytools.github.io/sitemap.xml
