@@ -93,3 +93,4 @@ function calculateEarnings() {
                 ${clickEarnings}
             `;
 }
+
