@@ -1,6 +1,3 @@
 User-agent: *
 
-Disallow: /Pages/Utility%20Pages/About
-
-
-Sitemap: https://xfinitytools.github.io/xfinitysitemap.xml
+Sitemap: https://xfinitytools.github.io/sitemap.xml
