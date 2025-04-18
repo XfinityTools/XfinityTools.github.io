@@ -6,6 +6,12 @@ body {
     padding: 0;
 }
 
+@media (width: 786px){
+    .keylength{
+        width:60%;
+    }
+}
+
 
 .exif-header, .text-metrics-header, .pdf-header {
     background-color: #e60340;
