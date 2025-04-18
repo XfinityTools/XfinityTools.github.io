@@ -6,11 +6,7 @@ body {
     padding: 0;
 }
 
-@media (width: 786px){
-    .keylength{
-        width:60%;
-    }
-}
+
 
 
 .exif-header, .text-metrics-header, .pdf-header {
@@ -155,6 +151,7 @@ th {
     .text-metrics-input {
         width: 60%;
     }
+    
 
 
 }
