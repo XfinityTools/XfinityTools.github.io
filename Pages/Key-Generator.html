@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Key-Generator.html">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <link href="Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Pages/Css/StyleSheet2.css" rel="stylesheet" />
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Generate strong random keys for API access, software licensing, or secure passwords. Supports custom length and character set options." />
+    <title>Key Generator</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <link rel="icon" href="../Images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <link href="Css/StyleSheet6.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style="font-family: 'Pacifico', cursive; font-size: 200%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Key Generator</p>
+        <a href="../Pages/Dashboards/Dashboard.html">
+            <p style="font-size: 85%; font-family: 'Pacifico', cursive;">Go Back</p>
+        </a>
+    </div>
+    <br />
+    <div class="container">
+        <div class="main-content">
+            <label for="keyLength">Key Length:</label>
+            <input class="border-2px-solid-black" style="width:10%;" type="number" id="keyLength" value="16" min="8" max="64" />
+
+            <label><input type="checkbox" id="uppercase"  /> Uppercase Letters</label>
+            <label><input type="checkbox" id="lowercase"  /> Lowercase Letters</label>
+            <label><input type="checkbox" id="numbers" checked /> Numbers</label>
+            <label><input type="checkbox" id="special"  /> Special Characters</label>
+            <label><input type="checkbox" id="excludeSimilar" /> Avoid Similar Characters (e.g., l, 1, I, 0, O)</label>
+            <label><input type="checkbox" id="segmentKey" /> Segment Key with Dashes (e.g., XXXX-YYYY-ZZZZ)</label>
+
+
+            <label for="customChars">Or use custom characters:</label>
+            <input class="border-2px-solid-black" style="width:30%;" type="text" id="customChars" placeholder="Enter your own character set" />
+
+
+            <button id="generateKey">Generate Key</button>
+            <button id="downloadKey" disabled>Download Key</button>
+            <button id="copyKey" disabled>Copy to Clipboard</button>
+            <button id="exportPdf" disabled>Export to PDF</button>
+
+            <label for="generatedKeyBox">Generated Key:</label>
+            <textarea class="border-2px-solid-black" style="width:30%;" id="generatedKeyBox" readonly></textarea>
+        </div>
+    </div>
+
+    <div class="container-infobox-left">
+        <p>The Key Generator Tool enables users to create strong, random keys ideal for use in API authentication, software security, encryption, or password creation.</p>
+
+        <h1>Instruction Manual</h1>
+
+        <p>
+            <strong>Step 1: Choose Key Configuration</strong><br>
+            - Select your desired key length (number of characters).<br>
+            - Choose the types of characters to include: uppercase letters, lowercase letters, numbers, and/or special symbols.<br>
+            - Optionally, input a custom character set to use instead of the default character pool.
+        </p>
+
+        <p>
+            <strong>Step 2: Improve Readability (Optional)</strong><br>
+            - Enable the <em>"Avoid Similar Characters"</em> option to exclude characters such as ‘O’, ‘0’, ‘l’, and ‘1’ which are easily mistaken for each other.
+        </p>
+
+        <p>
+            <strong>Step 3: Enable Key Segmentation (Optional)</strong><br>
+            - Use the <em>"Segment with Dashes"</em> feature to split the key into readable blocks (e.g., `XXXX-XXXX-XXXX`). This is useful for manual entry or improved visibility.
+        </p>
+
+        <p>
+            <strong>Step 4: Generate Key</strong><br>
+            - Click the <em>"Generate Key"</em> button to instantly create a secure random key based on your selected settings.
+        </p>
+
+        <p>
+            <strong>Step 5: Use the Key</strong><br>
+            - You can copy the key to your clipboard using the <em>"Copy"</em> button.<br>
+            - Download the key as a `.txt` file for local storage.<br>
+            - Export the key as a professionally formatted PDF document for archiving or sharing.
+        </p>
+    </div>
+
+
+    <footer style="padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>
+
+<script src="Java/JS6.js"></script>
