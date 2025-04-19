@@ -62,9 +62,9 @@
 
     <br />
 
-    <div class="container">
+    <div style="width:59%;" class="container">
 
-        <div class="main-content">
+        <div  class="main-content">
             <label>Price of Car:</label><br>
             <input type="text" id="carPrice" placeholder="e.g., 25000"><br>
 
@@ -96,7 +96,7 @@
             <label>Interest Rate (%):</label><br>
             <input type="number" id="interestRate" placeholder="e.g., 6"><br>
 
-            <button onclick="calculateLoan()">Calculate</button>
+            <button class="calculatecarLoan" onclick="calculateLoan()">Calculate</button>
 
             <div class="results" id="results"></div><br />
 
@@ -168,3 +168,11 @@
 
 </body>
 </html>
+<style>
+    
+    @media(max-width:768px){
+        .calculatecarLoan{
+            width: 40%;
+}
+        }
+</style>
