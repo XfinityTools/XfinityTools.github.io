@@ -104,8 +104,8 @@
             <input type="text" id="filename" placeholder="e.g., car_loan"><br>
 
             <button id="DownloadPDFcarLoan" onclick="downloadFile('pdf')">Download PDF</button>
-            <button onclick="downloadFile('csv')">Download CSV</button>
-            <button onclick="downloadFile('txt')">Download TXT</button>
+            <button id="DownloadCSVcarLoan" onclick="downloadFile('csv')">Download CSV</button>
+            <button id="DownloadTXTcarLoan" onclick="downloadFile('txt')">Download TXT</button>
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
@@ -173,15 +173,24 @@
     @media(max-width:768px){
         .calculatecarLoan{
             width: 40%;
-}
+            }
         }
 
-    .container{
-        width:70%;
+    
+
+    .container {
+        width: 70%;
     }
 
     input, select{
         width:50%;
+    }
+
+    @media(max-width:768px) {
+
+        #DownloadCSVcarLoan, #DownloadPDFcarLoan, #DownloadTXTcarLoan {
+            width: 40%;
+        }
     }
 
 
