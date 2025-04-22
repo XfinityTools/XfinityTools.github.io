@@ -90,6 +90,9 @@
                 width: auto;
                 margin: 5px;
             }
+
+
+        
     </style>
 </head>
 <body>
@@ -97,60 +100,60 @@
         <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
         <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">Jamaican Salary Calculator</p>
         <div class="header mobile-friendly">
-            <a href="/" style="font-size: 85%;  text-decoration: none;">Home</a>
+            <a href="/" >Home</a>
             <a href="../Pages/Dashboards/Dashboard.html">Dashboard</a>
-            <a href="../Pages/Dashboards/ToolList.html" >Tool List</a>
-            <a href="../Pages/Dashboards/ToolsLibrary.html">Tool Library</a> 
+            <a href="../Pages/Dashboards/ToolList.html">Tool List</a>
+            <a href="../Pages/Dashboards/ToolsLibrary.html">Tool Library</a>
         </div>
     </div>
     <br />
 
-    
-    <div class="container">
 
-        <div class="main-content">
 
-    <form id="salaryForm">
-        <label>
-            Gross Pay:
-            <input type="number" id="grossPay" required>
-        </label>
-        <label>
-            Additional Pension:
-            <input type="number" id="additionalPension" value="0">
-        </label>
-        <label>
-            Income Tax Threshold (A):
-            <input type="number" id="taxThreshold" required>
-        </label>
-        <label>
-            Pay Period:
-            <select id="payPeriod">
-                <option value="12">Monthly</option>
-                <option value="26">Fortnightly</option>
-                <option value="52">Weekly</option>
-            </select>
-        </label>
-        <button type="submit">Calculate</button>
-    </form>
 
-    <form class="excel-upload">
-        <label>
-            Upload Excel File:
-            <input type="file" id="excelFile" accept=".xlsx,.xls">
-        </label>
-    </form>
+    <div class="main-content">
 
-    <div class="buttons" style="display:none;" id="exportButtons">
-        <button onclick="exportPDF()">Export to PDF</button>
-        <button onclick="exportCSV()">Export to CSV</button>
-    </div>
+        <form class="salaryForm" id="salaryForm">
+            <label>
+                Gross Pay:
+                <input type="number" id="grossPay" required>
+            </label>
+            <label>
+                Additional Pension:
+                <input type="number" id="additionalPension" value="0">
+            </label>
+            <label>
+                Income Tax Threshold (A):
+                <input type="number" id="taxThreshold" required>
+            </label>
+            <label>
+                Pay Period:
+                <select id="payPeriod">
+                    <option value="12">Monthly</option>
+                    <option value="26">Fortnightly</option>
+                    <option value="52">Weekly</option>
+                </select>
+            </label>
+            <button type="submit">Calculate</button>
+        </form>
 
-    <div id="result"></div>
+        <form class="excel-upload">
+            <label>
+                Upload Excel File:
+                <input type="file" id="excelFile" accept=".xlsx,.xls">
+            </label>
+        </form>
 
+        <div class="buttons" style="display:none;" id="exportButtons">
+            <button onclick="exportPDF()">Export to PDF</button>
+            <button onclick="exportCSV()">Export to CSV</button>
         </div>
 
+        <div id="result"></div>
+
     </div>
+
+
     <script>
         let currentResults = [];
 
@@ -175,21 +178,19 @@
                 const data = new Uint8Array(e.target.result);
                 const workbook = XLSX.read(data, { type: "array" });
                 const sheet = workbook.Sheets[workbook.SheetNames[0]];
-                const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 }); // Get headers as the first row
+                const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
                 if (rows.length < 2) {
                     alert("The Excel file does not contain enough data.");
                     return;
                 }
 
-                const headers = rows[0]; // The first row contains column names
+                const headers = rows[0];
 
-                // Function to get column index by matching header names dynamically
                 function getColumnIndex(headerName) {
                     return headers.findIndex(header => header.toLowerCase().includes(headerName.toLowerCase()));
                 }
 
-                // Mapping the dynamic column names to the required fields
                 const grossPayIndex = getColumnIndex("gross pay");
                 const additionalPensionIndex = getColumnIndex("additional pension");
                 const incomeTaxIndex = getColumnIndex("income tax");
@@ -200,16 +201,13 @@
                     return;
                 }
 
-                // Get the first row's data (assuming all rows have the same structure)
                 const firstRow = rows[1];
 
-                // Populate the form fields with the data from the file
                 document.getElementById("grossPay").value = firstRow[grossPayIndex] || 0;
                 document.getElementById("additionalPension").value = firstRow[additionalPensionIndex] || 0;
-                document.getElementById("payPeriod").value = firstRow[payPeriodIndex] || 12; // Default to Monthly if not specified
+                document.getElementById("payPeriod").value = firstRow[payPeriodIndex] || 12;
                 document.getElementById("taxThreshold").value = firstRow[incomeTaxIndex] || 0;
 
-                // Automatically calculate deductions based on the data from the file
                 const threshold = parseFloat(firstRow[incomeTaxIndex]);
                 const period = parseInt(firstRow[payPeriodIndex]);
 
@@ -235,7 +233,8 @@
             const nis = Math.min(nisRaw, 12500);
             const thresholdPerPeriod = annualThreshold / period;
             const taxableReduction = nis + additionalPension + thresholdPerPeriod;
-            const paye = 0.25 * (grossPay - taxableReduction);
+            let paye = 0.25 * (grossPay - taxableReduction);
+            if (paye < 0) paye = 0;
             const eduTax = (grossPay - (nis + additionalPension)) * 0.0225;
             const totalDeductions = nht + nis + additionalPension + eduTax + paye;
             const netPay = grossPay - totalDeductions;
@@ -326,5 +325,6 @@
             link.click();
         }
     </script>
+
 </body>
 </html>

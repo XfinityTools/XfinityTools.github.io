@@ -8,6 +8,7 @@
     @media (max-width:768px){
         .mobile-friendly{
             font-weight:bolder;
+            gap: 40px;
         }
 
         .Header-Tool-Title{
