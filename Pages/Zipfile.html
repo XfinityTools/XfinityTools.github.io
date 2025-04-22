@@ -33,16 +33,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Quickly create a zip file from selected files on your computer with this free online tool. Simple, fast, and secure for all your compression needs.">
+    <link href="Css/Mobile-Friendly.css" rel="stylesheet" />
     <script src="../Pages/JS/JavaS2.js"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
             crossorigin="anonymous"></script>
+            
 </head>
 <body>
     <div class="header">
         <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a><br />
         <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Zip File Creation</p>
 
-        <a href="../Pages/Dashboards/Dashboard.html">Go Back</a>
+        <div class="header mobile-friendly">
+            <a href="/">Home</a>
+            <a href="../Pages/Dashboards/Dashboard.html">Dashboard</a>
+            <a href="../Pages/Dashboards/ToolList.html" >Tool List</a>
+            <a href="../Pages/Dashboards/ToolsLibrary.html">Tool Library</a>
+            
+           
+        </div>
 
     </div>
     <br>
@@ -50,10 +59,12 @@
 
         <div style="margin: auto;" class="main-content">
 
+            <div style="border:  3px dashed  #ccc; padding: 30px;">
+
             <input type="file" id="file-input" class="file-input" multiple><br>
             <ul style="border: transparent; background-color: transparent; margin: auto; font-family:'Times New Roman';" class="file-input" id="fileList"></ul>
             <button id="downloadButton" class="download-button">Download Zip</button>
-
+            </div>
         </div>
 
     </div><br><br>
