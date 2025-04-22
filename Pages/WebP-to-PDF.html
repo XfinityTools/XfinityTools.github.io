@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
-
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/WebP-to-PDF.html">
     <meta name="geo.region" content="JM">
     <meta name="geo.placename" content="Kingston, Jamaica">
@@ -39,10 +38,10 @@
         <div class="header mobile-friendly">
             <a href="/">Home</a>
             <a href="../Pages/Dashboards/Dashboard.html">Dashboard</a>
-            <a href="../Pages/Dashboards/ToolList.html" >Tool List</a>
+            <a href="../Pages/Dashboards/ToolList.html">Tool List</a>
             <a href="../Pages/Dashboards/ToolsLibrary.html">Tool Library</a>
-            
-           
+
+
         </div>
     </div>
 
@@ -50,95 +49,80 @@
 
     <div class="container">
         <div class="main-content">
-
+            <br />
+           
             <div id="drop-area" style="border: 2px dashed #ccc; padding: 20px; text-align: center; cursor: pointer;">
-                <p>Drag & drop .webp images here or click to upload</p>
+                <p id="drop-text">Drag & drop .webp images here or click to upload</p>
                 <input type="file" id="fileElem" multiple accept=".webp" style="display:none">
             </div>
-            <br />
+            <br /><br />
             <button id="convertDownloadBtn" style="background-color: green; color: white; border: none; padding: 10px; cursor:pointer;">Convert & Download PDF</button>
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-            <script>
-                const dropArea = document.getElementById('drop-area');
-                const fileElem = document.getElementById('fileElem');
-                const convertDownloadBtn = document.getElementById('convertDownloadBtn');
-                let imageFiles = [];
-
-                dropArea.addEventListener('click', () => {
-                    fileElem.click();
-                });
-
-                dropArea.addEventListener('dragover', (e) => {
-                    e.preventDefault();
-                    dropArea.style.borderColor = 'green';
-                });
-
-                dropArea.addEventListener('dragleave', () => {
-                    dropArea.style.borderColor = '#ccc';
-                });
-
-                dropArea.addEventListener('drop', (e) => {
-                    e.preventDefault();
-                    dropArea.style.borderColor = '#ccc';
-                    handleFiles(e.dataTransfer.files);
-                });
-
-                fileElem.addEventListener('change', () => {
-                    handleFiles(fileElem.files);
-                });
-
-                function handleFiles(files) {
-                    imageFiles = [];
-                    for (let file of files) {
-                        if (file.type === 'image/webp') {
-                            imageFiles.push(file);
-                        }
-                    }
-                }
-
-                convertDownloadBtn.addEventListener('click', () => {
-                    if (imageFiles.length === 0) {
-                        alert("Please upload at least one WebP image.");
-                        return;
-                    }
-
-                    const { jsPDF } = window.jspdf;
-                    const pdf = new jsPDF();
-
-                    let processedCount = 0;
-
-                    imageFiles.forEach((file, index) => {
-                        const reader = new FileReader();
-                        reader.onload = function (e) {
-                            const img = new Image();
-                            img.onload = function () {
-                                const canvas = document.createElement('canvas');
-                                const ctx = canvas.getContext('2d');
-                                canvas.width = img.width;
-                                canvas.height = img.height;
-                                ctx.drawImage(img, 0, 0);
-
-                                const imgData = canvas.toDataURL('image/jpeg', 1.0);
-                                if (index > 0) pdf.addPage();
-                                pdf.addImage(imgData, 'JPEG', 10, 10, 190, 0);
-
-                                processedCount++;
-                                if (processedCount === imageFiles.length) {
-                                    pdf.save("webp_to_pdf.pdf");
-                                }
-                            };
-                            img.src = e.target.result;
-                        };
-                        reader.readAsDataURL(file);
-                    });
-                });
-            </script>
 
         </div>
 
 
     </div>
+    <br /><br /><br />
+
+    <div class="container-infobox-left">
+        <p>The "WebP to PDF Converter" tool allows users to upload one or more `.webp` image files and convert them into a single downloadable PDF document. This is useful for users who need to store, share, or print WebP images in a universally accepted format like PDF. The tool is ideal for graphic designers, content creators, and everyday users looking for a simple file conversion solution.</p>
+
+        <h1>Instruction Manual</h1>
+
+        <h3>1. Accessing the Tool:</h3>
+        <ul>
+            <li>Open the webpage or platform where the tool is hosted.</li>
+            <li>Ensure you are using a modern browser (Chrome, Edge, Firefox, Safari) for the best experience.</li>
+        </ul>
+
+        <h3>2. Uploading Images:</h3>
+        <ul>
+            <li>
+                You can upload `.webp` image files in two ways:
+                <ul>
+                    <li><strong>Drag & Drop:</strong> Drag one or more `.webp` images from your computer into the dashed drop area.</li>
+                    <li><strong>Click to Upload:</strong> Click inside the dashed drop area to open the file explorer and select the images manually.</li>
+                </ul>
+            </li>
+            <li>Once the images are successfully uploaded, a message will appear saying "<em>Image(s) submitted successfully!</em>" indicating that the files have been recognized.</li>
+            <li>Only `.webp` images are accepted. Uploading other formats will display an error message.</li>
+        </ul>
+
+        <h3>3. Converting to PDF:</h3>
+        <ul>
+            <li>After successfully uploading your images, click the green <strong>"Convert & Download PDF"</strong> button.</li>
+            <li>The tool will process the uploaded `.webp` files and convert them into a PDF file.</li>
+            <li>If multiple images were uploaded, each image will be placed on a separate page in the PDF to avoid overlap or clutter.</li>
+        </ul>
+
+        <h3>4. Downloading the Result:</h3>
+        <ul>
+            <li>Once the conversion is complete, the PDF will be automatically downloaded to your device with the name <strong>"webp_to_pdf.pdf"</strong>.</li>
+            <li>The exported PDF includes a footer on each page stating "<em>Generated by Xfinity Tools</em>" along with the current date for easy tracking.</li>
+        </ul>
+
+        <h3>5. Tips & Recommendations:</h3>
+        <ul>
+            <li>Ensure your images are clear and high-resolution for better output quality.</li>
+            <li>Limit very large images or excessive file sizes if you experience slow processing or browser lag.</li>
+            <li>Use image compression tools beforehand if necessary to optimize the size of your `.webp` files.</li>
+        </ul>
+
+        <h3>6. Troubleshooting:</h3>
+        <ul>
+            <li>If the tool doesn't respond, make sure your browser has JavaScript enabled.</li>
+            <li>Check that your files are of `.webp` format. Other formats (like `.jpg`, `.png`, etc.) are not accepted.</li>
+            <li>If the PDF download doesn’t start, try refreshing the page or clearing your browser cache.</li>
+        </ul>
+
+        <h3>7. Support:</h3>
+        <ul>
+            <li>For feedback, bug reports, or assistance, please reach out through the support form provided on the hosting website.</li>
+        </ul>
+    </div>
+
 
     <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
         <div class="footer-container" style="display: flex; justify-content:center;">
@@ -151,3 +135,4 @@
 
 </body>
 </html>
+<script src="../JS/Script1.js"></script>
