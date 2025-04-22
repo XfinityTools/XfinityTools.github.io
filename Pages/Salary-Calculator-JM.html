@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Free Jamaican Salary Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f7f7f7;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form, .pay-slip, .buttons {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px #ccc;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .pay-slip {
+            margin-top: 15px;
+            border: 1px solid #000;
+        }
+
+            .pay-slip h3 {
+                margin-top: 0;
+                background: #000;
+                color: #fff;
+                padding: 10px;
+                border-radius: 4px 4px 0 0;
+            }
+
+            .pay-slip table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .pay-slip td {
+                padding: 8px;
+                border-bottom: 1px solid #ccc;
+            }
+
+                .pay-slip td.label {
+                    font-weight: bold;
+                }
+
+        .buttons {
+            text-align: center;
+        }
+
+            .buttons button {
+                width: auto;
+                margin: 5px;
+            }
+    </style>
+</head>
+<body>
+    <h1>Jamaican Salary Calculator</h1>
+
+    <form id="salaryForm">
+        <label>
+            Gross Pay:
+            <input type="number" id="grossPay" required>
+        </label>
+        <label>
+            Additional Pension:
+            <input type="number" id="additionalPension" value="0">
+        </label>
+        <label>
+            Income Tax Threshold (A):
+            <input type="number" id="taxThreshold" required>
+        </label>
+        <label>
+            Pay Period:
+            <select id="payPeriod">
+                <option value="12">Monthly</option>
+                <option value="26">Fortnightly</option>
+                <option value="52">Weekly</option>
+            </select>
+        </label>
+        <button type="submit">Calculate</button>
+    </form>
+
+    <form class="excel-upload">
+        <label>
+            Upload Excel File:
+            <input type="file" id="excelFile" accept=".xlsx,.xls">
+        </label>
+    </form>
+
+    <div class="buttons" style="display:none;" id="exportButtons">
+        <button onclick="exportPDF()">Export to PDF</button>
+        <button onclick="exportCSV()">Export to CSV</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        let currentResults = [];
+
+        document.getElementById("salaryForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const gross = parseFloat(document.getElementById("grossPay").value);
+            const additional = parseFloat(document.getElementById("additionalPension").value || 0);
+            const threshold = parseFloat(document.getElementById("taxThreshold").value);
+            const period = parseInt(document.getElementById("payPeriod").value);
+
+            const result = calculateDeductions(gross, additional, threshold, period);
+            currentResults = [result];
+            displayResult(currentResults);
+        });
+
+        document.getElementById("excelFile").addEventListener("change", function (e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: "array" });
+                const sheet = workbook.Sheets[workbook.SheetNames[0]];
+                const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 }); // Get headers as the first row
+
+                if (rows.length < 2) {
+                    alert("The Excel file does not contain enough data.");
+                    return;
+                }
+
+                const headers = rows[0]; // The first row contains column names
+
+                // Function to get column index by matching header names dynamically
+                function getColumnIndex(headerName) {
+                    return headers.findIndex(header => header.toLowerCase().includes(headerName.toLowerCase()));
+                }
+
+                // Mapping the dynamic column names to the required fields
+                const grossPayIndex = getColumnIndex("gross pay");
+                const additionalPensionIndex = getColumnIndex("additional pension");
+                const incomeTaxIndex = getColumnIndex("income tax");
+                const payPeriodIndex = getColumnIndex("pay period");
+
+                if (grossPayIndex === -1 || payPeriodIndex === -1 || incomeTaxIndex === -1) {
+                    alert("The Excel file does not contain required columns (Gross Pay, Income Tax, Pay Period).");
+                    return;
+                }
+
+                // Get the first row's data (assuming all rows have the same structure)
+                const firstRow = rows[1];
+
+                // Populate the form fields with the data from the file
+                document.getElementById("grossPay").value = firstRow[grossPayIndex] || 0;
+                document.getElementById("additionalPension").value = firstRow[additionalPensionIndex] || 0;
+                document.getElementById("payPeriod").value = firstRow[payPeriodIndex] || 12; // Default to Monthly if not specified
+                document.getElementById("taxThreshold").value = firstRow[incomeTaxIndex] || 0;
+
+                // Automatically calculate deductions based on the data from the file
+                const threshold = parseFloat(firstRow[incomeTaxIndex]);
+                const period = parseInt(firstRow[payPeriodIndex]);
+
+                const results = rows.slice(1).map(row => {
+                    return calculateDeductions(
+                        parseFloat(row[grossPayIndex]),
+                        parseFloat(row[additionalPensionIndex] || 0),
+                        threshold,
+                        period
+                    );
+                });
+
+                currentResults = results;
+                displayResult(currentResults);
+                document.getElementById("exportButtons").style.display = "block";
+            };
+            reader.readAsArrayBuffer(file);
+        });
+
+        function calculateDeductions(grossPay, additionalPension, annualThreshold, period) {
+            const nht = grossPay * 0.02;
+            const nisRaw = grossPay * 0.03;
+            const nis = Math.min(nisRaw, 12500);
+            const thresholdPerPeriod = annualThreshold / period;
+            const taxableReduction = nis + additionalPension + thresholdPerPeriod;
+            const paye = 0.25 * (grossPay - taxableReduction);
+            const eduTax = (grossPay - (nis + additionalPension)) * 0.0225;
+            const totalDeductions = nht + nis + additionalPension + eduTax + paye;
+            const netPay = grossPay - totalDeductions;
+
+            return {
+                GrossPay: grossPay,
+                NHT: nht,
+                NIS: nis,
+                AdditionalPension: additionalPension,
+                PAYE: paye,
+                EducationTax: eduTax,
+                NetPay: netPay
+            };
+        }
+
+        function displayResult(results) {
+            const container = document.getElementById("result");
+            container.innerHTML = "";
+            document.getElementById("exportButtons").style.display = "block";
+
+            results.forEach((r, i) => {
+                const slip = document.createElement("div");
+                slip.className = "pay-slip";
+
+                slip.innerHTML = `
+              <h3>Pay Slip ${i + 1}</h3>
+              <table>
+                <tr><td class="label">Gross Pay</td><td>$${formatCurrency(r.GrossPay)}</td></tr>
+                <tr><td class="label">NHT (2%)</td><td>$${formatCurrency(r.NHT)}</td></tr>
+                <tr><td class="label">NIS (3%)</td><td>$${formatCurrency(r.NIS)}</td></tr>
+                <tr><td class="label">Additional Pension</td><td>$${formatCurrency(r.AdditionalPension)}</td></tr>
+                <tr><td class="label">Education Tax (2.25%)</td><td>$${formatCurrency(r.EducationTax)}</td></tr>
+                <tr><td class="label">PAYE (25%)</td><td>$${formatCurrency(r.PAYE)}</td></tr>
+                <tr><td class="label"><strong>Net Pay</strong></td><td><strong>$${formatCurrency(r.NetPay)}</strong></td></tr>
+              </table>
+            `;
+                container.appendChild(slip);
+            });
+        }
+
+        function formatCurrency(value) {
+            return parseFloat(value).toLocaleString("en-JM", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        function exportPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            currentResults.forEach((r, i) => {
+                doc.text(`Pay Slip ${i + 1}`, 10, 10 + (i * 60));
+                doc.text(`Gross Pay: $${formatCurrency(r.GrossPay)}`, 10, 20 + (i * 60));
+                doc.text(`NHT (2%): $${formatCurrency(r.NHT)}`, 10, 30 + (i * 60));
+                doc.text(`NIS (3%): $${formatCurrency(r.NIS)}`, 10, 40 + (i * 60));
+                doc.text(`Additional Pension: $${formatCurrency(r.AdditionalPension)}`, 10, 50 + (i * 60));
+                doc.text(`Education Tax (2.25): $${formatCurrency(r.EducationTax)}`, 10, 60 + (i * 60));
+                doc.text(`PAYE: $${formatCurrency(r.PAYE)}`, 10, 70 + (i * 60));
+                doc.text(`Net Pay: $${formatCurrency(r.NetPay)}`, 10, 80 + (i * 60));
+            });
+
+            doc.save('salary-slip.pdf');
+        }
+
+        function exportCSV() {
+            const csv = currentResults.map(r => [
+                r.GrossPay,
+                r.NHT,
+                r.NIS,
+                r.AdditionalPension,
+                r.EducationTax,
+                r.PAYE,
+                r.NetPay
+            ]);
+            csv.unshift([
+                "Gross Pay",
+                "NHT (2%)",
+                "NIS (3%)",
+                "Additional Pension",
+                "Education Tax (2.25%)",
+                "PAYE (25%)",
+                "Net Pay"
+            ]);
+
+            const csvContent = csv.map(row => row.join(",")).join("\n");
+            const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "salary-slip.csv";
+            link.click();
+        }
+    </script>
+</body>
+</html>
