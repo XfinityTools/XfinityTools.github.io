@@ -1,5 +1,3 @@
-https://xfinitytools.github.io/Pages/WebP-Png.html
-https://xfinitytools.github.io/Pages/WebP-To-JPEG.html
 https://xfinitytools.github.io/Pages/Single-Image-PDF.html
 https://xfinitytools.github.io/Pages/Png-Jpeg.html
 https://xfinitytools.github.io/Pages/PDF-WaterMark.html

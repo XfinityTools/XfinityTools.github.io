@@ -16,3 +16,5 @@ https://xfinitytools.github.io/Pages/Dashboards/ToolList.html
 https://xfinitytools.github.io/Disclaimer.html
 https://xfinitytools.github.io/About.html
 https://xfinitytools.github.io
+https://xfinitytools.github.io/Pages/WebP-Png.html
+https://xfinitytools.github.io/Pages/WebP-To-JPEG.html
