@@ -1,12 +1,18 @@
-Car-Loan-Calculator
+Ad-Revenue-Estimator
+CamCase
 CamelCaseConversion
+Car-Loan-Calculator
+CSV-to-Excel
 CSV-To-Json
-ExceltoPDF
+CSV-To-Json
 EXIFDataExtractor
+ExceltoPDF
 FileCompression
 FileZipper
 HashingGenerator
+Image-Merger
 JSON-To-CSV
+Key-Generator
 PDFMerger
 PDFMetadataExtractor
 PDFWatermark
@@ -15,7 +21,10 @@ PNGtoWebP
 SentenceCapitalization
 SingleImagePDFConversion
 Text To Json
+Text-To-JSON
 Text-Metrics-Generator
 TextToCSV
 Text-to-Excel
+WebP-To-JPEG
+WebP-to-PDF
 WebptoPNG
