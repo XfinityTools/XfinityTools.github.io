@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://xfinitytools.github.io/Pages/">
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Salary-Calculator-JM.html">
     <meta name="geo.region" content="JM">
     <meta name="geo.placename" content="Kingston, Jamaica">
     <!-- Google tag (gtag.js) -->
@@ -122,8 +122,8 @@
                 Additional Pension:
                 <input type="number" id="additionalPension" value="0">
             </label>
-            <label>
-                Income Tax Threshold (A):
+            <label style="font-size:13px;">
+                Annual Income Tax Threshold (Exact Figure):
                 <input type="number" id="taxThreshold" required>
             </label>
             <label>
@@ -263,11 +263,11 @@
               <h3>Pay Slip ${i + 1}</h3>
               <table>
                 <tr><td class="label">Gross Pay</td><td>$${formatCurrency(r.GrossPay)}</td></tr>
+                 <tr><td class="label">PAYE (25%)</td><td>$${formatCurrency(r.PAYE)}</td></tr>
                 <tr><td class="label">NHT (2%)</td><td>$${formatCurrency(r.NHT)}</td></tr>
                 <tr><td class="label">NIS (3%)</td><td>$${formatCurrency(r.NIS)}</td></tr>
                 <tr><td class="label">Additional Pension</td><td>$${formatCurrency(r.AdditionalPension)}</td></tr>
-                <tr><td class="label">Education Tax (2.25%)</td><td>$${formatCurrency(r.EducationTax)}</td></tr>
-                <tr><td class="label">PAYE (25%)</td><td>$${formatCurrency(r.PAYE)}</td></tr>
+                <tr><td class="label">Education Tax (2.25%)</td><td>$${formatCurrency(r.EducationTax)}</td></tr>            
                 <tr><td class="label"><strong>Net Pay</strong></td><td><strong>$${formatCurrency(r.NetPay)}</strong></td></tr>
               </table>
             `;
@@ -278,6 +278,7 @@
         function formatCurrency(value) {
             return parseFloat(value).toLocaleString("en-JM", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         }
+
 
         function exportPDF() {
             const { jsPDF } = window.jspdf;

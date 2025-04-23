@@ -18,3 +18,7 @@ https://xfinitytools.github.io/About.html
 https://xfinitytools.github.io
 https://xfinitytools.github.io/Pages/WebP-Png.html
 https://xfinitytools.github.io/Pages/WebP-To-JPEG.html
+https://xfinitytools.github.io/Pages/Png-Jpeg.html
+https://xfinitytools.github.io/Pages/JSON-To-CSV.html
+https://xfinitytools.github.io/Pages/Text-To-JSON.html
+https://xfinitytools.github.io/Pages/CamCase.html
