@@ -32,6 +32,7 @@
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet7.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    
     <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
 
     <title>Free Ad Revenue Estimator</title>
@@ -61,11 +62,11 @@
     <br />
 
 
-    <div class="adsense-tool">
+    <div class="adsense-tool form">
         <h3>Enter Your Information</h3>
 
-        <label for="currency">Currency</label>
-        <select id="currency">
+        <label  for="currency">Currency</label>
+        <select class="formselect" id="currency">
             <option value="$">USD ($)</option>
             <option value="J$">JMD (J$)</option>
             <option value="�">GBP (�)</option>
@@ -73,18 +74,18 @@
         </select>
 
         <label for="rpm">Impression RPM</label>
-        <input type="number" step="0.01" id="rpm" placeholder="e.g. 4.50" required>
+        <input class="forminput" type="number" step="0.01" id="rpm" placeholder="e.g. 4.50" required>
 
         <label for="impressions">Number of Impressions</label>
-        <input type="number" id="impressions" placeholder="e.g. 650" required>
+        <input class="forminput" type="number" id="impressions" placeholder="e.g. 650" required>
 
         <label for="ctr">CTR (%) <span style="font-weight: normal;">(optional)</span></label>
-        <input type="number" step="0.01" id="ctr" placeholder="e.g. 2.5">
+        <input class="forminput" type="number" step="0.01" id="ctr" placeholder="e.g. 2.5">
 
         <label for="cpc">CPC <span style="font-weight: normal;">(optional)</span></label>
-        <input type="number" step="0.01" id="cpc" placeholder="e.g. 0.15">
+        <input class="forminput" type="number" step="0.01" id="cpc" placeholder="e.g. 0.15">
 
-        <button onclick="calculateEarnings()">Estimate Earnings</button>
+        <button class="earningsbutton" onclick="calculateEarnings()">Estimate Earnings</button>
 
         <div class="result" id="result"></div>
     </div>

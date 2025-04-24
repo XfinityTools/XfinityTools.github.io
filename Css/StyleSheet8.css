@@ -12,6 +12,15 @@ form {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+.form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
     form label {
         display: block;
         margin-bottom: 6px;
@@ -28,6 +37,8 @@ form {
         font-size: 16px;
         box-sizing: border-box;
     }
+
+
 
 button, input[type="submit"] {
     background-color: #0a4d8c;
@@ -98,3 +109,12 @@ button, input[type="submit"] {
             font-size: 18px;
             color: #0a4d8c;
         }
+
+
+#excelFile {
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 6px;
+}

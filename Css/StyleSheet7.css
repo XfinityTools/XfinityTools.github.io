@@ -31,12 +31,12 @@
     }
 
     .adsense-tool button {
-        width: 100%;
-        padding: 10px;
+        width: 40%;
+        
         background: #28a745;
-        color: white;
         border: none;
-        font-size: 1rem;
+        padding: 12px 18px;
+        font-size: 15px;
         border-radius: 6px;
         cursor: pointer;
     }
@@ -51,4 +51,35 @@
     background: #fff;
     border-radius: 6px;
     border: 1px solid #ddd;
+}
+
+.form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.forminput, .formselect {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button, input[type="submit"],.earningsbutton {
+    background-color: #0a4d8c;
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width:;
 }
