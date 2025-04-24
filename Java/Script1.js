@@ -153,19 +153,25 @@ function exportPDF() {
     const doc = new jsPDF();
 
     currentResults.forEach((r, i) => {
-        const y = 10 + (i * 60);
-        doc.text(`Pay Slip ${i + 1}`, 10, y);
-        doc.text(`Gross Pay: $${formatCurrency(r.GrossPay)}`, 10, y + 10);
-        doc.text(`PAYE: $${formatCurrency(r.PAYE)}`, 10, y + 20);
-        doc.text(`NHT (2%): $${formatCurrency(r.NHT)}`, 10, y + 30);
-        doc.text(`NIS (3%): $${formatCurrency(r.NIS)}`, 10, y + 40);
-        doc.text(`Additional Pension: $${formatCurrency(r.AdditionalPension)}`, 10, y + 50);
-        doc.text(`Education Tax (2.25%): $${formatCurrency(r.EducationTax)}`, 10, y + 60);
-        doc.text(`Net Pay: $${formatCurrency(r.NetPay)}`, 10, y + 70);
+        // Add slip content
+        doc.text(`Pay Slip ${i + 1}`, 10, 20);
+        doc.text(`Gross Pay: $${formatCurrency(r.GrossPay)}`, 10, 30);
+        doc.text(`PAYE: $${formatCurrency(r.PAYE)}`, 10, 40);
+        doc.text(`NHT (2%): $${formatCurrency(r.NHT)}`, 10, 50);
+        doc.text(`NIS (3%): $${formatCurrency(r.NIS)}`, 10, 60);
+        doc.text(`Additional Pension: $${formatCurrency(r.AdditionalPension)}`, 10, 70);
+        doc.text(`Education Tax (2.25%): $${formatCurrency(r.EducationTax)}`, 10, 80);
+        doc.text(`Net Pay: $${formatCurrency(r.NetPay)}`, 10, 90);
+
+        // Add a new page unless it's the last item
+        if (i !== currentResults.length - 1) {
+            doc.addPage();
+        }
     });
 
     doc.save('salary-slip.pdf');
 }
+
 
 function exportCSV() {
     const csv = currentResults.map(r => [
