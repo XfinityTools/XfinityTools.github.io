@@ -153,7 +153,7 @@ function exportPDF() {
     const doc = new jsPDF();
 
     currentResults.forEach((r, i) => {
-        // Add slip content
+        // slip content
         doc.text(`Pay Slip ${i + 1}`, 10, 20);
         doc.text(`Gross Pay: $${formatCurrency(r.GrossPay)}`, 10, 30);
         doc.text(`PAYE: $${formatCurrency(r.PAYE)}`, 10, 40);
