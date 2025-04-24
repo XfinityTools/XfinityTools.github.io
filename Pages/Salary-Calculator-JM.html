@@ -22,85 +22,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    
-    
+
+
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet8.css" rel="stylesheet" />
     <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
     <title>Free Jamaican Salary Calculator</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <meta name="description" content="" />
-    <style>
-        
-
-        form, .pay-slip, .buttons {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 5px #ccc;
-            max-width: 600px;
-            margin: 0 auto 20px;
-        }
-
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-
-        input, select, button {
-            width: 90%;
-            padding: 8px;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-
-        .pay-slip {
-            margin-top: 15px;
-            border: 1px solid #000;
-        }
-
-            .pay-slip h3 {
-                margin-top: 0;
-                background: #000;
-                color: #fff;
-                padding: 10px;
-                border-radius: 4px 4px 0 0;
-            }
-
-            .pay-slip table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-
-            .pay-slip td {
-                padding: 8px;
-                border-bottom: 1px solid #ccc;
-            }
-
-                .pay-slip td.label {
-                    font-weight: bold;
-                }
-
-        .buttons {
-            text-align: center;
-        }
-
-            .buttons button {
-                width: auto;
-                margin: 5px;
-            }
+    <meta name="description" content="A Jamaican salary calculator tool that helps you calculate deductions such as NHT, NIS, PAYE, Education Tax, and Additional Pension based on Jamaican tax regulations. Easily generate pay slips and export results in PDF or CSV format." />
 
 
-        
-    </style>
 </head>
 <body>
     <div class="text-metrics-header">
         <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
         <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">Jamaican Salary Calculator</p>
         <div class="header mobile-friendly">
-            <a href="/" >Home</a>
+            <a href="/">Home</a>
             <a href="../Pages/Dashboards/Dashboard.html">Dashboard</a>
             <a href="../Pages/Dashboards/ToolList.html">Tool List</a>
             <a href="../Pages/Dashboards/ToolsLibrary.html">Tool Library</a>
@@ -137,12 +77,12 @@
             <button type="submit">Calculate</button>
         </form>
 
-        <form class="excel-upload">
+        <!--<form class="excel-upload">
             <label>
                 Upload Excel File:
                 <input type="file" id="excelFile" accept=".xlsx,.xls">
             </label>
-        </form>
+        </form>-->
 
         <div class="buttons" style="display:none;" id="exportButtons">
             <button onclick="exportPDF()">Export to PDF</button>
@@ -154,178 +94,69 @@
     </div>
 
 
-    <script>
-        let currentResults = [];
+    <script src="../Java/Script1.js"></script>
 
-        document.getElementById("salaryForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-            const gross = parseFloat(document.getElementById("grossPay").value);
-            const additional = parseFloat(document.getElementById("additionalPension").value || 0);
-            const threshold = parseFloat(document.getElementById("taxThreshold").value);
-            const period = parseInt(document.getElementById("payPeriod").value);
+    <div class="container-infobox-left">
+        <p>The Salary Calculator Tool is a free web-based utility designed to help users calculate their net salary based on Jamaican tax regulations. It supports both individual and bulk salary calculations using gross pay and pension contributions. The tool automatically calculates deductions such as NHT, NIS, Education Tax, and PAYE, and then presents a breakdown of each employee’s payslip. Users can download the results in multiple formats such as PDF, CSV, or TXT.</p>
 
-            const result = calculateDeductions(gross, additional, threshold, period);
-            currentResults = [result];
-            displayResult(currentResults);
-        });
+        <h1>Instruction Manual:</h1>
 
-        document.getElementById("excelFile").addEventListener("change", function (e) {
-            const file = e.target.files[0];
-            if (!file) return;
+        <h3>1. Accessing the Tool:</h3>
+        <ul>
+            <li>Open any modern web browser (e.g., Chrome, Firefox, Safari).</li>
+        </ul>
 
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                const data = new Uint8Array(e.target.result);
-                const workbook = XLSX.read(data, { type: "array" });
-                const sheet = workbook.Sheets[workbook.SheetNames[0]];
-                const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+        <h3>2. Using the Calculator (Single Entry):</h3>
+        <ul>
+            <li>Scroll to the form section labeled “Calculate Salary.”</li>
+            <li>Enter the <strong>Gross Pay</strong> amount.</li>
+            <li>Optionally enter any additional <strong>Pension Contribution</strong> amount.</li>
+            <li>Click on the <strong>“Calculate Salary”</strong> button.</li>
+            <li>The payslip will be generated and shown below the form with all deductions and net salary clearly listed.</li>
+        </ul>
 
-                if (rows.length < 2) {
-                    alert("The Excel file does not contain enough data.");
-                    return;
-                }
+        <h3>3. Uploading Bulk Data (Excel File):</h3>
+        <ul>
+            <li>Scroll down to the file upload section labeled “Upload Excel File.”</li>
+            <li>Click on the file input to select an Excel file (.xlsx or .xls) containing employee salary information.</li>
+            <li>Ensure the file includes the necessary information (single entry titles) <strong>columns with exact names</strong>:</li>
 
-                const headers = rows[0];
+            <li>Click the <strong>“Upload”</strong> button to process the file.</li>
+            <li>The tool will automatically calculate deductions and generate a payslip for each employee listed.</li>
+        </ul>
 
-                function getColumnIndex(headerName) {
-                    return headers.findIndex(header => header.toLowerCase().includes(headerName.toLowerCase()));
-                }
+        <h3>4. Downloading Results:</h3>
+        <ul>
+            <li>After the payslips are generated, scroll to the section labeled “Export Payslips.”</li>
+            <li>
+                Select your preferred format:
+                <ul>
+                    <li><strong>Download PDF</strong> – for printable, formatted payslips.</li>
+                    <li><strong>Download CSV</strong> – for spreadsheet or database use.</li>
+                    <li><strong>Download TXT</strong> – for plain text storage or sharing.</li>
+                </ul>
+            </li>
+        </ul>
 
-                const grossPayIndex = getColumnIndex("gross pay");
-                const additionalPensionIndex = getColumnIndex("additional pension");
-                const incomeTaxIndex = getColumnIndex("income tax");
-                const payPeriodIndex = getColumnIndex("pay period");
+        <h3>5. Notes:</h3>
+        <ul>
+            <li>NIS deduction is capped at JMD $12,500 per month.</li>
+            <li>Education Tax is 2.25% of Gross Pay.</li>
+            <li>NHT is 2% of Gross Pay.</li>
+            <li>PAYE is calculated at 25% of the difference between gross pay and total deductions, including NIS, additional pension, and the income tax threshold per pay period.</li>
+            <li>The tool is optimized for use on desktop browsers but is also responsive on mobile.</li>
+        </ul>
+    </div>
 
-                if (grossPayIndex === -1 || payPeriodIndex === -1 || incomeTaxIndex === -1) {
-                    alert("The Excel file does not contain required columns (Gross Pay, Income Tax, Pay Period).");
-                    return;
-                }
-
-                const firstRow = rows[1];
-
-                document.getElementById("grossPay").value = firstRow[grossPayIndex] || 0;
-                document.getElementById("additionalPension").value = firstRow[additionalPensionIndex] || 0;
-                document.getElementById("payPeriod").value = firstRow[payPeriodIndex] || 12;
-                document.getElementById("taxThreshold").value = firstRow[incomeTaxIndex] || 0;
-
-                const threshold = parseFloat(firstRow[incomeTaxIndex]);
-                const period = parseInt(firstRow[payPeriodIndex]);
-
-                const results = rows.slice(1).map(row => {
-                    return calculateDeductions(
-                        parseFloat(row[grossPayIndex]),
-                        parseFloat(row[additionalPensionIndex] || 0),
-                        threshold,
-                        period
-                    );
-                });
-
-                currentResults = results;
-                displayResult(currentResults);
-                document.getElementById("exportButtons").style.display = "block";
-            };
-            reader.readAsArrayBuffer(file);
-        });
-
-        function calculateDeductions(grossPay, additionalPension, annualThreshold, period) {
-            const nht = grossPay * 0.02;
-            const nisRaw = grossPay * 0.03;
-            const nis = Math.min(nisRaw, 12500);
-            const thresholdPerPeriod = annualThreshold / period;
-            const taxableReduction = nis + additionalPension + thresholdPerPeriod;
-            let paye = 0.25 * (grossPay - taxableReduction);
-            if (paye < 0) paye = 0;
-            const eduTax = (grossPay - (nis + additionalPension)) * 0.0225;
-            const totalDeductions = nht + nis + additionalPension + eduTax + paye;
-            const netPay = grossPay - totalDeductions;
-
-            return {
-                GrossPay: grossPay,
-                NHT: nht,
-                NIS: nis,
-                AdditionalPension: additionalPension,
-                PAYE: paye,
-                EducationTax: eduTax,
-                NetPay: netPay
-            };
-        }
-
-        function displayResult(results) {
-            const container = document.getElementById("result");
-            container.innerHTML = "";
-            document.getElementById("exportButtons").style.display = "block";
-
-            results.forEach((r, i) => {
-                const slip = document.createElement("div");
-                slip.className = "pay-slip";
-
-                slip.innerHTML = `
-              <h3>Pay Slip ${i + 1}</h3>
-              <table>
-                <tr><td class="label">Gross Pay</td><td>$${formatCurrency(r.GrossPay)}</td></tr>
-                 <tr><td class="label">PAYE (25%)</td><td>$${formatCurrency(r.PAYE)}</td></tr>
-                <tr><td class="label">NHT (2%)</td><td>$${formatCurrency(r.NHT)}</td></tr>
-                <tr><td class="label">NIS (3%)</td><td>$${formatCurrency(r.NIS)}</td></tr>
-                <tr><td class="label">Additional Pension</td><td>$${formatCurrency(r.AdditionalPension)}</td></tr>
-                <tr><td class="label">Education Tax (2.25%)</td><td>$${formatCurrency(r.EducationTax)}</td></tr>            
-                <tr><td class="label"><strong>Net Pay</strong></td><td><strong>$${formatCurrency(r.NetPay)}</strong></td></tr>
-              </table>
-            `;
-                container.appendChild(slip);
-            });
-        }
-
-        function formatCurrency(value) {
-            return parseFloat(value).toLocaleString("en-JM", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-        }
-
-
-        function exportPDF() {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-
-            currentResults.forEach((r, i) => {
-                doc.text(`Pay Slip ${i + 1}`, 10, 10 + (i * 60));
-                doc.text(`Gross Pay: $${formatCurrency(r.GrossPay)}`, 10, 20 + (i * 60));
-                doc.text(`NHT (2%): $${formatCurrency(r.NHT)}`, 10, 30 + (i * 60));
-                doc.text(`NIS (3%): $${formatCurrency(r.NIS)}`, 10, 40 + (i * 60));
-                doc.text(`Additional Pension: $${formatCurrency(r.AdditionalPension)}`, 10, 50 + (i * 60));
-                doc.text(`Education Tax (2.25): $${formatCurrency(r.EducationTax)}`, 10, 60 + (i * 60));
-                doc.text(`PAYE: $${formatCurrency(r.PAYE)}`, 10, 70 + (i * 60));
-                doc.text(`Net Pay: $${formatCurrency(r.NetPay)}`, 10, 80 + (i * 60));
-            });
-
-            doc.save('salary-slip.pdf');
-        }
-
-        function exportCSV() {
-            const csv = currentResults.map(r => [
-                r.GrossPay,
-                r.NHT,
-                r.NIS,
-                r.AdditionalPension,
-                r.EducationTax,
-                r.PAYE,
-                r.NetPay
-            ]);
-            csv.unshift([
-                "Gross Pay",
-                "NHT (2%)",
-                "NIS (3%)",
-                "Additional Pension",
-                "Education Tax (2.25%)",
-                "PAYE (25%)",
-                "Net Pay"
-            ]);
-
-            const csvContent = csv.map(row => row.join(",")).join("\n");
-            const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
-            const link = document.createElement("a");
-            link.href = URL.createObjectURL(blob);
-            link.download = "salary-slip.csv";
-            link.click();
-        }
-    </script>
-
+    <!-- Footer section starts here -->
+    <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+    <!-- Footer section ends here -->
 </body>
 </html>
