@@ -46,11 +46,23 @@ document.getElementById("excelFile").addEventListener("change", function (e) {
 
         document.getElementById("grossPay").value = firstRow[grossPayIndex] || 0;
         document.getElementById("additionalPension").value = firstRow[pensionIndex] || 0;
-        document.getElementById("payPeriod").value = firstRow[payPeriodIndex] || 12;
         document.getElementById("taxThreshold").value = firstRow[taxThresholdIndex] || 0;
 
+        // Handle Pay Period input (as number or label)
+        let rawPeriod = (firstRow[payPeriodIndex] || "").toString().toLowerCase().trim();
+        let periodMap = {
+            "monthly": "12",
+            "fortnightly": "26",
+            "weekly": "52",
+            "12": "12",
+            "26": "26",
+            "52": "52"
+        };
+        let mappedPeriod = periodMap[rawPeriod] || "12"; // Default to monthly
+        document.getElementById("payPeriod").value = mappedPeriod;
+
         const threshold = parseFloat(firstRow[taxThresholdIndex] || 0);
-        const period = parseInt(firstRow[payPeriodIndex] || 12);
+        const period = parseInt(mappedPeriod);
 
         const results = rows.slice(1).map(row => {
             const gross = parseFloat(row[grossPayIndex] || 0);
@@ -65,6 +77,8 @@ document.getElementById("excelFile").addEventListener("change", function (e) {
 
     reader.readAsArrayBuffer(file);
 });
+
+
 
 function calculateDeductions(grossPay, additionalPension, annualThreshold, period) {
     if (isNaN(grossPay) || isNaN(additionalPension) || isNaN(annualThreshold) || isNaN(period)) {
