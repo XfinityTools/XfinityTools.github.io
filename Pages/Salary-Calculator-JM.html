@@ -111,6 +111,8 @@
             <li>Scroll to the form section labeled “Calculate Salary.”</li>
             <li>Enter the <strong>Gross Pay</strong> amount.</li>
             <li>Optionally enter any additional <strong>Pension Contribution</strong> amount.</li>
+            <li>Select the <strong>Pay Period</strong> (Monthly, Fortnightly, or Weekly).</li>
+            <li>Enter the <strong>Income Tax Threshold</strong> amount.</li>
             <li>Click on the <strong>“Calculate Salary”</strong> button.</li>
             <li>The payslip will be generated and shown below the form with all deductions and net salary clearly listed.</li>
         </ul>
@@ -119,7 +121,33 @@
         <ul>
             <li>Scroll down to the file upload section labeled “Upload Excel File.”</li>
             <li>Click on the file input to select an Excel file (.xlsx or .xls) containing employee salary information.</li>
-            <li>Ensure the file includes the necessary information (single entry titles) <strong>columns with exact names</strong>:</li>
+            <li>Ensure the file includes the following column headers for accurate processing:</li>
+            <li><strong>NB: Place 0 on the sheet if additional pension does not apply</strong></li>
+
+            <table border="1" cellpadding="8" style="margin: 10px 0; border-collapse: collapse;">
+                <thead style="background-color: #f2f2f2;">
+                    <tr>
+                        <th>Gross Pay</th>
+                        <th>Additional Pension</th>
+                        <th>Income Tax Threshold</th>
+                        <th>Pay Period</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Required</td>
+                        <td>Optional</td>
+                        <td>Required</td>
+                        <td>Required</td>
+                    </tr>
+                    <tr>
+                        <td>Numeric value</td>
+                        <td>Numeric value</td>
+                        <td>Numeric value</td>
+                        <td>12 / 26 / 52 <br>or<br> Monthly / Fortnightly / Weekly</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <li>Click the <strong>“Upload”</strong> button to process the file.</li>
             <li>The tool will automatically calculate deductions and generate a payslip for each employee listed.</li>
@@ -147,6 +175,7 @@
             <li>The tool is optimized for use on desktop browsers but is also responsive on mobile.</li>
         </ul>
     </div>
+
 
     <!-- Footer section starts here -->
     <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
