@@ -23,8 +23,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <meta name="description" content="Convert text and files to and from Base64 format using this powerful and easy-to-use tool from XfinityTools." />
     <meta charset="UTF-8">
-    <link href="Css/StyleSheet1.css" rel="stylesheet" />
-    <link href="../Pages/Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet8.css" rel="stylesheet" />
 
     <title>Base64 Encoder/Decoder</title>
 
@@ -36,7 +37,7 @@
             }
         }
 
-        textarea {
+        .base64-textarea {
             width: 100%;
             height: 160px;
             padding: 12px 14px;
@@ -101,7 +102,7 @@
 
     <div class="text-metrics-header">
         <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
-        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></p>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Base64 Encoder/Decoder</p>
         <a href="../Pages/Dashboards/Dashboard.html"><p style="font-size: 85%; font-family: 'Pacifico', cursive;">Go Back</p></a>
     </div>
 
@@ -110,11 +111,11 @@
     <div class="container">
         <div class="main-content">
 
-            <h2>Base64 Encoder/Decoder</h2>
+            
             <p>Convert text or files to and from Base64 format. Useful for embedding data into HTML, CSS, or API payloads.</p>
 
             <h4>Text Input</h4>
-            <textarea id="textInput" placeholder="Enter your text or Base64 string here..."></textarea>
+            <textarea class="base64-textarea" id="textInput" placeholder="Enter your text or Base64 string here..."></textarea>
 
             <div class="button-group">
                 <button onclick="encodeText()">Encode Text</button>
@@ -131,7 +132,7 @@
             </div>
 
             <h4>Output</h4>
-            <textarea id="output" placeholder="Output will appear here..." readonly></textarea>
+            <textarea class="base64-textarea" id="output" placeholder="Output will appear here..." readonly></textarea>
 
         </div>
     </div>

@@ -16,5 +16,9 @@
         font-size: 21px;
         transition: border-color 0.3s ease;
     }
+
+    .hide-button {
+        visibility: hidden;
+    }
 }
 
