@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-
+    <!-- Yandex.RTB -->
+    <script>window.yaContextCb = window.yaContextCb || []</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
     <script>
@@ -40,7 +41,27 @@
     <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
 </head>
 <body>
-   
+    <!-- Yandex.RTB R-A-14927786-2 -->
+    <script>
+        window.yaContextCb.push(() => {
+            Ya.Context.AdvManager.render({
+                "blockId": "R-A-14927786-2",
+                "type": "fullscreen",
+                "platform": "desktop"
+            })
+        })
+    </script>
+
+    <!-- Yandex.RTB R-A-14927786-3 -->
+    <script>
+        window.yaContextCb.push(() => {
+            Ya.Context.AdvManager.render({
+                "blockId": "R-A-14927786-3",
+                "type": "fullscreen",
+                "platform": "touch"
+            })
+        })
+    </script>
 
     <div class="text-metrics-header">
         <a href="/" style="font-family: 'Pacifico', cursive; font-size: 200%;">Xfinity Tools</a>
@@ -59,28 +80,30 @@
     <br />
     <div class="container">
         <div class="main-content">
-            <label for="keyLength">Key Length:</label>
-            <input class="border-2px-solid-black keylength" style="width:20%;" type="number" id="keyLength" value="16" min="8" max="64" />
+            <div>
+                <label for="keyLength">Key Length:</label>
+                <input class="border-2px-solid-black keylength" style="width:20%;" type="number" id="keyLength" value="16" min="8" max="64" />
 
-            <label><input type="checkbox" id="uppercase" /> Uppercase Letters</label>
-            <label><input type="checkbox" id="lowercase" /> Lowercase Letters</label>
-            <label><input type="checkbox" id="numbers" checked /> Numbers</label>
-            <label><input type="checkbox" id="special" /> Special Characters</label>
-            <label><input type="checkbox" id="excludeSimilar" /> Avoid Similar Characters (e.g., l, 1, I, 0, O)</label>
-            <label><input type="checkbox" id="segmentKey" /> Segment Key with Dashes (e.g., XXXX-YYYY-ZZZZ)</label>
-
-
-            <label for="customChars">Or use custom characters:</label>
-            <input class="border-2px-solid-black" style="width:30%;" type="text" id="customChars" placeholder="Enter your own character set" />
+                <label><input type="checkbox" id="uppercase" /> Uppercase Letters</label>
+                <label><input type="checkbox" id="lowercase" /> Lowercase Letters</label>
+                <label><input type="checkbox" id="numbers" checked /> Numbers</label>
+                <label><input type="checkbox" id="special" /> Special Characters</label>
+                <label><input type="checkbox" id="excludeSimilar" /> Avoid Similar Characters (e.g., l, 1, I, 0, O)</label>
+                <label><input type="checkbox" id="segmentKey" /> Segment Key with Dashes (e.g., XXXX-YYYY-ZZZZ)</label>
 
 
-            <button id="generateKey">Generate Key</button>
-            <button id="downloadKey" disabled>Download Key</button>
-            <button id="copyKey" disabled>Copy to Clipboard</button>
-            <button id="exportPdf" disabled>Export to PDF</button>
+                <label for="customChars">Or use custom characters:</label>
+                <input class="border-2px-solid-black" style="width:30%;" type="text" id="customChars" placeholder="Enter your own character set" />
 
-            <label for="generatedKeyBox">Generated Key:</label>
-            <textarea class="border-2px-solid-black" style="width:40%;" id="generatedKeyBox" readonly></textarea>
+
+                <button id="generateKey">Generate Key</button>
+                <button id="downloadKey" disabled>Download Key</button>
+                <button id="copyKey" disabled>Copy to Clipboard</button>
+                <button id="exportPdf" disabled>Export to PDF</button>
+
+                <label for="generatedKeyBox">Generated Key:</label>
+                <textarea class="border-2px-solid-black" style="width:40%;" id="generatedKeyBox" readonly></textarea>
+            </div>
         </div>
     </div>
 
