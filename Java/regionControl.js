@@ -1,5 +1,5 @@
 (function () {
-   
+    // Insert basic loading spinner
     document.body.innerHTML = `
     <style>
       body {
@@ -26,8 +26,13 @@
     <div class="spinner"></div>
   `;
 
-    async function checkRegion() {
+    async function checkRegionAndBots() {
         let allowAccess = false; // Default to not allow
+
+        // Detect potential bots based on User-Agent or other headers
+        if (isBot()) {
+            allowAccess = false;
+        }
 
         try {
             const controller = new AbortController();
@@ -43,6 +48,7 @@
 
             console.log('Region Check:', countryCode); // Safe log
 
+            // Allow access if not from Russia
             if (countryCode && countryCode !== 'RU') {
                 allowAccess = true;
             }
@@ -76,6 +82,16 @@
         }
     }
 
+    function isBot() {
+        // Simple bot detection based on common user-agents
+        const userAgent = navigator.userAgent.toLowerCase();
+        const bots = [
+            'bot', 'crawl', 'spider', 'slurp', 'googlebot', 'bingbot', 'baiduspider', 'yandexbot', 'duckduckbot'
+        ];
+
+        return bots.some(bot => userAgent.includes(bot));
+    }
+
     function initializeSite() {
         // Load Google Analytics
         const gtagScript = document.createElement('script');
@@ -98,5 +114,5 @@
         document.head.appendChild(adsenseScript);
     }
 
-    checkRegion();
+    checkRegionAndBots();
 })();
