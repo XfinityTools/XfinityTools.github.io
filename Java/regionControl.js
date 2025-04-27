@@ -1,5 +1,5 @@
 (function () {
-    // Insert basic loading spinner
+   
     document.body.innerHTML = `
     <style>
       body {
