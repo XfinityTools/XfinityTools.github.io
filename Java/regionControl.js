@@ -1,5 +1,5 @@
 (function () {
-    // Insert basic loading spinner without overwriting existing content
+    // Insert basic loading spinner
     const spinner = document.createElement('div');
     spinner.innerHTML = `
         <style>
@@ -9,7 +9,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: #111;
+                background: #000;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -35,42 +35,27 @@
     document.body.appendChild(spinner);
 
     async function checkRegionAndBots() {
-        let allowAccess = false; // Default to not allow
+        let allowAccess = false;
 
-        // Enhanced bot detection
         if (isBot()) {
             console.log('Bot detected');
             allowAccess = false;
         } else {
             try {
-                const controller = new AbortController();
-                const timeout = setTimeout(() => controller.abort(), 5000); // Increased timeout
-
-                const response = await fetch('https://ipapi.co/json/', {
-                    signal: controller.signal,
-                    headers: { 'User-Agent': navigator.userAgent }
-                });
-                clearTimeout(timeout);
-
-                if (!response.ok) throw new Error('API response error');
-
-                const data = await response.json();
-                const countryCode = data.country_code; // ipapi.co uses country_code
-
+                const countryCode = await getCountryCode();
                 console.log('Region Check:', countryCode);
 
-                // Allow access if not from Russia or if country code is undefined (fallback)
-                if (!countryCode || countryCode !== 'RU') {
+                if (countryCode && countryCode !== 'RU') {
                     allowAccess = true;
+                } else {
+                    allowAccess = false;
                 }
             } catch (error) {
                 console.error('Region check failed:', error);
-                // Fallback: Allow access if API fails to avoid blocking legitimate users
-                allowAccess = true;
+                allowAccess = false; // Default to block on API failure
             }
         }
 
-        // Additional bot detection: Check for human-like behavior
         if (allowAccess) {
             allowAccess = await checkHumanBehavior();
         }
@@ -80,7 +65,7 @@
                 <style>
                     body {
                         margin: 0;
-                        background: #111;
+                        background: #000;
                         color: #fff;
                         display: flex;
                         flex-direction: column;
@@ -91,8 +76,8 @@
                         text-align: center;
                     }
                 </style>
-                <h1>Content Unavailable</h1>
-                <p>This page is currently unavailable in your region or due to suspicious activity.</p>
+                <h1>Access Denied</h1>
+                <p>This content is not available in your region or failed verification checks.</p>
             `;
         } else {
             // Remove spinner
@@ -107,46 +92,72 @@
         const userAgent = navigator.userAgent.toLowerCase();
         const bots = [
             'bot', 'crawl', 'spider', 'slurp', 'googlebot', 'bingbot',
-            'baiduspider', 'yandexbot', 'duckduckbot', 'headless'
+            'baiduspider', 'yandexbot', 'duckduckbot', 'headless', 'phantomjs', 'selenium'
         ];
 
-        // Check user-agent for bot signatures
         if (bots.some(bot => userAgent.includes(bot))) return true;
-
-        // Check for missing or suspicious navigator properties
-        if (!navigator.webdriver && !window.chrome && !navigator.plugins.length) {
-            return true;
-        }
-
-        // Check for headless browser indicators
-        if (window.outerWidth === 0 || window.outerHeight === 0) {
-            return true;
-        }
+        if (navigator.webdriver) return true;
+        if (!navigator.plugins.length) return true;
+        if (window.outerWidth === 0 || window.outerHeight === 0) return true;
+        if (window.chrome === undefined && /headless/.test(userAgent)) return true;
 
         return false;
     }
 
+    async function getCountryCode() {
+        try {
+            // Try first API
+            const controller1 = new AbortController();
+            const timeout1 = setTimeout(() => controller1.abort(), 5000);
+            const response1 = await fetch('https://ipapi.co/json/', { signal: controller1.signal });
+            clearTimeout(timeout1);
+
+            if (response1.ok) {
+                const data1 = await response1.json();
+                if (data1 && data1.country_code) {
+                    return data1.country_code;
+                }
+            }
+        } catch (error) {
+            console.warn('Primary IP API failed', error);
+        }
+
+        try {
+            // Fallback API
+            const controller2 = new AbortController();
+            const timeout2 = setTimeout(() => controller2.abort(), 5000);
+            const response2 = await fetch('https://ipinfo.io/json?token=YOUR_TOKEN_HERE', { signal: controller2.signal });
+            clearTimeout(timeout2);
+
+            if (response2.ok) {
+                const data2 = await response2.json();
+                if (data2 && data2.country) {
+                    return data2.country;
+                }
+            }
+        } catch (error) {
+            console.warn('Fallback IP API failed', error);
+        }
+
+        throw new Error('Unable to determine country');
+    }
+
     async function checkHumanBehavior() {
         return new Promise((resolve) => {
-            let isHuman = false;
             let interactionCount = 0;
 
-            // Monitor mouse movements and clicks
             document.addEventListener('mousemove', () => interactionCount++);
+            document.addEventListener('keydown', () => interactionCount++);
+            document.addEventListener('scroll', () => interactionCount++);
             document.addEventListener('click', () => interactionCount++);
 
-            // Check interactions after 3 seconds
             setTimeout(() => {
-                if (interactionCount > 2) {
-                    isHuman = true; // Require multiple interactions
-                }
-                resolve(isHuman);
-            }, 3000);
+                resolve(interactionCount > 5); // Require 5+ interactions within 5 seconds
+            }, 5000);
         });
     }
 
     function initializeSite() {
-        // Load Google Analytics
         const gtagScript = document.createElement('script');
         gtagScript.async = true;
         gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY';
@@ -159,7 +170,6 @@
             gtag('config', 'G-MW6PG5PVGY');
         };
 
-        // Load AdSense
         const adsenseScript = document.createElement('script');
         adsenseScript.async = true;
         adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736';
