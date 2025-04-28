@@ -12,6 +12,11 @@
         margin: 0;
         padding: 0;
     }
+
+    .content-section {
+        width: 50%;
+        padding: 70px;
+    }
 }
 
 
