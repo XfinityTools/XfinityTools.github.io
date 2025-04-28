@@ -106,41 +106,24 @@
 
     async function getCountryCode() {
         try {
-            // Try first API
-            const controller1 = new AbortController();
-            const timeout1 = setTimeout(() => controller1.abort(), 5000);
-            const response1 = await fetch('https://ipapi.co/json/', { signal: controller1.signal });
-            clearTimeout(timeout1);
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 5000);
+            const response = await fetch('https://ipapi.co/json/', { signal: controller.signal });
+            clearTimeout(timeout);
 
-            if (response1.ok) {
-                const data1 = await response1.json();
-                if (data1 && data1.country_code) {
-                    return data1.country_code;
+            if (response.ok) {
+                const data = await response.json();
+                if (data && data.country_code) {
+                    return data.country_code;
                 }
             }
         } catch (error) {
-            console.warn('Primary IP API failed', error);
-        }
-
-        try {
-            // Fallback API
-            const controller2 = new AbortController();
-            const timeout2 = setTimeout(() => controller2.abort(), 5000);
-            const response2 = await fetch('https://ipinfo.io/json?token=YOUR_TOKEN_HERE', { signal: controller2.signal });
-            clearTimeout(timeout2);
-
-            if (response2.ok) {
-                const data2 = await response2.json();
-                if (data2 && data2.country) {
-                    return data2.country;
-                }
-            }
-        } catch (error) {
-            console.warn('Fallback IP API failed', error);
+            console.warn('IP API failed', error);
         }
 
         throw new Error('Unable to determine country');
     }
+
 
     async function checkHumanBehavior() {
         return new Promise((resolve) => {
