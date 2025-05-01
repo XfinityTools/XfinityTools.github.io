@@ -1,5 +1,5 @@
 (function () {
-    // Insert basic loading spinner
+    
     const spinner = document.createElement('div');
     spinner.innerHTML = `
         <style>
@@ -52,7 +52,7 @@
                 }
             } catch (error) {
                 console.error('Region check failed:', error);
-                allowAccess = false; // Default to block on API failure
+                allowAccess = false; 
             }
         }
 
@@ -80,7 +80,7 @@
                 <p>This content is not available in your region or failed verification checks.</p>
             `;
         } else {
-            // Remove spinner
+            
             const spinnerContainer = document.querySelector('.spinner-container');
             if (spinnerContainer) spinnerContainer.remove();
             document.documentElement.style.display = '';
@@ -135,8 +135,7 @@
             document.addEventListener('click', () => interactionCount++);
 
             setTimeout(() => {
-                resolve(interactionCount > 5); // Require 5+ interactions within 5 seconds
-            }, 5000);
+                resolve(interactionCount > 5); 
         });
     }
 
