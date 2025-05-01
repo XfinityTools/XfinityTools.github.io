@@ -50,6 +50,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="JS/JavaS1.js"></script>
     <script src="JS/DropDownMenu.js"></script>
+    <script src="Javascript/updateDateTime.js"></script>
 
     <link href="Index.css" rel="stylesheet" />
 
@@ -68,8 +69,8 @@
             <a href="About.html">About</a>
             <a href="Disclaimer.html">Disclaimer</a>
             <a href="Contact.html">Contact</a>
-
             <a href="Pages/Dashboards/ToolList.html">Tools List</a>
+           
         </div>
     </div>
 
@@ -111,31 +112,25 @@
             <h2>How It Works</h2>
             <p>
                 Each tool comes with step-by-step instructions, ensuring you get the results you need without hassle. Learn more about each tool by exploring our <a href="Pages/Dashboards/Dashboard.html">All Tools</a> page.
+                <a style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;" href="ads.txt">SiteMap</a><br />
+        <a style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;" href="yandex-ads-txt.txt">YAN</a><br />       
+        <a href="robots.txt" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">SiteMap</a>
+
             </p>
 
         </section>
 
 
     </div>
-
-
-    
    
 
     <footer style="padding: 15px; margin-top: 30px; margin-left: 30px;">
         <p style="display: inline-block;">&copy; <span id="currentYear"></span> - XfinityTools</p>
         <a style="float:right; display:inline-block;" href="Pages/Dashboards/ToolList.html">Tools List</a>
-        <a style="float:left; display:inline-block;" href="sitemap.xml">SiteMap</a><br />
-        <a style="  visibility:hidden;" href="ads.txt">SiteMap</a><br />
-        <a style="  visibility:hidden;" href="yandex-ads-txt.txt">YAN</a><br />
-        
-        <a style="visibility:hidden;" href="robots.txt">SiteMap</a><br />
-
+        <a style="float:left; display:inline-block;" href="sitemap.xml">SiteMap</a><br />       
         <script>
             document.getElementById('currentYear').textContent = new Date().getFullYear();
         </script>
-
-
     </footer>
 
 </body>
@@ -200,28 +195,4 @@
         font-size: 14px;
     }
 </style>
-
-<!--Other Scripts-->
-<script>
-
-    function updateDateTime() {
-        const now = new Date();
-        const date = now.toLocaleDateString('en-US', {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-        const time = now.toLocaleTimeString('en-US', {
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            hour12: false // Use 24-hour format
-        });
-        document.getElementById('currentDateTime').textContent = `${date}, ${time}`;
-    }
-
-    // Update the date and time immediately and then every second
-    updateDateTime();
-    setInterval(updateDateTime, 1000);
-</script>
+<script src="Javascript/updateDateTime.js"></script>
