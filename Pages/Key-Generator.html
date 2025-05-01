@@ -57,6 +57,38 @@
         })();
     </script>
 
+    <script>
+        (function () {
+            function isLikelyBot() {
+                const ua = navigator.userAgent.toLowerCase();
+                const botKeywords = [
+                    'bot', 'crawl', 'spider', 'slurp', 'googlebot', 'bingbot',
+                    'baiduspider', 'yandexbot', 'duckduckbot', 'headless', 'phantomjs', 'selenium'
+                ];
+
+                if (botKeywords.some(keyword => ua.includes(keyword))) return true;
+                if (navigator.webdriver) return true;
+                if (!navigator.plugins || navigator.plugins.length === 0) return true;
+                if (window.outerWidth === 0 || window.outerHeight === 0) return true;
+
+                return false;
+            }
+
+            function loadAdsense() {
+                const adsenseScript = document.createElement('script');
+                adsenseScript.async = true;
+                adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736';
+                adsenseScript.crossOrigin = 'anonymous';
+                document.head.appendChild(adsenseScript);
+            }
+
+            if (!isLikelyBot()) {
+                loadAdsense();
+            } else {
+                console.log('AdSense blocked: bot-like activity detected.');
+            }
+        })();
+    </script>
 
     <!-- Yandex.RTB -->
     <script>window.yaContextCb = window.yaContextCb || []</script>
