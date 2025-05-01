@@ -18,17 +18,17 @@
                     (window.outerWidth === 0 || window.outerHeight === 0)
                 );
             };
-        
+
             const getCountryCode = async () => {
                 const cachedCountry = sessionStorage.getItem('countryCode');
                 if (cachedCountry) return cachedCountry;
-        
+
                 try {
                     const controller = new AbortController();
                     const timeoutId = setTimeout(() => controller.abort(), 4000);
                     const response = await fetch('https://ipapi.co/json/', { signal: controller.signal });
                     clearTimeout(timeoutId);
-        
+
                     if (response.ok) {
                         const data = await response.json();
                         const code = data?.country_code || null;
@@ -40,7 +40,7 @@
                 }
                 return null;
             };
-        
+
             const initializeAdSense = () => {
                 const adsenseScript = document.createElement('script');
                 adsenseScript.async = true;
@@ -48,13 +48,13 @@
                 adsenseScript.crossOrigin = 'anonymous';
                 document.head.appendChild(adsenseScript);
             };
-        
+
             const run = async () => {
                 if (isBot()) {
                     console.warn('AdSense blocked: bot detected.');
                     return;
                 }
-        
+
                 const country = await getCountryCode();
                 if (country && country !== 'RU') {
                     initializeAdSense();
@@ -62,11 +62,10 @@
                     console.warn('AdSense blocked due to region:', country);
                 }
             };
-        
+
             run();
         })();
-        </script>
-        
+    </script>
 
     <!-- Yandex.RTB -->
     <script>window.yaContextCb = window.yaContextCb || []</script>
@@ -86,19 +85,17 @@
     <meta name="author" content="Diamond A Buchanan">
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
-
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
+            crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Generate strong random keys for API access, software licensing, or secure passwords. Supports custom length and character set options." />
     <title>Free Key Generator</title>
-   
+
     <link rel="icon" href="../Images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-   
-    
-
     <link href="../Css/StyleSheet6.css" rel="stylesheet" />
     <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
 </head>
@@ -228,5 +225,4 @@
 
 </body>
 </html>
-
 <script src="../Java/JS6.js"></script>
