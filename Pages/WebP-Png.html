@@ -2,7 +2,59 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    
+    <script>
+        (function () {
+            const isBot = () => {
+                const ua = navigator.userAgent.toLowerCase();
+                const botPatterns = [
+                    'bot', 'crawl', 'spider', 'slurp', 'googlebot', 'bingbot',
+                    'baiduspider', 'yandexbot', 'duckduckbot', 'headless', 'phantomjs', 'selenium'
+                ];
+                return (
+                    botPatterns.some(bot => ua.includes(bot)) ||
+                    navigator.webdriver ||
+                    !navigator.plugins.length ||
+                    (window.outerWidth === 0 || window.outerHeight === 0)
+                );
+            };
+
+            const getCountryCode = async () => {
+                try {
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 4000);
+                    const response = await fetch('https://ipapi. /json/', { signal: controller.signal });
+                    clearTimeout(timeoutId);
+                    if (response.ok) {
+                        const data = await response.json();
+                        return data?.country_code || null;
+                    }
+                } catch (e) {
+                    console.warn('Geolocation check failed:', e);
+                }
+                return null;
+            };
+
+            const initializeAdSense = () => {
+                const adsenseScript = document.createElement('script');
+                adsenseScript.async = true;
+                adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736';
+                adsenseScript.crossOrigin = 'anonymous';
+                document.head.appendChild(adsenseScript);
+            };
+
+            const run = async () => {
+                if (isBot()) return;
+                const country = await getCountryCode();
+                if (country && country !== 'RU') {
+                    initializeAdSense();
+                } else {
+                    console.warn('AdSense blocked due to region:', country);
+                }
+            };
+
+            run();
+        })();
+    </script>
 
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/WebP-Png.html">
