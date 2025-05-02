@@ -3,6 +3,21 @@
     font-family: 'Franklin Gothic Medium';font-size: 85%;text-decoration: none;
 }
 
+.coffee-button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #e60340;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
 
 @media (max-width:768px){
     .mobile-friendly{
