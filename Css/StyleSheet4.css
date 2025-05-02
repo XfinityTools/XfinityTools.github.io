@@ -49,15 +49,17 @@
 
 #jsonOutput {
     border: 2px solid black;
+    height:100px;
+   
 }
 
 .json-text-toolbox {
-                border: 2px dashed #ccc;
+
     padding: 20px;
     margin: 30px auto;
-    max-width: 800px;
+    max-width: 650px;
     border-radius: 10px;
-    background: #f9f9f9;
+   
 }
 
     .json-text-toolbox h2 {
