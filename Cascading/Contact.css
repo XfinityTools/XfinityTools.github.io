@@ -1,4 +1,19 @@
+.mobile-friendly {
+    display: flex; justify-content: center; align-items: center; gap: 30px; padding: 10px;
+    font-family: 'Franklin Gothic Medium';font-size: 85%;text-decoration: none;
+}
 
+
+@media (max-width:768px){
+    .mobile-friendly{
+        font-weight:bolder;
+        gap: 40px;
+    }
+
+    .Header-Tool-Title{
+        font-weight: bolder;
+        }
+    }
 
     .separate-links{
         gap: 30px; padding: 10px; font-size: 110%;
