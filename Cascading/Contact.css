@@ -15,42 +15,46 @@
     text-align: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
+
+}
+
+.coffee-button:hover{
+    color: white;
 }
 
 
-@media (max-width:768px){
+@media (max-width:768px) {
     .mobile-friendly{
-        font-weight:bolder;
-        gap: 40px;
-    }
+    font-weight:bolder;
+    gap: 40px;
+}
 
-    .Header-Tool-Title{
-        font-weight: bolder;
-        }
+.Header-Tool-Title{
+    font-weight: bolder;
     }
+}
 
-    .separate-links{
-        gap: 30px; padding: 10px; font-size: 110%;
-    }
-    .contact-links{
-        font-weight: normal;
-        text-decoration: underline;
-    }
-    .border-hidden{
-        border: hidden;
-    }
-    .feedback-textarea {
+.separate-links{
+    gap: 30px; padding: 10px; font-size: 110%;
+}
+.contact-links{
+    font-weight: normal;
+    text-decoration: underline;
+}
+.border-hidden{
+    border: hidden;
+}
+.feedback-textarea {
     height: 60px;
     resize: none;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
-    
-    width: 100%;
+
+width: 100%;
 }
 
 .feedback-container, .feedback-my-5{
-    width: 50%;
+width: 50%;
 }
 
 .feedback-form {
@@ -71,24 +75,23 @@
 }
 
 .feedback-submit{
-    background-color: #e60340;
+background-color: #e60340;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    
     color: black;
     font-size: 0.9rem;
     margin-top: 30px;
     border-radius: 0 0 8px 8px;
 }
 
-    footer p {
-        margin: 0;
-        font-family: 'Teko', sans-serif;
-    }
+footer p {
+    margin: 0;
+    font-family: 'Teko', sans-serif;
+}
 
 /* Hamburger Icon */
 .hamburger {
@@ -102,31 +105,31 @@ footer {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
+.hamburger {
+    display: block;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #e60340;
+    margin-top: 10px;
+}
+
+    .nav-links.show {
+        display: flex;
+        
     }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #e60340;
-        margin-top: 10px;
+    .nav-links a {
+        padding: 10px 0;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
-
-        .nav-links.show {
-            display: flex;
-            
-        }
-
-        .nav-links a {
-            padding: 10px 0;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
 }
 
 button:hover, input[type="submit"]:hover {
-        background-color: #e60340;
-    }
+    background-color: #e60340;
+}
 
