@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/WebP-Metadata-Viewer">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="The WebP Metadata Viewer is a free online tool that allows you to upload and analyze WebP image files to extract and view detailed metadata including file size, type, and dimensions." />
+
+
+    <link href="../Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
+
+    <title>WebP Metadata Viewer</title>
+
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">WebP Metadata Viewer</p>
+        <div class="header mobile-friendly">
+            <a href="/">Home</a>
+            <a href="../Pages/Dashboards/Dashboard.html">Dashboard</a>
+            <a href="../Pages/Dashboards/ToolList.html">Tool List</a>
+            <a href="../Pages/Dashboards/ToolsLibrary.html">Tool Library</a>
+        </div>
+    </div>
+
+
+
+    <br />
+
+    <div class="container">
+
+        <div class="main-content">
+
+            <div class="webp-metadata-viewer-tool" id="webpMetadataViewerWrapper">
+                <input type="file" id="webpMetadataInput" accept="image/webp" multiple hidden>
+                <div class="webp-metadata-clickable-area">
+                    <p>Click anywhere here or drag & drop your WebP images to view metadata.</p>
+                    <div id="webpMetadataDropArea" class="webp-metadata-drop-area">
+                        <p>Drag & Drop your WebP files here or click to select</p>
+                    </div>
+                </div>
+                <div id="webpMetadataResultsContainer"></div>
+            </div>
+
+        </div>
+    </div><br />
+    <div class="container-infobox-left">
+        <p>
+            The WebP Metadata Viewer Tool is a free online JavaScript-based utility that allows you to inspect the metadata of multiple WebP image files. This tool helps you view the underlying binary and header information of each uploaded image, useful for technical analysis, debugging, or file validation purposes.
+        </p>
+
+        <br />
+        <h1>Instructions:</h1>
+
+        <h2>Step 1: Select WebP Files</h2>
+        <p>1. Click inside the upload area to open the file selection dialog.</p>
+        <p>2. Browse and select one or more WebP images from your device.</p>
+        <p>3. Alternatively, drag and drop your WebP images directly into the upload area.</p>
+
+        <h2>Step 2: View Metadata</h2>
+        <p>1. After selecting the images, click the <strong>View Metadata</strong> button.</p>
+        <p>2. The tool will display a hex dump of the first 512 bytes of each file.</p>
+        <p>3. Each file metadata will appear in its own section, labeled by filename.</p>
+
+        <h2>Step 3: Analyze or Copy Metadata</h2>
+        <p>1. Use the displayed hex output to analyze file headers or extract technical info.</p>
+        <p>2. You may copy the displayed data for use in reports, research, or development.</p>
+
+        <h2>Tips:</h2>
+        <ul>
+            <li>Ensure your images are in <strong>.webp</strong> format. Other file types are not supported.</li>
+            <li>This tool works fully offline after the page has loaded, no data is sent to a server.</li>
+        </ul>
+    </div>
+
+    
+
+
+
+
+    <!-- Footer section starts here -->
+    <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+</body>
+</html>
+<script src="../Javascript/Webp-metadata-viewer.js"></script>
