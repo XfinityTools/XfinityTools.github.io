@@ -2,59 +2,6 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <script>
-        (function () {
-            const isBot = () => {
-                const ua = navigator.userAgent.toLowerCase();
-                const botPatterns = [
-                    'bot', 'crawl', 'spider', 'slurp', 'googlebot', 'bingbot',
-                    'baiduspider', 'yandexbot', 'duckduckbot', 'headless', 'phantomjs', 'selenium'
-                ];
-                return (
-                    botPatterns.some(bot => ua.includes(bot)) ||
-                    navigator.webdriver ||
-                    !navigator.plugins.length ||
-                    (window.outerWidth === 0 || window.outerHeight === 0)
-                );
-            };
-
-            const getCountryCode = async () => {
-                try {
-                    const controller = new AbortController();
-                    const timeoutId = setTimeout(() => controller.abort(), 4000);
-                    const response = await fetch('https://ipapi.co/json/', { signal: controller.signal });
-                    clearTimeout(timeoutId);
-                    if (response.ok) {
-                        const data = await response.json();
-                        return data?.country_code || null;
-                    }
-                } catch (e) {
-                    console.warn('Geolocation check failed:', e);
-                }
-                return null;
-            };
-
-            const initializeAdSense = () => {
-                const adsenseScript = document.createElement('script');
-                adsenseScript.async = true;
-                adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736';
-                adsenseScript.crossOrigin = 'anonymous';
-                document.head.appendChild(adsenseScript);
-            };
-
-            const run = async () => {
-                if (isBot()) return;
-                const country = await getCountryCode();
-                if (country && country !== 'RU') {
-                    initializeAdSense();
-                } else {
-                    console.warn('AdSense blocked due to region:', country);
-                }
-            };
-
-            run();
-        })();
-    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
     <script>
@@ -64,11 +11,8 @@
 
         gtag('config', 'G-MW6PG5PVGY');
     </script>
-
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/WebP-Png.html">
-
-
     <!-- Yandex.RTB -->
     <script>window.yaContextCb = window.yaContextCb || []</script>
     <script src="https://yandex.ru/ads/system/context.js" async></script>
@@ -76,26 +20,22 @@
 
     <meta name="geo.region" content="JM">
     <meta name="geo.placename" content="Kingston, Jamaica">
-
     <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
     <link rel="shortcut icon" href="../Images/favicon.ico" />
-    <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <meta name="rating" content="general">
     <meta name="author" content="Diamond A Buchanan">
     <script src="../JS/JavaS3.js"></script>
     <meta http-equiv="content-language" content="en-us">
-
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
-
     <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <meta name="description" content="Convert WebP images to PNG format easily with this free online tool. Drag and drop or select WebP files to convert and download the PNG output." />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
-            crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"crossorigin="anonymous"></script>
+            
 
     <title>Free WebP to PNG Converter</title>
 
@@ -143,7 +83,7 @@
             <div id="dropArea">Drag and drop WebP files here<br />or click to select files</div>
             <canvas style="margin: auto; max-width: 350px; max-height: 250px; " id="canvas"></canvas>
             <button class="download-button" id="convertButton" disabled>Convert</button>
-            <a class="download-button" id="downloadLink" style="display: none; width: 5%;">Download</a>
+          <br />  <a class="download-button" id="downloadLink" style="display: none; width: 5%;">Download</a>
         </div>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
                 crossorigin="anonymous"></script>
@@ -227,9 +167,6 @@
     <!-- Footer section ends here -->
 
 </body>
-
-
-
 </html>
 
 
