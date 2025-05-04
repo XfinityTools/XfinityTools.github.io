@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://xfinitytools.github.io/Pages/">
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Debt-to-Income">
     <meta name="geo.region" content="JM">
     <meta name="geo.placename" content="Kingston, Jamaica">
     <!-- Google tag (gtag.js) -->
@@ -21,12 +21,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="" />
+    <meta name="description" content="Instantly calculate your DTI ratio and see if you qualify for loans or credit. Simple, fast, and accurate." />
     <meta charset="UTF-8">
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
     <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
-    <link href="../Css/StyleSheet5.css" rel="stylesheet" />
+    
     <link href="../Css/Debt-to-Income.css" rel="stylesheet" />
     <script src="../Javascript/Debt-to-Income.js"></script>
 
@@ -42,7 +42,7 @@
             <a href="/">Home</a>
             <a href="../Pages/Dashboards/Dashboard.html">Dashboard</a>
             <a href="../Pages/Dashboards/ToolList.html" ">Tool List</a>
-            <a href="../Pages/Dashboards/ToolsLibrary.html">Tool Library</a>   
+            <a href="../Pages/Dashboards/ToolsLibrary.html">Tool Library</a>
         </div>
     </div>
 
@@ -50,7 +50,7 @@
 
     <div class="container">
         <div class="main-content">
-            
+
 
             <label for="monthlyIncome">Monthly Income:</label>
             <input type="text" id="monthlyIncome" oninput="addCommas(event, 'monthlyIncome')">
@@ -75,6 +75,49 @@
             <div class="results" id="dtiResult"></div>
             <div class="results" id="dtiRecommendation"></div>
         </div>
+    </div>
+
+    <div class="container-infobox-left">
+        <p>
+            The Debt-to-Income Ratio Calculator is a free, browser-based tool built with JavaScript that helps users assess their financial health by calculating their debt-to-income (DTI) ratio. It supports additional income sources and optional debt factors, providing users with a percentage-based DTI along with contextual feedback on their result. This tool is ideal for individuals preparing for loan applications, financial planning, or credit evaluation.
+        </p>
+
+        <br />
+        <h1>Instructions:</h1>
+
+        <h2>Step 1: Enter Monthly Income</h2>
+        <p>1. In the "Monthly Income" field, input your regular gross monthly income (before taxes).</p>
+        <p>2. The field automatically formats your entry with commas for easier readability.</p>
+
+        <h2>Step 2: Enter Monthly Debt Payments</h2>
+        <p>1. In the "Monthly Debt Payments" field, input the total of all monthly debt obligations (e.g., credit cards, loans, car payments).</p>
+
+        <h2>Step 3: (Optional) Add Bonus or Extra Income</h2>
+        <p>1. Enter your yearly bonus or overtime income in the "Annual Bonus / Overtime Income" field.</p>
+        <p>2. Add any additional monthly income (e.g., rental income, side jobs) in the "Additional Monthly Income" field.</p>
+
+        <h2>Step 4: (Optional) Enter Other Debts</h2>
+        <p>1. In the "Annual Debt" field, enter any debt that occurs on a yearly basis (e.g., annual loan fees or subscriptions).</p>
+        <p>2. If applicable, input your monthly housing expenses (rent or mortgage) in the "Monthly Housing Costs" field.</p>
+
+        <h2>Step 5: Calculate Your DTI</h2>
+        <p>1. Click the <strong>“Calculate DTI”</strong> button.</p>
+        <p>2. The tool will display your DTI ratio as a percentage based on total monthly income and debts.</p>
+
+        <h2>Step 6: Review the Recommendation</h2>
+        <p>1. Below the result, a recommendation message will appear:</p>
+        <ul>
+            <li><strong>Below 36%:</strong> Healthy DTI range; favorable for most lenders.</li>
+            <li><strong>36% – 43%:</strong> Acceptable, but could be improved before applying for new credit.</li>
+            <li><strong>Above 43%:</strong> High debt load; consider reducing debt or increasing income.</li>
+        </ul>
+
+        <h2>Tips:</h2>
+        <ul>
+            <li>Ensure all monetary inputs are numbers only (no currency symbols).</li>
+            <li>Use the optional fields for a more accurate and realistic calculation.</li>
+            <li>The calculator is for informational purposes and does not replace professional financial advice.</li>
+        </ul>
     </div>
 
     <!-- Footer section starts here -->
