@@ -6,9 +6,6 @@ body {
     padding: 0;
 }
 
-
-
-
 .exif-header, .text-metrics-header, .pdf-header {
     background-color: #e60340;
     color: white;
