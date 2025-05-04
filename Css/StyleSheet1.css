@@ -337,3 +337,45 @@ footer p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
 }
+
+/* WebP to BMP */
+.webp-to-bmp-tool {
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: auto;
+    cursor: pointer;
+}
+
+    .webp-to-bmp-tool h2,
+    .webp-to-bmp-tool p {
+        pointer-events: none;
+    }
+
+.webp-to-bmp-clickable-area {
+    pointer-events: auto;
+}
+
+.webp-to-bmp-drop-area {
+    border: 2px dashed #ccc;
+    padding: 40px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+    .webp-to-bmp-drop-area.dragover {
+        background-color: #e0f7fa;
+    }
+
+#webpToBmpPreviewContainer img {
+    max-width: 100%;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+}
+
+#convertWebpToBmp {
+    margin-top: 15px;
+    cursor: pointer;
+}
