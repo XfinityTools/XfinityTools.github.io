@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Debt-To-Income-Wiki">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <link href="../Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
+
+    <title>Debt To Income Wiki</title>
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">Debt To Income Wiki</p>
+        <div class="header mobile-friendly">
+            <a href="/">Home</a>
+            <a href="../Pages/Dashboards/Dashboard.html">Dashboard</a>
+            <a href="../Pages/Dashboards/ToolList.html">Tool List</a>
+            <a href="../Pages/Dashboards/ToolsLibrary.html">Tool Library</a>
+        </div>
+    </div>
+    <br />
+    <div class="container-infobox-left">
+        <h1>Debt-to-Income Ratio Calculator - Tool Wiki</h1>
+
+        <h2>What is DTI?</h2>
+        <p>
+            Debt-to-Income Ratio (DTI) is a financial metric used to measure how much of your monthly income goes toward paying debts. It is calculated as:
+        </p>
+        <pre>DTI (%) = (Total Monthly Debt Payments ÷ Total Monthly Income) × 100</pre>
+        <p>
+            A lower DTI means a healthier financial position and better chances for loan approval.
+        </p>
+
+        <h2>Overview</h2>
+        <p>
+            The Debt-to-Income (DTI) Ratio Calculator is a free, browser-based JavaScript utility designed to evaluate an individual’s financial health by comparing their monthly debt payments to their monthly income. The tool is ideal for anyone planning to apply for loans, mortgages, or credit, or simply looking to assess and manage their debt load.
+        </p>
+
+        <h2>Purpose</h2>
+        <p>
+            The purpose of this tool is to calculate your DTI ratio and offer a recommendation based on the result. A lower DTI indicates a healthier balance between income and debt, which can improve creditworthiness and increase the likelihood of loan approval.
+        </p>
+
+        <h2>How It Works</h2>
+        <p>
+            Users enter their gross monthly income, recurring monthly debt obligations, and optional values such as annual bonus, additional income, annual debt, and monthly housing costs. The tool then:
+        </p>
+        <ul>
+            <li>Aggregates monthly income (including annual bonus spread over 12 months and other monthly income).</li>
+            <li>Calculates total monthly debt (including annual debt divided by 12 and housing costs).</li>
+            <li>Computes the DTI ratio as: <strong>(Total Monthly Debt / Total Monthly Income) × 100</strong>.</li>
+            <li>Displays the result and a contextual recommendation.</li>
+        </ul>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Real-time number formatting with comma separators.</li>
+            <li>Optional fields for more precise results.</li>
+            <li>Handles empty or non-numeric optional inputs gracefully.</li>
+            <li>Visual feedback via result and recommendation messages.</li>
+            <li>Fully client-side; no data is transmitted or stored.</li>
+        </ul>
+
+        <h2>Input Fields</h2>
+        <ul>
+            <li><strong>Monthly Income:</strong> Required. Your gross (pre-tax) monthly income.</li>
+            <li><strong>Monthly Debt Payments:</strong> Required. The total of all your recurring monthly debt payments.</li>
+            <li><strong>Annual Bonus / Overtime Income:</strong> Optional. Yearly additional income, divided by 12 in the calculation.</li>
+            <li><strong>Additional Monthly Income:</strong> Optional. Other sources of monthly income.</li>
+            <li><strong>Annual Debt:</strong> Optional. Yearly obligations or debt payments, divided by 12.</li>
+            <li><strong>Monthly Housing Costs:</strong> Optional. Rent or mortgage payments.</li>
+        </ul>
+
+        <h2>Output</h2>
+        <p>
+            The calculator displays your DTI ratio as a percentage with two decimal places, followed by a recommendation message based on the value:
+        </p>
+        <ul>
+            <li><strong>&lt; 36%:</strong> Your DTI is in a healthy range.</li>
+            <li><strong>36% – 43%:</strong> You may qualify for some loans, but improving your DTI is advised.</li>
+            <li><strong>&gt; 43%:</strong> Your DTI is high; work on reducing debt or increasing income.</li>
+        </ul>
+
+        <h2>Formula Used</h2>
+        <pre>
+Total Monthly Income = Monthly Income + (Annual Bonus / 12) + Additional Monthly Income
+
+Total Monthly Debt = Monthly Debt + (Annual Debt / 12) + Monthly Housing Costs
+
+Debt-to-Income Ratio (DTI) = (Total Monthly Debt / Total Monthly Income) × 100
+    </pre>
+
+        <h2>Validation & Error Handling</h2>
+        <ul>
+            <li>If Monthly Income or Monthly Debt is missing or invalid (non-numeric or negative), an alert prompts the user to enter valid values.</li>
+            <li>Optional fields default to 0 if left empty or non-numeric.</li>
+        </ul>
+
+        <h2>Technology Stack</h2>
+        <ul>
+            <li>HTML5 for structure and input forms.</li>
+            <li>Vanilla JavaScript for logic and interactivity.</li>
+            <li>No frameworks, libraries, or server-side code involved.</li>
+        </ul>
+
+        <h2>Limitations</h2>
+        <ul>
+            <li>This tool is a static calculator and does not save any input or results.</li>
+            <li>All calculations assume consistent monthly and annual income patterns.</li>
+            <li>Results are informational and not financial advice.</li>
+        </ul>
+
+        <h2>Recommended Use Cases</h2>
+        <ul>
+            <li>Mortgage or personal loan application preparation.</li>
+            <li>Personal financial assessment and planning.</li>
+            <li>Debt management evaluation.</li>
+        </ul>
+
+        <h2>Security & Privacy</h2>
+        <p>
+            All calculations are done locally in your browser. No data is transmitted, collected, or saved. The tool is entirely privacy-safe and requires no internet connection after loading.
+        </p>
+    </div>
+
+
+
+
+
+
+    <!-- Footer section starts here -->
+    <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+</body>
+</html>
