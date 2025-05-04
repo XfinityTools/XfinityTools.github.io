@@ -55,9 +55,11 @@ textarea {
     width: 48%;
     height: 200px;
     padding: 10px;
-    border: 1px solid black;
     font-family: monospace;
     white-space: pre;
+    border: 1px solid #000;
+    white-space: pre;
+    box-sizing: border-box;
 }
 
 .diffTextAreas, .diffButtons, .diffFileInputs {
@@ -71,9 +73,9 @@ textarea {
     width: 32%;
 }
 
-.diffBlock h3 {
-    text-align: center;
-}
+    .diffBlock h3 {
+        text-align: center;
+    }
 
 .diffOutput {
     border: 1px solid black;
@@ -92,9 +94,19 @@ textarea {
     margin-top: 20px;
 }
 
-.diff-added { background-color: #d4fdd4; }
-.diff-removed { background-color: #ffd6d6; }
-.diff-line-number { color: gray; padding-right: 10px; }
+.diff-added {
+    background-color: #d4fdd4;
+}
+
+.diff-removed {
+    background-color: #ffd6d6;
+}
+
+.diff-line-number {
+    color: gray;
+    padding-right: 10px;
+}
+
 .diffPDFBtn {
     padding: 8px 20px;
     cursor: pointer;
@@ -102,4 +114,33 @@ textarea {
     color: white;
     border: none;
     border-radius: 4px;
+}
+
+/* Mobile-Friendly Enhancements */
+@media (max-width: 768px) {
+    .diffTextArea {
+        width: 100%;
+    }
+
+    .diffBlock {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .diffSideBySide {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .diffTextAreas,
+    .diffButtons,
+    .diffFileInputs {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .diffOutput {
+        height: auto;
+        min-height: 200px;
+    }
 }
