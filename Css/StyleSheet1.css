@@ -195,6 +195,11 @@ a, a:hover, a:visited, a:active {
     border-left: 5px solid #e60340;
 }
 
+.Image-Merger-Dropdown{
+/*    border:2px dashed #ccc;*/
+border:none;
+}
+
 .result-camcase {
     position: relative;
     padding: 20px;

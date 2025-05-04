@@ -18,15 +18,12 @@
         </script>
         <meta http-equiv="content-language" content="en-us">
         <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
-
         <meta name="rating" content="general">
         <meta name="author" content="Diamond A Buchanan">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
         <meta name="description" content="Merge multiple images (PNG, JPEG, WebP) into a single image file. Choose layout: horizontal, vertical, or grid. Free, fast, and easy to use." />
-
-
         <link href="../Css/StyleSheet1.css" rel="stylesheet" />
         <link href="../Css/StyleSheet2.css" rel="stylesheet" />
         <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
@@ -43,39 +40,33 @@
                 <a href="../Pages/Dashboards/Dashboard.html">Dashboard</a>
                 <a href="../Pages/Dashboards/ToolList.html" >Tool List</a>
                 <a href="../Pages/Dashboards/ToolsLibrary.html">Tool Library</a>
-                
-               
-            </div>
-    
+            </div> 
         </div>
-
         <br />
-
         <div class="container">
-
             <div class="main-content">
     
-    <p>Select multiple images to merge them in your preferred layout.</p>
+            <p>Select multiple images to merge them in your preferred layout.</p>
 
-    <div id="drop-area" style="border: 2px dashed #ccc; padding: 20px; text-align: center; cursor: pointer;">
-        <p>Click or drag and drop images here</p>
-        <input type="file" id="fileElem" multiple accept="image/*" style="display:none;">
-    </div>
+            <div id="drop-area" style="border: 2px dashed #ccc; padding: 20px; text-align: center; cursor: pointer;">
+                <p>Click or drag and drop images here</p>
+                <input type="file" id="fileElem" multiple accept="image/*" style="display:none;">
+            </div>
 
-    <br>
+            <br>
 
-    <label for="layout">Choose Layout:</label>
-    <select id="layout" style="margin-left: 10px;">
-        <option value="horizontal">Horizontal</option>
-        <option value="vertical">Vertical</option>
-        <option value="grid">Grid</option>
-    </select>
+            <label for="layout">Choose Layout:</label>
+            <select class="Image-Merger-Dropdown" id="layout" style="margin-left: 10px;">
+                <option value="horizontal">Horizontal</option>
+                <option value="vertical">Vertical</option>
+                <option value="grid">Grid</option>
+            </select>
 
-    <br><br>
+            <br><br>
 
-    <button id="mergeBtn" style="background-color: green; color: white; padding: 10px 20px; border: none;">Merge & Download</button>
+            <button id="mergeBtn" style="background-color: green; color: white; padding: 10px 20px; border: none;">Merge & Download</button>
 
-    <canvas id="canvas" style="display:none;"></canvas>
+            <canvas id="canvas" style="display:none;"></canvas>
 </div>
 
 
