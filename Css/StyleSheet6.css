@@ -1,4 +1,9 @@
-﻿
+﻿@media(max-width:768px) {
+    #generatedKeyBox, #customChars {
+        width: 70%;
+    }
+
+}
 label {
     display: block;
     margin: 10px 0 5px;
@@ -17,15 +22,16 @@ textarea {
     width: 40%;
 }
 
-.border-2px-solid-black {
+.border-2px-solid-black, #customChars {
     border: 2px solid black;
+    width: 40%;
 }
 
 textarea {
     height: 60px;
     resize: none;
     background-color: #f9f9f9;
-    border: 1px solid black;
+    border: 2px dashed #ccc;
 }
 
 .main-content button {
