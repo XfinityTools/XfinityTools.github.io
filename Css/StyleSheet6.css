@@ -50,6 +50,13 @@ textarea {
     }
 }
 
+.container-TextDiff {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
 .diffTextArea {
     width: 48%;
@@ -57,7 +64,7 @@ textarea {
     padding: 10px;
     font-family: monospace;
     white-space: pre;
-    border: 1px solid #000;
+    border: 1px dashed #ccc;
     white-space: pre;
     box-sizing: border-box;
 }
@@ -78,7 +85,7 @@ textarea {
     }
 
 .diffOutput {
-    border: 1px solid black;
+    border: 2px dashed #ccc;
     padding: 10px;
     background: #ffffff;
     height: 300px;
