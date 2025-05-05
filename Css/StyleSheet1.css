@@ -78,6 +78,8 @@ input[type=file], .file-input {
         overflow-x: hidden;
         margin: 0;
         padding: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
 }
@@ -138,7 +140,14 @@ input[type=file], .file-input {
     text-align: left;
     font-weight: normal;
     line-height: 1.5;
+    /* Ensure wrapping */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    /* Prevent horizontal scroll from long content */
+    overflow-x: auto;
 }
+
 
 .container-infobox-article { /* display: flex; */
     max-width: 900px; /* margin: 0 auto; */
