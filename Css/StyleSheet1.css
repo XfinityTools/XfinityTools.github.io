@@ -72,10 +72,14 @@ input[type=file], .file-input {
     cursor: pointer;
 }
 
-@media(max-width:768px){
-    body {
-        overflow:hidden;
+@media(max-width:768px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
     }
+
 }
 
 .container {
