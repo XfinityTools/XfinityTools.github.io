@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Css",
-    "\\Index",
     "\\Pages",
+    "\\Pages\\Dashboards",
     "\\Wikis"
   ],
-  "SelectedNode": "\\Css\\StyleSheet1.css",
+  "SelectedNode": "\\Pages\\Dashboards\\Dashboard.html",
   "PreviewInSolutionExplorer": false
 }
