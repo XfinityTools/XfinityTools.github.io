@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/TexttoCSV">
+    <!-- Yandex.RTB -->
+    <script>window.yaContextCb = window.yaContextCb || []</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <!-- Yandex.RTB -->
     <meta name="geo.region" content="JM">
     <meta name="geo.placename" content="Kingston, Jamaica">
     <!-- Google tag (gtag.js) -->
@@ -32,27 +36,44 @@
 <body>
     <div class="header">
         <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
-       
+
         <p class="Header-Tool-Title">Text to CSV Conversion</p>
         <div class="header mobile-friendly">
             <a href="/">Home</a>
             <a href="../Pages/Dashboards/Dashboard.html">Dashboard</a>
-            <a href="../Pages/Dashboards/ToolList.html" >Tool List</a>
+            <a href="../Pages/Dashboards/ToolList.html">Tool List</a>
             <a href="../Pages/Dashboards/ToolsLibrary.html">Tool Library</a>
-          
+
         </div>
 
     </div>
-    </div>
+    <!-- Yandex.RTB R-A-14927786-4 -->
+    <script>
+        window.yaContextCb.push(() => {
+            Ya.Context.AdvManager.render({
+                "blockId": "R-A-14927786-4",
+                "type": "topAd"
+            })
+        })
+    </script>
+    <script>
+        window.yaContextCb.push(() => {
+            Ya.Context.AdvManager.render({
+                "blockId": "R-A-14927786-3",
+                "type": "fullscreen",
+                "platform": "touch"
+            })
+        })
+    </script>
 
     <br>
     <div class="container">
         <div class="main-content">
-            
+
             <p>Enter your text data below, where each line represents a row, and commas separate the values for each column.</p>
 
             <!-- Text Area for input -->
-            <textarea style="margin: auto; display: block;" class="inputcam" id="textInput" rows="5" cols="10" placeholder="Enter your data here..."></textarea>
+            <textarea style="margin: auto; display: block; border:2px dashed #ccc;" class="inputcam" id="textInput" rows="7" cols="70" placeholder="Enter your data here"></textarea>
             <br><br><br /><br />
 
             <!-- Button to download the CSV -->
@@ -61,7 +82,7 @@
     </div>
     <br />
     <div class="container-infobox-left">
-        
+
         <p><strong>Description:</strong> This tool allows you to convert text data into a CSV format, which is commonly used for data import/export in spreadsheet applications. Simply enter your data in the provided text area, format it with rows separated by line breaks and columns separated by commas, and download it as a CSV file.</p>
 
         <h3>Instructions:</h3>
@@ -75,13 +96,13 @@
         </ul>
     </div>
     <br />
-   
+
     <!-- Footer section starts here -->
     <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
         <div class="footer-container" style="display: flex; justify-content:center;">
             <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
             <script>
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
             </script>
         </div>
     </footer>
