@@ -2,26 +2,26 @@ https://xfinitytools.github.io/Pages/Text-to-Excel
 https://xfinitytools.github.io/Pages/CSV-to-Excel
 https://xfinitytools.github.io/Pages/CSV-To-Json
 https://xfinitytools.github.io/Pages/Ad-Revenue-Estimator
-https://xfinitytools.github.io/Pages/Zipfile.html
-https://xfinitytools.github.io/Pages/TexttoCSV.html
-https://xfinitytools.github.io/Pages/SentenceCap.html
-https://xfinitytools.github.io/Pages/Png-Webp.html
-https://xfinitytools.github.io/Pages/HashingGenerator.html
-https://xfinitytools.github.io/Pages/File-Compression.html
-https://xfinitytools.github.io/Pages/Car-Loan-Calculator.html
-https://xfinitytools.github.io/Pages/Ad-Revenue-Estimator.html
-https://xfinitytools.github.io/Pages/Dashboards/ToolsLibrary.html
-https://xfinitytools.github.io/Pages/Dashboards/Dashboard.html
-https://xfinitytools.github.io/Pages/Dashboards/ToolList.html
-https://xfinitytools.github.io/Disclaimer.html
-https://xfinitytools.github.io/About.html
+https://xfinitytools.github.io/Pages/Zipfile
+https://xfinitytools.github.io/Pages/TexttoCSV
+https://xfinitytools.github.io/Pages/SentenceCap
+https://xfinitytools.github.io/Pages/Png-Webp
+https://xfinitytools.github.io/Pages/HashingGenerator
+https://xfinitytools.github.io/Pages/File-Compression
+https://xfinitytools.github.io/Pages/Car-Loan-Calculator
+https://xfinitytools.github.io/Pages/Ad-Revenue-Estimator
+https://xfinitytools.github.io/Pages/Dashboards/ToolsLibrary
+https://xfinitytools.github.io/Pages/Dashboards/Dashboard
+https://xfinitytools.github.io/Pages/Dashboards/ToolList
+https://xfinitytools.github.io/Disclaimer
+https://xfinitytools.github.io/About
 https://xfinitytools.github.io
-https://xfinitytools.github.io/Pages/WebP-Png.html
-https://xfinitytools.github.io/Pages/WebP-To-JPEG.html
-https://xfinitytools.github.io/Pages/Png-Jpeg.html
-https://xfinitytools.github.io/Pages/JSON-To-CSV.html
-https://xfinitytools.github.io/Pages/Text-To-JSON.html
-https://xfinitytools.github.io/Pages/CamCase.html
+https://xfinitytools.github.io/Pages/WebP-Png
+https://xfinitytools.github.io/Pages/WebP-To-JPEG
+https://xfinitytools.github.io/Pages/Png-Jpeg
+https://xfinitytools.github.io/Pages/JSON-To-CSV
+https://xfinitytools.github.io/Pages/Text-To-JSON
+https://xfinitytools.github.io/Pages/CamCase
 
 
 
