@@ -1,207 +1,219 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://xfinitytools.github.io/</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>1.00</priority>
+	<loc>https://xfinitytools.github.io/</loc>
+	<lastmod>2025-05-07T19:44:14+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/About.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://xfinitytools.github.io/About</loc>
+	<lastmod>2025-05-07T19:44:14+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Disclaimer.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://xfinitytools.github.io/Disclaimer</loc>
+	<lastmod>2025-05-07T19:44:14+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Contact.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://xfinitytools.github.io/Contact</loc>
+	<lastmod>2025-05-07T19:44:14+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Dashboards/ToolList.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://xfinitytools.github.io/yandex-ads-txt.txt</loc>
+	<lastmod>2025-05-07T19:44:14+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Dashboards/Dashboard.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://xfinitytools.github.io/robots.txt</loc>
+	<lastmod>2025-05-07T19:44:14+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Dashboards/ToolsLibrary.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://xfinitytools.github.io/ads.txt</loc>
+	<lastmod>2025-05-07T19:44:14+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/ads.txt</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://xfinitytools.github.io/Pages/Dashboards/ToolList</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/yandex-ads-txt.txt</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://xfinitytools.github.io/Pages/CamCase.html</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/robots.txt</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://xfinitytools.github.io/Pages/Dashboards/Dashboard</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Ad-Revenue-Estimator.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/Salary-Calculator-JM</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/CamCase.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/WebP-to-BMP</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Car-Loan-Calculator.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/Key-Generator</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/CSV-to-Excel.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/Text-Diff-Checker</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/CSV-To-Json.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/WebP-Metadata-Viewer</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/EXIF-Data-Extractor.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/Image-Merger</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Excel-PDF.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/Zipfile</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/File-Compression.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/Png-Jpeg</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/HashingGenerator.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/WebP-Png</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Image-Merger.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/WebP-To-JPEG</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/JSON-To-CSV.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/WebP-to-PDF</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Key-Generator.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/Png-Webp</loc>
+	<lastmod>2025-05-07T19:44:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/MergePDF.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/Ad-Revenue-Estimator</loc>
+	<lastmod>2025-05-07T19:44:21+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/PDF-Metadata-Extractor.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/Car-Loan-Calculator</loc>
+	<lastmod>2025-05-07T19:44:21+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/PDF-WaterMark.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/CSV-To-Json</loc>
+	<lastmod>2025-05-07T19:44:22+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Png-Jpeg.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/Debt-to-Income</loc>
+	<lastmod>2025-05-07T19:44:22+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Png-Webp.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/CSV-to-Excel</loc>
+	<lastmod>2025-05-07T19:44:22+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Salary-Calculator-JM.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/EXIF-Data-Extractor</loc>
+	<lastmod>2025-05-07T19:44:22+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/SentenceCap.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/File-Compression</loc>
+	<lastmod>2025-05-07T19:44:22+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Single-Image-PDF.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/Excel-PDF</loc>
+	<lastmod>2025-05-07T19:44:22+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Text-Metrics-Generator.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/HashingGenerator</loc>
+	<lastmod>2025-05-07T19:44:23+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Text-to-Excel.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/JSON-To-CSV</loc>
+	<lastmod>2025-05-07T19:44:23+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Text-To-JSON.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/PDF-Metadata-Extractor</loc>
+	<lastmod>2025-05-07T19:44:23+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/TexttoCSV.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/PDF-WaterMark</loc>
+	<lastmod>2025-05-07T19:44:23+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/WebP-To-JPEG.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/MergePDF</loc>
+	<lastmod>2025-05-07T19:44:23+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/WebP-Png.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/SentenceCap</loc>
+	<lastmod>2025-05-07T19:44:24+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/WebP-to-PDF.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/Text-Metrics-Generator</loc>
+	<lastmod>2025-05-07T19:44:24+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Zipfile.html</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://xfinitytools.github.io/Pages/Text-To-JSON</loc>
+	<lastmod>2025-05-07T19:44:24+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://xfinitytools.github.io/Pages/Dashboards/Dashboard</loc>
-  <lastmod>2025-04-24T16:01:32+00:00</lastmod>
-  <priority>0.51</priority>
+	<loc>https://xfinitytools.github.io/Pages/Single-Image-PDF</loc>
+	<lastmod>2025-05-07T19:44:24+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
-
-
+<url>
+	<loc>https://xfinitytools.github.io/Pages/TexttoCSV</loc>
+	<lastmod>2025-05-07T19:44:24+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://xfinitytools.github.io/Pages/Text-to-Excel</loc>
+	<lastmod>2025-05-07T19:44:25+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://xfinitytools.github.io/Wikis/Debt-To-Income-Wiki</loc>
+	<lastmod>2025-05-07T19:44:27+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://xfinitytools.github.io/Wikis/Salary-Calculator-JM-Wiki</loc>
+	<lastmod>2025-05-07T19:44:28+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
 </urlset>
