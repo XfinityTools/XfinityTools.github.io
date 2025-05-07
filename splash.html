@@ -12,7 +12,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
     <style>
-       
+
         .card {
             position: relative;
             display: -ms-flexbox;
@@ -21,23 +21,27 @@
             flex-direction: column;
             min-width: 0;
             word-wrap: break-word;
-/*            background-color: #fff;*/
+            /*            background-color: #fff;*/
             background-clip: border-box;
             border: none;
             border-radius: .25rem;
-            
+            background-color: white;
         }
 
         .card-body {
             -ms-flex: 1 1 auto;
             flex: 1 1 auto;
             min-height: 1px;
-            padding: 1.25rem
+            padding: 1.25rem;
+            background-color: white;
         }
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
+/*            font-family: 'Teko', sans-serif;*/
+            font-size: 16px;
+            background-color: white !important
         }
 
         .section {
@@ -101,12 +105,12 @@
 
             .header .nav-link {
                 color: white !important;
-                font-size: 16px;
+                font-size: 23px;
                 margin-right: 15px;
             }
 
                 .header .nav-link:hover {
-                    color: #e60340 !important;
+                    color: white !important;
                 }
 
         .card-title {
@@ -132,7 +136,21 @@
         }
 
         .card-text-padding-25 {
-            padding:65px;
+            padding: 65px;
+            font-size: 21px;
+        }
+        
+
+        a.bg-light:focus, a.bg-light:hover, button.bg-light:focus, button.bg-light:hover {
+            background-color: white
+        }
+
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 19px;
+            transition: color 0.3s ease;
         }
     </style>
 </head>
@@ -153,37 +171,45 @@
     </div>
 
 
-    <div class="section bg-light">
+    <div class="section ">
         <div class="section-height">
             <!-- Title Card -->
             <div class="card">
                 <div class="card-body">
                     <h5 style="font-family: 'Pacifico'; font-size: 500%; " class="card-title">Xfinity Tools</h5><br />
-                    <p class="card-text">A Tool for Every Reason.</p>
-                    <p class="card-text-padding-25">Xfinity Tools is your ultimate destination for productivity-enhancing online utilities. Whether you need to edit images, convert files, organize data, or process text, our free suite of tools is here to assist you.</p>
+
+                    <p class="card-text-padding-25">
+                        Xfinity Tools is a proudly Jamaican-based platform offering a free, comprehensive suite of web-based tools tailored to simplify your digital workflow. Whether you're a student, developer, freelancer, or everyday user, our growing library of utilities helps you complete tasks faster and smarter — all without sign-ups, installations, or hidden fees.
+
+                        From text and data converters to image utilities and financial calculators, Xfinity Tools delivers instant access, modern design, and powerful results — right in your browser.
+
+
+                        Launched in 2022, Xfinity Tools has evolved from a personal initiative into a robust, publicly accessible platform, offering a growing suite of free web-based tools for everyday use.<br /><br />
+
+                        <a href="Pages/Dashboards/Dashboard.html" class="btn btn-primary btn-md" style="margin-right: 10px; display:inline-block;"> Tools Dashboard &raquo;</a>
+                        <a href="Pages/Dashboards/ToolsLibrary.html" class="btn btn-primary btn-md" style="margin-right: 10px; display: inline-block;"> Tools Library &raquo;</a>
+                    </p>
+
+
+
                 </div>
             </div>
         </div>
     </div>
     <!-- Stats Section with Title Card -->
 
-    <div class="section bg-secondary text-white" id="stats">
-        <h2>Website Stats</h2>
-        <p>Here are some key statistics that showcase the power of our platform:</p>
-        <ul class="list-unstyled">
-            <li><strong>Users:</strong> 12,345</li>
-            <li><strong>Active Projects:</strong> 789</li>
-            <li><strong>Countries Served:</strong> 15</li>
-        </ul>
-    </div>
+    
+
 
     <!-- About Section -->
     <div class="section bg-primary text-white" id="about">
         <div class="about">
             <h2>What Is This Website About?</h2>
-            <p>Our website connects people from all around the world, offering them tools, resources, and opportunities to grow and succeed in their endeavors.</p>
+            <p>Welcome to <strong>Xfinity Tools</strong>, a platform dedicated to simplifying everyday tasks and boosting productivity. Our website serves as a comprehensive resource hub, providing a growing suite of free, easy-to-use web tools designed to meet the needs of users across various industries and professions. We aim to make complex processes more accessible by offering intuitive tools that can be used directly from your browser — no downloads, installations, or registrations required. From data converters to financial calculators and text analysis tools, we strive to empower users with the right tools at their fingertips, so they can focus on what matters most. Our mission is to connect people from around the world, offering them resources and opportunities to succeed. Whether you're a student, a professional, or a hobbyist, Xfinity Tools is here to support your journey. We continuously update our tools to keep up with technological advancements and to ensure you're always working with the most effective solutions available. Join us on this exciting journey and explore the tools that can help you grow, succeed, and achieve your goals, all for free and without the hassle of complex setups.</p>
         </div>
     </div>
+
+
 
     <!-- FAQ Section -->
     <div class="section bg-light" id="faq">
