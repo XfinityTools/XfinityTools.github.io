@@ -22,6 +22,13 @@ https://xfinitytools.github.io/Pages/Png-Jpeg
 https://xfinitytools.github.io/Pages/JSON-To-CSV
 https://xfinitytools.github.io/Pages/Text-To-JSON
 https://xfinitytools.github.io/Pages/CamCase
+https://xfinitytools.github.io/Pages/Text-Metrics-Generator
+https://xfinitytools.github.io/Pages/Text-Diff-Checker
+https://xfinitytools.github.io/Pages/Single-Image-PDF
+https://xfinitytools.github.io/Pages/Salary-Calculator-JM
+https://xfinitytools.github.io/Pages/Key-Generator
+https://xfinitytools.github.io/Pages/Image-Merger
+https://xfinitytools.github.io/Pages/EXIF-Data-Extractor
 
 
 
