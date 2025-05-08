@@ -37,119 +37,158 @@
 </head>
 <body>
 
-<div class="text-metrics-header">
-    <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
-    <p class="Header-Tool-Title">Text Difference Checker</p>
-    <div class="header mobile-friendly">
-        <a href="/">Home</a>
-        <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
-        <a href="../Pages/Dashboards/ToolList">Tool List</a>
-        <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>
+    <div class="text-metrics-header">
+        <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p class="Header-Tool-Title">Text Difference Checker</p>
+        <div class="header mobile-friendly">
+            <a href="/">Home</a>
+            <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
+            <a href="../Pages/Dashboards/ToolList">Tool List</a>
+            <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>
 
 
+        </div>
     </div>
-</div>
     <style>
         .container-TextDiff {
             display: flex;
             max-width: 800px;
             margin: 0 auto;
             background-color: #fff;
-            
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-       
         }
     </style>
-<br />
+    <br />
 
-<div class="container-TextDiff">
-    <div class="main-content">
-        <div class="diffTextAreas">
-            <textarea id="text1" class="diffTextArea" placeholder="Enter or upload first text"></textarea>
-            <textarea id="text2" class="diffTextArea" placeholder="Enter or upload second text"></textarea>
-        </div>
-
-        <div class="diffFileInputs">
-            <input type="file" id="file1" accept=".txt">
-            <input type="file" id="file2" accept=".txt">
-        </div>
-
-        <div class="diffButtons">
-            <button onclick="compareText()" class="diffPDFBtn">Compare</button>
-            <button onclick="downloadPDF()" class="diffPDFBtn">Download PDF</button>
-        </div>
-
-        <div class="diffSideBySide">
-            <div class="diffBlock">
-                <h3>Text 1</h3>
-                <pre id="diffOutput1" class="diffOutput"></pre>
+    <div class="container-TextDiff">
+        <div class="main-content">
+            <div class="diffTextAreas">
+                <textarea id="text1" class="diffTextArea" placeholder="Enter or upload first text"></textarea>
+                <textarea id="text2" class="diffTextArea" placeholder="Enter or upload second text"></textarea>
             </div>
-            <div class="diffBlock">
-                <h3>Text 2</h3>
-                <pre id="diffOutput2" class="diffOutput"></pre>
+
+            <div class="diffFileInputs">
+                <input type="file" id="file1" accept=".txt">
+                <input type="file" id="file2" accept=".txt">
             </div>
-            <div class="diffBlock">
-                <h3>Differences Only</h3>
-                <pre id="diffOnlyOutput" class="diffOutput"></pre>
+
+            <div class="diffButtons">
+                <button onclick="compareText()" class="diffPDFBtn">Compare</button>
+                <button onclick="downloadPDF()" class="diffPDFBtn">Download PDF</button>
+            </div>
+
+            <div class="diffSideBySide">
+                <div class="diffBlock">
+                    <h3>Text 1</h3>
+                    <pre id="diffOutput1" class="diffOutput"></pre>
+                </div>
+                <div class="diffBlock">
+                    <h3>Text 2</h3>
+                    <pre id="diffOutput2" class="diffOutput"></pre>
+                </div>
+                <div class="diffBlock">
+                    <h3>Differences Only</h3>
+                    <pre id="diffOnlyOutput" class="diffOutput"></pre>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Footer section starts here -->
-<footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
-    <div class="footer-container" style="display: flex; justify-content:center;">
-        <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+    <div class="container-infobox-left">
+        <p>The "Text Diff Checker" is a free web-based tool designed to help users visually compare two blocks of text or uploaded .txt files. It displays the original content side by side and highlights any differences line by line, making it easy to identify changes. The tool also includes a “Differences Only” section and allows users to download the comparison as a PDF.</p>
+
+        <h1>Instruction Manual:</h1>
+
+        <h3>1. Accessing the Tool:</h3>
+        <p>Open your browser and go to the Text Diff Checker tool page on the XfinityTools website. Once loaded, you will see two main text boxes, file upload options, and buttons for comparing and downloading.</p>
+
+        <h3>2. Input Options:</h3>
+        <p>You can use either of the following methods to input text:</p>
+        <ul>
+            <li><strong>Manual Entry:</strong> Type or paste the first text into the left textarea and the second text into the right textarea.</li>
+            <li><strong>File Upload:</strong> Use the file input fields to upload two separate .txt files. The contents will automatically populate the text areas.</li>
+        </ul>
+
+        <h3>3. Comparing Text:</h3>
+        <p>After entering or uploading your text, click the <strong>"Compare"</strong> button. The tool will analyze both inputs line by line and generate a comparison in the lower section of the page.</p>
+        <ul>
+            <li><strong>Text 1:</strong> Displays the left-side input with differences highlighted.</li>
+            <li><strong>Text 2:</strong> Displays the right-side input with differences highlighted.</li>
+            <li><strong>Differences Only:</strong> Shows only the lines that differ between the two inputs.</li>
+        </ul>
+
+        <h3>4. Highlighting:</h3>
+        <p>Lines that differ between the two texts are highlighted for easy identification:</p>
+        <ul>
+            <li><span style="color:red;">Red (removed)</span> indicates content from Text 1 that was changed or deleted.</li>
+            <li><span style="color:green;">Green (added)</span> indicates content from Text 2 that was added or modified.</li>
+        </ul>
+
+        <h3>5. Downloading Results:</h3>
+        <p>Click the <strong>"Download PDF"</strong> button to export the comparison output for offline viewing or documentation.</p>
+
+        <h3>6. Additional Notes:</h3>
+        <ul>
+            <li>Make sure the files you upload are in plain text (.txt) format.</li>
+            <li>For best results, ensure both texts are properly formatted with consistent line breaks.</li>
+            <li>All line numbers are automatically displayed alongside each line for reference.</li>
+        </ul>
+
+    </div>
+
+        <!-- Footer section starts here -->
+        <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+            <div class="footer-container" style="display: flex; justify-content:center;">
+                <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+                <script>
+                    document.getElementById('currentYear').textContent = new Date().getFullYear();
+                </script>
+            </div>
+        </footer>
+        <style>
+        </style>
+
+
+
         <script>
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-        </script>
-    </div>
-</footer>
-<style>
+            function compareText() {
+                const text1 = document.getElementById('text1').value.split('\n');
+                const text2 = document.getElementById('text2').value.split('\n');
+                const maxLength = Math.max(text1.length, text2.length);
+                let out1 = '', out2 = '', diffs = '';
 
-</style>
+                for (let i = 0; i < maxLength; i++) {
+                    const line1 = text1[i] || '';
+                    const line2 = text2[i] || '';
+                    const lineNum = (i + 1).toString().padStart(3, ' ') + ' | ';
+                    const diffLine1 = line1 !== line2 ? `<span class="diff-removed">${line1}</span>` : line1;
+                    const diffLine2 = line1 !== line2 ? `<span class="diff-added">${line2}</span>` : line2;
 
+                    out1 += `<span class="diff-line-number">${lineNum}</span>${diffLine1}\n`;
+                    out2 += `<span class="diff-line-number">${lineNum}</span>${diffLine2}\n`;
 
+                    if (line1 !== line2) {
+                        diffs += `<span class="diff-line-number">${lineNum}</span>${diffLine1} ↔ ${diffLine2}\n`;
+                    }
+                }
 
-    <script>
-    function compareText() {
-        const text1 = document.getElementById('text1').value.split('\n');
-        const text2 = document.getElementById('text2').value.split('\n');
-        const maxLength = Math.max(text1.length, text2.length);
-        let out1 = '', out2 = '', diffs = '';
-
-        for (let i = 0; i < maxLength; i++) {
-            const line1 = text1[i] || '';
-            const line2 = text2[i] || '';
-            const lineNum = (i + 1).toString().padStart(3, ' ') + ' | ';
-            const diffLine1 = line1 !== line2 ? `<span class="diff-removed">${line1}</span>` : line1;
-            const diffLine2 = line1 !== line2 ? `<span class="diff-added">${line2}</span>` : line2;
-
-            out1 += `<span class="diff-line-number">${lineNum}</span>${diffLine1}\n`;
-            out2 += `<span class="diff-line-number">${lineNum}</span>${diffLine2}\n`;
-
-            if (line1 !== line2) {
-                diffs += `<span class="diff-line-number">${lineNum}</span>${diffLine1} ↔ ${diffLine2}\n`;
+                document.getElementById('diffOutput1').innerHTML = out1;
+                document.getElementById('diffOutput2').innerHTML = out2;
+                document.getElementById('diffOnlyOutput').innerHTML = diffs;
             }
-        }
 
-        document.getElementById('diffOutput1').innerHTML = out1;
-        document.getElementById('diffOutput2').innerHTML = out2;
-        document.getElementById('diffOnlyOutput').innerHTML = diffs;
-    }
+            document.getElementById('file1').addEventListener('change', e => {
+                const reader = new FileReader();
+                reader.onload = () => document.getElementById('text1').value = reader.result;
+                reader.readAsText(e.target.files[0]);
+            });
 
-    document.getElementById('file1').addEventListener('change', e => {
-        const reader = new FileReader();
-        reader.onload = () => document.getElementById('text1').value = reader.result;
-        reader.readAsText(e.target.files[0]);
-    });
+            document.getElementById('file2').addEventListener('change', e => {
+                const reader = new FileReader();
+                reader.onload = () => document.getElementById('text2').value = reader.result;
+                reader.readAsText(e.target.files[0]);
+            });
+        </script>
 
-    document.getElementById('file2').addEventListener('change', e => {
-        const reader = new FileReader();
-        reader.onload = () => document.getElementById('text2').value = reader.result;
-        reader.readAsText(e.target.files[0]);
-    });
-</script>
-
-  </body>
+</body>
  </html>
