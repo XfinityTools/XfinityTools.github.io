@@ -121,68 +121,124 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        <style>
+            @media(max-width:768px) {
+                .WelcomeDiv, .Why-Choose-Xfinity-Tools, .How-It-Works, .WebStats {
+                    max-width: 65%;
+                    transition: background-color 0.3s ease, transform 0.2s ease;
+                    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+                    margin: 5px;
+                    padding: 9px;
+                    justify-content: left;
+                }
+            }
 
+            .WelcomeDiv, .Why-Choose-Xfinity-Tools {
+                max-width: 90%;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+                box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+                margin: 5px;
+                padding: 9px;
+                justify-content: left;
+                justify-self: left;
+            }
+
+            .WebStats, .How-It-Works {
+                max-width: 90%;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+                box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+                margin: 5px;
+                padding: 9px;
+                justify-content: left;
+                justify-self: right;
+            }
+
+                .WelcomeDiv:hover,
+                .Why-Choose-Xfinity-Tools:hover,
+                .How-It-Works:hover,
+                .WebStats:hover {
+                    transform: translateY(-5px);
+                    background-color: #f8f9fa;
+                    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.15);
+                    border-radius: 12px;
+                    transition: all 0.3s ease;
+                    background: linear-gradient(to bottom right, #ffffff, #f1f1f1);
+                    border: 1px solid #e60340;
+                }
+
+                .WelcomeDiv:hover,
+                .Why-Choose-Xfinity-Tools:hover,
+                .How-It-Works:hover,
+                .WebStats:hover {
+                    font-size: 1.2rem;
+                }
+            
+            }
+
+        </style>
         <section>
-            <h2>Welcome!</h2>
-            <p>
-                Xfinity Tools is a proudly Jamaican-based platform offering a free, comprehensive suite of web-based tools tailored to simplify your digital workflow. Whether you're a student, developer, freelancer, or everyday user, our growing library of utilities helps you complete tasks faster and smarter — all without sign-ups, installations, or hidden fees.
 
-                From text and data converters to image utilities and financial calculators, Xfinity Tools delivers instant access, modern design, and powerful results — right in your browser.
+            <div class="WelcomeDiv">
+                <h2>Welcome!</h2>
+                <p>
+                    Xfinity Tools is a proudly Jamaican-based platform offering a free, comprehensive suite of web-based tools tailored to simplify your digital workflow. Whether you're a student, developer, freelancer, or everyday user, our growing library of utilities helps you complete tasks faster and smarter — all without sign-ups, installations, or hidden fees. From text and data converters to image utilities and financial calculators, Xfinity Tools delivers instant access, modern design, and powerful results — right in your browser.Launched in 2022, Xfinity Tools has evolved from a personal initiative into a robust, publicly accessible platform, offering a growing suite of free web-based tools for everyday use.
+                </p>
 
+                <div style="margin-top: 20px;">
+                    <a href="Pages/Dashboards/Dashboard.html" class="btn btn-primary btn-md" style="margin-right: 10px; display:inline-block;"> Tools Dashboard &raquo;</a>
+                    <a href="Pages/Dashboards/ToolsLibrary.html" class="btn btn-primary btn-md" style="margin-right: 10px; display: inline-block;"> Tools Library &raquo;</a>
+                </div>
+            </div>
+            
+            <br /><br />
 
-                Launched in 2022, Xfinity Tools has evolved from a personal initiative into a robust, publicly accessible platform, offering a growing suite of free web-based tools for everyday use.
-            </p>
-
-            <div style="margin-top: 20px;">
-                <a href="Pages/Dashboards/Dashboard.html" class="btn btn-primary btn-md" style="margin-right: 10px; display:inline-block;"> Tools Dashboard &raquo;</a>
-                <a href="Pages/Dashboards/ToolsLibrary.html" class="btn btn-primary btn-md" style="margin-right: 10px; display: inline-block;"> Tools Library &raquo;</a>
-
-
-
-            </div><br /><br />
-
-            <h2>Website Stats</h2>
-            <p>Our site analytics are powered by Google Analytics, a robust tool that provides valuable insights into user behavior and traffic patterns. By integrating Google Tag Manager, we ensure seamless management and deployment of tracking codes, allowing for real-time data collection and optimization of our website's performance. Here are some key statistics that showcase the power of our platform:</p>
-            <ul class="list-unstyled">
-                <li><strong>Active Montly Users:</strong> 605</li>
-                <li><strong>Active Tools:</strong> 32</li>
-                <li><strong>Countries Served:</strong> 75</li>
-            </ul>
+                  <div class="WebStats">
+                      <h2>Website Stats</h2>
+                      <p>Our site analytics are powered by Google Analytics, a robust tool that provides valuable insights into user behavior and traffic patterns. By integrating Google Tag Manager, we ensure seamless management and deployment of tracking codes, allowing for real-time data collection and optimization of our website's performance. Here are some key statistics that showcase the power of our platform:</p>
+                      <ul class="list-unstyled">
+                          <li> Active Montly Users:  605</li>
+                          <li> Active Tools:  32</li>
+                          <li> Countries Served:  55</li>
+                      </ul>
+                  </div>
 
 
             <br />
 
 
 
-            <div>
+            <div class="Why-Choose-Xfinity-Tools">
                 <h2>Why Choose Xfinity Tools?</h2>
-                <p>We offer <strong>user-friendly, fast, and reliable tools</strong> designed to help you complete tasks efficiently, accessible directly from any device. There’s no need for downloads or installations—simply open your browser and get started.</p>
+                <p>We offer  user-friendly, fast, and reliable tools designed to help you complete tasks efficiently, accessible directly from any device. There’s no need for downloads or installations—simply open your browser and get started.</p>
                 <ul class="list-unstyled">
-                    <li><strong>Privacy Focused:</strong> We prioritize your privacy—<strong>no cookies, no trackers, no fingerprinting.</strong> We do not store or share any of your personal data.</li>
-                    <li><strong>Secure Connection:</strong> Our website is protected by an <strong>SSL certificate</strong>, ensuring your connection is encrypted and secure.</li>
-                    <li><strong>Trusted Hosting:</strong> Xfinity Tools is hosted by a reputable provider, ensuring maximum uptime and performance.</li>
+                    <li>Privacy Focused:  We prioritize your privacy— no cookies, no trackers, no fingerprinting.  We do not store or share any of your personal data.</li>
+                    <li> Secure Connection:  Our website is protected by an  SSL certificate , ensuring your connection is encrypted and secure.</li>
+                    <li> Trusted Hosting:  Xfinity Tools is hosted by a reputable provider, ensuring maximum uptime and performance.</li>
                 </ul>
-                <p>With us, you get a <strong>seamless experience</strong> without the hassles, distractions, or concerns over privacy.</p>
+                <p>With us, you get a  seamless experience  without the hassles, distractions, or concerns over privacy.</p>
             </div>
 
 
             <br />
-            <h2>How It Works</h2>
-            <p>
-                At Xfinity Tools, we believe in making your experience as smooth and straightforward as possible. Each of our tools comes with easy-to-follow, <strong>step-by-step instructions</strong>, ensuring that you get the results you need without any confusion or hassle. Whether you're a beginner or a seasoned pro, our clear guides help you make the most out of every tool.
-            </p>
-            <p>
-                Every tool on our platform includes a comprehensive <strong>instruction manual</strong>, so you can get started with confidence. If you ever find yourself unsure or need extra assistance, our dedicated support team is always available to help. Simply reach out to us, and we'll ensure you get the answers you need to continue your work without delays.
-            </p>
-            <p>
-                We strive to keep everything simple and intuitive, so you can complete your tasks with ease. In addition to the instructions, we also provide helpful tips and FAQs to assist you in using the tools to their fullest potential.
-            </p>
-            <p>
-                To explore more and dive into the specifics of each tool, feel free to check out our <a href="Pages/Dashboards/Dashboard.html">All Tools</a> page. Here, you can find a complete list of the tools available, along with detailed descriptions, user reviews, and updates. Whether you're looking for a converter, calculator, or any other utility, you'll find everything you need in one place.
-            </p>
-            <p>
-                We are constantly working on improving and expanding our toolset, so be sure to check back for new additions and updates regularly. If you need assistance, our support team is just a message away.
-            </p>
+
+            <div class="How-It-Works">
+                <h2>How It Works</h2>
+                <p>
+                    At Xfinity Tools, we believe in making your experience as smooth and straightforward as possible. Each of our tools comes with easy-to-follow,  step-by-step instructions , ensuring that you get the results you need without any confusion or hassle. Whether you're a beginner or a seasoned pro, our clear guides help you make the most out of every tool.
+                </p>
+                <p>
+                    Every tool on our platform includes a comprehensive instruction manual, so you can get started with confidence. If you ever find yourself unsure or need extra assistance, our dedicated support team is always available to help. Simply reach out to us, and we'll ensure you get the answers you need to continue your work without delays.
+                </p>
+                <p>
+                    We strive to keep everything simple and intuitive, so you can complete your tasks with ease. In addition to the instructions, we also provide helpful tips and FAQs to assist you in using the tools to their fullest potential.
+                </p>
+                <p>
+                    To explore more and dive into the specifics of each tool, feel free to check out our <a href="Pages/Dashboards/Dashboard.html">All Tools</a> page. Here, you can find a complete list of the tools available, along with detailed descriptions, user reviews, and updates. Whether you're looking for a converter, calculator, or any other utility, you'll find everything you need in one place.
+                </p>
+                <p>
+                    We are constantly working on improving and expanding our toolset, so be sure to check back for new additions and updates regularly. If you need assistance, our support team is just a message away.
+                </p>
+            </div>
 
 
 
