@@ -2,7 +2,7 @@
     .content-section {
         width: 55%;
         padding: 30px;
-        border-left: 5px solid #e60340;
+        border-left: 3px solid #e60340;
     }
 
     html, body {
@@ -30,7 +30,7 @@
 .content-section {
     width: 40%;
     padding: 20px;
-    border-left: 5px solid #e60340;
+    border-left: 3px solid #e60340;
 }
 
 .ad-unit {
