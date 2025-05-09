@@ -1,0 +1,43 @@
+<!-- Yandex.RTB R-A-14927786-2 -->
+<script>
+window.yaContextCb.push(() => {
+    Ya.Context.AdvManager.render({
+        "blockId": "R-A-14927786-2",
+        "type": "fullscreen",
+        "platform": "desktop"
+    })
+})
+</script>
+
+
+<!-- Yandex.RTB R-A-14927786-3 -->
+<script>
+window.yaContextCb.push(() => {
+    Ya.Context.AdvManager.render({
+        "blockId": "R-A-14927786-3",
+        "type": "fullscreen",
+        "platform": "touch"
+    })
+})
+</script>
+
+<!-- Yandex.RTB R-A-14927786-5 -->
+<script>
+window.yaContextCb.push(() => {
+    Ya.Context.AdvManager.render({
+        "blockId": "R-A-14927786-5",
+        "type": "fullscreen",
+        "platform": "desktop"
+    })
+})
+</script>
+
+<!-- Yandex.RTB R-A-14927786-4 -->
+<script>
+window.yaContextCb.push(() => {
+    Ya.Context.AdvManager.render({
+        "blockId": "R-A-14927786-4",
+        "type": "topAd"
+    })
+})
+</script>
