@@ -1,0 +1,9 @@
+Document ID: CSV-To-Json
+Tool-Description: CSV to JSON is a versatile tool that enables seamless conversion of CSV (Comma-Separated Values) files into JSON (JavaScript Object Notation) format. This tool efficiently transforms structured data from a tabular format into a hierarchical format, making it easier to integrate with web applications, databases, or APIs. Users can simply upload a CSV file, and the tool generates a clean, structured JSON output. This is especially useful for developers, data analysts, and anyone needing to convert and manipulate CSV data in a more flexible, machine-readable format.
+Tool-Name: CSV To Json Converter
+URL: https://xfinitytools.github.io/Pages/CSV-To-Json
+
+Document ID 
+Tool-Description
+Tool-Name
+URL

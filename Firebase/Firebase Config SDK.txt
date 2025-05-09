@@ -1,0 +1,8 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyD32FmQ4e70kW-qjYM7SGmC-Gre4jF8NJE",
+  authDomain: "xfinitytools-database.firebaseapp.com",
+  projectId: "xfinitytools-database",
+  storageBucket: "xfinitytools-database.firebasestorage.app",
+  messagingSenderId: "508662234595",
+  appId: "1:508662234595:web:a34a9d38ab6a99afa574d6"
+};
