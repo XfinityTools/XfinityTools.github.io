@@ -1,7 +1,7 @@
 @media (max-width: 768px) {
     .content-section {
-        width: 54%;
-        padding: 35px;
+        width: 40%;
+        padding: 20px;
         border-left: 5px solid #e60340;
     }
 
@@ -28,7 +28,7 @@
 
 .content-section {
     width: 40%;
-    padding: 50px;
+    padding: 20px;
     border-left: 5px solid #e60340;
 }
 
