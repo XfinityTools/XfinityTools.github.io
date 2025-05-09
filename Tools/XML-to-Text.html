@@ -9,10 +9,10 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
     <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-MW6PG5PVGY');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
     </script>
     <meta http-equiv="content-language" content="en-us">
     <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="" />
+    <meta name="description" content="XML To Text Converter" />
 
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
@@ -43,33 +43,102 @@
             <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>
         </div>
     </div>
-
-
-
     <br />
-
     <div class="pdf-container">
-        <h2>Select or Drop a PDF File</h2>
-        <div class="pdf-drop-area" id="dropArea">
-            <p>Drag & Drop PDF Here or Click to Upload</p>
-            <input type="file" id="fileInput" accept="application/pdf" style="display:none;" />
+        <!--<h2>Select or Drop a XML File</h2>-->
+        <div class="pdf-drop-area" id="XML-to-text-dropArea">
+            <p>Drag & Drop XML File Here or Click to Upload</p>
+            <input type="file" id="fileInput" accept=".xml,text/xml" style="display:none;" />
         </div>
 
         <div id="output"></div>
     </div>
-
-
-
 
     <!-- Footer section starts here -->
     <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
         <div class="footer-container" style="display: flex; justify-content:center;">
             <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
             <script>
-                    document.getElementById('currentYear').textContent = new Date().getFullYear();
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
             </script>
         </div>
     </footer>
 
 </body>
 </html>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const dropArea = document.getElementById("XML-to-text-dropArea");
+        const fileInput = document.getElementById("fileInput");
+        const output = document.getElementById("output");
+
+        ["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
+            dropArea.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+            });
+        });
+
+        dropArea.addEventListener("dragover", () => dropArea.classList.add("highlight"));
+        dropArea.addEventListener("dragleave", () => dropArea.classList.remove("highlight"));
+        dropArea.addEventListener("drop", (e) => {
+            dropArea.classList.remove("highlight");
+            const files = e.dataTransfer.files;
+            if (files.length > 0) handleFile(files[0]);
+        });
+
+        dropArea.addEventListener("click", () => fileInput.click());
+        fileInput.addEventListener("change", () => {
+            if (fileInput.files.length > 0) handleFile(fileInput.files[0]);
+        });
+
+        function handleFile(file) {
+            if (file.type !== "text/xml" && !file.name.endsWith(".xml")) {
+                output.innerHTML = "<p style='color:red;'>Please upload a valid XML file.</p>";
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const xmlText = e.target.result;
+                const formatted = formatXml(xmlText);
+
+                // Display output
+                output.innerHTML = `<pre style="white-space: pre-wrap; background:#f4f4f4; padding:10px; border-radius:4px;">${formatted}</pre>`;
+
+                // Auto-download
+                const blob = new Blob([formatted], { type: "text/plain" });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement("a");
+                link.href = url;
+                link.download = file.name.replace(".xml", "-formatted.txt");
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+            };
+            reader.readAsText(file);
+        }
+
+        function formatXml(xml) {
+            const PADDING = "  ";
+            const reg = /(>)(<)(\/*)/g;
+            let formatted = "";
+            let pad = 0;
+
+            xml = xml.replace(reg, "$1\r\n$2$3");
+            xml.split("\r\n").forEach((node) => {
+                let indent = 0;
+                if (node.match(/^<\/\w/)) pad -= 1;
+                else if (node.match(/^<\w([^>]*[^\/])?>.*$/)) indent = 1;
+                formatted += PADDING.repeat(pad) + node + "\r\n";
+                pad += indent;
+            });
+
+            return formatted;
+        }
+    });
+</script>
+
+
+
