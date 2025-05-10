@@ -1,17 +1,10 @@
-NO
 https://xfinitytools.github.io/Pages/EXIF-Data-Extractor
 https://xfinitytools.github.io/Pages/Car-Loan-Calculator
-https://xfinitytools.github.io/Pages/Dashboards/ToolList
-https://xfinitytools.github.io/Pages/Debt-to-Income
 https://xfinitytools.github.io/Pages/Excel-PDF
 https://xfinitytools.github.io/Pages/EXIF-Data-Extractor
 https://xfinitytools.github.io/Pages/HashingGenerator
-https://xfinitytools.github.io/Pages/Image-Merger
 https://xfinitytools.github.io/Pages/JSON-To-CSV
-https://xfinitytools.github.io/Pages/Png-Webp
-https://xfinitytools.github.io/Pages/Salary-Calculator-JM
 https://xfinitytools.github.io/Pages/Single-Image-PDF
-Not Submitted
 https://xfinitytools.github.io/Pages/Text-Diff-Checker
 https://xfinitytools.github.io/Pages/Text-Metrics-Generator
 https://xfinitytools.github.io/Pages/Text-To-JSON
@@ -20,7 +13,6 @@ https://xfinitytools.github.io/Pages/WebP-Metadata-Viewer
 https://xfinitytools.github.io/Pages/WebP-To-JPEG
 https://xfinitytools.github.io/Pages/WebP-to-PDF
 https://xfinitytools.github.io/Wikis/Debt-To-Income-Wiki
-
 
 
 YES
@@ -38,6 +30,11 @@ https://xfinitytools.github.io/Pages/WebP-Png
 https://xfinitytools.github.io/Pages/WebP-to-BMP
 https://xfinitytools.github.io/Pages/Zipfile
 https://xfinitytools.github.io/Wikis/Salary-Calculator-JM-Wiki
+https://xfinitytools.github.io/Pages/Dashboards/ToolList
+https://xfinitytools.github.io/Pages/Debt-to-Income
+https://xfinitytools.github.io/Pages/Image-Merger
+https://xfinitytools.github.io/Pages/Png-Webp
+https://xfinitytools.github.io/Pages/Salary-Calculator-JM
 
 
 
