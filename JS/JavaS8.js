@@ -63,3 +63,6 @@ function displayMetadata(metadata, pageCount) {
 
     document.getElementById('output').innerHTML = outputHTML;
 }
+
+
+

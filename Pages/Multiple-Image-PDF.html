@@ -7,33 +7,32 @@
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/Multiple-Image-PDF">
     <meta name="geo.region" content="JM">
     <meta name="geo.placename" content="Kingston, Jamaica">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-MW6PG5PVGY');
     </script>
+
     <meta http-equiv="content-language" content="en-us">
     <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
-    <script src="../Java/Script3.js"></script>
-    <meta name="rating" content="general">
-    <meta name="author" content="Diamond A Buchanan">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet2.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
     <meta name="description" content="Convert multiple images to PDF format effortlessly with this free online tool. Upload your images and download it as a PDF in just a few clicks." />
-    <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
-    <link href="../Css/StyleSheet2.css" rel="stylesheet" />
 
+    <!-- PDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
+
 <body>
     <div class="header">
-        <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <a href="/" style="font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
         <p class="Header-Tool-Title">Multiple Image to PDF Converter</p>
 
         <div class="header mobile-friendly">
@@ -41,18 +40,60 @@
             <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
             <a href="../Pages/Dashboards/ToolList">Tool List</a>
             <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>
-
-
         </div>
     </div>
+
     <br><br>
 
-    
     <div class="pdf-container">
         <div class="pdf-drop-area" id="Multiple-Image-PDF-dropArea">
             <p>Drag & Drop Images File Here or Click to Upload</p>
-            </div>
-            <button class="download-button" onclick="convertToPDF()">Convert to PDF</button>
-        </div>  
+        </div>
+        <button class="download-button" onclick="convertToPDF()">Convert to PDF</button>
+    </div>
+
+    <!-- Firebase loader script -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+        import { getFirestore, collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyD32FmQ4e70kW-qjYM7SGmC-Gre4jF8NJE",
+            authDomain: "xfinitytools-database.firebaseapp.com",
+            projectId: "xfinitytools-database",
+            storageBucket: "xfinitytools-database.appspot.com",
+            messagingSenderId: "508662234595",
+            appId: "1:508662234595:web:a34a9d38ab6a99afa574d6"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        async function loadDynamicToolScript(sectionID) {
+            const toolsRef = collection(db, "Tools");
+            const q = query(toolsRef, where("Section_ID", "==", sectionID));
+            const querySnapshot = await getDocs(q);
+
+            if (!querySnapshot.empty) {
+                const doc = querySnapshot.docs[0];
+                const toolScript = doc.data()["Tool-Script"];
+
+                if (toolScript) {
+                    const dynamicScript = document.createElement("script");
+                    dynamicScript.type = "text/javascript";
+                    dynamicScript.text = toolScript;
+                    document.body.appendChild(dynamicScript);
+                } else {
+                    console.error("Tool-Script is missing.");
+                }
+            } else {
+                console.error("No document found with Section_ID:", sectionID);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            loadDynamicToolScript("Multiple-Image-PDF");
+        });
+    </script>
 </body>
 </html>
