@@ -1,10 +1,8 @@
 Ad-Revenue-Estimator
 CamelCaseConversion
 Car-Loan-Calculator
-
 CSV-to-Excel
 CSV-To-Json
-
 EXIFDataExtractor
 ExceltoPDF
 FileCompression
