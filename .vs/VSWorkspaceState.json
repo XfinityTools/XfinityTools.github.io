@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Backup",
-    "\\JS",
     "\\Pages",
-    "\\Pages\\Dashboards"
+    "\\Pages\\Dashboards",
+    "\\Tools"
   ],
   "SelectedNode": "\\Pages\\XML-to-Text.html",
   "PreviewInSolutionExplorer": false
