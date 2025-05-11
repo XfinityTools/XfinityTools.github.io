@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/TXT-to-PDF">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="" />
+
+    <link href="../Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
+
+    <title>Free Text To PDF Converter</title>
+
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';"></p>
+        <div class="header mobile-friendly">
+            <a href="/">Home</a>
+            <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
+            <a href="../Pages/Dashboards/ToolList">Tool List</a>
+            <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>
+        </div>
+    </div>
+
+
+
+    <br />
+
+    <div class="pdf-container">
+        <!--<h2>Select or Drop a XML File</h2>-->
+        <div class="pdf-drop-area" id="TXT-to-PDF-dropArea">
+            <p>Drag & Drop TXT File Here or Click to Upload</p>
+            <input type="file" id="fileInput" accept="text" style="display:none;" />
+        </div>
+
+        <div id="output"></div>
+    </div>
+
+
+
+
+    <!-- Footer section starts here -->
+    <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const dropArea = document.getElementById("TXT-to-PDF-dropArea");
+        const fileInput = document.getElementById("fileInput");
+        const output = document.getElementById("output");
+
+        // Prevent default drag behavior
+        ["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
+            dropArea.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+            });
+        });
+
+        // Highlight effect on drag
+        dropArea.addEventListener("dragover", () => dropArea.classList.add("highlight"));
+        dropArea.addEventListener("dragleave", () => dropArea.classList.remove("highlight"));
+
+        // Handle dropped file
+        dropArea.addEventListener("drop", (e) => {
+            dropArea.classList.remove("highlight");
+            const files = e.dataTransfer.files;
+            if (files.length > 0) handleFile(files[0]);
+        });
+
+        // Handle click to open file input
+        dropArea.addEventListener("click", () => fileInput.click());
+        fileInput.addEventListener("change", () => {
+            if (fileInput.files.length > 0) handleFile(fileInput.files[0]);
+        });
+
+        function handleFile(file) {
+            if (file.type !== "text/plain" && !file.name.endsWith(".txt")) {
+                output.innerHTML = "<p style='color:red;'>Please upload a valid TXT file.</p>";
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const text = e.target.result;
+                output.innerHTML = `<pre style="white-space: pre-wrap; background:#f4f4f4; padding:10px; border-radius:4px;">${text}</pre>`;
+                generatePDF(text, file.name.replace(".txt", ".pdf"));
+            };
+            reader.readAsText(file);
+        }
+
+        function generatePDF(text, filename) {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            const marginLeft = 10;
+            const marginTop = 20;
+            const lineHeight = 7;
+            const pageHeight = doc.internal.pageSize.height;
+
+            const lines = doc.splitTextToSize(text, 180);
+            let cursorY = marginTop;
+
+            lines.forEach(line => {
+                if (cursorY + lineHeight > pageHeight - 10) {
+                    doc.addPage();
+                    cursorY = marginTop;
+                }
+                doc.text(line, marginLeft, cursorY);
+                cursorY += lineHeight;
+            });
+
+            doc.save(filename);
+        }
+    });
+</script>
+
