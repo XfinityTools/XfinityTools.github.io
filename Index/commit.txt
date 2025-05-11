@@ -6,7 +6,7 @@ Add new features and functionality
 
 Fix bugs and enhance user experience
 
-General maintenance and cleanup
+General maintenance and code cleanup
 
 Optimize performance and file handling
 
