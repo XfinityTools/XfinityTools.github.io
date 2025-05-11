@@ -1,0 +1,282 @@
+[
+ {
+   "Document ID": 1,
+   "Tool-Name": "Ad Revenue Estimator",
+   "Tool-Description": "The Ad Revenue Estimator is a simple tool designed to help content creators and website owners estimate their potential advertising earnings. By inputting key metrics such as the number of ad impressions and the revenue per thousand impressions (RPM), users can quickly calculate an estimate of their total earnings. This tool is ideal for budgeting, planning ad strategies, or understanding monetization potential.",
+   "Section_ID": "Ad-Revenue-Estimator",
+   "Google_Index": "Yes",
+   "URL": "https://xfinitytools.github.io/Pages/Ad-Revenue-Estimator"
+ },
+ {
+   "Document ID": 2,
+   "Tool-Name": "Camel Case Converter",
+   "Tool-Description": "Camel case conversion is a naming convention used in computer programming and other contexts where multiple words are combined to form a single identifier. In camel case, each word in the identifier is written without spaces, and the first letter of each word, except the first word, is capitalized.",
+   "Section_ID": "CamCase",
+   "Google_Index": "Yes",
+   "URL": "https://xfinitytools.github.io/Pages/CamCase"
+ },
+ {
+   "Document ID": 3,
+   "Tool-Name": "Car Loan Calculator",
+   "Tool-Description": "Car Loan Calculator is a practical tool designed to assist individuals in estimating monthly payments and total interest when purchasing a vehicle through financing. In this tool, users input key loan details such as vehicle price, down payment, interest rate, and loan term. The calculator then generates a breakdown of monthly installments, total repayment amount, and total interest. This is especially useful for budgeting, comparing loan options, or planning future vehicle purchases",
+   "Section_ID": "Car-Loan-Calculator",
+   "Google_Index": "Yes",
+   "URL": "https://xfinitytools.github.io/Pages/Car-Loan-Calculator"
+ },
+ {
+   "Document ID": 4,
+   "Tool-Name": "CSV To Excel",
+   "Tool-Description": "CSV-to-Excel conversion involves transforming data from a CSV (Comma-Separated Values) file into a structured Excel spreadsheet. A CSV file stores tabular data in plain text format, where each line represents a row and values are separated by commas. Converting this data to Excel enhances its usability by allowing users to apply Excel features such as formatting, formulas, charts, and filters. This process is essential for professionals who want to analyze, visualize, or manage large datasets more efficiently within the Excel environment, providing a more interactive and user-friendly experience.",
+   "Section_ID": "CSV-to-Excel",
+   "Google_Index": "Yes",
+   "URL": "https://xfinitytools.github.io/Pages/CSV-to-Excel"
+ },
+ {
+   "Document ID": 5,
+   "Tool-Name": "CSV To Json",
+   "Tool-Description": "CSV to JSON is a versatile tool that enables seamless conversion of CSV (Comma-Separated Values) files into JSON (JavaScript Object Notation) format. This tool efficiently transforms structured data from a tabular format into a hierarchical format, making it easier to integrate with web applications, databases, or APIs. Users can simply upload a CSV file, and the tool generates a clean, structured JSON output. This is especially useful for developers, data analysts, and anyone needing to convert and manipulate CSV data in a more flexible, machine-readable format.",
+   "Section_ID": "CSV-To-Json",
+   "Google_Index": "Yes",
+   "URL": "https://xfinitytools.github.io/Pages/CSV-To-Json"
+ },
+ {
+   "Document ID": 6,
+   "Tool-Name": "Debt to Income Ratio Calculator",
+   "Tool-Description": "The Debt-to-Income Ratio Calculator is a free, browser-based tool built with JavaScript that helps users assess their financial health by calculating their debt-to-income (DTI) ratio. It supports additional income sources and optional debt factors",
+   "Section_ID": "Debt-to-Income",
+   "Google_Index": "Yes",
+   "URL": "https://xfinitytools.github.io/Pages/Debt-to-Income"
+ },
+ {
+   "Document ID": 8,
+   "Tool-Name": "Excel to PDF",
+   "Tool-Description": "Converting Excel to PDF involves transforming an Excel spreadsheet file (.xlsx) into a PDF document format. This conversion process allows you to preserve the content, formatting, and layout of the Excel file while making it easily shareable, printable, and viewable across different platforms and devices.",
+   "Section_ID": "Excel-PDF",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/Excel-PDF"
+ },
+ {
+   "Document ID": 7,
+   "Tool-Name": "EXIF Data Extractor",
+   "Tool-Description": "EXIF data extraction involves retrieving metadata embedded in an image, such as camera settings, date/time, and GPS location. This data helps analyze and organize images by providing details like shutter speed, aperture, and focal length. The extraction process allows users to view the data in a readable format and save it in various formats like text, CSV, or JSON for further use.",
+   "Section_ID": "EXIF-Data-Extractor",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/EXIF-Data-Extractor"
+ },
+ {
+   "Document ID": 9,
+   "Tool-Name": "File Compression",
+   "Tool-Description": "File compression is a process of reducing the size of one or more files, often referred to as the \"source files,\" to save storage space and improve data transfer efficiency. The compressed files are created in a format that requires less disk space compared to the original files, making them more manageable for storage and faster to transfer over networks.",
+   "Section_ID": "File-Compression",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/File-Compression"
+ },
+ {
+   "Document ID": 10,
+   "Tool-Name": "Hashing Generator",
+   "Tool-Description": "Hashing is a process where a cryptographic algorithm takes an input (e.g., a password, file, or text) and produces a fixed-size string of characters, which typically appears random. Even a small change in the input will produce a completely different hash. This makes it useful for verifying data integrity (e.g., checking if a file has been tampered with) and securely storing sensitive information like passwords.",
+   "Section_ID": "HashingGenerator",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/HashingGenerator.html"
+ },
+ {
+   "Document ID": 11,
+   "Tool-Name": "Image Merger",
+   "Tool-Description": "Image merging involves combining two or more individual images into a single unified image. This tool allows you to merge images in formats like JPG, PNG, and WebP in your preferred layout — horizontal, vertical, or grid. It’s especially useful for creating image collages, side-by-side comparisons, or grouped visual presentations. Merging images simplifies sharing, organizing, and presenting multiple visuals as one cohesive file",
+   "Section_ID": "Image-Merger",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/Image-Merger"
+ },
+ {
+   "Document ID": 20,
+   "Tool-Name": "Jamaican Salary Calculator",
+   "Tool-Description": "The salary calculator tool helps you calculate deductions like NHT, NIS, PAYE, Education Tax, and Additional Pension based on Jamaican tax regulations. It allows you to input gross pay, tax threshold, and pay period to generate accurate results. The tool also provides options to export your pay slip in PDF or CSV format, making it easier to manage and track your earnings and deductions.",
+   "Section_ID": "Salary-Calculator-JM",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/Salary-Calculator-JM"
+ },
+ {
+   "Document ID": 12,
+   "Tool-Name": "JSON To CSV",
+   "Tool-Description": "JSON is a lightweight data-interchange format used primarily for transmitting data between servers and web applications. CSV is a simpler format often used for importing/exporting data into spreadsheets. Converting JSON to CSV makes it easier to read, share, and analyze structured data in tabular form.",
+   "Section_ID": "JSON-To-CSV",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/JSON-To-CSV"
+ },
+ {
+   "Document ID": 13,
+   "Tool-Name": "Key Generator",
+   "Tool-Description": "Key generation involves creating secure, random strings of characters that can be used for software licensing, API authentication, password creation, and other security-related tasks. This tool allows you to generate customizable keys based on your preferred character sets, length, and format. You can include uppercase and lowercase letters, numbers, special symbols, or define your own characters.",
+   "Section_ID": "Key-Generator",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/Key-Generator"
+ },
+ {
+   "Document ID": 14,
+   "Tool-Name": "Multiple Image to PDF Converter",
+   "Tool-Description": "Multiple Image PDF Conversion is a utility commonly used in digital workflows where Multiple images needs to be saved or shared in a consistent document format. In this tool, multiple images is converted into a PDF file where the images fills the entire page without white borders. This is especially useful for preserving full-page graphics, scanned documents, or photos in a clean, printable format.",
+   "Section_ID": "Multiple-Image-PDF",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/Multiple-Image-PDF"
+ },
+ {
+   "Document ID": 15,
+   "Tool-Name": "PDF Merger",
+   "Tool-Description": "PDF merging refers to the process of combining multiple PDF (Portable Document Format) documents into a single PDF file. This merging operation is useful when you want to consolidate several related PDF files or create a cohesive document from separate PDFs",
+   "Section_ID": "MergePDF",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/MergePDF"
+ },
+ {
+   "Document ID": 16,
+   "Tool-Name": "PDF Metadata Extractor",
+   "Tool-Description": "PDF Metadata Extraction involves retrieving descriptive information embedded within a PDF file, such as the document’s title, author, subject, creator software, producer, creation and modification dates, PDF version, and number of pages. This metadata helps users understand the document’s origin, authorship, and technical details. The extraction process displays this information in a readable format.",
+   "Section_ID": "PDF-Metadata-Extractor",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/PDF-Metadata-Extractor"
+ },
+ {
+   "Document ID": 17,
+   "Tool-Name": "PDF Watermarker",
+   "Tool-Description": "PDF watermarking refers to the process of adding visible or invisible markings or overlays onto a PDF document. These markings typically contain text, images, logos, or patterns that are superimposed on each page of the PDF. The purpose of watermarking is to identify the document's origin, protect its authenticity, or indicate its confidentiality.",
+   "Section_ID": "PDF-WaterMark",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/PDF-WaterMark.html"
+ },
+ {
+   "Document ID": 19,
+   "Tool-Name": "PNG to JPEG",
+   "Tool-Description": "Converting a PNG file to JPEG involves transforming the image file format from PNG (Portable Network Graphics) to JPEG (Joint Photographic Experts Group). This conversion can be useful in certain scenarios where JPEG format is preferred over PNG, such as reducing file size or compatibility requirements.",
+   "Section_ID": "Png-Jpeg",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/Png-Jpeg"
+ },
+ {
+   "Document ID": 18,
+   "Tool-Name": "PNG to WebP",
+   "Tool-Description": "Converting a PNG to WebP file involves changing the image file format from PNG (Portable Network Graphics) to WebP (a modern image format developed by Google). This conversion can be useful in situations where PNG format is preferred over WebP, such as compatibility requirements or the need for lossless compression",
+   "Section_ID": "Png-Webp",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/Png-Webp"
+ },
+ {
+   "Document ID": 21,
+   "Tool-Name": "Sentence Capitalization",
+   "Tool-Description": "When an entire sentence is capitalized, it means that all the letters in the sentence are written in uppercase, without any lowercase letters. This style is often used in informal writing, online communication, or to convey emphasis or urgency.",
+   "Section_ID": "SentenceCap",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/SentenceCap"
+ },
+ {
+   "Document ID": 22,
+   "Tool-Name": "Single Image PDF Conversion",
+   "Tool-Description": "Single Image PDF Conversion is a utility commonly used in digital workflows where a single image needs to be saved or shared in a consistent document format. In this tool, one image is converted into a PDF file where the image fills the entire page without white borders. This is especially useful for preserving full-page graphics, scanned documents, or photos in a clean, printable format.",
+   "Section_ID": "Single-Image-PDF",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/Single-Image-PDF"
+ },
+ {
+   "Document ID": 24,
+   "Tool-Name": "Text Difference Checker",
+   "Tool-Description": "This tool lets you compare two blocks of text side by side and instantly highlights the differences. It's ideal for checking changes in documents, code, or any other text-based content. You can upload files or paste text directly, and see what’s added, removed, or modified in a clear, easy-to-read format.",
+   "Section_ID": "Text-Diff-Checker",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/Text-Diff-Checker"
+ },
+ {
+   "Document ID": 25,
+   "Tool-Name": "Text Metrics Generator",
+   "Tool-Description": "Text Metrics Generation involves analyzing a body of text to extract useful statistics such as the number of characters, words, sentences, vowels, and consonants. It also calculates metrics like average word length and character-to-word ratio. This analysis helps users better understand the structure and readability of their writing. The extracted data is presented in a clean, readable format for review or further use.",
+   "Section_ID": "Text-Metrics-Generator",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/Text-Metrics-Generator"
+ },
+ {
+   "Document ID": 28,
+   "Tool-Name": "Text To CSV",
+   "Tool-Description": "Text-to-CSV conversion involves transforming plain text data into a structured CSV (Comma-Separated Values) format. This process is useful when working with data that is organized using spaces, tabs, or fixed-width columns, such as reports or exported text logs. By converting the text into CSV, the data becomes machine-readable and can be easily imported into spreadsheet software like Excel or Google Sheets. The resulting CSV format uses commas to separate values into individual columns, making it easier to sort, analyze, and manipulate the information for reporting or database purposes.",
+   "Section_ID": "TexttoCSV",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/TexttoCSV"
+ },
+ {
+   "Document ID": 27,
+   "Tool-Name": "Text to Excel",
+   "Tool-Description": "Text-to-Excel conversion involves transforming plain text data often structured using fixed-width spacing or delimiters—into a tabular Excel format. This process extracts meaningful information from the text and organizes it into rows and columns, just like a typical spreadsheet. It is especially useful for payrolls, transaction logs, or legacy system outputs. By converting text to Excel, users can analyze, sort, and visualize data more effectively using Excel’s built-in tools. The result is a clean, structured spreadsheet that improves readability, facilitates reporting, and allows for efficient data handling and sharing.",
+   "Section_ID": "Text-to-Excel",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/Text-to-Excel"
+ },
+ {
+   "Document ID": 26,
+   "Tool-Name": "Text To Json",
+   "Tool-Description": "Text to JSON conversion is the process of transforming structured or semi-structured plain text data into JSON (JavaScript Object Notation), a widely-used data format for storing and exchanging information. This conversion enables users to represent text-based data in a hierarchical, readable, and machine-friendly format. It is particularly useful for organizing repetitive patterns or records in the text into key-value pairs, arrays, or objects. Once converted, the JSON output can be easily used for data analysis, web applications, or transferred between systems, and it can also be saved for further processing or integration.",
+   "Section_ID": "Text-To-JSON",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/Text-To-JSON"
+ },
+ {
+   "Document ID": 23,
+   "Tool-Name": "Text To PDF",
+   "Tool-Description": "Converting a text file to PDF involves transforming plain textual content into a Portable Document Format (PDF) file. This conversion is useful in scenarios where you need to preserve the formatting, share documents across platforms, or ensure print-ready output. PDF files are widely accepted for official documentation and offer enhanced accessibility and compatibility compared to raw text files.",
+   "Section_ID": "TXT-to-PDF",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/TXT-to-PDF"
+ },
+ {
+   "Document ID": 29,
+   "Tool-Name": "WEBP Metadata Viewer",
+   "Tool-Description": "Viewing metadata in a WEBP file involves extracting and displaying information embedded within the image, such as creation date, compression details, and image dimensions. This tool helps users analyze the metadata of multiple WEBP files at once, providing insights into the image’s structure and properties. It is useful for photographers, developers, or anyone working with image optimization and file management.",
+   "Section_ID": "WebP-Metadata-Viewer",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/WebP-Metadata-Viewer"
+ },
+ {
+   "Document ID": 31,
+   "Tool-Name": "WebP to BMP",
+   "Tool-Description": "The WebP to BMP Converter Tool allows you to easily convert WebP image files to BMP format directly in your browser. This tool works entirely offline for privacy, and no files are uploaded to any server. Simply upload your WebP file, and it will be converted instantly to BMP format, which you can then download.",
+   "Section_ID": "WebP-to-BMP",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/WebP-to-BMP"
+ },
+ {
+   "Document ID": 30,
+   "Tool-Name": "WebP to JPEG",
+   "Tool-Description": "Converting a WebP file to JPEG involves changing the image format from WebP (a modern image format developed by Google) to JPEG (a widely supported image format known for its balance of quality and file size). This conversion is helpful when JPEG is preferred for broader compatibility, faster loading times, or when working with platforms that do not support WebP.",
+   "Section_ID": "WebP-To-JPEG",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/WebP-To-JPEG"
+ },
+ {
+   "Document ID": 32,
+   "Tool-Name": "WebP to PDF",
+   "Tool-Description": "Converting a WebP file to PDF involves transforming the image from the WebP format into a PDF document. This is useful when you need to share, archive, or print WebP images in a format that is widely supported and preserves layout consistency across devices and platforms.",
+   "Section_ID": "WebP-to-PDF",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/WebP-to-PDF"
+ },
+ {
+   "Document ID": 33,
+   "Tool-Name": "WebP to PNG",
+   "Tool-Description": "Converting a WebP file to PNG involves changing the image file format from WebP (a modern image format developed by Google) to PNG (Portable Network Graphics). This conversion can be useful in situations where PNG format is preferred over WebP, such as compatibility requirements or the need for lossless compression.",
+   "Section_ID": "WebP-Png",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/WebP-Png"
+ },
+ {
+   "Document ID": 34,
+   "Tool-Name": "XML To Text Converter",
+   "Tool-Description": "XML to Text conversion is the process of extracting readable content from XML files by removing tags and formatting the data into plain, human-readable text. This is useful for simplifying structured data for display, analysis, or further processing.",
+   "Section_ID": "XML-to-Text",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/XML-to-Text"
+ },
+ {
+   "Document ID": 35,
+   "Tool-Name": "Zip File Creation",
+   "Tool-Description": "Creating a zip file involves compressing one or more files or directories into a single archive file with the \".zip\" extension. The process of creating a zip file helps reduce file size and makes it easier to store, transfer, and organize multiple files together.",
+   "Section_ID": "Zipfile",
+   "Google_Index": "",
+   "URL": "https://xfinitytools.github.io/Pages/Zipfile"
+ }
+]
