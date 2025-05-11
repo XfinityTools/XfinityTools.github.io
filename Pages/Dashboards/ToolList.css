@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
     .content-section {
-        width: 65%;
+        width: 69%;
         padding: 30px;
         border-left: 3px solid #e60340;
     }
@@ -28,10 +28,11 @@
 }
 
 .content-section {
-    width: 43%;
+    width: 33%;
     padding: 22px;
     border-left: 3px solid #e60340;
-/*    box-shadow: none;*/
+   
+    
 }
 
 .ad-unit {
@@ -42,5 +43,10 @@
 
 ol {
     font-size: 19.5px;
+}
+
+.ToolListP {
+    font-size: 21px;
+    margin-right: 10%;
 }
 

@@ -15,20 +15,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-      <!-- Google tag (gtag.js) -->
+
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+
+    <!-- Firebase Compat Version -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-MW6PG5PVGY');
     </script>
+
     <!-- Other -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../../JS/JavaS1.js"></script>
     <script src="DropDownMenu.js"></script>
-    <link href="../../Css/Bootstrap.css" rel="stylesheet" />
+    <!--<link href="../../Css/Bootstrap.css" rel="stylesheet" />-->
     <link href="ToolList.css" rel="stylesheet" />
     <link href="../../Css/Dashboard.css" rel="stylesheet" />
     <link href="DashHeader.css" rel="stylesheet" />
@@ -36,78 +42,117 @@
 </head>
 <body>
     <div class="header">
-        <a href="/"><h1>Xfinity Tool List</h1></a>
+        <a href="/"><h1>Xfinity Tools</h1></a>
 
         <button class="hamburger" onclick="toggleMenu()">☰</button>
 
         <div class="nav-links" id="navLinks" style="font-family: 'Franklin Gothic Medium';">
-            <a class="font-family-Franklin Gothic Medium" href="../../About.html">About</a>
+            <a href="../../About.html">About</a>
             <a href="../../Disclaimer">Disclaimer</a>
             <a href="../../Contact">Contact</a>
-            <a href="ToolsLibrary"> Library</a>
+            <a href="ToolsLibrary">Library</a>
             <a href="Dashboard">Dashboard</a>
         </div>
     </div>
 
-    <div style=" margin: 0 auto; margin-left: 30px;">      
-       
+    <div style="margin: 0 auto; margin-left: 30px;">
+        <br />
+        <h1 style="margin-left: 10%;">Tools List</h1>
+        <div style="margin-left: 10%;" class="container-infobox-left">
+            <p class="ToolListP">This is the official list of tools available on the website. The links are clickable and will direct you to the corresponding tool. The list is organized in alphabetical order based on tool name for your convenience.</p>
+
+
+        </div>
+        <div class="row">
+
             <section class="content-section">
-                <ol>
-                    <li><a href="../Ad-Revenue-Estimator">Ad Revenue Estimator</a><br /></li>
-                    <li><a href="../CamCase">Camel Case Converter</a><br /></li>
-                    <li><a href="../Car-Loan-Calculator">Car Loan Calculator</a><br /></li>
-                    <li><a href="../CSV-To-Json">CSV to Json</a><br /></li>
-                    <li><a href="../Debt-to-Income">Debt to Income Ratio Calculator</a><br /></li>
-                    <li><a href="../CSV-to-Excel">CSV to Excel</a><br /></li>
-                    <li><a href="../EXIF-Data-Extractor">EXIF Data Extractor</a><br /></li>
-                    <li><a href="../Excel-PDF">Excel to PDF Converter</a><br /></li>
-                    <li><a href="../File-Compression">File Compression Generator</a><br /></li>
-                    <li><a href="../HashingGenerator">Hashing Generator</a><br /></li>
-                    <li><a href="../Image-Merger">Image Merger</a><br /></li>
-                    <li><a href="../JSON-To-CSV">JSON To CSV</a><br /></li>
-                    <li><a href="../Key-Generator">Key Generator</a><br /></li>
-                    <li><a href="../MergePDF">Merge PDF Generator</a><br /></li>
-                    <li><a href="../PDF-Metadata-Extractor">PDF Metadata Extractor</a><br /></li>
-                    <li><a href="../PDF-WaterMark">PDF Watermarker</a><br /></li>
-                    <li><a href="../Png-Jpeg">PNG to JPEG Converter</a><br /></li>
-                    <li><a href="../Png-Webp">PNG to WEBP Converter</a><br /></li>
-                    <li><a href="../Salary-Calculator-JM">Salary Calculator JM </a><br /></li>
-                    <li><a href="../SentenceCap">Sentence Capitalization Generator</a><br /></li>
-                    <li><a href="../Single-Image-PDF">Single Image to PDF</a><br /></li>
-                    <li><a href="../Text-Diff-Checker">Text Difference Checker</a><br /></li>
-                    <li><a href="../Text-Metrics-Generator">Text Metrics Generator</a><br /></li>
-                    <li><a href="../Text-To-JSON">Text To Json</a><br /></li>
-                    <li><a href="../Text-to-Excel">Text To Excel</a><br /></li>
-                    <li><a href="../TexttoCSV">Text To CSV</a><br /></li>
-                    <li><a href="../WebP-to-BMP">WEBP to BMP Converter</a><br /></li>
-                    <li><a href="../WebP-To-JPEG">WEBP to JPEG Converter</a><br /></li>
-                    <li><a href="../WebP-Png">WEBP to PNG Converter</a><br /></li>
-                    <li><a href="../WebP-to-PDF">WEBP to PDF Converter</a><br /></li>
-                    <li><a href="../WebP-Metadata-Viewer">WEBP Metadata Viewer</a><br /></li>
-                    <li><a href="../Zipfile">Zip File Generator</a><br /></li>
+                <ol id="toolListContainer">
+
+                    <!-- Dynamic tool list will go here -->
                 </ol>
             </section>
-            <div class="ad-unit">
-
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-6760354428989736"
-                     data-ad-slot="1304851532"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>  
-            </div>
         </div>
-    <div>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script><!-- Square Ad (4/28/25) --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6760354428989736" data-ad-slot="9528999483" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+        <script>
+            // Firebase config
+            const firebaseConfig = {
+                apiKey: "AIzaSyD32FmQ4e70kW-qjYM7SGmC-Gre4jF8NJE",
+                authDomain: "xfinitytools-database.firebaseapp.com",
+                projectId: "xfinitytools-database",
+                storageBucket: "xfinitytools-database.appspot.com",
+                messagingSenderId: "508662234595",
+                appId: "1:508662234595:web:a34a9d38ab6a99afa574d6"
+            };
+
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+
+            // Load tool list from "Tools" collection
+            async function loadToolList() {
+                const toolListContainer = document.getElementById("toolListContainer");
+
+                try {
+                    const snapshot = await db.collection("Tools").get();
+                    const tools = [];
+
+                    snapshot.forEach(doc => {
+                        const data = doc.data();
+                        if (data["Tool-Name"] && data["URL"]) {
+                            tools.push({
+                                name: data["Tool-Name"],
+                                url: data["URL"]
+                            });
+                        }
+                    });
+
+                    // Sort tools alphabetically
+                    tools.sort((a, b) => a.name.localeCompare(b.name));
+
+                    // Populate list
+                    tools.forEach(tool => {
+                        const li = document.createElement("li");
+                        li.innerHTML = `<a href="${tool.url}" target="_blank">${tool.name}</a><br/>`;
+                        toolListContainer.appendChild(li);
+                    });
+
+                } catch (error) {
+                    console.error("Error loading tools:", error);
+                }
+            }
+
+            // Trigger load
+            loadToolList();
+        </script>
+
+
+        <!-- Ad Units -->
+        <div class="ad-unit">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-6760354428989736"
+                 data-ad-slot="1304851532"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
     </div>
 
+    <!--<div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6760354428989736"
+             data-ad-slot="9528999483"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>-->
     <!-- Footer -->
     <footer style="padding: 15px; margin-top: 30px; margin-left: 30px;">
         <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
@@ -116,5 +161,4 @@
         </script>
     </footer>
 </body>
-
 </html>

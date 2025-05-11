@@ -42,7 +42,7 @@
 </head>
 <body>
     <div class="header">
-        <a href="/"><h1>Xfinity Tool List</h1></a>
+        <a href="/"><h1>Xfinity Tools</h1></a>
 
         <button class="hamburger" onclick="toggleMenu()">☰</button>
 
@@ -56,81 +56,90 @@
     </div>
 
     <div style="margin: 0 auto; margin-left: 30px;">
-        <div class="row">
-            <section class="content-section">
-                <ol id="toolListContainer">
-                    <!-- Dynamic tool list will go here -->
-                </ol>
-            </section>
+        <br />
+        <h1 style="margin-left: 10%;">Tools List</h1>
+        <div style="margin-left: 10%;" class="container-infobox-left">
+            <p class="ToolListP">This is the official list of tools available on the website. The links are clickable and will direct you to the corresponding tool. The list is organized in alphabetical order based on tool name for your convenience.</p>
+
+
         </div>
+            <div class="row">
 
-        <script>
-            // Firebase config
-            const firebaseConfig = {
-                apiKey: "AIzaSyD32FmQ4e70kW-qjYM7SGmC-Gre4jF8NJE",
-                authDomain: "xfinitytools-database.firebaseapp.com",
-                projectId: "xfinitytools-database",
-                storageBucket: "xfinitytools-database.appspot.com",
-                messagingSenderId: "508662234595",
-                appId: "1:508662234595:web:a34a9d38ab6a99afa574d6"
-            };
+                <section class="content-section">
+                    <ol id="toolListContainer">
 
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            const db = firebase.firestore();
+                        <!-- Dynamic tool list will go here -->
+                    </ol>
+                </section>
+            </div>
 
-            // Load tool list from "Tools" collection
-            async function loadToolList() {
-                const toolListContainer = document.getElementById("toolListContainer");
+            <script>
+                // Firebase config
+                const firebaseConfig = {
+                    apiKey: "AIzaSyD32FmQ4e70kW-qjYM7SGmC-Gre4jF8NJE",
+                    authDomain: "xfinitytools-database.firebaseapp.com",
+                    projectId: "xfinitytools-database",
+                    storageBucket: "xfinitytools-database.appspot.com",
+                    messagingSenderId: "508662234595",
+                    appId: "1:508662234595:web:a34a9d38ab6a99afa574d6"
+                };
 
-                try {
-                    const snapshot = await db.collection("Tools").get();
-                    const tools = [];
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+                const db = firebase.firestore();
 
-                    snapshot.forEach(doc => {
-                        const data = doc.data();
-                        if (data["Tool-Name"] && data["URL"]) {
-                            tools.push({
-                                name: data["Tool-Name"],
-                                url: data["URL"]
-                            });
-                        }
-                    });
+                // Load tool list from "Tools" collection
+                async function loadToolList() {
+                    const toolListContainer = document.getElementById("toolListContainer");
 
-                    // Sort tools alphabetically
-                    tools.sort((a, b) => a.name.localeCompare(b.name));
+                    try {
+                        const snapshot = await db.collection("Tools").get();
+                        const tools = [];
 
-                    // Populate list
-                    tools.forEach(tool => {
-                        const li = document.createElement("li");
-                        li.innerHTML = `<a href="${tool.url}" target="_blank">${tool.name}</a><br/>`;
-                        toolListContainer.appendChild(li);
-                    });
+                        snapshot.forEach(doc => {
+                            const data = doc.data();
+                            if (data["Tool-Name"] && data["URL"]) {
+                                tools.push({
+                                    name: data["Tool-Name"],
+                                    url: data["URL"]
+                                });
+                            }
+                        });
 
-                } catch (error) {
-                    console.error("Error loading tools:", error);
+                        // Sort tools alphabetically
+                        tools.sort((a, b) => a.name.localeCompare(b.name));
+
+                        // Populate list
+                        tools.forEach(tool => {
+                            const li = document.createElement("li");
+                            li.innerHTML = `<a href="${tool.url}" target="_blank">${tool.name}</a><br/>`;
+                            toolListContainer.appendChild(li);
+                        });
+
+                    } catch (error) {
+                        console.error("Error loading tools:", error);
+                    }
                 }
-            }
 
-            // Trigger load
-            loadToolList();
-        </script>
+                // Trigger load
+                loadToolList();
+            </script>
 
 
-        <!-- Ad Units -->
-        <div class="ad-unit">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-6760354428989736"
-             data-ad-slot="1304851532"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-    </div>
+            <!-- Ad Units -->
+            <div class="ad-unit">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-6760354428989736"
+                     data-ad-slot="1304851532"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
 
     <!--<div>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
