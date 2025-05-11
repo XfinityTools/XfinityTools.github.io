@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Firebase",
-    "\\Pages"
+    "\\Javascript",
+    "\\Pages",
+    "\\Pages\\Dashboards",
+    "\\Tools"
   ],
-  "SelectedNode": "\\Pages\\Template.html",
+  "SelectedNode": "\\Javascript\\Base-Con.js",
   "PreviewInSolutionExplorer": false
 }

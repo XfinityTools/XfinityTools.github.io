@@ -16,26 +16,27 @@
     </script>
     <meta http-equiv="content-language" content="en-us">
     <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
-
+    <script src="../Javascript/Base-Con.js"></script>
     <meta name="rating" content="general">
     <meta name="author" content="Diamond A Buchanan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="" />
+    <meta name="description" content="Convert numbers between bases like binary, decimal, hexadecimal, and more using this fast, easy Base Converter. Supports bases 2 to 36, copy results, and view history." />
 
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet8.css" rel="stylesheet" />
     <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
 
-    <title></title>
+    <title>Free Base Converter</title>
 
 </head>
 <body>
 
     <div class="text-metrics-header">
         <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
-        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';"></p>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">Base Converter</p>
         <div class="header mobile-friendly">
             <a href="/">Home</a>
             <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
@@ -43,96 +44,87 @@
             <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>
         </div>
     </div>
-
-
-
-    <br />
-
-    <div class="container">
-        <div class="main-content">
-            <h2>Base Converter Tool</h2>
-            <div>
-                <label for="inputNumber">Enter Number:</label>
-                <input type="text" id="inputNumber" placeholder="e.g. 1010">
+    <div class="main-content">
+        <form id="baseConverterForm" onsubmit="event.preventDefault(); convertBase();">
+            <div style="margin-bottom: 15px;">
+                <label for="inputNumber"><strong>Enter Number:</strong></label><br>
+                <input type="text" id="inputNumber" placeholder="e.g. 1010" required style="width: 100%; padding: 8px;">
             </div>
-            <div>
-                <label for="fromBase">From Base:</label>
-                <select id="fromBase">
-                    <option value="2">Binary</option>
-                    <option value="8">Octal</option>
-                    <option value="10" selected>Decimal</option>
-                    <option value="16">Hexadecimal</option>
-                </select>
+
+            <div style="display: flex; gap: 20px; margin-bottom: 15px;">
+                <div style="flex: 1;">
+                    <label for="fromBase"><strong>From Base:</strong></label><br>
+                    <select id="fromBase" style="width: 100%; padding: 8px;">
+                        <option value="2">Binary</option>
+                        <option value="3">Ternary</option>
+                        <option value="5">Quinary</option>
+                        <option value="6">Senary</option>
+                        <option value="7">Septenary</option>
+                        <option value="8">Octal</option>
+                        <option value="10" selected>Decimal</option>
+                        <option value="12">Duodecimal</option>
+                        <option value="16">Hexadecimal</option>
+                        <option value="20">Vigesimal</option>
+                    </select>
+                </div>
+                <div style="flex: 1;">
+                    <label for="toBase"><strong>To Base:</strong></label><br>
+                    <select id="toBase" style="width: 100%; padding: 8px;">
+                        <option value="2">Binary</option>
+                        <option value="3">Ternary</option>
+                        <option value="5">Quinary</option>
+                        <option value="6">Senary</option>
+                        <option value="7">Septenary</option>
+                        <option value="8">Octal</option>
+                        <option value="10">Decimal</option>
+                        <option value="12">Duodecimal</option>
+                        <option value="16" selected>Hexadecimal</option>
+                        <option value="20">Vigesimal</option>
+                    </select>
+                </div>
             </div>
-            <div>
-                <label for="toBase">To Base:</label>
-                <select id="toBase">
-                    <option value="2">Binary</option>
-                    <option value="8">Octal</option>
-                    <option value="10">Decimal</option>
-                    <option value="16" selected>Hexadecimal</option>
-                </select>
-            </div>
-            <button onclick="convertBase()">Convert</button>
-            <div id="result" style="margin-top: 10px;">
+
+            <button type="submit" style="padding: 10px 20px; font-weight: bold;">Convert</button>
+
+            <div id="result" style="margin-top: 20px; display:none;">
                 <strong>Result:</strong>
-                <span id="convertedResult"></span>
-                <button onclick="copyResult()">Copy</button>
+                <div style="display:flex; align-items:center; gap:10px; margin-top:5px;">
+                    <span id="convertedResult" style="font-size: 1.2em;"></span>
+                    <button onclick="copyResult()" style="padding: 5px 10px;">Copy</button>
+                </div>
             </div>
-            <div id="history" style="margin-top: 20px;">
+
+            <div id="history" style="margin-top: 30px;">
                 <h3>Conversion History</h3>
-                <ul id="conversionHistory"></ul>
+                <ul id="conversionHistory" style="list-style-type: disc; padding-left: 20px;"></ul>
             </div>
-        </div>
+        </form>
     </div>
 
-    <script>
-        const historyList = [];
+    <div class="container-infobox-left">
+        <p>
+            The Base Converter tool allows you to convert numbers between numeral systems ranging from binary (Base 2) to Base 36. It supports common bases such as Binary, Octal, Decimal, Hexadecimal, and more obscure ones like Ternary, Quinary, and Duodecimal. Features include a user-friendly form layout, real-time conversion, automatic input validation, conversion history tracking, and copy-to-clipboard functionality.
+        </p>
 
-        function convertBase() {
-            const input = document.getElementById("inputNumber").value.trim();
-            const fromBase = parseInt(document.getElementById("fromBase").value);
-            const toBase = parseInt(document.getElementById("toBase").value);
-            const resultDisplay = document.getElementById("convertedResult");
+        <h1>Instruction Manual:</h1>
+        <ul>
+            <li><strong>Step 1:</strong> Enter the number you wish to convert in the input field.</li>
+            <li><strong>Step 2:</strong> Select the base the number is currently in from the "From Base" dropdown.</li>
+            <li><strong>Step 3:</strong> Select the base you want to convert the number to from the "To Base" dropdown.</li>
+            <li><strong>Step 4:</strong> Click the <strong>"Convert"</strong> button to perform the conversion.</li>
+            <li><strong>Step 5:</strong> The result will appear below the form. Use the <strong>"Copy"</strong> button to copy the result to your clipboard.</li>
+            <li><strong>Step 6:</strong> Your conversion will be saved in the "Conversion History" section for quick reference.</li>
+        </ul>
 
-            try {
-                if (!input) throw new Error("Enter a number.");
-                const parsed = parseInt(input, fromBase);
-                if (isNaN(parsed)) throw new Error("Invalid number for the selected base.");
-                const converted = parsed.toString(toBase).toUpperCase();
-                resultDisplay.textContent = converted;
-
-                // Add to history
-                const historyItem = `${input} (Base ${fromBase}) → ${converted} (Base ${toBase})`;
-                historyList.unshift(historyItem);
-                updateHistory();
-            } catch (err) {
-                resultDisplay.textContent = err.message;
-            }
-        }
-
-        function updateHistory() {
-            const ul = document.getElementById("conversionHistory");
-            ul.innerHTML = "";
-            historyList.slice(0, 5).forEach(entry => {
-                const li = document.createElement("li");
-                li.textContent = entry;
-                ul.appendChild(li);
-            });
-        }
-
-        function copyResult() {
-            const result = document.getElementById("convertedResult").textContent;
-            if (result) {
-                navigator.clipboard.writeText(result).then(() => {
-                    alert("Result copied to clipboard.");
-                });
-            }
-        }
-    </script>
+        <p>
+           Please ensure your input only includes valid characters for the selected "From Base". For example, binary numbers must only include 0s and 1s.
+        </p>
+    </div>
 
 
 
+
+    
 
 
     <!-- Footer section starts here -->
@@ -147,3 +139,4 @@
 
 </body>
 </html>
+
