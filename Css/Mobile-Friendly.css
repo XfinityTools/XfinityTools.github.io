@@ -24,3 +24,15 @@ footer p {
     margin: 0;
     font-family: 'Teko', sans-serif;
 }
+
+.PageFooterStyle {
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+}
