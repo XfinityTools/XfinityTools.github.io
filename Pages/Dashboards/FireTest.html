@@ -1,120 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Dashboards/Dashboard">
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Dashboards/ToolList">
     <meta name="geo.region" content="JM">
     <meta name="geo.placename" content="Kingston, Jamaica">
     <meta name="rating" content="general">
     <meta name="author" content="Diamond A Buchanan">
-    <meta name="description" content="Xfinity Tools is a free comprehensive collection of web-based tools designed to simplify various tasks and enhance your productivity. Our aim is to provide you with a one-stop destination for quick and efficient online utilities.
-Whether you need to edit images, convert files, manipulate data, or process text, Xfinity Tools has you covered.">
+    <meta name="description" content="Browse the complete A–Z list of tools available on Xfinity Tools. This alphabetical tool index offers quick access to every utility in one place.">
     <link rel="icon" type="image/x-icon" href="../../Images/favicon.ico">
     <meta name="google-site-verification" content="_tlvtjqFT1OiTJbgwrthCi6VKRpfT5n7QSbKtX_dF88" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'G-MW6PG5PVGY');
-    </script>
-    <!-- Other -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../../JS/JavaS1.js"></script>
-    <script src="DropDownMenu.js"></script>
-    <link href="../../Css/Bootstrap.css" rel="stylesheet" />
-    <link href="../../Css/Header.css" rel="stylesheet" />
-    <link href="../../Css/Dashboard.css" rel="stylesheet" />
-    <title>Xfinity Tools - Tools Dashboard</title>
-</head>
-<body>
-    <div class="header">
-        <a href="/"><h1>Xfinity Tools Dashboard</h1></a>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <div class="nav-links" id="navLinks">
-            <a href="../../About">About</a>
-            <a href="../../Disclaimer">Disclaimer</a>
-            <a href="../../Contact">Contact</a>
-            <a href="ToolsLibrary">Tools Library</a>
-            <a href="ToolList">Tools List</a>
-
-        </div>
-    </div>
-
-    <div id="SearchBarAndPageSelector" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-
-        <a href="/" class="btn btn-secondary btn-md dash-home-button" style="margin-right: 10px;">Home </a>
-
-        <input type="text" class="dash-searchbar" id="searchInput" placeholder="Search Tools" style="padding: 14px; width: 250px; border: 2px solid #e60340; border-radius: 2px; font-size: 12px; color:black;" />
-
-        <button type="button" id="searchButton" class="btn btn-secondary btn-md dash-search-button" style="margin-right: 10px;">Search </button>
-    </div>
-
-
-    <div class="row" id="toolsRow">
-
-    </div>
-
-    
+    <!-- Firebase Compat Version -->
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
 
     <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyD32FmQ4e70kW-qjYM7SGmC-Gre4jF8NJE",
-            authDomain: "xfinitytools-database.firebaseapp.com",
-            projectId: "xfinitytools-database",
-            storageBucket: "xfinitytools-database.appspot.com",
-            messagingSenderId: "508662234595",
-            appId: "1:508662234595:web:a34a9d38ab6a99afa574d6"
-        };
-
-        
-        const app = firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
-
-        const toolsRow = document.getElementById("toolsRow");
-        toolsRow.innerHTML = ""; // Clear any placeholder or previous content
-
-        db.collection("Tools").get().then((querySnapshot) => {
-            if (querySnapshot.empty) {
-                toolsRow.innerHTML = "<p>No tools found.</p>";
-            } else {
-                querySnapshot.forEach((doc) => {
-                    const data = doc.data();
-
-                    const toolSection = document.createElement("section");
-                    toolSection.className = "col-md-4 card-dash";
-                    toolSection.id = data["Tool-ID"] || ""; // Optional unique ID
-
-                    // Creating inner HTML for each tool
-                    toolSection.innerHTML = `
-                                    <div>
-                                        <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
-                                    </div>
-                                    <h2>${data["Tool-Name"]}</h2>
-                                    <p class="Tool-Description">${data["Tool-Description"]}</p>
-                                    <br />
-                                    <p class="Tool-URL">
-                                        <a class="btn btn-default" href="${data.URL}">Use &raquo;</a>
-                                    </p>
-                                `;
-
-                    // Append the new section to the toolsRow
-                    toolsRow.appendChild(toolSection);
-                });
-            }
-        }).catch((error) => {
-            console.error("Error fetching documents: ", error);
-            toolsRow.innerHTML = "<p>Error loading tools. Please try again later.</p>";
-        });
-
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
     </script>
+
+    <!-- Other -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../JS/JavaS1.js"></script>
+    <script src="DropDownMenu.js"></script>
+    <!--<link href="../../Css/Bootstrap.css" rel="stylesheet" />-->
+    <link href="ToolList.css" rel="stylesheet" />
+    <link href="../../Css/Dashboard.css" rel="stylesheet" />
+    <link href="DashHeader.css" rel="stylesheet" />
+    <title>Xfinity Tools - Tool List</title>
+</head>
+<body>
+    <div class="header">
+        <a href="/"><h1>Xfinity Tool List</h1></a>
+
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+        <div class="nav-links" id="navLinks" style="font-family: 'Franklin Gothic Medium';">
+            <a href="../../About.html">About</a>
+            <a href="../../Disclaimer">Disclaimer</a>
+            <a href="../../Contact">Contact</a>
+            <a href="ToolsLibrary">Library</a>
+            <a href="Dashboard">Dashboard</a>
+        </div>
+    </div>
+
+    <div style="margin: 0 auto; margin-left: 30px;">
+        <div class="row">
+            <section class="content-section">
+                <ol id="toolListContainer">
+                    <!-- Dynamic tool list will go here -->
+                </ol>
+            </section>
+        </div>
+
+        <script>
+            // Firebase config
+            const firebaseConfig = {
+                apiKey: "AIzaSyD32FmQ4e70kW-qjYM7SGmC-Gre4jF8NJE",
+                authDomain: "xfinitytools-database.firebaseapp.com",
+                projectId: "xfinitytools-database",
+                storageBucket: "xfinitytools-database.appspot.com",
+                messagingSenderId: "508662234595",
+                appId: "1:508662234595:web:a34a9d38ab6a99afa574d6"
+            };
+
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+
+            // Load tool list from "Tools" collection
+            async function loadToolList() {
+                const toolListContainer = document.getElementById("toolListContainer");
+
+                try {
+                    const snapshot = await db.collection("Tools").get();
+                    const tools = [];
+
+                    snapshot.forEach(doc => {
+                        const data = doc.data();
+                        if (data["Tool-Name"] && data["URL"]) {
+                            tools.push({
+                                name: data["Tool-Name"],
+                                url: data["URL"]
+                            });
+                        }
+                    });
+
+                    // Sort tools alphabetically
+                    tools.sort((a, b) => a.name.localeCompare(b.name));
+
+                    // Populate list
+                    tools.forEach(tool => {
+                        const li = document.createElement("li");
+                        li.innerHTML = `<a href="${tool.url}" target="_blank">${tool.name}</a><br/>`;
+                        toolListContainer.appendChild(li);
+                    });
+
+                } catch (error) {
+                    console.error("Error loading tools:", error);
+                }
+            }
+
+            // Trigger load
+            loadToolList();
+        </script>
+
+
+        <!-- Ad Units -->
+        <div class="ad-unit">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6760354428989736"
+             data-ad-slot="1304851532"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    </div>
+
+    <!--<div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6760354428989736"
+             data-ad-slot="9528999483"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>-->
+
+    <!-- Footer -->
+    <footer style="padding: 15px; margin-top: 30px; margin-left: 30px;">
+        <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+        <script>
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
+    </footer>
 </body>
 </html>
