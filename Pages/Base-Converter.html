@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Base-Converter">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="" />
+
+    <link href="../Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
+
+    <title></title>
+
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';"></p>
+        <div class="header mobile-friendly">
+            <a href="/">Home</a>
+            <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
+            <a href="../Pages/Dashboards/ToolList">Tool List</a>
+            <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>
+        </div>
+    </div>
+
+
+
+    <br />
+
+    <div class="container">
+        <div class="main-content">
+            <h2>Base Converter Tool</h2>
+            <div>
+                <label for="inputNumber">Enter Number:</label>
+                <input type="text" id="inputNumber" placeholder="e.g. 1010">
+            </div>
+            <div>
+                <label for="fromBase">From Base:</label>
+                <select id="fromBase">
+                    <option value="2">Binary</option>
+                    <option value="8">Octal</option>
+                    <option value="10" selected>Decimal</option>
+                    <option value="16">Hexadecimal</option>
+                </select>
+            </div>
+            <div>
+                <label for="toBase">To Base:</label>
+                <select id="toBase">
+                    <option value="2">Binary</option>
+                    <option value="8">Octal</option>
+                    <option value="10">Decimal</option>
+                    <option value="16" selected>Hexadecimal</option>
+                </select>
+            </div>
+            <button onclick="convertBase()">Convert</button>
+            <div id="result" style="margin-top: 10px;">
+                <strong>Result:</strong>
+                <span id="convertedResult"></span>
+                <button onclick="copyResult()">Copy</button>
+            </div>
+            <div id="history" style="margin-top: 20px;">
+                <h3>Conversion History</h3>
+                <ul id="conversionHistory"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const historyList = [];
+
+        function convertBase() {
+            const input = document.getElementById("inputNumber").value.trim();
+            const fromBase = parseInt(document.getElementById("fromBase").value);
+            const toBase = parseInt(document.getElementById("toBase").value);
+            const resultDisplay = document.getElementById("convertedResult");
+
+            try {
+                if (!input) throw new Error("Enter a number.");
+                const parsed = parseInt(input, fromBase);
+                if (isNaN(parsed)) throw new Error("Invalid number for the selected base.");
+                const converted = parsed.toString(toBase).toUpperCase();
+                resultDisplay.textContent = converted;
+
+                // Add to history
+                const historyItem = `${input} (Base ${fromBase}) → ${converted} (Base ${toBase})`;
+                historyList.unshift(historyItem);
+                updateHistory();
+            } catch (err) {
+                resultDisplay.textContent = err.message;
+            }
+        }
+
+        function updateHistory() {
+            const ul = document.getElementById("conversionHistory");
+            ul.innerHTML = "";
+            historyList.slice(0, 5).forEach(entry => {
+                const li = document.createElement("li");
+                li.textContent = entry;
+                ul.appendChild(li);
+            });
+        }
+
+        function copyResult() {
+            const result = document.getElementById("convertedResult").textContent;
+            if (result) {
+                navigator.clipboard.writeText(result).then(() => {
+                    alert("Result copied to clipboard.");
+                });
+            }
+        }
+    </script>
+
+
+
+
+
+    <!-- Footer section starts here -->
+    <footer class="PageFooterStyle">
+        <div class="footer-container">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+</body>
+</html>
