@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Compound-Interest-Calculator">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <script src="../Javascript/Base-Con.js"></script>
+
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="Calculate the compound interest on your investment or loan with this simple tool. Enter principal, interest rate, compounding frequency, and duration to see how your money grows over time.">
+
+    <link href="../Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet8.css" rel="stylesheet" />
+    <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
+
+    <title>Compound Interest Calculator</title>
+
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">Compound Interest Calculator</p>
+        <div class="header mobile-friendly">
+            <a href="/">Home</a>
+            <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
+            <a href="../Pages/Dashboards/ToolList">Tool List</a>
+            <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="main-content">
+        <form id="compoundInterestForm">
+            <label for="principal">Principal Amount ($):</label>
+            <input type="text" id="principal" required />
+
+            <label for="rate">Annual Interest Rate (%):</label>
+            <input type="number" id="rate" step="0.01" required />
+
+            <label for="timesCompounded">Times Compounded Per Year:</label>
+            <input type="number" id="timesCompounded" required />
+
+            <label for="years">Number of Years:</label>
+            <input type="number" id="years" required />
+
+            <button type="submit">Calculate</button>
+            <div id="result">
+                <p id="finalAmount"></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="container-infobox-left">
+        <p>
+            Compound Interest is the process of calculating interest on an initial principal amount as well as the accumulated interest over time. Unlike simple interest, where interest is only calculated on the principal, compound interest takes into account interest on both the initial investment and the interest previously earned.
+        </p>
+
+        <h1>Compound Interest Calculator Instruction Manual</h1>
+
+        <p>To use the Compound Interest Calculator, follow these steps:</p>
+        <ol>
+            <li><strong>Principal Amount ($):</strong> Enter the initial amount of money you are investing or loaning (e.g., 1000).</li>
+            <li><strong>Annual Interest Rate (%):</strong> Enter the interest rate in percentage terms (e.g., 5 for 5%).</li>
+            <li><strong>Times Compounded Per Year:</strong> Specify how many times the interest is compounded per year (e.g., 12 for monthly compounding).</li>
+            <li><strong>Number of Years:</strong> Enter the number of years for which the money will grow (e.g., 10).</li>
+            <li>Click <strong>Calculate </strong> to get the final amount after the specified period.</li>
+        </ol>
+
+        <p>The tool will then calculate the total amount accumulated, including both the initial principal and the interest accrued over time, based on the formula:</p>
+        <p><em>Amount = P(1 + r/n)^(nt)</em></p>
+        <p>Where:</p>
+        <ul>
+            <li><strong>P:</strong> Principal amount</li>
+            <li><strong>r:</strong> Annual interest rate (in decimal form)</li>
+            <li><strong>n:</strong> Number of times the interest is compounded per year</li>
+            <li><strong>t:</strong> Time in years</li>
+        </ul>
+
+        <p>The final amount will be displayed on the screen after calculation.</p>
+    </div>
+
+    <!-- Footer section starts here -->
+    <footer class="PageFooterStyle">
+        <div class="footer-container">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
