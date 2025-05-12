@@ -2,6 +2,15 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const url = window.location.href;
+            if (url.endsWith(".html")) {
+                const cleanUrl = url.replace(/\.html$/, "");
+                window.location.replace(cleanUrl);
+            }
+        });
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
     <script>
@@ -16,7 +25,7 @@
     <!-- Yandex.RTB -->
     <script>window.yaContextCb = window.yaContextCb || []</script>
     <script src="https://yandex.ru/ads/system/context.js" async></script>
-    
+
 
     <meta name="geo.region" content="JM">
     <meta name="geo.placename" content="Kingston, Jamaica">
