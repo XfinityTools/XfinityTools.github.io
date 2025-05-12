@@ -1,16 +1,24 @@
-
+Page is not indexed: Duplicate, Google chose different canonical than user
 https://xfinitytools.github.io/Pages/EXIF-Data-Extractor
 https://xfinitytools.github.io/Pages/Car-Loan-Calculator
-https://xfinitytools.github.io/Pages/Excel-PDF
 https://xfinitytools.github.io/Pages/EXIF-Data-Extractor
 https://xfinitytools.github.io/Pages/HashingGenerator
 https://xfinitytools.github.io/Pages/JSON-To-CSV
-https://xfinitytools.github.io/Pages/Single-Image-PDF
 https://xfinitytools.github.io/Pages/Text-To-JSON
+
+
+Page is not indexed: URL is unknown to Google
+https://xfinitytools.github.io/Pages/Excel-PDF
+https://xfinitytools.github.io/Pages/Single-Image-PDF
 https://xfinitytools.github.io/Pages/WebP-to-PDF
 https://xfinitytools.github.io/Pages/TXT-to-PDF
-https://xfinitytools.github.io/Pages/XML-to-Text
 https://xfinitytools.github.io/Pages/Multiple-Image-PDF
+
+
+
+Page is not indexed: Crawled - currently not indexed
+https://xfinitytools.github.io/Pages/XML-to-Text
+
 
 YES
 https://xfinitytools.github.io/Pages/Ad-Revenue-Estimator
