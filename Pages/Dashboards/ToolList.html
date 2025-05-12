@@ -1,6 +1,15 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const url = window.location.href;
+            if (url.endsWith(".html")) {
+                const cleanUrl = url.replace(/\.html$/, "");
+                window.location.replace(cleanUrl);
+            }
+        });
+    </script>
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/Dashboards/ToolList">
