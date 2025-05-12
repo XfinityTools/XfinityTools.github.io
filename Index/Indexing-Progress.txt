@@ -1,3 +1,4 @@
+
 https://xfinitytools.github.io/Pages/EXIF-Data-Extractor
 https://xfinitytools.github.io/Pages/Car-Loan-Calculator
 https://xfinitytools.github.io/Pages/Excel-PDF
@@ -5,15 +6,11 @@ https://xfinitytools.github.io/Pages/EXIF-Data-Extractor
 https://xfinitytools.github.io/Pages/HashingGenerator
 https://xfinitytools.github.io/Pages/JSON-To-CSV
 https://xfinitytools.github.io/Pages/Single-Image-PDF
-https://xfinitytools.github.io/Pages/Text-Diff-Checker
-https://xfinitytools.github.io/Pages/Text-Metrics-Generator
 https://xfinitytools.github.io/Pages/Text-To-JSON
-https://xfinitytools.github.io/Pages/Text-to-Excel
-https://xfinitytools.github.io/Pages/WebP-Metadata-Viewer
-https://xfinitytools.github.io/Pages/WebP-To-JPEG
 https://xfinitytools.github.io/Pages/WebP-to-PDF
-https://xfinitytools.github.io/Wikis/Debt-To-Income-Wiki
-
+https://xfinitytools.github.io/Pages/TXT-to-PDF
+https://xfinitytools.github.io/Pages/XML-to-Text
+https://xfinitytools.github.io/Pages/Multiple-Image-PDF
 
 YES
 https://xfinitytools.github.io/Pages/Ad-Revenue-Estimator
@@ -35,6 +32,15 @@ https://xfinitytools.github.io/Pages/Debt-to-Income
 https://xfinitytools.github.io/Pages/Image-Merger
 https://xfinitytools.github.io/Pages/Png-Webp
 https://xfinitytools.github.io/Pages/Salary-Calculator-JM
+https://xfinitytools.github.io/Pages/Compound-Interest-Calculator
+https://xfinitytools.github.io/Pages/BMI-Calculator
+https://xfinitytools.github.io/Pages/Base-Converter
+https://xfinitytools.github.io/Pages/WebP-To-JPEG
+https://xfinitytools.github.io/Pages/Text-to-Excel
+https://xfinitytools.github.io/Pages/Text-Diff-Checker
+https://xfinitytools.github.io/Pages/Text-Metrics-Generator
+https://xfinitytools.github.io/Pages/WebP-Metadata-Viewer
+https://xfinitytools.github.io/Wikis/Debt-To-Income-Wiki
 
 
 
