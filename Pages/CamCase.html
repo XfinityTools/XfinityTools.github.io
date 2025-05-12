@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const url = window.location.href;
+            if (url.endsWith(".html")) {
+                const cleanUrl = url.replace(/\.html$/, "");
+                window.location.replace(cleanUrl);
+            }
+        });
+    </script>
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/CamCase">
     <meta name="geo.region" content="JM">
     <meta name="geo.placename" content="Kingston, Jamaica">
@@ -26,7 +35,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
     <meta name="description" content="Use the free Camel Case Converter tool to quickly convert your sentences or text into camel case format." />
-    
+
 </head>
 <body>
     <div class="header">
