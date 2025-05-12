@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/BMI-Calculator">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="Use our BMI Calculator to determine your Body Mass Index from height and weight. Supports feet/inches or cm/kg formats, and flexible input styles like 5'4 or 5.3." />
+
+    <link href="../Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet8.css" rel="stylesheet" />
+    <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
+
+    <title>Free BMI Calculator</title>
+
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">BMI Calculator</p>
+        <div class="header mobile-friendly">
+            <a href="/">Home</a>
+            <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
+            <a href="../Pages/Dashboards/ToolList">Tool List</a>
+            <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>
+        </div>
+    </div>
+
+
+    <div class="main-content">
+        <form class="form-style" id="bmiForm">
+            
+
+            <label for="unitSystem">Unit System:</label>
+            <select id="unitSystem">
+                <option value="metric">Metric (kg, cm)</option>
+                <option value="imperial">Imperial (lbs, ft'in")</option>
+            </select>
+
+            <label for="weight">Weight:</label>
+            <input type="number" id="weight" placeholder="Enter weight" required />
+
+            <label for="height">Height:</label>
+            <input type="text" id="height" placeholder="e.g., 170 (cm) or 5'4" required />
+
+            <button type="submit">Calculate BMI</button>
+            <div id="bmiResult" class="result-box"></div>
+        </form>
+
+
+    </div>
+
+
+    <script>
+        document.getElementById("bmiForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const unit = document.getElementById("unitSystem").value;
+            const weight = parseFloat(document.getElementById("weight").value);
+            const heightInput = document.getElementById("height").value.trim();
+            const resultBox = document.getElementById("bmiResult");
+
+            if (isNaN(weight) || weight <= 0) {
+                resultBox.innerHTML = "<p style='color:red;'>Please enter a valid positive weight.</p>";
+                return;
+            }
+
+            let heightInMetersOrInches;
+
+            if (unit === "metric") {
+                const height = parseFloat(heightInput);
+                if (isNaN(height) || height <= 0) {
+                    resultBox.innerHTML = "<p style='color:red;'>Please enter a valid height in cm.</p>";
+                    return;
+                }
+                heightInMetersOrInches = height / 100; // convert cm to meters
+            } else {
+                // Parse feet and inches format (e.g., 5'4" or 5'4)
+                const match = heightInput.match(/^(\d+)\s*['′]?\s*(\d+)?\s*["″]?\s*$/);
+                if (!match) {
+                    resultBox.innerHTML = "<p style='color:red;'>Please enter height in the format 5'4 or 5'4\"</p>";
+                    return;
+                }
+
+                const feet = parseInt(match[1]) || 0;
+                const inches = parseInt(match[2]) || 0;
+                heightInMetersOrInches = feet * 12 + inches;
+            }
+
+            let bmi = 0;
+
+            if (unit === "metric") {
+                bmi = weight / (heightInMetersOrInches * heightInMetersOrInches);
+            } else {
+                bmi = (weight / (heightInMetersOrInches * heightInMetersOrInches)) * 703;
+            }
+
+            const category =
+                bmi < 18.5
+                    ? "Underweight"
+                    : bmi < 24.9
+                        ? "Normal weight"
+                        : bmi < 29.9
+                            ? "Overweight"
+                            : "Obese";
+
+            resultBox.innerHTML = `<p><strong>BMI:</strong> ${bmi.toFixed(2)}<br><strong>Category:</strong> ${category}</p>`;
+        });
+    </script>
+
+    <div class="container-infobox-left">
+        <p>
+            The BMI (Body Mass Index) Calculator allows users to determine their body mass index using either metric or imperial units.
+            It supports flexible height formats such as feet and inches (e.g., 5'4", 5.4, or 5.3), and provides immediate feedback on BMI classification.
+            This tool is useful for health assessment and monitoring.
+        </p>
+
+        <h1>BMI Calculator Instruction Manual</h1>
+        <ul>
+            <li>Select your preferred unit: <strong>Metric</strong> (kg/cm) or <strong>Imperial</strong> (lbs/ft+in).</li>
+            <li>
+                Enter your weight:
+                <ul>
+                    <li>Metric: in kilograms (e.g., 68)</li>
+                    <li>Imperial: in pounds (e.g., 150)</li>
+                </ul>
+            </li>
+            <li>
+                Enter your height:
+                <ul>
+                    <li>Metric: in centimeters (e.g., 165)</li>
+                    <li>
+                        Imperial: in one of the following formats:
+                        <ul>
+                            <li><code>5'4"</code></li>
+                            <li><code>5′4″</code> (unicode feet/inches)</li>
+                            <li><code>5.4</code> or <code>5.3</code> (interpreted as 5 feet and fractional inches)</li>
+                            <li><code>5</code> (interpreted as 5 feet, 0 inches)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Click the "Calculate BMI" button to get your result.</li>
+            <li>The result will show your BMI value and its category (e.g., Normal, Overweight, Obese).</li>
+        </ul>
+    </div>
+
+
+
+
+    <!-- Footer section starts here -->
+    <footer class="PageFooterStyle">
+        <div class="footer-container">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+</body>
+</html>
