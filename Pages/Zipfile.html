@@ -4,9 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const url = window.location.href;
+            if (url.endsWith(".html")) {
+                const cleanUrl = url.replace(/\.html$/, "");
+                window.location.replace(cleanUrl);
+            }
+        });
+    </script>
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/Zipfile">
     <script async src="https://fundingchoicesmessages.google.com/i/pub-6760354428989736?ers=1"></script>
-    
+
 
     <meta name="geo.region" content="JM">
     <meta name="geo.placename" content="Kingston, Jamaica">
