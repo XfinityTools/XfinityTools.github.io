@@ -16,10 +16,10 @@ https://xfinitytools.github.io/Pages/Multiple-Image-PDF
 
 
 Page is not indexed: Crawled - currently not indexed
-https://xfinitytools.github.io/Pages/XML-to-Text
 
 
 YES
+https://xfinitytools.github.io/Pages/XML-to-Text
 https://xfinitytools.github.io/Pages/Ad-Revenue-Estimator
 https://xfinitytools.github.io/Pages/CSV-To-Json
 https://xfinitytools.github.io/Pages/CSV-to-Excel
