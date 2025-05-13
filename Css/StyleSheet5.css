@@ -47,8 +47,11 @@
     }
 
 #jsonOutput {
-    border: 2px solid black;
+
+border: 2px dashed #ccc;
     height:200px;
+   
+   
     
 }
 
