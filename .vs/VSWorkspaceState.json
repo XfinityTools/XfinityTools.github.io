@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Css",
-    "\\Pages"
+    "\\Index",
+    "\\Javascript",
+    "\\Javascript\\JScript",
+    "\\Pages",
+    "\\Pages\\Dashboards"
   ],
-  "SelectedNode": "\\Css\\StyleSheet4.css",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }
