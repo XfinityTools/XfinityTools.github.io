@@ -1,7 +1,5 @@
 Update tool layout and structure
 
-Refactor code and improve styling
-
 Add new content
 
 Add new features and functionality
