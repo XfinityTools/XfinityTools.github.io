@@ -1,25 +1,4 @@
- function convertCSVtoExcel() {
-            const fileInput = document.getElementById('csvFileInput');
-            if (!fileInput.files.length) {
-                alert('Please select a CSV file first.');
-                return;
-            }
-
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                const csvData = e.target.result;
-                const workbook = XLSX.utils.book_new();
-                const worksheet = XLSX.utils.csv_to_sheet(csvData);
-                XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
-
-                const excelFileName = "converted_excel_file.xlsx";
-                XLSX.writeFile(workbook, excelFileName);
-            };
-            reader.readAsText(fileInput.files[0]);
-}
-
-
-function parseFixedWidthLine(line) {
+﻿function parseFixedWidthLine(line) {
     return [
         line.substring(0, 15).trim(),     // ID
         line.substring(15, 34).trim(),    // Code/Type

@@ -3,7 +3,7 @@
 	padding: 45px;
 	font-family: 'Segoe UI', sans-serif;
 	background: #f9f9f9;
-	border: 2px solid #ccc;
+	border: 2px dashed #ccc;
 }
 
 	.csv-tool input[type="file"] {

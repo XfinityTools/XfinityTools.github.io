@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
     <script src="../Javascript/JScript/redirect-urls.js"></script>
+    <script src="../Javascript/Java/JS1.js"></script>
 
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/CSV-to-Excel">
     <meta name="geo.region" content="JM">
@@ -27,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
 
-
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/xlsx.mini.min.js"></script>
     <!--  -->
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
@@ -53,6 +54,7 @@
     </div>
 
     <br />
+   
     <div class="container">
         <div class="main-content">
             <!-- CSV to Excel Tool Starts Here -->
@@ -60,22 +62,24 @@
                 <h2>CSV to Excel Converter</h2>
                 <input type="file" id="csvFileInput" accept=".csv">
                 <br>
-                <button onclick="convertCSVtoExcel()">Convert & Download Excel</button>
+                <button id="convertBtn">Convert & Download</button>
             </div>
             <!-- CSV to Excel Tool Ends Here -->
-
         </div>
     </div>
+    
+
+    
 
     <div class="container-infobox-left">
         <p>The "CSV to Excel Converter" tool transforms comma-separated values (CSV) files into Excel spreadsheets. This allows users to organize, edit, and analyze their CSV data in a structured Excel format. It’s ideal for working with data exports from databases, surveys, financial records, and more.</p>
 
-        <h1>Instruction Manual:</h1>
+        <h1>CSV to Excel Converter Instruction Manual</h1>
 
         <h3>1. Accessing the Tool:</h3>
         <ul>
             <li>Open your preferred web browser.</li>
-            
+
         </ul>
 
         <h3>2. Uploading Your CSV File:</h3>
@@ -116,29 +120,48 @@
         </div>
     </footer>
 
-
     <script>
-        function convertCSVtoExcel() {
-            const fileInput = document.getElementById('csvFileInput');
-            if (!fileInput.files.length) {
-                alert('Please select a CSV file first.');
+        document.getElementById('convertBtn').addEventListener('click', function () {
+            const input = document.getElementById('csvFileInput');
+            if (!input.files.length) {
+                alert("Please upload a CSV file.");
                 return;
             }
 
+            const file = input.files[0];
             const reader = new FileReader();
-            reader.onload = function (e) {
-                const csvData = e.target.result;
-                const workbook = XLSX.utils.book_new();
-                const worksheet = XLSX.utils.csv_to_sheet(csvData);
-                XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
 
-                XLSX.writeFile(workbook, "converted_excel_file.xlsx");
+            reader.onload = function (e) {
+                const csv = e.target.result;
+
+                try {
+                    
+                    const workbook = XLSX.read(csv, { type: 'string' });
+
+                    
+                    const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+
+                   
+                    const newWorkbook = XLSX.utils.book_new();
+                    XLSX.utils.book_append_sheet(newWorkbook, worksheet, "Sheet1");
+
+                    
+                    XLSX.writeFile(newWorkbook, "converted.xlsx");
+                } catch (error) {
+                    alert("Conversion failed: " + error.message);
+                }
             };
-            reader.readAsText(fileInput.files[0]);
-        }
+
+            reader.onerror = function () {
+                alert("Failed to read file!");
+            };
+
+            reader.readAsText(file);
+        });
     </script>
+
+
 
 
 </body>
 </html>
-<script src="../Javascript/Java/JS1.js"></script>

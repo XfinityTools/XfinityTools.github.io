@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <script src="../Javascript/JScript/redirect-urls.js"></script>
+    <script src="../Javascript/JScript/Script1.js"></script>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Mortgage-Calculator">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="" />
+    <link href="../Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet8.css" rel="stylesheet" />
+    <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
+
+    <title>Free Mortgage Calculator</title>
+
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">Mortgage Calculator</p>
+        <div class="header mobile-friendly">
+            <a href="/">Home</a>
+            <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
+            <a href="../Pages/Dashboards/ToolList">Tool List</a>
+            <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>
+        </div>
+    </div>
+    <br />
+
+    <form id="mortgageForm">
+        <label for="homePrice">Home Price ($):</label>
+        <input type="number" id="homePrice" required />
+
+        <label for="downPayment">Down Payment ($):</label>
+        <input type="number" id="downPayment" required />
+
+        <label for="interestRate">Annual Interest Rate (%):</label>
+        <input type="number" id="interestRate" step="0.01" required />
+
+        <label for="loanTerm">Loan Term (years):</label>
+        <input type="number" id="loanTerm" required />
+
+        <button class="Mortgage-Submit"  type="submit">Calculate</button>
+
+        <div id="mortgageResults" style="display:none; margin-top: 20px;">
+            <p id="monthlyPayment" style="font-weight:bold;"></p>
+            <button  onclick="printSchedule()">Print Schedule</button>
+            <button  onclick="exportPDF()">Export PDF</button>   
+            <button  onclick="exportExcel()">Export Excel</button>
+
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container-infobox-left">
+        <p>
+            <!--What tool does and features of tool goes here-->
+        </p>
+
+        <h1><!--Tool Name--> Instruction Manual:</h1>
+        <!--Tool instruction manual goes here-->
+
+
+    </div>
+
+
+
+    <!-- Footer section starts here -->
+    <footer class="PageFooterStyle">
+        <div class="footer-container">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+<script>
+    function formatCurrency(value) {
+        return parseFloat(value).toLocaleString('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 2
+        });
+    }
+
+    document.getElementById('mortgageForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const homePrice = parseFloat(document.getElementById('homePrice').value);
+        const downPayment = parseFloat(document.getElementById('downPayment').value);
+        const loanAmount = homePrice - downPayment;
+
+        if (loanAmount <= 0) {
+            alert("Down payment must be less than the home price.");
+            return;
+        }
+
+        const annualInterestRate = parseFloat(document.getElementById('interestRate').value) / 100;
+        const loanTermYears = parseInt(document.getElementById('loanTerm').value);
+
+        const monthlyRate = annualInterestRate / 12;
+        const totalPayments = loanTermYears * 12;
+        const monthlyPayment = loanAmount * monthlyRate / (1 - Math.pow(1 + monthlyRate, -totalPayments));
+
+        document.getElementById('monthlyPayment').textContent = `Monthly Payment: ${formatCurrency(monthlyPayment)}`;
+        document.getElementById('mortgageResults').style.display = 'block';
+
+        // Store amortization schedule
+        window.generatedSchedule = [];
+        let balance = loanAmount;
+
+        for (let i = 1; i <= totalPayments; i++) {
+            const interest = balance * monthlyRate;
+            const principal = monthlyPayment - interest;
+            balance -= principal;
+
+            window.generatedSchedule.push([
+                i,
+                formatCurrency(monthlyPayment),
+                formatCurrency(principal),
+                formatCurrency(interest),
+                formatCurrency(Math.max(balance, 0))
+            ]);
+        }
+    });
+
+    function printSchedule() {
+        if (!window.generatedSchedule) return alert("Please calculate first.");
+
+        const printWindow = window.open('', '', 'width=900,height=700');
+        printWindow.document.write('<html><head><title>Amortization Schedule</title></head><body>');
+        printWindow.document.write('<h2>Amortization Schedule</h2>');
+        printWindow.document.write('<table border="1" cellpadding="5" cellspacing="0"><thead><tr>');
+        printWindow.document.write('<th>Month</th><th>Payment</th><th>Principal</th><th>Interest</th><th>Remaining Balance</th></tr></thead><tbody>');
+
+        window.generatedSchedule.forEach(row => {
+            printWindow.document.write('<tr>' + row.map(cell => `<td>${cell}</td>`).join('') + '</tr>');
+        });
+
+        printWindow.document.write('</tbody></table></body></html>');
+        printWindow.document.close();
+        printWindow.print();
+    }
+
+    function exportPDF() {
+        if (!window.generatedSchedule) return alert("Please calculate first.");
+
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        doc.text("Amortization Schedule", 14, 20);
+        doc.autoTable({
+            startY: 30,
+            head: [["Month", "Payment", "Principal", "Interest", "Remaining Balance"]],
+            body: window.generatedSchedule
+        });
+        doc.save("Amortization_Schedule.pdf");
+    }
+
+    function exportCSV() {
+        if (!window.generatedSchedule) return alert("Please calculate first.");
+
+        let csv = "Month,Payment,Principal,Interest,Remaining Balance\n";
+        window.generatedSchedule.forEach(row => {
+            csv += row.join(",") + "\n";
+        });
+
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "Amortization_Schedule.csv";
+        link.click();
+    }
+
+    function exportExcel() {
+        if (!window.generatedSchedule) return alert("Please calculate first.");
+
+        let table = `<table border="1"><thead><tr><th>Month</th><th>Payment</th><th>Principal</th><th>Interest</th><th>Remaining Balance</th></tr></thead><tbody>`;
+        window.generatedSchedule.forEach(row => {
+            table += `<tr><td>${row.join("</td><td>")}</td></tr>`;
+        });
+        table += "</tbody></table>";
+
+        const blob = new Blob([table], { type: "application/vnd.ms-excel" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "Amortization_Schedule.xls";
+        link.click();
+    }
+</script>
+
+
