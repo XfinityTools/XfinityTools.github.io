@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
     <script src="../Javascript/JScript/redirect-urls.js"></script>
-    <script src="../Javascript/Java/JS1.js"></script>
 
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/CSV-to-Excel">
     <meta name="geo.region" content="JM">
@@ -131,49 +130,6 @@
             </script>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('convertBtn').addEventListener('click', function () {
-            const input = document.getElementById('csvFileInput');
-            if (!input.files.length) {
-                alert("Please upload a CSV file.");
-                return;
-            }
-
-            const file = input.files[0];
-            const reader = new FileReader();
-
-            reader.onload = function (e) {
-                const csv = e.target.result;
-
-                try {
-
-                    const workbook = XLSX.read(csv, { type: 'string' });
-
-
-                    const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-
-
-                    const newWorkbook = XLSX.utils.book_new();
-                    XLSX.utils.book_append_sheet(newWorkbook, worksheet, "Sheet1");
-
-
-                    XLSX.writeFile(newWorkbook, "converted.xlsx");
-                } catch (error) {
-                    alert("Conversion failed: " + error.message);
-                }
-            };
-
-            reader.onerror = function () {
-                alert("Failed to read file!");
-            };
-
-            reader.readAsText(file);
-        });
-    </script>
-
-
-
-
 </body>
 </html>
+<script src="../Javascript/Java/Script4.js"></script>
