@@ -1,7 +1,5 @@
 Update tool layout and structure
 
-Add new content
-
 Add new features and functionality
 
 Fix bugs and enhance user experience

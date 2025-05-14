@@ -54,7 +54,7 @@
     </div>
 
     <br />
-   
+
     <div class="container">
         <div class="main-content">
             <!-- CSV to Excel Tool Starts Here -->
@@ -67,9 +67,21 @@
             <!-- CSV to Excel Tool Ends Here -->
         </div>
     </div>
-    
 
-    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
+            crossorigin="anonymous"></script>
+    <!-- Horizontal (28/1/25) -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6760354428989736"
+         data-ad-slot="8424936846"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+
 
     <div class="container-infobox-left">
         <p>The "CSV to Excel Converter" tool transforms comma-separated values (CSV) files into Excel spreadsheets. This allows users to organize, edit, and analyze their CSV data in a structured Excel format. It’s ideal for working with data exports from databases, surveys, financial records, and more.</p>
@@ -135,17 +147,17 @@
                 const csv = e.target.result;
 
                 try {
-                    
+
                     const workbook = XLSX.read(csv, { type: 'string' });
 
-                    
+
                     const worksheet = workbook.Sheets[workbook.SheetNames[0]];
 
-                   
+
                     const newWorkbook = XLSX.utils.book_new();
                     XLSX.utils.book_append_sheet(newWorkbook, worksheet, "Sheet1");
 
-                    
+
                     XLSX.writeFile(newWorkbook, "converted.xlsx");
                 } catch (error) {
                     alert("Conversion failed: " + error.message);
