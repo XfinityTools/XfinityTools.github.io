@@ -26,7 +26,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
 
+
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
+    
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
     <meta name="description" content="Calculate your car loan with ease using this free online tool. Enter details like car price, downpayment, loan period, inflation rate, and interest rate to get your loan estimate. Download results in PDF, CSV, or in TXT format" />
     <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
@@ -60,19 +62,19 @@
 
     <div class="text-metrics-header">
         <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
-        <p class="Header-Tool-Title">Car Loan Calculator</p>
-        <div class="header mobile-friendly">
-            <a href="/">Home</a>
-            <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
-            <a href="../Pages/Dashboards/ToolList">Tool List</a>
-            <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>
+            <p class="Header-Tool-Title">Car Loan Calculator</p>
+            <div class="header mobile-friendly">
+                <a href="/">Home</a>
+                <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
+                <a href="../Pages/Dashboards/ToolList" >Tool List</a>
+                <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>                              
+            </div>
         </div>
-    </div>
     <br />
 
-    <div style="width:59%;" class="form">
+    <div style="width:59%;" class="container">
 
-        <div class="main-content">
+        <div  class="main-content">
             <label>Price of Car:</label><br>
             <input type="text" id="carPrice" placeholder="e.g., 25000"><br>
 
@@ -161,10 +163,10 @@
             <li>Check the accuracy of the interest and inflation rates to get reliable results.</li>
             <li>This tool gives estimates and should not be used as a substitute for professional financial advice.</li>
         </ul>
-    </div>
+</div>
 
 
-    <!-- Footer section starts here -->
+        <!-- Footer section starts here -->
     <footer class="PageFooterStyle">
         <div class="footer-container">
             <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
@@ -177,47 +179,22 @@
 </body>
 </html>
 <style>
-
-    @media(max-width:768px) {
-        .calculatecarLoan {
+    
+    @media(max-width:768px){
+        .calculatecarLoan{
             width: 40%;
-        }
-
+            }
         #DownloadCSVcarLoan, #DownloadPDFcarLoan, #DownloadTXTcarLoan {
             width: 30%;
         }
-    }
+
+        }
 
     .container {
         width: 70%;
     }
 
-    input, select {
-        width: 50%;
+    input, select{
+        width:50%;
     }
-    .form {
-        max-width: 600px;
-        margin: 20px auto;
-        background-color: #fff;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .form label {
-        display: block;
-        margin-bottom: 6px;
-        font-weight: 600;
-    }
-
-    .form input,
-    .form select {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 18px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        font-size: 16px;
-        box-sizing: border-box;
-    }
-
 </style>
