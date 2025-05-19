@@ -27,7 +27,7 @@ Whether you need to edit images, convert files, manipulate data, or process text
     </script>
     <!-- Other -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../../Javascript/JS/JavaS1.js"></script>
+    <!--<script src="../../Javascript/JS/JavaS1.js"></script>-->
     <script src="DropDownMenu.js"></script>
     <script src="../../Javascript/JS/DropDownMenu.js"></script>
     <link href="../../Css/Bootstrap.css" rel="stylesheet" />
@@ -76,7 +76,7 @@ Whether you need to edit images, convert files, manipulate data, or process text
 
     </div>
 
-    <!--footer-->
+   
 
     <footer style="padding: 15px; margin-top: 30px; margin-left: 30px;">
         <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
@@ -85,7 +85,6 @@ Whether you need to edit images, convert files, manipulate data, or process text
         </script>
 
     </footer>
-    <script src="../../JS/search.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
 
@@ -115,22 +114,22 @@ Whether you need to edit images, convert files, manipulate data, or process text
 
                     const toolSection = document.createElement("section");
                     toolSection.className = "col-md-4 card-dash";
-                    toolSection.id = data["Tool-ID"] || ""; // Optional unique ID
+                    toolSection.id = data["Tool-ID"] || ""; 
 
-                    // Creating inner HTML for each tool
+                    
                     toolSection.innerHTML = `
-                                                    <div>
-                                                        <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
-                                                    </div>
-                                                    <h2>${data["Tool-Name"]}</h2>
-                                                    <p class="Tool-Description">${data["Tool-Description"]}</p>
-                                                    <br />
-                                                    <p class="Tool-URL">
-                                                        <a class="btn btn-default" href="${data.URL}">Use &raquo;</a>
-                                                    </p>
-                                                `;
+                                                            <div>
+                                                                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
+                                                            </div>
+                                                            <h2>${data["Tool-Name"]}</h2>
+                                                            <p class="Tool-Description">${data["Tool-Description"]}</p>
+                                                            <br />
+                                                            <p class="Tool-URL">
+                                                                <a class="btn btn-default" href="${data.URL}">Use &raquo;</a>
+                                                            </p>
+                                                        `;
 
-                    // Append the new section to the toolsRow
+                   
                     toolsRow.appendChild(toolSection);
                 });
             }
@@ -142,3 +141,6 @@ Whether you need to edit images, convert files, manipulate data, or process text
     </script>
 </body>
 </html>
+<script src="../../Javascript/JavaS/DashFireBase.js"></script>
+
+
