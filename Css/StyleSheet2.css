@@ -1,10 +1,21 @@
-﻿
-body {
-    font-family: Arial, sans-serif;
-    background: #f7f7f7;
-    margin: 0;
-    padding: 0;
+﻿.XMLtoJSON-Downloadbutton {
+    padding: 10px 10px;
+    background-color: #006e30;
+    color: white;
+    border: none;
+    border-radius: 2px;
 }
+
+    .XMLtoJSON-Downloadbutton:hover{
+        cursor:pointer;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+        margin: 0;
+        padding: 0;
+    }
 
 .exif-header, .text-metrics-header, .pdf-header {
     background-color: #e60340;
