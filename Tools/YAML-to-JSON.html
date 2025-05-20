@@ -10,10 +10,10 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
     <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-MW6PG5PVGY');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
     </script>
     <meta http-equiv="content-language" content="en-us">
     <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
@@ -23,21 +23,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="" />
+    <meta name="description" content="Free YAML to JSON Converter tool. Instantly convert .yaml or .yml files to JSON format using drag and drop or file upload. Fast, private, and browser-based." />
 
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
     <link href="../Css/StyleSheet8.css" rel="stylesheet" />
     <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
 
-    <title></title>
+    <title>Free YAML to JSON Converter</title>
 
 </head>
 <body>
 
     <div class="text-metrics-header">
         <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
-        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';"></p>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">YAML to JSON Converter</p>
         <div class="header mobile-friendly">
             <a href="/">Home</a>
             <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
@@ -45,30 +45,116 @@
             <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>
         </div>
     </div>
-
-
-
     <br />
 
-    
 
+
+    <div class="container">
         <div class="main-content">
 
-
+            <div id="dropArea">
+                <p>Drag & drop your .yaml or .yml file here, or click to upload</p>
+            </div>
+            <input type="file" id="fileInput" accept=".yaml,.yml" style="display: none;">
+            <br><br>
+            <button id="downloadBtn" onclick="downloadJSON()" disabled>Download JSON</button>
         </div>
-    
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+    <script>
+        const dropArea = document.getElementById('dropArea');
+        const fileInput = document.getElementById('fileInput');
+        const downloadBtn = document.getElementById('downloadBtn');
+        let resultJSON = '';
+
+        dropArea.addEventListener('click', () => fileInput.click());
+
+        fileInput.addEventListener('change', (e) => handleFiles(e.target.files));
+
+        dropArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropArea.style.backgroundColor = '#e0e0e0';
+        });
+
+        dropArea.addEventListener('dragleave', () => {
+            dropArea.style.backgroundColor = '#f8f8f8';
+        });
+
+        dropArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropArea.style.backgroundColor = '#f8f8f8';
+            handleFiles(e.dataTransfer.files);
+        });
+
+        function handleFiles(files) {
+            if (files.length === 0) return;
+
+            const file = files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (evt) {
+                try {
+                    const yamlData = jsyaml.load(evt.target.result);
+                    resultJSON = JSON.stringify(yamlData, null, 2);
+                    alert('Conversion successful. Click "Download JSON" to save.');
+                    downloadBtn.disabled = false;
+                } catch (err) {
+                    alert('Invalid YAML file.');
+                }
+            };
+
+            reader.readAsText(file);
+        }
+
+        function downloadJSON() {
+            const blob = new Blob([resultJSON], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'converted.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+
+
 
 
     <div class="container-infobox-left">
         <p>
-            <!--What tool does and features of tool goes here-->
+            The YAML to JSON Converter is a free browser-based tool designed to convert YAML files into JSON format.
+            With support for drag-and-drop or manual file selection, this tool allows for fast and accurate translation of `.yaml` or `.yml` configuration files into structured JSON.
+            Ideal for developers, system administrators, and data professionals who work with configuration files, APIs, or automation tools that require format switching.
         </p>
 
-        <h1><!--Tool Name--> Instruction Manual:</h1>
-        <!--Tool instruction manual goes here-->
-
-
+        <h1>YAML to JSON Converter Instruction Manual:</h1>
+        <ul>
+            <li><strong>Step 1:</strong> Ensure your file is a valid YAML file with a <code>.yaml</code> or <code>.yml</code> extension.</li>
+            <li>
+                <strong>Step 2:</strong> To upload the file:
+                <ul>
+                    <li>Drag and drop it into the dashed drop area, or</li>
+                    <li>Click the drop area to open the file browser and select your file manually.</li>
+                </ul>
+            </li>
+            <li><strong>Step 3:</strong> The tool automatically parses and converts your YAML file into JSON format.</li>
+            <li><strong>Step 4:</strong> If the conversion is successful, a message will appear and the <strong>Download JSON</strong> button will be enabled.</li>
+            <li><strong>Step 5:</strong> Click the <strong>Download JSON</strong> button to save the result to your device.</li>
+            <li>
+                <strong>Important Notes:</strong>
+                <ul>
+                    <li>Only one file can be uploaded at a time.</li>
+                    <li>All processing is done locally in your browser, ensuring privacy and speed.</li>
+                    <li>Invalid YAML files will result in an error message make sure your YAML is properly formatted before uploading.</li>
+                </ul>
+            </li>
+        </ul>
     </div>
+
 
 
 
@@ -77,7 +163,7 @@
         <div class="footer-container">
             <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
             <script>
-                        document.getElementById('currentYear').textContent = new Date().getFullYear();
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
             </script>
         </div>
     </footer>
