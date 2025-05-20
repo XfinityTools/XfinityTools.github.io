@@ -19,6 +19,8 @@ Page is not indexed: Crawled - currently not indexed
 
 
 YES
+https://xfinitytools.github.io/Pages/XML-to-JSON
+https://xfinitytools.github.io/Pages/TextFile-Merger
 https://xfinitytools.github.io/Pages/XML-to-Text
 https://xfinitytools.github.io/Pages/Ad-Revenue-Estimator
 https://xfinitytools.github.io/Pages/CSV-To-Json
