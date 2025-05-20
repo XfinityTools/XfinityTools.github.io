@@ -10,12 +10,48 @@
         cursor:pointer;
     }
 
-    body {
-        font-family: Arial, sans-serif;
-        background: #f7f7f7;
-        margin: 0;
-        padding: 0;
-    }
+.Excel-Meta-Drop {
+    border: 2px dashed #ccc;
+    padding: 30px;
+    text-align: center;
+    font-family: monospace;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.Excel-Meta-output {
+    white-space: pre-wrap;
+    padding: 15px;
+    font-family: monospace;
+    margin-bottom: 20px;
+}
+
+#downloadTxtBtn {
+    padding: 10px 20px;
+    font-family: monospace;
+    background-color: #e60340;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#downloadPdfBtn {
+    padding: 10px 20px;
+    font-family: monospace;
+    background-color: #e60340;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
 
 .exif-header, .text-metrics-header, .pdf-header {
     background-color: #e60340;

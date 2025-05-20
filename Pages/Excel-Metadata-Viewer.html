@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <script src="../Javascript/JScript/redirect-urls.js"></script>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Excel-Metadata-Viewer">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="Excel Metadata Viewer is a free online tool that extracts and displays detailed information about Excel files, including file size, sheet names, and row/column counts. Download metadata as text or PDF for easy analysis." />
+
+    <link href="../Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
+
+    <title>Free Excel Metadata Viewer</title>
+
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">Excel Metadata Viewer</p>
+        <div class="header mobile-friendly">
+            <a href="/">Home</a>
+            <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
+            <a href="../Pages/Dashboards/ToolList">Tool List</a>
+            <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>
+        </div>
+    </div>
+    <br />
+
+    <div class="container">
+        <div class="main-content">
+
+            <p>Drag and drop an Excel file here or click to upload.</p>
+
+            <div id="dropZone" class="Excel-Meta-Drop">
+                Drop Excel file here or click to browse
+            </div>
+
+            <input type="file" id="excelFileInput" accept=".xlsx,.xls" style="display: none;" />
+
+            <div id="outputSection" style="display: none;">
+                <pre id="metadataOutput" style="
+                white-space: pre-wrap;
+                padding: 15px;
+                font-family: monospace;
+                margin-bottom: 20px;
+            "></pre>
+
+                <button id="downloadTxtBtn">
+                    Download as TXT
+                </button>
+
+                <button id="downloadPdfBtn">
+                    Download as PDF
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SheetJS and jsPDF libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+
+
+
+
+
+    <div class="container-infobox-left">
+        <p>
+            Excel Metadata Viewer is a lightweight online tool that extracts and displays detailed information from Excel files (.xlsx and .xls). It presents useful metadata such as the file name, file size, number of sheets, sheet names, and row/column counts. Users can view the metadata directly on the page and export the results as a downloadable TXT or PDF file. Ideal for researchers, data analysts, or anyone needing quick insights into Excel file structure without opening the file.
+        </p>
+
+        <h1>Excel Metadata Viewer Instruction Manual:</h1>
+        <ol>
+            <li>
+                <strong>Accessing the Tool:</strong><br>
+                Open your preferred web browser and navigate to the Excel Metadata Viewer page.
+            </li><br>
+
+            <li>
+                <strong>Uploading Your Excel File:</strong><br>
+                Drag and drop your Excel file into the designated area or click the upload box to choose a file from your device.
+            </li><br>
+
+            <li>
+                <strong>Viewing Metadata:</strong><br>
+                Once the file is uploaded, the tool will automatically extract and display key metadata, including file size, number of sheets, sheet names, and dimensions.
+            </li><br>
+
+            <li>
+                <strong>Downloading Metadata:</strong><br>
+                Use the "Download as TXT" or "Download as PDF" buttons to save the metadata to your device for future reference.
+            </li><br>
+
+            <li>
+                <strong>Opening the Exported File:</strong><br>
+                Locate the downloaded TXT or PDF file on your computer and open it using any compatible viewer such as Notepad, Adobe Reader, or a browser.
+            </li><br>
+
+            <li>
+                <strong>Tips:</strong><br>
+                Ensure the uploaded file is a valid Excel format (.xls or .xlsx). The tool does not process password-protected or corrupted Excel files. For best results, upload clean and well-structured workbooks.
+            </li>
+        </ol>
+    </div>
+
+
+
+
+    <!-- Footer section starts here -->
+    <footer class="PageFooterStyle">
+        <div class="footer-container">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+</body>
+</html>
+<script src="../Javascript/JavaS/Script1.js"></script>
