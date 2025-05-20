@@ -39,3 +39,9 @@ https://xfinitytools.github.io/Wikis/Salary-Calculator-JM-Wiki
 https://xfinitytools.github.io/Pages/Multiple-Image-PDF
 https://xfinitytools.github.io/Pages/XML-to-Text
 https://xfinitytools.github.io/Pages/TXT-to-PDF
+https://xfinitytools.github.io/Pages/YAML-to-JSON
+https://xfinitytools.github.io/Pages/Excel-Metadata-Viewer
+https://xfinitytools.github.io/Pages/Mortgage-Calculator
+https://xfinitytools.github.io/Pages/TextFile-Merger
+https://xfinitytools.github.io/Pages/XML-to-JSON
+https://xfinitytools.github.io/Pages/Compound-Interest-Calculator
