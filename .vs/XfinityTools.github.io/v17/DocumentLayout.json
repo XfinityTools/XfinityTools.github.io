@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CSV-to-Excel.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\CSV-to-Excel.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Index\\commit.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Index\\commit.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Dashboards\\ToolList.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Dashboards\\ToolList.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CSV-To-Json.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\CSV-To-Json.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CamCase.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\CamCase.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\WebP-Png.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\WebP-Png.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\WebP-To-JPEG.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\WebP-To-JPEG.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Excel-Metadata-Viewer.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Excel-Metadata-Viewer.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\YAML-to-JSON.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -15,8 +43,8 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\WebP-Metadata-Viewer.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Excel-Metadata-Viewer.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Excel-Metadata-Viewer.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\TexttoCSV.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\TexttoCSV.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\ads.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -34,11 +62,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 212,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "commit.txt",
               "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Index\\commit.txt",
               "RelativeDocumentMoniker": "Index\\commit.txt",
@@ -48,6 +76,97 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-05-13T01:05:15.317Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ToolList.html",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Dashboards\\ToolList.html",
+              "RelativeDocumentMoniker": "Pages\\Dashboards\\ToolList.html",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Dashboards\\ToolList.html",
+              "RelativeToolTip": "Pages\\Dashboards\\ToolList.html",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAAEUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-21T20:28:19.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CSV-To-Json.html",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CSV-To-Json.html",
+              "RelativeDocumentMoniker": "Pages\\CSV-To-Json.html",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CSV-To-Json.html",
+              "RelativeToolTip": "Pages\\CSV-To-Json.html",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAD0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-21T20:22:48.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CSV-to-Excel.html",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CSV-to-Excel.html",
+              "RelativeDocumentMoniker": "Pages\\CSV-to-Excel.html",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CSV-to-Excel.html",
+              "RelativeToolTip": "Pages\\CSV-to-Excel.html",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAqwIUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-21T20:22:41.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CamCase.html",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CamCase.html",
+              "RelativeDocumentMoniker": "Pages\\CamCase.html",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CamCase.html",
+              "RelativeToolTip": "Pages\\CamCase.html",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAIAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-21T20:22:05.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WebP-Png.html",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\WebP-Png.html",
+              "RelativeDocumentMoniker": "Pages\\WebP-Png.html",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\WebP-Png.html",
+              "RelativeToolTip": "Pages\\WebP-Png.html",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAqwKAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-21T20:21:03.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WebP-To-JPEG.html",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\WebP-To-JPEG.html",
+              "RelativeDocumentMoniker": "Pages\\WebP-To-JPEG.html",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\WebP-To-JPEG.html",
+              "RelativeToolTip": "Pages\\WebP-To-JPEG.html",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-21T20:20:54.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TexttoCSV.html",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\TexttoCSV.html",
+              "RelativeDocumentMoniker": "Pages\\TexttoCSV.html",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\TexttoCSV.html",
+              "RelativeToolTip": "Pages\\TexttoCSV.html",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAqwH0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-21T20:19:35.185Z",
               "EditorCaption": ""
             },
             {
@@ -64,20 +183,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "WebP-Metadata-Viewer.html",
               "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\WebP-Metadata-Viewer.html",
               "RelativeDocumentMoniker": "Pages\\WebP-Metadata-Viewer.html",
               "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\WebP-Metadata-Viewer.html",
               "RelativeToolTip": "Pages\\WebP-Metadata-Viewer.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAAAHgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-05-20T20:25:47.056Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "ads.txt",
               "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\ads.txt",
               "RelativeDocumentMoniker": "ads.txt",
@@ -89,19 +208,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Excel-Metadata-Viewer.html",
               "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Excel-Metadata-Viewer.html",
               "RelativeDocumentMoniker": "Pages\\Excel-Metadata-Viewer.html",
               "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Excel-Metadata-Viewer.html",
               "RelativeToolTip": "Pages\\Excel-Metadata-Viewer.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABaAAAAAAAAAA==",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAJsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-20T05:25:41.449Z"
+              "WhenOpened": "2025-05-20T05:25:41.449Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "index.txt",
               "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\index.txt",
               "RelativeDocumentMoniker": "index.txt",
@@ -113,13 +233,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "YAML-to-JSON.html",
               "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\YAML-to-JSON.html",
               "RelativeDocumentMoniker": "Pages\\YAML-to-JSON.html",
               "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\YAML-to-JSON.html",
               "RelativeToolTip": "Pages\\YAML-to-JSON.html",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAmwJkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAmwJkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-05-20T04:45:32.277Z",
               "EditorCaption": ""
