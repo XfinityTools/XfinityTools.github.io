@@ -16,6 +16,19 @@
         color:white;
     }
 
+.UUIDButton {
+    background-color: white;
+    border: 1px solid #e60340;
+    color: #e60340;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+    .UUIDButton:hover {
+        background-color: #003060; /* Slightly darker blue on hover */
+        background-color: #e60340;
+        color: white;
+    }     
 
     .wikibtn {
         display: inline-block;
