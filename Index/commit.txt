@@ -6,6 +6,8 @@ Fix bugs and enhance user experience
 
 General maintenance and code cleanup
 
+Appearance Changes
+
 General Code Changes
 
 Optimize performance and file handling
