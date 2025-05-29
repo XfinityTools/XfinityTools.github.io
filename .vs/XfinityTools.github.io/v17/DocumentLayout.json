@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\TextFile-Merger.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\TextFile-Merger.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Index\\commit.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Index\\commit.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\TextFile-Merger.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\TextFile-Merger.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Key-Generator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -22,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 212,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "commit.txt",
               "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Index\\commit.txt",
               "RelativeDocumentMoniker": "Index\\commit.txt",
               "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Index\\commit.txt",
               "RelativeToolTip": "Index\\commit.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-05-13T01:05:15.317Z",
               "IsPinned": true,
@@ -40,7 +40,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TextFile-Merger.html",
               "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\TextFile-Merger.html",
               "RelativeDocumentMoniker": "Pages\\TextFile-Merger.html",
