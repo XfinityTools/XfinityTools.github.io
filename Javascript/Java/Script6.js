@@ -1,4 +1,4 @@
-
+﻿
     const units = {
         length: ["Meter", "Kilometer", "Centimeter", "Millimeter", "Mile", "Yard", "Foot", "Inch"],
     mass: ["Gram", "Kilogram", "Milligram", "Pound", "Ounce"],
@@ -98,4 +98,54 @@
     return value;
         }
 
-    window.onload = populateUnits;
+window.onload = populateUnits;
+
+
+    document.getElementById('converterForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+    const inputValue = parseFloat(document.getElementById('inputValue').value);
+    const inputUnit = document.getElementById('inputUnit').value;
+    const outputUnit = document.getElementById('outputUnit').value;
+    let result = 0;
+
+    // Convert input to km/L first
+    let kmpl = 0;
+    switch (inputUnit) {
+    case 'mpg':
+    kmpl = inputValue * 0.425144; // 1 MPG ≈ 0.425144 km/L
+    break;
+    case 'kmpl':
+    kmpl = inputValue;
+    break;
+    case 'l100km':
+    kmpl = 100 / inputValue;
+    break;
+  }
+
+    // Convert km/L to desired output
+    switch (outputUnit) {
+    case 'mpg':
+    result = kmpl / 0.425144;
+    break;
+    case 'kmpl':
+    result = kmpl;
+    break;
+    case 'l100km':
+    result = 100 / kmpl;
+    break;
+  }
+
+    document.getElementById('result').innerText = `Result: ${result.toFixed(2)} ${getUnitLabel(outputUnit)}`;
+});
+
+function getUnitLabel(unit) {
+  switch (unit) {
+    case 'mpg': return 'MPG';
+    case 'kmpl': return 'km/L';
+    case 'l100km': return 'L/100km';
+  }
+}
+
+
+
