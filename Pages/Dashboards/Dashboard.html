@@ -7,7 +7,7 @@
     <meta name="geo.placename" content="Kingston, Jamaica">
     <meta name="rating" content="general">
     <meta name="author" content="Diamond A Buchanan">
-    <meta name="description" content="Xfinity Tools is a free comprehensive collection of web-based tools designed to simplify various tasks and enhance your productivity. Whether you need to edit images, convert files, manipulate data, or process text, Xfinity Tools has you covered.">
+    <meta name="description" content="Xfinity Tools Dashboard shows the free comprehensive collection of web-based tools in alphabetic order.">
     <link rel="icon" type="image/x-icon" href="../../Images/favicon.ico">
     <meta name="google-site-verification" content="_tlvtjqFT1OiTJbgwrthCi6VKRpfT5n7QSbKtX_dF88" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,9 +49,11 @@
 
         <a href="/" class="btn btn-secondary btn-md dash-home-button" style="margin-right: 10px;">Home </a>
 
-        <input type="text" class="dash-searchbar" id="searchInput" placeholder="Search Tools" style="padding: 14px; width: 250px; border: 2px solid #e60340; border-radius: 2px; font-size: 12px; color:black;" />
+        <input type="text" class="dash-searchbar" id="searchInput" placeholder="Search Tools" style="padding: 14px; width: 210px; border: 2px solid #e60340; border-radius: 2px; font-size: 12px; color:black;" />
 
-        <button type="button" id="searchButton" class="btn btn-secondary btn-md dash-search-button" style="margin-right: 10px;">Search </button>
+        <button type="button" id="searchButton" class="btn btn-secondary btn-md dash-search-button" style=" padding: 14px;">Search </button>
+
+        <button type="button" id="clearSearchButton" class="btn " style="padding: 14px;">Clear</button>
     </div>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
@@ -72,7 +74,7 @@
 
     </div>
 
-   
+
 
     <footer style="padding: 15px; margin-top: 30px; margin-left: 30px;">
         <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
@@ -110,22 +112,22 @@
 
                     const toolSection = document.createElement("section");
                     toolSection.className = "col-md-4 card-dash";
-                    toolSection.id = data["Tool-ID"] || ""; 
+                    toolSection.id = data["Tool-ID"] || "";
 
-                    
+
                     toolSection.innerHTML = `
-                                                            <div>
-                                                                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
-                                                            </div>
-                                                            <h2>${data["Tool-Name"]}</h2>
-                                                            <p class="Tool-Description">${data["Tool-Description"]}</p>
-                                                            <br />
-                                                            <p class="Tool-URL">
-                                                                <a class="btn btn-default" href="${data.URL}">Use &raquo;</a>
-                                                            </p>
-                                                        `;
+                                                                <div>
+                                                                    <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
+                                                                </div>
+                                                                <h2>${data["Tool-Name"]}</h2>
+                                                                <p class="Tool-Description">${data["Tool-Description"]}</p>
+                                                                <br />
+                                                                <p class="Tool-URL">
+                                                                    <a class="btn btn-default" href="${data.URL}">Use &raquo;</a>
+                                                                </p>
+                                                            `;
 
-                   
+
                     toolsRow.appendChild(toolSection);
                 });
             }
@@ -140,3 +142,14 @@
 <script src="../../Javascript/JavaS/DashFireBase.js"></script>
 
 
+<script>
+    document.getElementById('clearSearchButton').addEventListener('click', function () {
+        const searchInput = document.getElementById('searchInput');
+        searchInput.value = '';
+        searchInput.focus();
+
+        // Optional: Clear or hide any output area if you have one
+        const resultArea = document.getElementById('searchResults'); // Example ID
+        if (resultArea) resultArea.innerHTML = '';
+    });
+</script>

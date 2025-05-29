@@ -12,6 +12,7 @@ https://xfinitytools.github.io/Pages/CSV-to-Excel
 https://xfinitytools.github.io/Pages/CSV-To-Json
 https://xfinitytools.github.io/Pages/Dashboards/Dashboard
 https://xfinitytools.github.io/Pages/Dashboards/ToolList
+https://xfinitytools.github.io/Pages/Date-Difference-Calculator
 https://xfinitytools.github.io/Pages/Debt-to-Income
 https://xfinitytools.github.io/Pages/EXIF-Data-Extractor
 https://xfinitytools.github.io/Pages/Excel-Metadata-Viewer
