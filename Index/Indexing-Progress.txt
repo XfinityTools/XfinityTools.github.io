@@ -52,6 +52,7 @@ https://xfinitytools.github.io/Pages/WebP-Metadata-Viewer
 https://xfinitytools.github.io/Wikis/Debt-To-Income-Wiki
 https://xfinitytools.github.io/Pages/Text-to-XML
 https://xfinitytools.github.io/Pages/YAML-to-JSON
+https://xfinitytools.github.io/Pages/Gas-Mileage-Converter
 
 
 

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Date-Difference-Calculator">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="Calculate the difference between two dates in days, weeks, months, or years. A simple date difference calculator for planning, tracking, and scheduling." />
+
+    <link href="../Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet8.css" rel="stylesheet" />
+    <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
+
+    <title>Free Date Difference Calculator</title>
+
+</head>
+<body>
+
+    <div class="text-metrics-header">
+        <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">Date Difference Calculator</p>
+        <div class="header mobile-friendly">
+            <a href="/">Home</a>
+            <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
+            <a href="../Pages/Dashboards/ToolList">Tool List</a>
+            <a href="../Pages/Dashboards/ToolsLibrary">Tool Library</a>
+        </div>
+    </div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
+            crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"
+         data-ad-client="ca-pub-6760354428989736"
+         data-ad-slot="7235524973"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+
+    <div class="main-content">
+
+        <form id="dateDiffForm">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" required>
+
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" required>
+
+            <button type="submit">Calculate</button>
+
+            <p id="dateResult" style="margin-top:20px;"></p>
+
+        </form>
+
+    </div>
+    <div class="container-infobox-left">
+        <p>
+            Date difference calculation determines the amount of time between two calendar dates. This tool simplifies the process by allowing users to input a start and end date and instantly view the full difference in multiple time units, including years, months, weeks, days, hours, minutes, and seconds. It is ideal for planning projects, calculating age, tracking durations, or organizing events.
+        </p>
+
+        <h1>Date Difference Calculator Instruction Manual</h1>
+        <ul>
+            <li>Select the first date using the "Start Date" field.</li>
+            <li>Select the second date using the "End Date" field.</li>
+            <li>Click the "Calculate" button to process the difference.</li>
+            <li>The tool will display the time span between both dates in the following format:</li>
+            <ul>
+                <li>Years: 3</li>
+                <li>Months: 36</li>
+                <li>Weeks: 156</li>
+                <li>Days: 1,095</li>
+                <li>Hours: 26,280</li>
+                <li>Minutes: 1,576,800</li>
+                <li>Seconds: 94,608,000</li>
+            </ul>
+            <li>All values are calculated using standard calendar approximations, with months based on an average of 30.44 days and years based on 365.25 days to account for leap years.</li>
+            <li>All results are automatically formatted with commas for better readability.</li>
+        </ul>
+    </div>
+
+
+
+    <!-- Footer section starts here -->
+    <footer class="PageFooterStyle">
+        <div class="footer-container">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+
+</body>
+</html>
+<script>
+    document.getElementById('dateDiffForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const start = new Date(document.getElementById('startDate').value);
+        const end = new Date(document.getElementById('endDate').value);
+
+        if (isNaN(start.getTime()) || isNaN(end.getTime())) {
+            document.getElementById('dateResult').innerText = "Please enter valid dates.";
+            return;
+        }
+
+        const diffTime = Math.abs(end - start);
+
+        const diffSeconds = Math.floor(diffTime / 1000);
+        const diffMinutes = Math.floor(diffTime / (1000 * 60));
+        const diffHours = Math.floor(diffTime / (1000 * 60 * 60));
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        const diffWeeks = Math.floor(diffDays / 7);
+        const diffMonths = Math.floor(diffDays / 30.44);
+        const diffYears = Math.floor(diffDays / 365.25);
+
+        function formatNumber(num) {
+            return num.toLocaleString('en-US');
+        }
+
+        document.getElementById('dateResult').innerHTML =
+            `Years: ${formatNumber(diffYears)}<br>` +
+            `Months: ${formatNumber(diffMonths)}<br>` +
+            `Weeks: ${formatNumber(diffWeeks)}<br>` +
+            `Days: ${formatNumber(diffDays)}<br>` +
+            `Hours: ${formatNumber(diffHours)}<br>` +
+            `Minutes: ${formatNumber(diffMinutes)}<br>` +
+            `Seconds: ${formatNumber(diffSeconds)}`;
+    });
+</script>
+
+
+
