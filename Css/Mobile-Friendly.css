@@ -10,7 +10,7 @@
     text-decoration: none;
 }
 
-.dropheader {
+.dropheader, #dropdown-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,13 +21,17 @@
     text-decoration: none;
     background-color: transparent;
     border: none;
-    color: white;     
-    max-width:98px;
+    color: white;
+    max-width: 98px;
+}
+
+#dropdown-container {
+   font-size: 97% !important;
 }
 
 
-@media (max-width:768px) {
-    .mobile-friendly{
+    @media (max-width:768px) {
+        .mobile-friendly{
             font-weight:bolder;
             gap: 40px;
         }

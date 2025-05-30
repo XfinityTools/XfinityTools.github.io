@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
+    <script src="../Javascript/JScript/Header-Drop.js"></script>
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/Gas-Mileage-Converter">
     <meta name="geo.region" content="JM">
     <meta name="geo.placename" content="Kingston, Jamaica">
@@ -23,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
     <meta name="description" content="Convert fuel efficiency between MPG, km/L, and L/100km instantly. This tool simplifies gas mileage conversions for drivers, mechanics, and travelers." />
-    
+
 
 
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
@@ -43,23 +44,8 @@
             <a href="/">Home</a>
             <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
             <a href="../Pages/Dashboards/ToolList">Tool List</a>
-            <div class="dropdown">
-                <select class="dropheader" name="tools" id="tools" onchange="redirectToTool(this)">
-                    <option style="color:black" value="">More Tools</option>
-                    <option style="color:black" value="/Pages/Ad-Revenue-Estimator">Ad Revenue Calculator</option>
-                    <option style="color:black" value="/Pages/Base-Converter">Base Converter</option>
-                    <option style="color:black" value="/Pages/BMI-Calculator">BMI Converter</option>
-                    <option style="color:black" value="/Pages/Car-Loan-Calculator">Car Loan Calculator</option>
-                    <option style="color:black" value="/Pages/CSV-to-Excel">CSV To Excel</option>
-                    <option style="color:black" value="/Pages/Excel-PDF">Excel to PDF</option>
-                    <option style="color:black" value="/Pages/Key-Generator">Key Generator</option>
-                    <option style="color:black" value="/Pages/Png-Jpeg">PNG to JPEG</option>
-                    <option style="color:black" value="/Pages/Text-To-JSON">Text To JSON</option>
-                    <option style="color:black" value="/Pages/Unit-Converter">Unit Converter</option>
-                    <option style="color:black" value="/Pages/WebP-Png">WEBP To PNG</option>
-                    <option style="color:black" value="/Pages/WebP-to-PDF">WEBP To PDF</option>
-                </select>
-            </div>
+            <div id="dropdown-container"></div>
+
         </div>
     </div>
 
