@@ -1,12 +1,32 @@
 
-    .mobile-friendly {
-        display: flex; justify-content: center; align-items: center; gap: 30px; padding: 10px;
-        font-family: 'Franklin Gothic Medium';font-size: 85%;text-decoration: none;
-    }
+.mobile-friendly {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 85%;
+    text-decoration: none;
+}
+
+.dropheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 95%;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
 
 
-    @media (max-width:768px){
-        .mobile-friendly{
+@media (max-width:768px) {
+    .mobile-friendly{
             font-weight:bolder;
             gap: 40px;
         }
