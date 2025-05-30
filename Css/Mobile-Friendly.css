@@ -17,19 +17,13 @@
     gap: 30px;
     padding: 10px;
     font-family: 'Franklin Gothic Medium';
-    font-size: 75%;
+    font-size: 95%;
     text-decoration: none;
     background-color: transparent;
     border: none;
     color: white;
 }
 
-select.dropheader {
-    -webkit-appearance: auto;
-    -moz-appearance: auto;
-    appearance: auto;
-    background-image: none;
-}
 
 
 @media (max-width:768px) {
