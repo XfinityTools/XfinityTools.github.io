@@ -33,10 +33,14 @@
             gap: 40px;
         }
 
-        .Header-Tool-Title{
-            font-weight: bolder;
-            }
+    .Header-Tool-Title{
+        font-weight: bolder;
         }
+    }
+
+    .Home-Dis {
+        visibility: hidden
+    }
 
 }
 
