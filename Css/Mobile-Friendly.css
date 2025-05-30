@@ -22,6 +22,7 @@
     background-color: transparent;
     border: none;
     color: white;
+    font-weight:bold;
 }
 
 
@@ -36,24 +37,32 @@
             font-weight: bolder;
             }
         }
-    
 
-.Header-Tool-Title{
-    font-size: 95%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bolder;
-}
-footer p {
-    margin: 0;
-    font-family: 'Teko', sans-serif;
+@media (max-width:768px) {
+    .Home-Dis{
+        visibility:hidden
+    }
 }
 
-.PageFooterStyle {
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    color: #000000;
-}
+    .Header-Tool-Title {
+        font-size: 95%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bolder;
+    }
 
-.footer-container {
-    display: flex;
-    justify-content: center;
-}
+    footer p {
+        margin: 0;
+        font-family: 'Teko', sans-serif;
+    }
+
+    .PageFooterStyle {
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #000000;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: center;
+    }
