@@ -49,7 +49,7 @@
 
         <a href="/" class="btn btn-secondary btn-md dash-home-button" style="margin-right: 10px;">Home </a>
 
-        <input type="text" class="dash-searchbar" id="searchInput" placeholder="Search Tools" style="padding: 14px; width: 210px; border: 2px solid #e60340; border-radius: 2px; font-size: 12px; color:black;" />
+        <input type="text" class="dash-searchbar" id="searchInput" placeholder="Search Tools" style="padding: 14px; width: 180px; border: 2px solid #e60340; border-radius: 2px; font-size: 12px; color:black;" />
 
         <button type="button" id="searchButton" class="btn btn-secondary btn-md dash-search-button" style=" padding: 14px;">Search </button>
 
@@ -116,16 +116,16 @@
 
 
                     toolSection.innerHTML = `
-                                                                <div>
-                                                                    <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
-                                                                </div>
-                                                                <h2>${data["Tool-Name"]}</h2>
-                                                                <p class="Tool-Description">${data["Tool-Description"]}</p>
-                                                                <br />
-                                                                <p class="Tool-URL">
-                                                                    <a class="btn btn-default" href="${data.URL}">Use &raquo;</a>
-                                                                </p>
-                                                            `;
+                                            <div>
+                                                <img src="../../Images/Untitled design.png" alt="XfinityLogo" width="20">
+                                            </div>
+                                            <h2>${data["Tool-Name"]}</h2>
+                                            <p class="Tool-Description">${data["Tool-Description"]}</p>
+                                            <br />
+                                            <p class="Tool-URL">
+                                                <a class="btn btn-default" href="${data.URL}">Use &raquo;</a>
+                                            </p>
+                                        `;
 
 
                     toolsRow.appendChild(toolSection);
@@ -148,8 +148,8 @@
         searchInput.value = '';
         searchInput.focus();
 
-        // Optional: Clear or hide any output area if you have one
-        const resultArea = document.getElementById('searchResults'); // Example ID
+        
+        const resultArea = document.getElementById('searchResults'); D
         if (resultArea) resultArea.innerHTML = '';
     });
 </script>

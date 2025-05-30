@@ -56,7 +56,6 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-
     <div class="main-content">
         <div class="unit-converter-tool">
 
@@ -80,6 +79,14 @@
                 <label for="fromUnit">From:</label>
                 <select id="fromUnit"></select>
 
+                <div style="display: flex; justify-content: center; margin: 20px 0;">
+                    <button type="button" onclick="reverseUnits()" style="padding: 6px 12px;">
+                        ⇄
+                    </button>
+                </div>
+
+
+
                 <label for="toUnit">To:</label>
                 <select id="toUnit"></select>
                 <br>
@@ -90,9 +97,9 @@
                 <div id="conversionResult"></div>
             </form>
 
-
         </div>
     </div>
+
 
     <div class="container-infobox-left">
         <p>
@@ -101,15 +108,15 @@
 
         <h1>Unit Converter Instruction Manual</h1>
 
-        <li><strong>Step 1:</strong> Select the measurement category from the dropdown menu labeled <strong>Select Unit Type</strong> (e.g., Length, Mass, Temperature, etc.).</li>
+        <li><strong>Step 1:</strong> Select the measurement category from the dropdown menu labeled <strong>Select Unit Type</strong> (e.g., Length, Mass, Temperature, etc.).</li><br />
 
-        <li><strong>Step 2:</strong> Enter the numerical value you want to convert in the <strong>Enter Value</strong> field.</li>
+        <li><strong>Step 2:</strong> Enter the numerical value you want to convert in the <strong>Enter Value</strong> field.</li><br />
 
-        <li><strong>Step 3:</strong> Choose the unit you are converting <strong>from</strong> using the first dropdown menu, and select the unit you want to convert <strong>to</strong> using the second dropdown menu.</li>
+        <li><strong>Step 3:</strong> Choose the unit you are converting <strong>from</strong> using the first dropdown menu, and select the unit you want to convert <strong>to</strong> using the second dropdown menu.</li><br />
 
-        <li><strong>Step 4:</strong> Click the <strong>Convert</strong> button. The result will be displayed directly below the form.</li>
+        <li><strong>Step 4:</strong> Click the <strong>Convert</strong> button. The result will be displayed directly below the form.</li><br />
 
-        <li><strong>Note:</strong> For temperature conversions, the tool uses precise formulas (e.g., Celsius to Fahrenheit or Kelvin) to ensure accuracy. For other types like length and mass, the tool uses standardized conversion rates.</li>
+        <li><strong>Note:</strong> For temperature conversions, the tool uses precise formulas (e.g., Celsius to Fahrenheit or Kelvin) to ensure accuracy. For other types like length and mass, the tool uses standardized conversion rates.</li><br />
 
 
 
@@ -131,3 +138,13 @@
 </body>
 </html>
 <script src="../Javascript/Java/Script6.js"></script>
+<script>
+    function reverseUnits() {
+        const from = document.getElementById("fromUnit");
+        const to = document.getElementById("toUnit");
+        const temp = from.value;
+        from.value = to.value;
+        to.value = temp;
+    }
+</script>
+
