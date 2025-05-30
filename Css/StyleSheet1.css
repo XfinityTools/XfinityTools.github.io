@@ -108,11 +108,6 @@ input[type=file], .file-input {
     }
 
 
-    @media (max-width:768px) {
-        .Home-Dis {
-            visibility: hidden
-        }
-    }
 
 .container {
     max-width: 500px;

@@ -27,11 +27,7 @@
     margin-bottom: 20px;
 }
 
-@media (max-width:768px) {
-    .Home-Dis {
-        visibility: hidden
-    }
-}
+
 
 #downloadTxtBtn {
     padding: 10px 20px;
