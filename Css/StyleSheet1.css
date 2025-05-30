@@ -106,8 +106,7 @@ input[type=file], .file-input {
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
-
-
+}
 
 .container {
     max-width: 500px;
