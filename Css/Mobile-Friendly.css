@@ -21,12 +21,9 @@
     text-decoration: none;
     background-color: transparent;
     border: none;
-    color: white;
-     
+    color: white;     
     max-width:98px;
 }
-
-
 
 
 @media (max-width:768px) {
@@ -39,10 +36,6 @@
         font-weight: bolder;
         }
     }
-
-   
-
-
 
     .Header-Tool-Title {
         font-size: 95%;
