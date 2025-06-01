@@ -88,30 +88,44 @@ body {
 
 .csv-textarea {
     margin: 30px auto;
-    width: 88%;
+    width: 95%;
     text-align: left;
     background-color: white;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: none;
+   
+    border: 2px dashed #ccc;
     overflow: hidden;
     resize: none; 
     min-height: 100px; /* Ensures it doesn't collapse too small */
     font-family: monospace;
 }
 
+.csvjson-button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #e60340;
+    background-color: transparent;
+    color: #e60340;
+}
 
-    .pdf-drop-area {
-        width: 100%;
-        height: 150px;
-        border: 2px dashed #aaa;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        margin: 20px 0;
-        cursor: pointer;
+    .csvjson-button:hover {
+        background-color: #e60340;
+        color: white;
     }
+
+
+.pdf-drop-area {
+    width: 100%;
+    height: 150px;
+    border: 2px dashed #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin: 20px 0;
+    cursor: pointer;
+}
 
 .exif-drop-area, .text-metrics-input-area {
     border: 2px dashed #aaa;
@@ -219,18 +233,18 @@ th {
 
 
 /* CSV Button Styling */
-.csv-button {
+/*.csv-button {
     display: inline-block;
     padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
+    margin-top: 20px;*/
+/*    background-color: transparent;*/
+/*    color: white;*/
+    /*border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-}
+}*/
 
     .csv-button:hover {
         background-color: #0056b3;
@@ -272,6 +286,7 @@ h1 {
 /* Select and Checkbox Styling */
 .csv-select, .csv-checkbox {
     margin-top: 10px;
+    border:none;
 }
 
 /* CSV Preview Section Styling */
