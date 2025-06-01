@@ -5,6 +5,8 @@
     <meta name="geo.region" content="JM">
     <meta name="robots" content="index, follow">
     <script src="Javascript/JScript/redirect-urls.js"></script>
+    <script src="Javascript/JScript/Header-Drop.js"></script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
     <script>
@@ -52,6 +54,23 @@
             margin: 0;
             padding: 0;
         }
+
+        #dropdown-container {
+            background-color: #e60340;
+            background: #e60340;
+        }
+
+        .dropdown-container {
+            background-color: #e60340;
+            background-color: transparent;          
+           
+        }
+
+        @media (max-width:768px){
+            .dropdown-container {
+                visibility: hidden;
+            }          
+        }
     </style>
 </head>
 <body>
@@ -62,7 +81,8 @@
             <a href="About">About</a>
             <a href="Disclaimer">Disclaimer</a>
             <a href="Contact">Contact</a>
-            <a href="Pages/Dashboards/ToolList">Tools List</a>
+            <a class="Toolist" href="Pages/Dashboards/ToolList">Tools List</a>
+            <div class="dropdown-container" id="dropdown-container"></div>
         </div>
     </div>
     <div>
