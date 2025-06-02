@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
     <meta name="description" content="Use our free Slug Generator Tool to convert any text into a clean, SEO-friendly URL slug. Perfect for blogs, websites, and eCommerce platforms." />
-
+    <script src="../Javascript/Java/JS7.js"></script>
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
     <link href="../Css/StyleSheet8.css" rel="stylesheet" />
@@ -75,38 +75,6 @@
 
         </form>
     </div>
-
-    <script>
-        function generateSlug() {
-            const input = document.getElementById('textInput').value;
-            const slug = input
-                .toLowerCase()
-                .trim()
-                .replace(/[^a-z0-9\s-]/g, '')     
-                .replace(/\s+/g, '-')             
-                .replace(/-+/g, '-');            
-
-            document.getElementById('slugOutput').value = slug;
-        }
-
-        function copySlug() {
-            const slugField = document.getElementById("slugOutput");
-            slugField.select();
-            slugField.setSelectionRange(0, 99999); // For mobile devices
-
-            try {
-                document.execCommand("copy");
-                alert("Slug copied to clipboard!");
-            } catch (err) {
-                alert("Failed to copy slug.");
-            }
-        }
-
-    </script>
-
-
-
-
     <div class="container-infobox-left">
         <p>
             The Slug Generator Tool transforms any text input into a clean, URL-friendly format known as a "slug".
