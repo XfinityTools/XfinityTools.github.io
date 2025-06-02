@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
-    <script src="../Javascript/JScript/redirect-urls.js"></script>
     <script src="../Javascript/JScript/Header-Drop.js"></script>
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/Slug-Generator">
     <meta name="geo.region" content="JM">
@@ -23,9 +22,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="" />
+    <meta name="description" content="Use our free Slug Generator Tool to convert any text into a clean, SEO-friendly URL slug. Perfect for blogs, websites, and eCommerce platforms." />
+
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet8.css" rel="stylesheet" />
     <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
     <title>Free Slug Generator</title>
 
@@ -51,31 +52,119 @@
          data-ad-client="ca-pub-6760354428989736"
          data-ad-slot="7235524973"></ins>
     <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
 
     <br />
 
-    <div class="container">
+    <div class="main-content">
+        <form id="slugForm" onsubmit="generateSlug(); return false;">
+            <label for="textInput">Enter Text:</label>
+            <input type="text" id="textInput" required style="padding: 10px; width: 300px; font-size: 14px;" />
 
-        <div class="main-content">
+            <button type="submit" style="padding: 10px 20px; margin-left: 10px;">Generate Slug</button>
 
+            <br /><br />
+            <label for="slugOutput">Slug:</label>
+            <input type="text" id="slugOutput" readonly style="padding: 10px; width: 300px; font-size: 14px;" />
 
-        </div>
+           
+                <button type="button" onclick="copySlug()">Copy</button>
+            
+
+        </form>
     </div>
+
+    <script>
+        function generateSlug() {
+            const input = document.getElementById('textInput').value;
+            const slug = input
+                .toLowerCase()
+                .trim()
+                .replace(/[^a-z0-9\s-]/g, '')     
+                .replace(/\s+/g, '-')             
+                .replace(/-+/g, '-');            
+
+            document.getElementById('slugOutput').value = slug;
+        }
+
+        function copySlug() {
+            const slugField = document.getElementById("slugOutput");
+            slugField.select();
+            slugField.setSelectionRange(0, 99999); // For mobile devices
+
+            try {
+                document.execCommand("copy");
+                alert("Slug copied to clipboard!");
+            } catch (err) {
+                alert("Failed to copy slug.");
+            }
+        }
+
+    </script>
+
+
 
 
     <div class="container-infobox-left">
         <p>
-            <!--What tool does and features of tool goes here-->
+            The Slug Generator Tool transforms any text input into a clean, URL-friendly format known as a "slug".
+            It removes special characters, converts text to lowercase, and replaces spaces with hyphens.
+            This is especially useful for blog post URLs, product pages, and search engine optimization (SEO).
         </p>
 
-        <h1><!--Tool Name--> Instruction Manual:</h1>
-        <!--Tool instruction manual goes here-->
+        <h1>Slug Generator Instruction Manual</h1>
+        <ol>
+            <li>
+                <strong>Accessing the Tool:</strong><br>
+                Ensure you are using a modern browser (Chrome, Firefox, Edge, or Safari). The tool does not require an internet connection once loaded.
+            </li>
 
+            <li>
+                <strong>Entering Text:</strong><br>
+                In the input field labeled “Enter Text”, type or paste the phrase you wish to convert into a slug. This could be a title, product name, article heading, or any other string.
+            </li>
 
+            <li>
+                <strong>Generating the Slug:</strong><br>
+                Click the “Generate Slug” button beside the input field. The tool will:
+                <ul>
+                    <li>Convert all characters to lowercase.</li>
+                    <li>Remove any punctuation or special characters.</li>
+                    <li>Replace spaces with hyphens.</li>
+                    <li>Trim leading and trailing whitespace.</li>
+                </ul>
+                The resulting slug will be displayed in the “Slug” field below the button.
+            </li>
+
+            <li>
+                <strong>Using the Slug:</strong><br>
+                You may now copy the generated slug and use it in your URLs, file names, or identifiers. The slug is ready for use in content management systems, blogs, and custom URLs.
+            </li>
+
+            <li>
+                <strong>Tips & Best Practices:</strong>
+                <ul>
+                    <li>Keep your input concise for shorter slugs.</li>
+                    <li>Use only relevant keywords to improve SEO performance.</li>
+                    <li>Avoid using special symbols or diacritic marks as they will be removed automatically.</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>Troubleshooting:</strong>
+                <ul>
+                    <li>If the output field remains blank, ensure that the input field contains valid characters.</li>
+                    <li>Make sure your browser has JavaScript enabled.</li>
+                    <li>Refresh the page if the tool becomes unresponsive.</li>
+                </ul>
+            </li>
+
+           
+        </ol>
     </div>
+
 
 
 
@@ -84,7 +173,7 @@
         <div class="footer-container">
             <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
             <script>
-                        document.getElementById('currentYear').textContent = new Date().getFullYear();
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
             </script>
         </div>
     </footer>
