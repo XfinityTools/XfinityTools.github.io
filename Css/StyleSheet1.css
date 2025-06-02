@@ -5,6 +5,10 @@
     width: 50%;
 }
 
+.slug-button{
+    padding:10px 10px;
+}
+
 .Mortgage-Submit {
     background-color: white;
     border: 1px solid #e60340;

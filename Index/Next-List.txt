@@ -50,3 +50,4 @@ https://xfinitytools.github.io/Pages/XML-to-JSON
 https://xfinitytools.github.io/Pages/XML-to-Text
 https://xfinitytools.github.io/Pages/YAML-to-JSON
 https://xfinitytools.github.io/Pages/Zipfile
+https://xfinitytools.github.io/Pages/Slug-Generator
