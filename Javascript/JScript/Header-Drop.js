@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Text To JSON", value: "/Pages/Text-To-JSON" },
         { name: "Unit Converter", value: "/Pages/Unit-Converter" },
         { name: "WEBP To PNG", value: "/Pages/WebP-Png" },
-        { name: "WEBP To PDF", value: "/Pages/WebP-to-PDF" }
+        { name: "WEBP To PDF", value: "/Pages/WebP-to-PDF" },
         { name: "YAML to JSON", value: "/Pages/YAML-to-JSON" }
     ];
 
