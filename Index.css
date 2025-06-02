@@ -3,6 +3,9 @@
     color: inherit;
     display: inline;
 }
+.select {
+    background-color: yellow;
+}
 
 .header-links:hover {
 }
@@ -50,14 +53,17 @@ li {
             color: #ffe3eb;
         }
 
-/* Main Section */
-section {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    line-height:2;
-}
+    .nav-links div{
+        background-color:transparent;
+    }
+    /* Main Section */
+    section {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+        background: white;
+        line-height: 2;
+    }
 
     section h1 {
         font-family: 'Pacifico', cursive;
