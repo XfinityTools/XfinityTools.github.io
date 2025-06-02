@@ -48,6 +48,14 @@
     <script src="Javascript/JScript/updateDateTime.js"></script>
     <link href="Index.css" rel="stylesheet" />
     <title>Xfinity Tools - Free Online Tool Suite</title>
+    <script>
+        function redirectToTool(select) {
+            const url = select.value;
+            if (url) {
+                window.location.href = url;
+            }
+        }
+    </script>
     <style>
         #imageCarousel {
             width: 100%;
@@ -55,14 +63,18 @@
             padding: 0;
         }
 
-        
 
-        @media (max-width:768px){
-            .dropdown-container {
+
+        @media (max-width:768px) {
+            .dropdown-container, .H-Dropdown {
                 visibility: hidden;
-            }          
+            }
+
         }
-        
+
+        select option{
+            color:black;
+        }
     </style>
 </head>
 <body>
@@ -74,7 +86,17 @@
             <a href="Disclaimer">Disclaimer</a>
             <a href="Contact">Contact</a>
             <a class="Toolist" href="Pages/Dashboards/ToolList">Tools List</a>
-            <div class="dropdown-container" id="dropdown-container"></div>
+            <!--<div class="dropdown-container" id="dropdown-container"></div>-->
+            <select class="H-Dropdown" style="background-color:transparent;color:white;border:none;" onchange="redirectToTool(this)">
+                <option style="font-size: 19px;" value="">More Tools</option>
+                
+                <option value="/Pages/Base-Converter">Base Converter</option>
+                <option value="/Pages/Car-Loan-Calculator">Car Loan Calculator</option>
+                <option value="/Pages/BMI-Calculator">BMI Converter</option>
+                <option value="/Pages/CSV-to-Excel">CSV To Excel</option>
+                <option value="/Pages/Text-To-JSON">Text to Json</option>
+                <option value="/Pages/WebP-Png">Webp to PNG</option>
+            </select>
         </div>
     </div>
     <div>
