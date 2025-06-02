@@ -1,9 +1,12 @@
- Tool Name - Instruction Manual
- <ol>
-   <li>
+<div class="container-infobox-left">
+<p>
+<!--What tool does and features of tool goes here-->
+</p>
+<h1><!--Tool Name--> - Instruction Manual</h1><ol>
+<li>
 1. Accessing the Tool:
 </li><br>
-   <li>
+<li>
 2. Uploading Images:(If application)
 </li><br>
 <li>
@@ -18,3 +21,4 @@
 7. Support:
 </li><br>
 </ol>
+</div>
