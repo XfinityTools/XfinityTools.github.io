@@ -55,31 +55,31 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-    
-        <div class="main-content">
-            <form id="rotCipherForm">
-                <label for="rotInput">Enter text to encode/decode:</label><br>
-                <textarea id="rotInput" rows="4" cols="78" placeholder="Enter your text here"></textarea><br><br>
 
-                <label for="rotValue">Select ROT Option:</label>
-                <select id="rotValue">
-                    <option value="ROT13">ROT13</option>
-                    <option value="ROT47">ROT47</option>
-                    <option disabled>──────────</option>
-                    <option value="ALL_ENCRYPT">Rot All - Encrypt</option>
-                    <option value="ALL_DECRYPT">Rot All - Decrypt</option>
-                </select><br><br>
+    <div class="main-content">
+        <form id="rotCipherForm">
+            <label for="rotInput">Enter text to encode/decode:</label><br>
+            <textarea id="rotInput" rows="4" cols="78" placeholder="Enter your text here"></textarea><br><br>
 
-                <button type="button" onclick="pasteRotText()">Paste</button>
-                <button type="button" onclick="runRotTool()">Run</button>
-                <button type="button" onclick="clearRotFields()">Clear</button><br><br>
+            <label for="rotValue">Select ROT Option:</label>
+            <select id="rotValue">
+                <option value="ROT13">ROT13</option>
+                <option value="ROT47">ROT47</option>
+                <option disabled>──────────</option>
+                <option value="ALL_ENCRYPT">Rot All - Encrypt</option>
+                <option value="ALL_DECRYPT">Rot All - Decrypt</option>
+            </select><br><br>
 
-                <div id="rotOutputContainer"></div><br>
+            <button type="button" onclick="pasteRotText()">Paste</button>
+            <button type="button" onclick="runRotTool()">Run</button>
+            <button type="button" onclick="clearRotFields()">Clear</button><br><br>
 
-                <button type="button" onclick="copyAllRot()">Copy All</button>
-            </form>
-        </div>
-    
+            <div id="rotOutputContainer"></div><br>
+
+            <button type="button" onclick="copyAllRot()">Copy All</button>
+        </form>
+    </div>
+
 
     <style>
         #rotOutputContainer {
@@ -88,10 +88,9 @@
             gap: 1rem;
         }
 
-        .rot-box {           
+        .rot-box {
             padding: 10px;
             border-radius: 4px;
-            
         }
 
             .rot-box label {
@@ -105,19 +104,39 @@
             }
     </style>
 
-    
-
-
-
     <div class="container-infobox-left">
         <p>
-            <!--What tool does and features of tool goes here-->
+            The ROT Cipher Tool encodes or decodes text by shifting each letter of the alphabet by a fixed number of positions. Commonly used for ROT13, it also allows custom shift values. This tool is ideal for basic text obfuscation, puzzles, and educational purposes. It operates directly in the browser, requires no installation, and provides immediate results.
         </p>
 
-        <h1><!--Tool Name-->- Instruction Manual</h1>
-        <!--Tool instruction manual goes here-->
+        <h1>ROT Cipher Tool - Instruction Manual</h1>
+        <p>
+            <strong>Accessing the Tool:</strong><br>
+            Open the ROT Cipher Tool in your web browser. No installation is necessary, and the tool loads instantly once the page is accessed.<br><br>
 
+            <strong>Entering Text:</strong><br>
+            Type or paste the text you wish to encode or decode into the input field provided.<br><br>
+
+            <strong>Selecting ROT Value:</strong><br>
+            Choose the desired rotation amount (e.g., 13 for ROT13) using the dropdown menu or number input. The default is usually ROT13.<br><br>
+
+            <strong>Generating Output:</strong><br>
+            Click the "Encode" or "Decode" button to process the text. The result will be displayed immediately in the output field.<br><br>
+
+            <strong>Copying the Result:</strong><br>
+            Use the "Copy" button if available, or manually select and copy the output for use elsewhere.<br><br>
+
+            <strong>Tips & Recommendations:</strong><br>
+            ROT ciphers are not secure for protecting sensitive data. Use them for informal purposes such as encoding spoilers, simple messages, or classroom demonstrations.<br><br>
+
+            <strong>Troubleshooting:</strong><br>
+            Ensure you have entered valid alphabetic text. Refresh the page if the tool becomes unresponsive. Make sure JavaScript is enabled in your browser.<br><br>
+
+            <strong>Support:</strong><br>
+            For help, refer to the documentation or contact the developer through the support link provided on the tool’s website.
+        </p>
     </div>
+
 
     <!-- Footer section starts here -->
     <footer class="PageFooterStyle">
