@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
     <script src="../Javascript/JScript/Header-Drop.js"></script>
-    <link rel="canonical" href="https://xfinitytools.github.io/Pages/">
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Base64-Decorder">
     <meta name="geo.region" content="JM">
     <meta name="geo.placename" content="Kingston, Jamaica">
     <!-- Google tag (gtag.js) -->
@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="" />
+    <meta name="description" content="Decode Base64-encoded text into plain readable format instantly. Use this online Base64 Decoder to convert encoded data for emails, URLs, and web applications." />
 
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
@@ -34,7 +34,7 @@
 <body>
     <div class="text-metrics-header">
         <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
-        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';"></p>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">Base64 Decoder</p>
         <div class="header mobile-friendly">
             <a href="/">Home</a>
             <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
@@ -54,25 +54,51 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-
     <div class="main-content">
-        
+        <form id="base64DecodeForm" onsubmit="decodeBase64(event)">
+            <label for="encodedInput">Enter Base64 Text to Decode:</label><br>
+            <textarea id="encodedInput" name="encodedInput" rows="6" cols="75" required></textarea><br><br>
 
-        
+            <button type="submit">Decode</button>
+
+            <div id="decodeResult" style="margin-top: 20px;">
+                <h3>Decoded Output</h3>
+                <textarea id="decodedText" rows="6" cols="75" readonly></textarea><br><br>
+                <button type="button" onclick="copyDecoded()">Copy Output</button>
+            </div>
+        </form>
     </div>
-
-
-
 
     <div class="container-infobox-left">
         <p>
-            <!--What tool does and features of tool goes here-->
+            The Base64 Decoder converts Base64-encoded text back into its original readable form. This tool is helpful for developers and users who need to decode data embedded in URLs, APIs, or email systems. It supports UTF-8 text decoding and includes a one-click copy feature for convenience.
         </p>
 
-        <h1><!--Tool Name-->- Instruction Manual</h1>
-        <!--Tool instruction manual goes here-->
+        <h1>Base64 Decoder - Instruction Manual</h1>
+        <p>
+            <strong>Accessing the Tool:</strong><br>
+            Open the Base64 Decoder directly in your web browser. No installation or sign-in is required.<br><br>
 
+            <strong>Entering Encoded Text:</strong><br>
+            In the "Enter Base64 Text to Decode" area, paste or type the Base64-encoded string you wish to decode.<br><br>
+
+            <strong>Decoding the Text:</strong><br>
+            Click the "Decode" button. The tool will process the input and display the decoded plain text in the output area below.<br><br>
+
+            <strong>Copying the Decoded Output:</strong><br>
+            After decoding, click the "Copy Output" button to copy the plain text to your clipboard. A confirmation alert will appear once copied.<br><br>
+
+            <strong>Tips & Recommendations:</strong><br>
+            Ensure the Base64 input is correctly formatted. Invalid or corrupted strings may result in an error. This tool is ideal for small to moderate text strings.<br><br>
+
+            <strong>Troubleshooting:</strong><br>
+            If decoding fails, verify the Base64 string is complete and does not contain invalid characters. If the output appears garbled, the original content may not have been properly UTF-8 encoded.<br><br>
+
+            <strong>Support:</strong><br>
+            For assistance or to report issues, visit the support section on the website and submit a request.
+        </p>
     </div>
+
 
     <!-- Footer section starts here -->
     <footer class="PageFooterStyle">
@@ -85,6 +111,6 @@
     </footer>
 </body>
 </html>
-<script src="../Javascript/JScript/.js"></script>
+<script src="../Javascript/Java/Script7.js"></script>
 
 
