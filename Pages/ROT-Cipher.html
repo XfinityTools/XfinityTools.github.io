@@ -70,18 +70,21 @@
                 <option value="ALL_DECRYPT">Rot All - Decrypt</option>
             </select><br><br>
 
-            <button type="button" onclick="pasteRotText()">Paste</button>
-            <button type="button" onclick="runRotTool()">Run</button>
-            <button type="button" onclick="clearRotFields()">Clear</button><br><br>
+            <button class="CypherButton" type="button" onclick="pasteRotText()">Paste</button>
+            <button class="CypherButton" type="button" onclick="runRotTool()">Run</button>
+            <button class="CypherButton" type="button" onclick="clearRotFields()">Clear</button><br><br>
 
             <div id="rotOutputContainer"></div><br>
 
-            <button type="button" onclick="copyAllRot()">Copy All</button>
+            <button class="CypherButton" type="button" onclick="copyAllRot()">Copy All</button>
         </form>
     </div>
 
 
     <style>
+        .CypherButton{
+            padding:5px 9px;
+        }
         #rotOutputContainer {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
