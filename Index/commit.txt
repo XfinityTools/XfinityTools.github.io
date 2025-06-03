@@ -1,5 +1,7 @@
 Update tool layout and structure
 
+New Tool and structure
+
 Fix bugs and enhance user experience
 
 General maintenance and code cleanup
