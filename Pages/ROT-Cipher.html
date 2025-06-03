@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <script src="../Javascript/JScript/Header-Drop.js"></script>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/ROT-Cipher">
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <meta charset="UTF-8">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="" />
+
+    <link href="../Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet8.css" rel="stylesheet" />
+    <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
+    <title>Free ROT Cipher</title>
+</head>
+<body>
+    <div class="text-metrics-header">
+        <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">ROT Cipher</p>
+        <div class="header mobile-friendly">
+            <a href="/">Home</a>
+            <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
+            <a href="../Pages/Dashboards/ToolList">Tool List</a>
+            <div id="dropdown-container"></div>
+        </div>
+    </div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
+            crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"
+         data-ad-client="ca-pub-6760354428989736"
+         data-ad-slot="7235524973"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    
+        <div class="main-content">
+            <form id="rotCipherForm">
+                <label for="rotInput">Enter text to encode/decode:</label><br>
+                <textarea id="rotInput" rows="4" cols="78" placeholder="Enter your text here"></textarea><br><br>
+
+                <label for="rotValue">Select ROT Option:</label>
+                <select id="rotValue">
+                    <option value="ROT13">ROT13</option>
+                    <option value="ROT47">ROT47</option>
+                    <option disabled>──────────</option>
+                    <option value="ALL_ENCRYPT">Rot All - Encrypt</option>
+                    <option value="ALL_DECRYPT">Rot All - Decrypt</option>
+                </select><br><br>
+
+                <button type="button" onclick="pasteRotText()">Paste</button>
+                <button type="button" onclick="runRotTool()">Run</button>
+                <button type="button" onclick="clearRotFields()">Clear</button><br><br>
+
+                <div id="rotOutputContainer"></div><br>
+
+                <button type="button" onclick="copyAllRot()">Copy All</button>
+            </form>
+        </div>
+    
+
+    <style>
+        #rotOutputContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .rot-box {           
+            padding: 10px;
+            border-radius: 4px;
+            
+        }
+
+            .rot-box label {
+                font-weight: bold;
+            }
+
+            .rot-box textarea {
+                width: 100%;
+                height: 100px;
+                resize: vertical;
+            }
+    </style>
+
+    <script>
+        function rotEncrypt(text, shift) {
+            return text.replace(/[a-zA-Z]/g, function (c) {
+                const base = c <= 'Z' ? 65 : 97;
+                return String.fromCharCode((c.charCodeAt(0) - base + shift) % 26 + base);
+            });
+        }
+
+        function rot47(text) {
+            return text.replace(/[\x21-\x7E]/g, function (c) {
+                return String.fromCharCode(33 + (c.charCodeAt(0) + 14) % 94);
+            });
+        }
+
+        function runRotTool() {
+            const input = document.getElementById("rotInput").value;
+            const option = document.getElementById("rotValue").value;
+            const container = document.getElementById("rotOutputContainer");
+            container.innerHTML = "";
+
+            if (!input.trim()) {
+                alert("Please enter text to process.");
+                return;
+            }
+
+            const addOutputBox = (label, value) => {
+                const div = document.createElement("div");
+                div.className = "rot-box";
+
+                const labelEl = document.createElement("label");
+                labelEl.textContent = label;
+
+                const textarea = document.createElement("textarea");
+                textarea.readOnly = true;
+                textarea.value = value;
+
+                const copyBtn = document.createElement("button");
+                copyBtn.textContent = "Copy";
+                copyBtn.type = "button";
+                copyBtn.style.marginTop = "5px";
+                copyBtn.onclick = function () {
+                    navigator.clipboard.writeText(textarea.value)
+                        .then(() => alert(`${label} copied to clipboard!`))
+                        .catch(err => alert("Copy failed: " + err));
+                };
+
+                div.appendChild(labelEl);
+                div.appendChild(document.createElement("br"));
+                div.appendChild(textarea);
+                div.appendChild(copyBtn);
+                container.appendChild(div);
+            };
+
+
+            if (option === "ROT13") {
+                addOutputBox("ROT13", rotEncrypt(input, 13));
+            } else if (option === "ROT47") {
+                addOutputBox("ROT47", rot47(input));
+            } else if (option === "ALL_ENCRYPT") {
+                for (let i = 1; i <= 25; i++) {
+                    addOutputBox("ROT" + i, rotEncrypt(input, i));
+                }
+                addOutputBox("ROT47", rot47(input));
+            } else if (option === "ALL_DECRYPT") {
+                for (let i = 1; i <= 25; i++) {
+                    addOutputBox("ROT" + i + " Decrypt", rotEncrypt(input, 26 - i));
+                }
+                addOutputBox("ROT47 Decrypt", rot47(input));
+            }
+        }
+
+        function copyAllRot() {
+            const texts = document.querySelectorAll(".rot-box textarea");
+            let allText = "";
+            texts.forEach(textarea => {
+                const label = textarea.previousSibling.textContent;
+                allText += `${label}\n${textarea.value}\n\n`;
+            });
+
+            navigator.clipboard.writeText(allText)
+                .then(() => alert("All outputs copied to clipboard!"))
+                .catch(err => alert("Copy failed: " + err));
+        }
+
+        function pasteRotText() {
+            navigator.clipboard.readText()
+                .then(text => {
+                    document.getElementById("rotInput").value = text;
+                })
+                .catch(err => {
+                    alert("Failed to read clipboard: " + err);
+                });
+        }
+
+        function clearRotFields() {
+            document.getElementById("rotInput").value = "";
+            document.getElementById("rotOutputContainer").innerHTML = "";
+        }
+    </script>
+
+
+
+    <div class="container-infobox-left">
+        <p>
+            <!--What tool does and features of tool goes here-->
+        </p>
+
+        <h1><!--Tool Name-->- Instruction Manual</h1>
+        <!--Tool instruction manual goes here-->
+
+    </div>
+
+    <!-- Footer section starts here -->
+    <footer class="PageFooterStyle">
+        <div class="footer-container">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+</body>
+</html>
+
+
