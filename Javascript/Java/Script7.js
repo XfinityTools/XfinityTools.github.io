@@ -25,5 +25,17 @@
             }
 
 
+function encodeBase64(event) {
+    event.preventDefault();
+    const inputText = document.getElementById('plainText').value;
+    const encoded = btoa(unescape(encodeURIComponent(inputText)));
+    document.getElementById('encodedText').value = encoded;
+}
 
-
+function copyToClipboard() {
+    const output = document.getElementById('encodedText');
+    output.select();
+    output.setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand("copy");
+    alert("Encoded text copied to clipboard.");
+}
