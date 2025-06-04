@@ -57,4 +57,23 @@ function copyDecoded() {
     document.execCommand("copy");
     alert("Decoded text copied to clipboard.");
 }
-   
+
+function reverseText(event) {
+    event.preventDefault();
+    const input = document.getElementById('inputText').value;
+    const reversed = input.split('').reverse().join('');
+    document.getElementById('reversedText').value = reversed;
+}
+
+function copyReversed() {
+    const output = document.getElementById('reversedText');
+    output.select();
+    output.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("Reversed text copied to clipboard.");
+}
+
+function clearInput() {
+    document.getElementById('inputText').value = '';
+    document.getElementById('reversedText').value = '';
+}
