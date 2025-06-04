@@ -1,8 +1,8 @@
 @media (max-width: 768px) {
     .content-section {
-        width: 69%;
+        width: 100%;
         padding: 30px;
-        border-left: 3px solid #e60340;
+        border-left: 2px solid #e60340;
     }
 
     html, body {
