@@ -25,7 +25,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../../Javascript/JS/JavaS1.js"></script>
     <script src="../../Javascript/JS/DropDownMenu.js"></script>
-    <link href="../../Css/Dashboard.css" rel="stylesheet" />
 
     <title>Xfinity Tools - Tool List</title>
 </head>
@@ -205,5 +204,175 @@
         margin-right: 10%;
     }
 
+
+</style>
+
+<style>
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: inline;
+    }
+
+    .header-links:hover {
+    }
+
+    a:visited {
+        text-decoration: none;
+        text-decoration: none;
+    }
+
+
+
+
+
+    .header {
+        background-color: #e60340;
+        color: white;
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+        .header h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 39px;
+            margin: 0;
+            color: white;
+        }
+
+    .nav-links {
+        display: flex;
+        gap: 35px;
+    }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 19px;
+            transition: color 0.3s ease;
+            font-family: ' Calibri'
+        }
+
+            .nav-links a:hover {
+                color: #ffe3eb;
+            }
+
+    /* Main Section */
+    section {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+        section h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+            text-align: center;
+        }
+
+    .lead {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: white;
+        background-color: #e60340;
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+        text-align: center;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+        .btn:hover {
+            background-color: #e5c00d;
+            transform: translateY(-2px);
+        }
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Teko', sans-serif;
+        font-size: 16px;
+        color: #333;
+        background-color: white;
+        line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: white;
+        color: black;
+        font-size: 0.9rem;
+        margin-top: 30px;
+        border-radius: 0 0 8px 8px;
+    }
+
+        footer p {
+            margin: 0;
+            font-family: 'Teko', sans-serif;
+        }
+
+    /* Hamburger Icon */
+    .hamburger {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+        .hamburger {
+            display: block;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: #e60340;
+            margin-top: 10px;
+        }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 1px 0;
+                text-align: center;
+                font-size: 18px;
+            }
+
+        .hide-button {
+            visibility: hidden;
+        }
+    }
 
 </style>
