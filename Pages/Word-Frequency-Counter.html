@@ -56,10 +56,14 @@
 
 
     <div class="main-content">
+        
 
         <form id="wordForm" onsubmit="countWords(event)">
             <label for="textInput">Enter Text:</label><br>
             <textarea id="textInput" name="textInput" rows="8" cols="75" required></textarea><br><br>
+
+            <label for="fileInput">Or Upload a .txt or .docx File:</label><br>
+            <input type="file" id="fileInput" accept=".txt,.docx" onchange="handleFileUpload(event)"><br><br>
 
             <button type="submit">Count Words</button>
             <button type="button" onclick="clearFields()">Clear</button>
@@ -71,78 +75,82 @@
             </div>
         </form>
 
-    </div>
-
-    <div class="container-infobox-left">
-        <p>
-            The Word Frequency Counter tool analyzes a block of text and counts how many times each word appears. It is useful for text analysis, SEO, readability checking, and general linguistic evaluation. Features include case-insensitive counting, tabular results display, and options to copy or clear the results.
-        </p>
-
-        <h1>Word Frequency Counter - Instruction Manual</h1>
-
-        <ol>
-            <li>
-                <strong>Accessing the Tool:</strong><br>
-                Navigate to the Word Frequency Counter tool from your main tools directory or menu. No account or login is required.
-            </li>
-            <br>
-
-            <li>
-                <strong>Entering Text:</strong><br>
-                In the provided text area, paste or type the text you want to analyze. This can be any block of plain text including paragraphs, articles, or content drafts.
-            </li>
-            <br>
-
-            <li>
-                <strong>Counting Words:</strong><br>
-                Click the "Count Words" button. The tool will process the input and display a table showing each unique word alongside its frequency.
-            </li>
-            <br>
-
-            <li>
-                <strong>Copying the Output:</strong><br>
-                After the results appear, you can click "Copy Output" to copy the frequency data to your clipboard for use elsewhere.
-            </li>
-            <br>
-
-            <li>
-                <strong>Clearing the Tool:</strong><br>
-                Click the "Clear" button to remove the text input and the results, resetting the tool for new input.
-            </li>
-            <br>
-
-            <li>
-                <strong>Tips & Recommendations:</strong><br>
-                Use plain text for best results. Avoid using text with excessive symbols or numbers unless those are relevant to your word analysis. Ensure spelling is accurate for more meaningful data.
-            </li>
-            <br>
-
-            <li>
-                <strong>Troubleshooting:</strong><br>
-                - If no results appear, make sure the input is not empty.<br>
-                - Avoid using large files or special characters, which may affect readability.<br>
-                - Refresh the page if the buttons become unresponsive.
-            </li>
-            <br>
-
-            <li>
-                <strong>Support:</strong><br>
-                For technical support or questions about the tool, contact the site administrator or visit the support page linked in the footer of the website.
-            </li>
-            <br>
-        </ol>
-    </div>
-
-
-    <!-- Footer section starts here -->
-    <footer class="PageFooterStyle">
-        <div class="footer-container">
-            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
-            <script>
-                document.getElementById('currentYear').textContent = new Date().getFullYear();
-            </script>
         </div>
-    </footer>
+
+        <!-- Add Mammoth.js for DOCX file support -->
+        <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+
+
+        <div class="container-infobox-left">
+            <p>
+                The Word Frequency Counter tool analyzes a block of text and counts how many times each word appears. It is useful for text analysis, SEO, readability checking, and general linguistic evaluation. Features include case-insensitive counting, tabular results display, and options to copy or clear the results.
+            </p>
+
+            <h1>Word Frequency Counter - Instruction Manual</h1>
+
+            <ol>
+                <li>
+                    <strong>Accessing the Tool:</strong><br>
+                    Navigate to the Word Frequency Counter tool from your main tools directory or menu. No account or login is required.
+                </li>
+                <br>
+
+                <li>
+                    <strong>Entering Text:</strong><br>
+                    In the provided text area, paste or type the text you want to analyze. This can be any block of plain text including paragraphs, articles, or content drafts.
+                </li>
+                <br>
+
+                <li>
+                    <strong>Counting Words:</strong><br>
+                    Click the "Count Words" button. The tool will process the input and display a table showing each unique word alongside its frequency.
+                </li>
+                <br>
+
+                <li>
+                    <strong>Copying the Output:</strong><br>
+                    After the results appear, you can click "Copy Output" to copy the frequency data to your clipboard for use elsewhere.
+                </li>
+                <br>
+
+                <li>
+                    <strong>Clearing the Tool:</strong><br>
+                    Click the "Clear" button to remove the text input and the results, resetting the tool for new input.
+                </li>
+                <br>
+
+                <li>
+                    <strong>Tips & Recommendations:</strong><br>
+                    Use plain text for best results. Avoid using text with excessive symbols or numbers unless those are relevant to your word analysis. Ensure spelling is accurate for more meaningful data.
+                </li>
+                <br>
+
+                <li>
+                    <strong>Troubleshooting:</strong><br>
+                    - If no results appear, make sure the input is not empty.<br>
+                    - Avoid using large files or special characters, which may affect readability.<br>
+                    - Refresh the page if the buttons become unresponsive.
+                </li>
+                <br>
+
+                <li>
+                    <strong>Support:</strong><br>
+                    For technical support or questions about the tool, contact the site administrator or visit the support page linked in the footer of the website.
+                </li>
+                <br>
+            </ol>
+        </div>
+
+
+        <!-- Footer section starts here -->
+        <footer class="PageFooterStyle">
+            <div class="footer-container">
+                <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+                <script>
+                    document.getElementById('currentYear').textContent = new Date().getFullYear();
+                </script>
+            </div>
+        </footer>
 </body>
 </html>
 <script src="../Javascript/Java/Script7.js"></script>

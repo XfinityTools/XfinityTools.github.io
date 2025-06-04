@@ -54,7 +54,8 @@ https://xfinitytools.github.io/Pages/Text-to-XML
 https://xfinitytools.github.io/Pages/YAML-to-JSON
 https://xfinitytools.github.io/Pages/Gas-Mileage-Converter
 https://xfinitytools.github.io/Pages/Slug-Generator
-
+https://xfinitytools.github.io/Pages/Word-Frequency-Counter
+https://xfinitytools.github.io/Pages/Text-Reverser
 
 
 

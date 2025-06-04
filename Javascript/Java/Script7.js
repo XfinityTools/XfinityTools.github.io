@@ -109,6 +109,36 @@ function countWords(event) {
     resultArea.appendChild(table);
 }
 
+function countWords(event) {
+    event.preventDefault();
+    const text = document.getElementById('textInput').value;
+    const words = text.toLowerCase().match(/\b\w+\b/g);
+    const frequency = {};
+
+    if (words) {
+        words.forEach(word => {
+            frequency[word] = (frequency[word] || 0) + 1;
+        });
+    }
+
+    const resultArea = document.getElementById('frequencyResult');
+    resultArea.innerHTML = '';
+
+    const table = document.createElement('table');
+    table.border = "1";
+    const header = table.insertRow();
+    header.insertCell().innerText = 'Word';
+    header.insertCell().innerText = 'Frequency';
+
+    for (const word in frequency) {
+        const row = table.insertRow();
+        row.insertCell().innerText = word;
+        row.insertCell().innerText = frequency[word];
+    }
+
+    resultArea.appendChild(table);
+}
+
 function copyFrequencies() {
     const tempArea = document.createElement('textarea');
     const table = document.querySelector('#frequencyResult table');
@@ -130,4 +160,36 @@ function copyFrequencies() {
 function clearFields() {
     document.getElementById('textInput').value = '';
     document.getElementById('frequencyResult').innerHTML = '';
+    document.getElementById('fileInput').value = '';
+}
+
+function handleFileUpload(event) {
+    const file = event.target.files[0];
+    const textInput = document.getElementById('textInput');
+
+    if (!file) return;
+
+    if (file.name.endsWith('.txt')) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            textInput.value = e.target.result;
+        };
+        reader.readAsText(file);
+    } else if (file.name.endsWith('.docx')) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const arrayBuffer = e.target.result;
+            mammoth.extractRawText({ arrayBuffer: arrayBuffer })
+                .then(result => {
+                    textInput.value = result.value;
+                })
+                .catch(err => {
+                    alert("Error reading .docx file.");
+                    console.error(err);
+                });
+        };
+        reader.readAsArrayBuffer(file);
+    } else {
+        alert("Only .txt or .docx files are supported.");
+    }
 }
