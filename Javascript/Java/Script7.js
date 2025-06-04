@@ -77,3 +77,57 @@ function clearInput() {
     document.getElementById('inputText').value = '';
     document.getElementById('reversedText').value = '';
 }
+
+
+function countWords(event) {
+    event.preventDefault();
+    const text = document.getElementById('textInput').value;
+    const words = text.toLowerCase().match(/\b\w+\b/g);
+    const frequency = {};
+
+    if (words) {
+        words.forEach(function (word) {
+            frequency[word] = (frequency[word] || 0) + 1;
+        });
+    }
+
+    const resultArea = document.getElementById('frequencyResult');
+    resultArea.innerHTML = '';
+
+    const table = document.createElement('table');
+    table.border = "1";
+    const header = table.insertRow();
+    header.insertCell().innerText = 'Word';
+    header.insertCell().innerText = 'Frequency';
+
+    for (const word in frequency) {
+        const row = table.insertRow();
+        row.insertCell().innerText = word;
+        row.insertCell().innerText = frequency[word];
+    }
+
+    resultArea.appendChild(table);
+}
+
+function copyFrequencies() {
+    const tempArea = document.createElement('textarea');
+    const table = document.querySelector('#frequencyResult table');
+    let content = '';
+
+    for (let i = 1; i < table.rows.length; i++) {
+        const cells = table.rows[i].cells;
+        content += `${cells[0].innerText}: ${cells[1].innerText}\n`;
+    }
+
+    tempArea.value = content;
+    document.body.appendChild(tempArea);
+    tempArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempArea);
+    alert("Word frequencies copied to clipboard.");
+}
+
+function clearFields() {
+    document.getElementById('textInput').value = '';
+    document.getElementById('frequencyResult').innerHTML = '';
+}
