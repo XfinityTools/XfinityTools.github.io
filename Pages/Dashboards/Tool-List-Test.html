@@ -164,185 +164,185 @@
 
     }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            display: inline;
-        }
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: inline;
+    }
 
-        .header-links:hover {
-        }
+    .header-links:hover {
+    }
 
-        a:visited {
-            text-decoration: none;
-        }
+    a:visited {
+        text-decoration: none;
+    }
 
 
 
-        .font-family-Franklin Gothic Medium {
-            font-family: 'Franklin Gothic Medium';
-        }
+    .font-family-Franklin Gothic Medium {
+        font-family: 'Franklin Gothic Medium';
+    }
 
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-        .content-section {
-            width: 45%;
-            padding: 35px;
-        }
+    .content-section {
+        width: 45%;
+        padding: 35px;
+    }
 
-        .ad-unit {
-            width: 30%;
-            margin-left: 20px;
-            padding: 20px;
-        }
+    .ad-unit {
+        width: 30%;
+        margin-left: 20px;
+        padding: 20px;
+    }
 
-        ol {
-            font-size: 21px;
-        }
+    ol {
+        font-size: 21px;
+    }
 
-        .ToolListP {
-            font-size: 21px;
-            margin-right: 10%;
-        }
+    .ToolListP {
+        font-size: 21px;
+        margin-right: 10%;
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            display: inline;
-        }
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: inline;
+    }
 
-        .header-links:hover {
-        }
+    .header-links:hover {
+    }
 
-        a:visited {
-            text-decoration: none;
-            text-decoration: none;
-        }
+    a:visited {
+        text-decoration: none;
+        text-decoration: none;
+    }
 
-        .header {
-            background-color: #e60340;
+    .header {
+        background-color: #e60340;
+        color: white;
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+        .header h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 39px;
+            margin: 0;
             color: white;
-            padding: 20px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-            .header h1 {
-                font-family: 'Pacifico', cursive;
-                font-size: 39px;
-                margin: 0;
-                color: white;
-            }
+    .nav-links {
+        display: flex;
+        gap: 35px;
+    }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 19px;
+            transition: color 0.3s ease;
+            font-family: ' Calibri'
+        }
+
+    .nav-links a:hover {
+        color: #ffe3eb;
+    }
+
+    /* Main Section */
+    section {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+        section h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+            text-align: center;
+        }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Teko', sans-serif;
+        font-size: 16px;
+        color: #333;
+        background-color: white;
+        line-height: 1.8;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: white;
+        color: black;
+        font-size: 0.9rem;
+        margin-top: 30px;
+        border-radius: 0 0 8px 8px;
+    }
+
+        footer p {
+            margin: 0;
+            font-family: 'Teko', sans-serif;
+        }
+
+    /* Hamburger Icon */
+    .hamburger {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+        .hamburger {
+            display: block;
+        }
 
         .nav-links {
-            display: flex;
-            gap: 35px;
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: #e60340;
+            margin-top: 10px;
         }
+
+            .nav-links.show {
+                display: flex;
+            }
 
             .nav-links a {
-                color: white;
-                text-decoration: none;
-                font-weight: bold;
-                font-size: 19px;
-                transition: color 0.3s ease;
-                font-family: ' Calibri'
-            }
-
-                .nav-links a:hover {
-                    color: #ffe3eb;
-                }
-
-        /* Main Section */
-        section {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-            section h1 {
-                font-family: 'Pacifico', cursive;
-                font-size: 2.5rem;
-                margin-bottom: 20px;
-                color: #1a1a2e;
+                padding: 1px 0;
                 text-align: center;
+                font-size: 18px;
             }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .hide-button {
+            visibility: hidden;
         }
-
-        body {
-            font-family: 'Teko', sans-serif;
-            font-size: 16px;
-            color: #333;
-            background-color: white;
-            line-height: 1.8;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: white;
-            color: black;
-            font-size: 0.9rem;
-            margin-top: 30px;
-            border-radius: 0 0 8px 8px;
-        }
-
-            footer p {
-                margin: 0;
-                font-family: 'Teko', sans-serif;
-            }
-
-        /* Hamburger Icon */
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 28px;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background-color: #e60340;
-                margin-top: 10px;
-            }
-
-                .nav-links.show {
-                    display: flex;
-                }
-
-                .nav-links a {
-                    padding: 1px 0;
-                    text-align: center;
-                    font-size: 18px;
-                }
-
-            .hide-button {
-                visibility: hidden;
-            }
-        }
+    }
 
 </style>
