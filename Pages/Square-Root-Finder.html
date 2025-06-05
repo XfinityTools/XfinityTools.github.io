@@ -56,13 +56,11 @@
 
 
     <div class="main-content">
-        <h1>Square Root Finder</h1>
-
         <form id="sqrtForm" onsubmit="calculateSquareRoot(event)">
             <label for="numberInput">Enter a non-negative number:</label><br>
             <input type="number" id="numberInput" name="numberInput" step="any" min="0" required><br><br>
 
-            <button type="submit">Calculate Square Root</button>
+            <button type="submit">Calculate</button>
             <button type="button" onclick="clearSqrtFields()">Clear</button>
             <div id="sqrtResult" style="margin-top: 20px; display: none;">
                 <h3>Result</h3>

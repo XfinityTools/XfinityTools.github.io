@@ -249,3 +249,76 @@ function clearSqrtFields() {
     document.getElementById('sqrtOutput').innerText = '';
     document.getElementById('sqrtResult').style.display = 'none';
 }
+
+
+function calculateGcdLcm(event) {
+            event.preventDefault();
+
+            const num1 = parseInt(document.getElementById('number1').value);
+            const num2 = parseInt(document.getElementById('number2').value);
+
+            if (isNaN(num1) || isNaN(num2) || num1 < 1 || num2 < 1) {
+                alert('Please enter valid positive integers.');
+                return;
+            }
+
+            function gcd(a, b) {
+                while (b !== 0) {
+                    const temp = b;
+                    b = a % b;
+                    a = temp;
+                }
+                return a;
+            }
+
+            function lcm(a, b, gcdVal) {
+                return (a * b) / gcdVal;
+            }
+
+            const gcdValue = gcd(num1, num2);
+            const lcmValue = lcm(num1, num2, gcdValue);
+
+            document.getElementById('gcdResult').innerText = `Greatest Common Divisor (GCD): ${gcdValue}`;
+            document.getElementById('lcmResult').innerText = `Least Common Multiple (LCM): ${lcmValue}`;
+            document.getElementById('result').style.display = 'block';
+        }
+
+        function clearFields() {
+            document.getElementById('number1').value = '';
+            document.getElementById('number2').value = '';
+            document.getElementById('gcdResult').innerText = '';
+            document.getElementById('lcmResult').innerText = '';
+            document.getElementById('result').style.display = 'none';
+        }
+
+
+function calculateStandardDeviation(event) {
+    event.preventDefault();
+
+    const input = document.getElementById('dataInput').value.trim();
+    if (!input) {
+        alert('Please enter some numbers.');
+        return;
+    }
+
+    const numbers = input.split(',').map(num => parseFloat(num.trim())).filter(num => !isNaN(num));
+
+    if (numbers.length === 0) {
+        alert('Please enter valid numbers separated by commas.');
+        return;
+    }
+
+    const mean = numbers.reduce((a, b) => a + b, 0) / numbers.length;
+    const squaredDiffs = numbers.map(num => (num - mean) ** 2);
+    const variance = squaredDiffs.reduce((a, b) => a + b, 0) / numbers.length;
+    const stdDev = Math.sqrt(variance);
+
+    document.getElementById('stdDevResult').innerText = `Standard Deviation: ${stdDev.toFixed(6)}`;
+    document.getElementById('result').style.display = 'block';
+}
+
+function clearFields() {
+    document.getElementById('dataInput').value = '';
+    document.getElementById('stdDevResult').innerText = '';
+    document.getElementById('result').style.display = 'none';
+}

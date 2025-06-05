@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="" />
+    <meta name="description" content="Calculate the standard deviation of a list of numbers easily with the Standard Deviation Calculator tool. Useful for statistical analysis and research." />
 
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
@@ -56,23 +56,38 @@
 
 
     <div class="main-content">
+        
+        <form id="stdDevForm" onsubmit="calculateStandardDeviation(event)">
+            <label for="dataInput">Enter numbers separated by commas:</label><br>
+            <textarea id="dataInput" name="dataInput" rows="4" cols="80" placeholder="e.g. 4, 8, 15, 16, 23, 42" required></textarea><br><br>
 
-
-
+            <button type="submit">Calculate</button>
+            <button type="button" onclick="clearFields()">Clear</button>
+            <div id="result" style="margin-top: 20px; display: none;">
+                <h3>Result</h3>
+                <p id="stdDevResult"></p>
+            </div>
+        </form>
     </div>
-
-
-
 
     <div class="container-infobox-left">
         <p>
-            <!--What tool does and features of tool goes here-->
+            The Standard Deviation Calculator computes the standard deviation of a set of numbers. It helps measure the amount of variation or dispersion in a data set, widely used in statistics and research.
         </p>
 
-        <h1><!--Tool Name-->- Instruction Manual</h1>
-        <!--Tool instruction manual goes here-->
+        <h1>Standard Deviation Calculator - Instruction Manual</h1>
 
+        <ul>
+            <li><strong>Step 1:</strong> Enter a list of numbers separated by commas in the input box.</li>
+            <li><strong>Step 2:</strong> Click the “Calculate” button.</li>
+            <li><strong>Step 3:</strong> The standard deviation will be displayed below the form.</li>
+            <li><strong>Clear:</strong> Use the “Clear” button to reset the input and output fields.</li>
+            <li><strong>Tips:</strong> Ensure numbers are separated by commas; spaces are allowed.</li>
+            <li><strong>Troubleshooting:</strong> Enter valid numeric values; avoid empty inputs.</li>
+            <li><strong>Support:</strong> Contact support if you encounter issues.</li>
+        </ul>
     </div>
+
 
     <!-- Footer section starts here -->
     <footer class="PageFooterStyle">
@@ -85,6 +100,6 @@
     </footer>
 </body>
 </html>
-<script src="../Script/.js"></script>
+<script src="../Script/Script1.js"></script>
 
 
