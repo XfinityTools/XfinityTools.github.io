@@ -291,7 +291,6 @@ function calculateGcdLcm(event) {
             document.getElementById('result').style.display = 'none';
         }
 
-
 function calculateStandardDeviation(event) {
     event.preventDefault();
 
@@ -308,12 +307,27 @@ function calculateStandardDeviation(event) {
         return;
     }
 
+    if (numbers.length === 1 && document.querySelector('input[name="stdType"]:checked').value === 'sample') {
+        alert('Sample standard deviation requires at least two numbers.');
+        return;
+    }
+
     const mean = numbers.reduce((a, b) => a + b, 0) / numbers.length;
     const squaredDiffs = numbers.map(num => (num - mean) ** 2);
-    const variance = squaredDiffs.reduce((a, b) => a + b, 0) / numbers.length;
+
+    let variance;
+    const stdType = document.querySelector('input[name="stdType"]:checked').value;
+
+    if (stdType === 'population') {
+        variance = squaredDiffs.reduce((a, b) => a + b, 0) / numbers.length;
+    } else {
+        // sample standard deviation divides by (n-1)
+        variance = squaredDiffs.reduce((a, b) => a + b, 0) / (numbers.length - 1);
+    }
+
     const stdDev = Math.sqrt(variance);
 
-    document.getElementById('stdDevResult').innerText = `Standard Deviation: ${stdDev.toFixed(6)}`;
+    document.getElementById('stdDevResult').innerText = `${stdType.charAt(0).toUpperCase() + stdType.slice(1)} Standard Deviation: ${stdDev.toFixed(6)}`;
     document.getElementById('result').style.display = 'block';
 }
 
@@ -321,4 +335,5 @@ function clearFields() {
     document.getElementById('dataInput').value = '';
     document.getElementById('stdDevResult').innerText = '';
     document.getElementById('result').style.display = 'none';
+    document.querySelector('input[name="stdType"][value="population"]').checked = true;
 }
