@@ -367,3 +367,35 @@ function clearFields() {
     document.getElementById('lossValue').innerText = '';
     document.getElementById('result').style.display = 'none';
 }
+
+function testRegex(event) {
+    event.preventDefault();
+
+    const patternInput = document.getElementById('pattern').value;
+    const testText = document.getElementById('testText').value;
+
+    try {
+        const regex = new RegExp(patternInput, 'g');
+        const matches = [...testText.matchAll(regex)];
+
+        const resultElement = document.getElementById('matchResult');
+        if (matches.length > 0) {
+            resultElement.innerHTML = `Match found:<br><ul>` +
+                matches.map(m => `<li>${m[0]}</li>`).join('') + `</ul>`;
+        } else {
+            resultElement.innerText = 'No match found.';
+        }
+
+        document.getElementById('result').style.display = 'block';
+    } catch (e) {
+        document.getElementById('matchResult').innerText = 'Invalid regular expression.';
+        document.getElementById('result').style.display = 'block';
+    }
+}
+
+function clearRegexFields() {
+    document.getElementById('pattern').value = '';
+    document.getElementById('testText').value = '';
+    document.getElementById('matchResult').innerText = '';
+    document.getElementById('result').style.display = 'none';
+}

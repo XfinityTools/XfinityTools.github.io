@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="" />
+    <meta name="description" content="Use the Regex Tester to check your regular expressions against any input text. Instantly verify matches and debug your patterns with ease." />
 
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
@@ -56,23 +56,43 @@
 
 
     <div class="main-content">
+        <h1>Regex Tester</h1>
 
+        <form id="regexForm" onsubmit="testRegex(event)">
+            <label for="pattern">Regular Expression Pattern:</label><br>
+            <input type="text" id="pattern" name="pattern" placeholder="e.g., ^[a-zA-Z0-9]+$" required><br><br>
 
+            <label for="testText">Text to Test Against:</label><br>
+            <textarea id="testText" name="testText" rows="6" cols="75" required></textarea><br><br>
+
+            <button type="submit">Test</button>
+            <button type="button" onclick="clearRegexFields()">Clear</button>
+            <div id="result" style="margin-top: 20px; display: none;">
+                <h3>Result</h3>
+                <p id="matchResult"></p>
+            </div>
+        </form>
 
     </div>
-
-
-
-
     <div class="container-infobox-left">
         <p>
-            <!--What tool does and features of tool goes here-->
+            The Regex Tester tool allows users to enter a regular expression pattern and test it against a block of text. It helps in verifying whether the pattern correctly matches the intended parts of the input.
         </p>
 
-        <h1><!--Tool Name-->- Instruction Manual</h1>
-        <!--Tool instruction manual goes here-->
+        <h1>Regex Tester - Instruction Manual</h1>
 
+        <ul>
+            <li><strong>Step 1:</strong> Enter your regular expression pattern in the input field (e.g., <code>^[a-z0-9]+$</code>).</li>
+            <li><strong>Step 2:</strong> Type or paste the text you want to test into the text area.</li>
+            <li><strong>Step 3:</strong> Click the “Test” button.</li>
+            <li><strong>Result:</strong> The tool will highlight any matches found in the text, or indicate that no match was found.</li>
+            <li><strong>Clear:</strong> Use the “Clear” button to reset the fields.</li>
+            <li><strong>Tips:</strong> Be mindful of escape characters. Use raw strings for complex patterns. Patterns are evaluated in JavaScript using the global (`g`) flag.</li>
+            <li><strong>Troubleshooting:</strong> If an error appears, double-check your pattern for syntax errors.</li>
+            <li><strong>Support:</strong> For help with regular expressions, consult online regex reference guides or contact support.</li>
+        </ul>
     </div>
+
 
     <!-- Footer section starts here -->
     <footer class="PageFooterStyle">
@@ -85,6 +105,6 @@
     </footer>
 </body>
 </html>
-<script src="../Script/.js"></script>
+<script src="../Script/Script1.js"></script>
 
 
