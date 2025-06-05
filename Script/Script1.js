@@ -108,7 +108,7 @@ function convertRoman(event) {
         }
     }
 
-    document.getElementById('romanOutput').innerText = `${num} in Roman numerals is ${result}`;
+    document.getElementById('romanOutput').innerText = `${result}`;
     document.getElementById('romanResult').style.display = 'block';
 }
 
@@ -142,7 +142,7 @@ function convertToDecimal(event) {
         prev = current;
     }
 
-    document.getElementById('decimalOutput').innerText = `${roman} in decimal is ${total}`;
+    document.getElementById('decimalOutput').innerText = `${total}`;
     document.getElementById('decimalResult').style.display = 'block';
 }
 
@@ -225,4 +225,27 @@ function clearPythagorasFields() {
     document.getElementById('sideB').value = '';
     document.getElementById('hypotenuseOutput').innerText = '';
     document.getElementById('pythagorasResult').style.display = 'none';
+}
+
+
+function calculateSquareRoot(event) {
+    event.preventDefault();
+
+    const num = parseFloat(document.getElementById('numberInput').value);
+
+    if (isNaN(num) || num < 0) {
+        document.getElementById('sqrtOutput').innerText = 'Please enter a valid non-negative number.';
+        document.getElementById('sqrtResult').style.display = 'block';
+        return;
+    }
+
+    const sqrt = Math.sqrt(num);
+    document.getElementById('sqrtOutput').innerText = `${sqrt.toFixed(6)}`;
+    document.getElementById('sqrtResult').style.display = 'block';
+}
+
+function clearSqrtFields() {
+    document.getElementById('numberInput').value = '';
+    document.getElementById('sqrtOutput').innerText = '';
+    document.getElementById('sqrtResult').style.display = 'none';
 }

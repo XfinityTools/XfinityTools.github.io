@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="" />
+    <meta name="description" content="Quickly find the square root of any non-negative number using the Square Root Finder tool. Simple and accurate calculator for students and professionals." />
 
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
@@ -56,23 +56,39 @@
 
 
     <div class="main-content">
+        <h1>Square Root Finder</h1>
 
+        <form id="sqrtForm" onsubmit="calculateSquareRoot(event)">
+            <label for="numberInput">Enter a non-negative number:</label><br>
+            <input type="number" id="numberInput" name="numberInput" step="any" min="0" required><br><br>
 
+            <button type="submit">Calculate Square Root</button>
+            <button type="button" onclick="clearSqrtFields()">Clear</button>
+            <div id="sqrtResult" style="margin-top: 20px; display: none;">
+                <h3>Result</h3>
+                <p id="sqrtOutput"></p>
+            </div>
+        </form>
 
     </div>
-
-
-
-
     <div class="container-infobox-left">
         <p>
-            <!--What tool does and features of tool goes here-->
+            The Square Root Finder calculates the square root of any non-negative number entered. It is useful for students, engineers, and professionals who need quick and accurate square root calculations.
         </p>
 
-        <h1><!--Tool Name-->- Instruction Manual</h1>
-        <!--Tool instruction manual goes here-->
+        <h1>Square Root Finder - Instruction Manual</h1>
 
+        <ul>
+            <li><strong>Step 1:</strong> Enter a non-negative number into the input field.</li>
+            <li><strong>Step 2:</strong> Click the Calculate Square Root button.</li>
+            <li><strong>Step 3:</strong> View the calculated square root displayed below the form.</li>
+            <li><strong>Clear:</strong> Use the Clear button to reset the input and output.</li>
+            <li><strong>Tips:</strong> Only non-negative numbers are accepted; decimal values are allowed.</li>
+            <li><strong>Troubleshooting:</strong> Ensure the input is valid and not negative.</li>
+            <li><strong>Support:</strong> Contact technical support for assistance.</li>
+        </ul>
     </div>
+
 
     <!-- Footer section starts here -->
     <footer class="PageFooterStyle">
@@ -85,6 +101,6 @@
     </footer>
 </body>
 </html>
-<script src="../Script/.js"></script>
+<script src="../Script/Script1.js"></script>
 
 
