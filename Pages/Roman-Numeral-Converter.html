@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="" />
+    <meta name="description" content="Convert numbers from 1 to 3999 into Roman numerals with this fast and easy Roman Numeral Converter tool." />
 
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
@@ -56,35 +56,55 @@
 
 
     <div class="main-content">
+       
+
+        <form id="romanForm" onsubmit="convertRoman(event)">
+            <label for="number">Enter a number (1 to 3999):</label><br>
+            <input type="number" id="number" name="number" min="1" max="3999" required><br><br>
+
+            <button type="submit">Convert</button>
+            <button type="button" onclick="clearRomanFields()">Clear</button>
+
+            <div id="romanResult" style="margin-top: 20px; display: none;">
+                <h3>Roman Numeral</h3>
+                <p id="romanOutput"></p>
+            </div>
+        </form>
+
+     </div>   
 
 
 
-    </div>
+        <div class="container-infobox-left">
+            <p>
+                The Roman Numeral Converter is a simple utility that allows users to convert any number from 1 to 3999 into its Roman numeral equivalent. This is ideal for educational purposes, historical references, and formatting stylized numbering systems.
+            </p>
 
+            <h1>Roman Numeral Converter - Instruction Manual</h1>
 
-
-
-    <div class="container-infobox-left">
-        <p>
-            <!--What tool does and features of tool goes here-->
-        </p>
-
-        <h1><!--Tool Name-->- Instruction Manual</h1>
-        <!--Tool instruction manual goes here-->
-
-    </div>
-
-    <!-- Footer section starts here -->
-    <footer class="PageFooterStyle">
-        <div class="footer-container">
-            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
-            <script>
-                document.getElementById('currentYear').textContent = new Date().getFullYear();
-            </script>
+            <ul>
+                <li><strong>Step 1:</strong> Enter a number between 1 and 3999 into the input field.</li>
+                <li><strong>Step 2:</strong> Click the Convert button to generate the Roman numeral equivalent.</li>
+                <li><strong>Step 3:</strong> View the result below the form. The result will clearly display both the original number and its Roman representation.</li>
+                <li><strong>Clear:</strong> Click the Clear button to reset the form and result display.</li>
+                <li><strong>Tips:</strong> Use this converter to learn Roman numeral patterns or format chapter headings, event years, and more.</li>
+                <li><strong>Troubleshooting:</strong> Ensure the number entered is within the allowed range (1 to 3999). If it is not, an appropriate message will be displayed.</li>
+                <li><strong>Support:</strong> If you experience issues with the converter, please contact technical support or your website administrator.</li>
+            </ul>
         </div>
-    </footer>
+
+
+        <!-- Footer section starts here -->
+        <footer class="PageFooterStyle">
+            <div class="footer-container">
+                <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+                <script>
+                    document.getElementById('currentYear').textContent = new Date().getFullYear();
+                </script>
+            </div>
+        </footer>
 </body>
 </html>
-<script src="../Script/.js"></script>
+<script src="../Script/Script1.js"></script>
 
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
     <script src="../Javascript/JScript/Header-Drop.js"></script>
-    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Factorial-Calculator">
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Roman-To-Decimal">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
     <script>
@@ -23,18 +23,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="Calculate the factorial of any non-negative integer quickly with this simple and efficient Factorial Calculator tool." />
+    <meta name="description" content="Convert Roman numerals into decimal numbers quickly and accurately with this easy-to-use Roman to Decimal Converter tool." />
 
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
     <link href="../Css/StyleSheet8.css" rel="stylesheet" />
     <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
-    <title>Free Factorial Calculator</title>
+    <title>Free Roman To Decimal Converter</title>
 </head>
 <body>
     <div class="text-metrics-header">
         <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
-        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">Factorial Calculator</p>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">Roman To Decimal Converter</p>
         <div class="header mobile-friendly">
             <a href="/">Home</a>
             <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
@@ -54,50 +54,44 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
+
     <div class="main-content">
-        
+       
 
-        <form id="factorialForm" onsubmit="calculateFactorial(event)">
-            <label for="numberInput">Enter a non-negative integer:</label><br>
-            <input type="number" id="numberInput" name="numberInput" min="0" required><br><br>
+        <form id="decimalForm" onsubmit="convertToDecimal(event)">
+            <label for="romanInput">Enter a Roman Numeral (e.g., XIV):</label><br>
+            <input type="text" id="romanInput" name="romanInput" pattern="^[MDCLXVI]+$" required><br><br>
 
-            <button type="submit">Calculate</button>
-            <button type="button" onclick="clearFactorialFields()">Clear</button>
+            <button type="submit">Convert</button>
+            <button type="button" onclick="clearDecimalFields()">Clear</button>
 
-            <div id="factorialResult" style="margin-top: 20px; display: none;">
-                <h3>Factorial Result</h3>
-                <p id="factorialOutput"></p>
-                <p id="factorialSteps" style="white-space: pre-wrap; font-family: monospace;"></p>
+            <div id="decimalResult" style="margin-top: 20px; display: none;">
+                <h3>Decimal Value</h3>
+                <p id="decimalOutput"></p>
             </div>
-
-            <button style="border-radius:0;" type="button" onclick="printFactorialResult()">Save as PDF</button>
-
         </form>
 
        
-
-
 
     </div>
 
     <div class="container-infobox-left">
         <p>
-            The Factorial Calculator computes the factorial of a non-negative integer, which is the product of all positive integers less than or equal to that number. This tool is useful for students, teachers, programmers, and anyone working with permutations, combinations, or mathematical functions.
+            The Roman to Decimal Converter allows users to convert Roman numerals into their standard decimal (Arabic numeral) equivalents. This tool is ideal for students, educators, historians, and anyone interested in number systems or classical references.
         </p>
 
-        <h1>Factorial Calculator - Instruction Manual</h1>
+        <h1>Roman to Decimal Converter - Instruction Manual</h1>
 
         <ul>
-            <li><strong>Step 1:</strong> Enter a non-negative integer into the input field.</li>
-            <li><strong>Step 2:</strong> Click the Calculate button to compute the factorial of the entered number.</li>
-            <li><strong>Step 3:</strong> View the result displayed below the form.</li>
-            <li><strong>Clear:</strong> Use the Clear button to reset the form and result area.</li>
-            <li><strong>Tips:</strong> Factorials grow rapidly; avoid large inputs as they may cause performance issues.</li>
-            <li><strong>Troubleshooting:</strong> Only non-negative integers are accepted. Decimals and negative values will be rejected.</li>
-            <li><strong>Support:</strong> For technical issues, contact your website administrator or developer.</li>
+            <li><strong>Step 1:</strong> Enter a valid Roman numeral in uppercase (e.g., XIV, MMXXV) into the input field.</li>
+            <li><strong>Step 2:</strong> Click the Convert button to process the Roman numeral.</li>
+            <li><strong>Step 3:</strong> View the equivalent decimal value displayed below the form.</li>
+            <li><strong>Clear:</strong> Use the Clear button to reset the form and remove the previous result.</li>
+            <li><strong>Tips:</strong> Roman numerals are case-insensitive, but the tool expects them in uppercase. Invalid characters will result in an error.</li>
+            <li><strong>Troubleshooting:</strong> Only input valid Roman numerals using the letters I, V, X, L, C, D, and M. Avoid spaces or punctuation.</li>
+            <li><strong>Support:</strong> Contact your website administrator or technical support for any issues with the converter.</li>
         </ul>
     </div>
-
 
     <!-- Footer section starts here -->
     <footer class="PageFooterStyle">

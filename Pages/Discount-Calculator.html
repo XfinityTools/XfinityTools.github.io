@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="" />
+    <meta name="description" content="Use the Discount Calculator to compute original price, discount percentage, or final price. Enter any two values, and the tool will calculate the third instantly." />
 
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
@@ -54,37 +54,66 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-
     <div class="main-content">
+        
 
+        <form id="discountForm" onsubmit="calculateDiscount(event)">
+            <label for="originalPrice">Original Price:</label><br>
+            <input type="number" id="originalPrice" step="0.01" min="0"><br><br>
 
+            <label for="discountPercent">Discount Percentage (%):</label><br>
+            <input type="number" id="discountPercent" step="0.01" min="0" max="100"><br><br>
 
-    </div>
+            <label for="finalPrice">Final Price:</label><br>
+            <input type="number" id="finalPrice" step="0.01" min="0"><br><br>
 
+            <button type="submit">Calculate</button>
+            <button type="button" onclick="clearDiscountFields()">Clear</button>
 
+            <div id="result" style="margin-top: 20px; display: none;">
+                <h3>Calculation Result</h3>
+                <p id="resultText"></p>
+            </div>
+        </form>
 
-
-    <div class="container-infobox-left">
-        <p>
-            <!--What tool does and features of tool goes here-->
-        </p>
-
-        <h1><!--Tool Name-->- Instruction Manual</h1>
-        <!--Tool instruction manual goes here-->
-
-    </div>
-
-    <!-- Footer section starts here -->
-    <footer class="PageFooterStyle">
-        <div class="footer-container">
-            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
-            <script>
-                document.getElementById('currentYear').textContent = new Date().getFullYear();
-            </script>
         </div>
-    </footer>
+
+        <div class="container-infobox-left">
+            <p>
+                The Discount Calculator is a simple and flexible tool designed to calculate any one of three key values: the original price, the discount percentage, or the final price after discount. Users may enter any two of the three values, and the tool will compute the third automatically. It supports both forward and reverse discount calculations and displays results with clear precision.
+            </p>
+
+            <h1>Discount Calculator - Instruction Manual</h1>
+
+            <ul>
+                <li>
+                    <strong>Step 1:</strong> Enter any two of the following values:
+                    <ul>
+                        <li>Original Price</li>
+                        <li>Discount Percentage</li>
+                        <li>Final Price</li>
+                    </ul>
+                </li>
+                <li><strong>Step 2:</strong> Click the Calculate button. The tool will determine the missing value.</li>
+                <li><strong>Step 3:</strong> View the result below the form. It will show the calculated amount and label.</li>
+                <li><strong>Clear Function:</strong> Use the Clear button to reset all fields and results.</li>
+                <li><strong>Tips:</strong> Ensure only two fields are filled. Leaving more or fewer will result in an error message.</li>
+                <li><strong>Troubleshooting:</strong> If you receive a message about incomplete or incorrect input, check that only two fields are filled in and the values are valid numbers.</li>
+                <li><strong>Support:</strong> For tool-related issues, please contact your site administrator or support team.</li>
+            </ul>
+        </div>
+
+        <!-- Footer section starts here -->
+        <footer class="PageFooterStyle">
+            <div class="footer-container">
+                <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+                <script>
+                    document.getElementById('currentYear').textContent = new Date().getFullYear();
+                </script>
+            </div>
+        </footer>
 </body>
 </html>
-<script src="../Script/.js"></script>
+<script src="../Script/Script1.js"></script>
 
 

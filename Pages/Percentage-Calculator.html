@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <script src="../Javascript/JScript/Header-Drop.js"></script>
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/Percentage-Calculator">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW6PG5PVGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MW6PG5PVGY');
+    </script>
+    <meta name="geo.region" content="JM">
+    <meta name="geo.placename" content="Kingston, Jamaica">
+    <meta http-equiv="content-language" content="en-us">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+
+    <meta name="rating" content="general">
+    <meta name="author" content="Diamond A Buchanan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="Easily calculate percentages with this flexible tool. Enter any two values�part, whole, or percentage�and find the third instantly." />
+
+    <link href="../Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="../Css/StyleSheet8.css" rel="stylesheet" />
+    <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
+    <title>Free Percentage Calculator</title>
+</head>
+<body>
+    <div class="text-metrics-header">
+        <a href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 95%; font-family: 'Franklin Gothic Medium';">Percentage Calculator</p>
+        <div class="header mobile-friendly">
+            <a href="/">Home</a>
+            <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
+            <a href="../Pages/Dashboards/ToolList">Tool List</a>
+            <div id="dropdown-container"></div>
+        </div>
+    </div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
+            crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"
+         data-ad-client="ca-pub-6760354428989736"
+         data-ad-slot="7235524973"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+
+    <div class="main-content">
+
+
+        <form id="percentageForm" onsubmit="calculatePercentage(event)">
+            <label for="part">Part Value:</label><br>
+            <input type="number" id="part" step="0.01" min="0"><br><br>
+
+            <label for="whole">Whole Value:</label><br>
+            <input type="number" id="whole" step="0.01" min="0"><br><br>
+
+            <label for="percentage">Percentage (%):</label><br>
+            <input type="number" id="percentage" step="0.01" min="0"><br><br>
+
+            <button type="submit">Calculate</button>
+            <button type="button" onclick="clearPercentageFields()">Clear</button>
+
+            <div id="percentageResult" style="margin-top: 20px; display: none;">
+                <h3>Result</h3>
+                <p id="percentageResultText"></p>
+            </div>
+        </form>
+
+    </div>
+
+
+    <div class="container-infobox-left">
+        <p>
+            The Percentage Calculator allows users to compute the percentage of a number, find what number a percentage represents, or determine what percentage one number is of another. Users can enter any two values and calculate the third, making it versatile for both forward and reverse percentage calculations.
+        </p>
+
+        <h1>Percentage Calculator - Instruction Manual</h1>
+
+        <ul>
+            <li>
+                <strong>Step 1:</strong> Enter any two of the following values:
+                <ul>
+                    <li>Part Value</li>
+                    <li>Whole Value</li>
+                    <li>Percentage</li>
+                </ul>
+            </li>
+            <li><strong>Step 2:</strong> Click the Calculate button to compute the missing value.</li>
+            <li><strong>Step 3:</strong> Review the result below the form, which clearly explains the relationship.</li>
+            <li><strong>Clear:</strong> Use the Clear button to reset all fields and results.</li>
+            <li><strong>Tips:</strong> Ensure only two fields are filled in. If all three or fewer than two are entered, the calculation will not proceed.</li>
+            <li><strong>Troubleshooting:</strong> Recheck entries for accuracy. Enter valid positive numbers and ensure that exactly two fields are completed.</li>
+            <li><strong>Support:</strong> Contact the site administrator or support desk for any issues encountered with the tool.</li>
+        </ul>
+    </div>
+
+
+    <!-- Footer section starts here -->
+    <footer class="PageFooterStyle">
+        <div class="footer-container">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="../Script/Script1.js"></script>
+
+
