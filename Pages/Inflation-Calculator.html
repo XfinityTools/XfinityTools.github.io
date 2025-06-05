@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="" />
+    <meta name="description" content="Calculate the future value of money considering inflation with the Inflation Calculator. Enter initial amount, inflation rate, and years to estimate inflation impact." />
 
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
@@ -56,23 +56,52 @@
 
 
     <div class="main-content">
+        <h1>Inflation Calculator</h1>
+
+        <form id="inflationForm" onsubmit="calculateInflation(event)">
+            <label for="initialAmount">Initial Amount (in your currency):</label><br>
+            <input type="number" id="initialAmount" name="initialAmount" step="0.01" min="0" required><br><br>
+
+            <label for="inflationRate">Annual Inflation Rate (%):</label><br>
+            <input type="number" id="inflationRate" name="inflationRate" step="0.01" min="0" required><br><br>
+
+            <label for="years">Number of Years:</label><br>
+            <input type="number" id="years" name="years" step="1" min="0" required><br><br>
+
+            <button type="submit">Calculate</button>
+            <button type="button" onclick="clearFields()">Clear</button>
+
+            <div id="result" style="margin-top: 20px; display: none;">
+                <h3>Result</h3>
+                <p id="inflatedValue"></p>
+                <p id="lossValue"></p>
+            </div>
+        </form>
+
 
 
 
     </div>
-
-
-
-
     <div class="container-infobox-left">
         <p>
-            <!--What tool does and features of tool goes here-->
+            The Inflation Calculator estimates the future value of an amount of money after accounting for inflation over a number of years. This helps you understand how much prices or costs may increase over time due to inflation.
         </p>
 
-        <h1><!--Tool Name-->- Instruction Manual</h1>
-        <!--Tool instruction manual goes here-->
+        <h1>Inflation Calculator - Instruction Manual</h1>
 
+        <ul>
+            <li><strong>Step 1:</strong> Enter the initial amount of money you want to evaluate.</li>
+            <li><strong>Step 2:</strong> Input the annual inflation rate as a percentage.</li>
+            <li><strong>Step 3:</strong> Enter the number of years over which inflation will be applied.</li>
+            <li><strong>Step 4:</strong> Click the “Calculate” button.</li>
+            <li><strong>Result:</strong> The calculator will display the estimated value of the initial amount after inflation and the increase due to inflation.</li>
+            <li><strong>Clear:</strong> Use the “Clear” button to reset the form fields and results.</li>
+            <li><strong>Tips:</strong> Use actual inflation rates relevant to your country for accurate estimates.</li>
+            <li><strong>Troubleshooting:</strong> Ensure all inputs are non-negative numbers.</li>
+            <li><strong>Support:</strong> Contact support if you experience any problems or need assistance.</li>
+        </ul>
     </div>
+
 
     <!-- Footer section starts here -->
     <footer class="PageFooterStyle">
@@ -85,6 +114,6 @@
     </footer>
 </body>
 </html>
-<script src="../Script/.js"></script>
+<script src="../Script/Script1.js"></script>
 
 

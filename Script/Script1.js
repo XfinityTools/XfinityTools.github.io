@@ -337,3 +337,33 @@ function clearFields() {
     document.getElementById('result').style.display = 'none';
     document.querySelector('input[name="stdType"][value="population"]').checked = true;
 }
+
+function calculateInflation(event) {
+    event.preventDefault();
+
+    const initialAmount = parseFloat(document.getElementById('initialAmount').value);
+    const inflationRate = parseFloat(document.getElementById('inflationRate').value) / 100;
+    const years = parseInt(document.getElementById('years').value);
+
+    if (initialAmount < 0 || inflationRate < 0 || years < 0) {
+        alert('Please enter non-negative values.');
+        return;
+    }
+
+    // Calculate value after inflation
+    const inflatedValue = initialAmount * Math.pow(1 + inflationRate, years);
+    const lossInValue = inflatedValue - initialAmount;
+
+    document.getElementById('inflatedValue').innerText = `Value after ${years} year(s) considering inflation: ${inflatedValue.toFixed(2)}`;
+    document.getElementById('lossValue').innerText = `Increase due to inflation: ${lossInValue.toFixed(2)}`;
+    document.getElementById('result').style.display = 'block';
+}
+
+function clearFields() {
+    document.getElementById('initialAmount').value = '';
+    document.getElementById('inflationRate').value = '';
+    document.getElementById('years').value = '';
+    document.getElementById('inflatedValue').innerText = '';
+    document.getElementById('lossValue').innerText = '';
+    document.getElementById('result').style.display = 'none';
+}
