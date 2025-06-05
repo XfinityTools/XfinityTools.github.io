@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="" />
+    <meta name="description" content="Calculate the length of the hypotenuse in a right triangle quickly using the Pythagorean Theorem Calculator by entering the lengths of the other two sides." />
 
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
@@ -56,23 +56,44 @@
 
 
     <div class="main-content">
+        <h1>Pythagorean Theorem Calculator</h1>
 
+        <form id="pythagorasForm" onsubmit="calculateHypotenuse(event)">
+            <label for="sideA">Enter length of side A:</label><br>
+            <input type="number" id="sideA" name="sideA" step="any" min="0" required><br><br>
 
+            <label for="sideB">Enter length of side B:</label><br>
+            <input type="number" id="sideB" name="sideB" step="any" min="0" required><br><br>
 
+            <button type="submit">Calculate Hypotenuse</button>
+            <button type="button" onclick="clearPythagorasFields()">Clear</button>
+
+            <div id="pythagorasResult" style="margin-top: 20px; display: none;">
+                <h3>Result</h3>
+                <p id="hypotenuseOutput"></p>
+            </div>
+        </form>
     </div>
-
-
 
 
     <div class="container-infobox-left">
         <p>
-            <!--What tool does and features of tool goes here-->
+            The Pythagorean Theorem Calculator helps determine the length of the hypotenuse (side C) in a right-angled triangle when the lengths of the other two sides (A and B) are known. This tool is useful for students, engineers, architects, and anyone working with right triangles.
         </p>
 
-        <h1><!--Tool Name-->- Instruction Manual</h1>
-        <!--Tool instruction manual goes here-->
+        <h1>Pythagorean Theorem Calculator - Instruction Manual</h1>
 
+        <ul>
+            <li><strong>Step 1:</strong> Enter the lengths of side A and side B (the two shorter sides) in the input fields.</li>
+            <li><strong>Step 2:</strong> Click the Calculate Hypotenuse button to find the length of side C (the hypotenuse).</li>
+            <li><strong>Step 3:</strong> View the calculated length displayed below the form.</li>
+            <li><strong>Clear:</strong> Use the Clear button to reset all inputs and results.</li>
+            <li><strong>Tips:</strong> Only positive numbers are accepted. Decimal values are allowed for precision.</li>
+            <li><strong>Troubleshooting:</strong> Ensure inputs are not empty and are valid positive numbers.</li>
+            <li><strong>Support:</strong> For assistance, contact your technical support or website administrator.</li>
+        </ul>
     </div>
+
 
     <!-- Footer section starts here -->
     <footer class="PageFooterStyle">
@@ -85,6 +106,6 @@
     </footer>
 </body>
 </html>
-<script src="../Script/.js"></script>
+<script src="../Script/Script1.js"></script>
 
 

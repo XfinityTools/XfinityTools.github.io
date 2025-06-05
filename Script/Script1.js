@@ -200,3 +200,29 @@ function printFactorialResult() {
     printWindow.focus();
     printWindow.print();
 }
+
+
+function calculateHypotenuse(event) {
+    event.preventDefault();
+
+    const sideA = parseFloat(document.getElementById('sideA').value);
+    const sideB = parseFloat(document.getElementById('sideB').value);
+
+    if (isNaN(sideA) || isNaN(sideB) || sideA < 0 || sideB < 0) {
+        document.getElementById('hypotenuseOutput').innerText = 'Please enter valid positive numbers for both sides.';
+        document.getElementById('pythagorasResult').style.display = 'block';
+        return;
+    }
+
+    const hypotenuse = Math.sqrt(sideA * sideA + sideB * sideB);
+    document.getElementById('hypotenuseOutput').innerText =
+        `The length of the hypotenuse (side C) is: ${hypotenuse.toFixed(4)}`;
+    document.getElementById('pythagorasResult').style.display = 'block';
+}
+
+function clearPythagorasFields() {
+    document.getElementById('sideA').value = '';
+    document.getElementById('sideB').value = '';
+    document.getElementById('hypotenuseOutput').innerText = '';
+    document.getElementById('pythagorasResult').style.display = 'none';
+}
