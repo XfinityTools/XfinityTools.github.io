@@ -3,7 +3,8 @@ function calculateBusinessDays(event) {
 
     const start = new Date(document.getElementById('startDate').value);
     const end = new Date(document.getElementById('endDate').value);
-    let count = 0;
+    let businessCount = 0;
+    let weekendCount = 0;
 
     if (end < start) {
         document.getElementById('result').innerText = "End date must be after start date.";
@@ -14,14 +15,17 @@ function calculateBusinessDays(event) {
 
     while (current <= end) {
         const day = current.getDay();
-        if (day !== 0 && day !== 6) {
-            count++;
+        if (day === 0 || day === 6) {
+            weekendCount++;
+        } else {
+            businessCount++;
         }
         current.setDate(current.getDate() + 1);
     }
 
-    document.getElementById('result').innerText = `Business Days: ${count}`;
-  }
+    document.getElementById('result').innerText =
+        `Business Days: ${businessCount}\nWeekend Days: ${weekendCount}`;
+}
 
 
 function encodeBase64(event) {
