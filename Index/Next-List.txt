@@ -12,9 +12,7 @@ https://xfinitytools.github.io/Pages/Car-Loan-Calculator
 https://xfinitytools.github.io/Pages/Checksum-Generator
 https://xfinitytools.github.io/Pages/Compound-Interest-Calculator
 https://xfinitytools.github.io/Pages/CSV-to-Excel
-
 https://xfinitytools.github.io/Pages/CSV-To-Json
-
 https://xfinitytools.github.io/Pages/Date-Difference-Calculator
 https://xfinitytools.github.io/Pages/Debt-to-Income
 https://xfinitytools.github.io/Pages/Excel-Metadata-Viewer
@@ -23,13 +21,9 @@ https://xfinitytools.github.io/Pages/EXIF-Data-Extractor
 https://xfinitytools.github.io/Pages/File-Compression
 https://xfinitytools.github.io/Pages/Gas-Mileage-Converter
 https://xfinitytools.github.io/Pages/HashingGenerator
-
 https://xfinitytools.github.io/Pages/Image-Merger
 https://xfinitytools.github.io/Pages/Salary-Calculator-JM
 https://xfinitytools.github.io/Pages/JSON-To-CSV
-
-
-
 https://xfinitytools.github.io/Pages/Key-Generator
 https://xfinitytools.github.io/Pages/Mortgage-Calculator
 https://xfinitytools.github.io/Pages/Multiple-Image-PDF
@@ -45,7 +39,6 @@ https://xfinitytools.github.io/Pages/Slug-Generator
 https://xfinitytools.github.io/Pages/Text-Diff-Checker
 https://xfinitytools.github.io/Pages/TextFile-Merger
 https://xfinitytools.github.io/Pages/Text-Metrics-Generator
-
 https://xfinitytools.github.io/Pages/TexttoCSV
 https://xfinitytools.github.io/Pages/Text-to-Excel
 https://xfinitytools.github.io/Pages/Text-To-JSON
@@ -75,6 +68,6 @@ https://xfinitytools.github.io/Pages/Pythagorean-Theorem-Calculator
 https://xfinitytools.github.io/Pages/Square-Root-Finder
 https://xfinitytools.github.io/Pages/GCD-LCM-Calculator
 https://xfinitytools.github.io/Pages/Standard-Deviation-Calculator
-
-
+https://xfinitytools.github.io/Pages/Inflation-Calculator
+https://xfinitytools.github.io/Pages/Regex-Tester
 https://xfinitytools.github.io/Pages/Roman-To-Decimal
