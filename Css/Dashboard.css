@@ -232,13 +232,13 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column;
-        text-align: center;
+/*        flex-direction: column;
+        text-align: center;*/
     }
 
         .header h1 {
             font-size: 20px;
-            margin-bottom: 10px;
+/*            margin-bottom: 10px;*/
         }
 
     section {
