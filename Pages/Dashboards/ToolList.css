@@ -120,7 +120,7 @@ ol {
 
 @media (max-width: 768px) {
     .content-section {
-        width: 70%;
+        width: 75%;
         padding: 30px;
         border-left: 3px solid #e60340;
     }
