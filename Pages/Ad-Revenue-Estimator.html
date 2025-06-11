@@ -15,7 +15,7 @@
     <script src="../Javascript/JScript/Header-Drop.js"></script>
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/Ad-Revenue-Estimator">
-
+    
     <meta name="description" content="Estimate your online ad earnings with the Ad Revenue Estimator. Enter impression RPM, impressions, CTR, and CPC to calculate potential ad revenue in your chosen currency.">
     <meta name="geo.region" content="JM">
     <meta name="geo.placename" content="Kingston, Jamaica">
@@ -25,11 +25,9 @@
     <meta name="rating" content="general">
     <meta name="author" content="Diamond A Buchanan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
 
     <link href="../Css/StyleSheet1.css" rel="stylesheet" />
-
     <link href="../Css/StyleSheet7.css" rel="stylesheet" />
     <link href="../Css/StyleSheet2.css" rel="stylesheet" />
     <link href="../Css/Mobile-Friendly.css" rel="stylesheet" />
@@ -47,7 +45,20 @@
             <a href="/">Home</a>
             <a href="../Pages/Dashboards/Dashboard">Dashboard</a>
             <a href="../Pages/Dashboards/ToolList">Tool List</a>
-            <div id="dropdown-container"></div>
+            <select class="H-Dropdown"  onchange="redirectToTool(this)">
+                <option  value="">More Tools</option>
+                <option class="Dropdown-black" value="Base-Converter">Base Converter</option>
+                <option class="Dropdown-black" value="Car-Loan-Calculator">Car Loan Calculator</option>
+                <option class="Dropdown-black" value="CSV-To-Json">CSV to Json</option>
+                <option class="Dropdown-black" value="CSV-to-Excel">CSV To Excel</option>
+                <option class="Dropdown-black" value="EXIF-Data-Extractor">EXIF Data Extractor</option>
+                <option class="Dropdown-black" value="Key-Generator">Key Generator</option>
+                <option class="Dropdown-black" value="MergePDF">PDF Merger</option>
+                <option class="Dropdown-black" value="Text-To-JSON">Text to Json</option>
+                <option class="Dropdown-black" value="TXT-to-PDF">Text to PDF</option>
+                <option class="Dropdown-black" value="WebP-Png">Webp to PNG</option>
+                <option class="Dropdown-black" value="XML-to-JSON">XML to Json</option>
+            </select>
 
         </div>
     </div>

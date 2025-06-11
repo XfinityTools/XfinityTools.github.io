@@ -51,3 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
     div.appendChild(select);
     container.appendChild(div);
 });
+
+
+function redirectToTool(select) {
+    const url = select.value;
+    if (url) {
+        window.location.href = url;
+    }
+}
