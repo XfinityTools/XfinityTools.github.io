@@ -48,35 +48,35 @@
     const totalPayment = monthlyPayment * months * (carCondition === "used" ? 1 : inflationFactor);
     const totalInterest = totalPayment - adjustedPrincipal;
 
-    let resultHTML = `
-    <strong>Price of Car:</strong> $${formatNumber(principal)}<br>
-        <strong>Downpayment:</strong> $${formatNumber(downpayment)}<br>
-            <strong>Year of Vehicle:</strong> ${vehicleYear || 'N/A'}<br>
-                <strong>Monthly Payment:</strong> $${formatNumber(monthlyPayment)}<br>
-                    <strong>Total Payment:</strong> $${formatNumber(totalPayment)}<br>
-                        <strong>Total Interest Paid:</strong> $${formatNumber(totalInterest)}<br>
-                            <strong>Interest Rate:</strong> ${interestRate}%<br>
-                                `;
+let resultHTML = `
+<strong>Price of Car:</strong> $${formatNumber(principal)}<br>
+<strong>Downpayment:</strong> $${formatNumber(downpayment)}<br>
+<strong>Year of Vehicle:</strong> ${vehicleYear || 'N/A'}<br>
+<span style="color: green;"><strong>Monthly Payment:</strong> $${formatNumber(monthlyPayment)}</span><br>
+<strong>Total Payment:</strong> $${formatNumber(totalPayment)}<br>
+<strong>Total Interest Paid:</strong> $${formatNumber(totalInterest)}<br>
+<strong>Interest Rate:</strong> ${interestRate}%<br>
+`;
 
-                                if (!isNaN(inflationRate)) {
-                                    resultHTML += `<strong>Inflation Rate:</strong> ${inflationRate}%<br>`;
-            }
+if (!isNaN(inflationRate)) {
+resultHTML += `<strong>Inflation Rate:</strong> ${inflationRate}%<br>`;
+}
 
-                                document.getElementById("results").innerHTML = resultHTML;
+document.getElementById("results").innerHTML = resultHTML;
 
-                                lastResults = {
-                                    carPrice: formatNumber(principal),
-                                downpayment: formatNumber(downpayment),
-                                monthly: formatNumber(monthlyPayment),
-                                total: formatNumber(totalPayment),
-                                interest: formatNumber(totalInterest),
-                                interestRate: interestRate,
-                                inflation: isNaN(inflationRate) ? null : inflationRate,
-                                condition: carCondition,
-                                vehicleYear: vehicleYear || "N/A",
-                                loanYears: loanYears
-            };
-        }
+lastResults = {
+carPrice: formatNumber(principal),
+downpayment: formatNumber(downpayment),
+monthly: formatNumber(monthlyPayment),
+total: formatNumber(totalPayment),
+interest: formatNumber(totalInterest),
+interestRate: interestRate,
+inflation: isNaN(inflationRate) ? null : inflationRate,
+condition: carCondition,
+vehicleYear: vehicleYear || "N/A",
+loanYears: loanYears
+};
+}
 
                                 function downloadFile(type) {
             const filename = document.getElementById("filename").value || "loan_result";
