@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Pages"
+    "\\Pages",
+    "\\Pages\\Dashboards",
+    "\\Wikis"
   ],
-  "SelectedNode": "\\Pages\\Salary-Calculator-JM.html",
+  "SelectedNode": "\\Pages\\Dashboards\\Dashboard.html",
   "PreviewInSolutionExplorer": false
 }
