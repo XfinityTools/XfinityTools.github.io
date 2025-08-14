@@ -3,168 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-Reverser.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Text-Reverser.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-Diff-Checker.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Text-Diff-Checker.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-Metrics-Generator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Text-Metrics-Generator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-to-Excel.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Text-to-Excel.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-To-JSON.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Text-To-JSON.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-to-XML.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Text-to-XML.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\TextFile-Merger.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\TextFile-Merger.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Regex-Tester.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Regex-Tester.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\TexttoCSV.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\TexttoCSV.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\footer-test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\footer-test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\YAML-to-JSON.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\YAML-to-JSON.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Template.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Template.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Css\\Mobile-Friendly.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Css\\Mobile-Friendly.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Index\\commit.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Index\\commit.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Roman-Numeral-Converter.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Roman-Numeral-Converter.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Pythagorean-Theorem-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Pythagorean-Theorem-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Png-Webp.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Png-Webp.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Png-Jpeg.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Png-Jpeg.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Percentage-Change-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Percentage-Change-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Percentage-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Percentage-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\PDF-WaterMark.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\PDF-WaterMark.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Multiple-Image-PDF.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Multiple-Image-PDF.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Mortgage-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Mortgage-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\MergePDF.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\MergePDF.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Css\\Instruction.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Css\\Instruction.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Key-Generator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Key-Generator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\JSON-To-CSV.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\JSON-To-CSV.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Javascript\\JS\\JavaS1.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Javascript\\JS\\JavaS1.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Inflation-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Inflation-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Javascript\\JScript\\updateDateTime.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Javascript\\JScript\\updateDateTime.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Image-Merger.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Image-Merger.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\HashingGenerator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\HashingGenerator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\GCD-LCM-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\GCD-LCM-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Index\\commit.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Index\\commit.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Gas-Mileage-Converter.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Gas-Mileage-Converter.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\File-Compression.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\File-Compression.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Factorial-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Factorial-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\EXIF-Data-Extractor.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\EXIF-Data-Extractor.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Excel-PDF.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Excel-PDF.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Excel-Metadata-Viewer.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Excel-Metadata-Viewer.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Discount-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Discount-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Debt-to-Income.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Debt-to-Income.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Date-Difference-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Date-Difference-Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CSV-To-Json.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\CSV-To-Json.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CSV-to-Excel.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\CSV-to-Excel.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -174,19 +42,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 212,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 6,
               "Title": "commit.txt",
               "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Index\\commit.txt",
               "RelativeDocumentMoniker": "Index\\commit.txt",
               "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Index\\commit.txt",
               "RelativeToolTip": "Index\\commit.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-05-13T01:05:15.317Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAAEsBAAAAAAAAAAAIwBIBAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-05T22:03:28.013Z",
               "IsPinned": true
             },
             {
@@ -203,485 +84,76 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\index.html",
-              "RelativeDocumentMoniker": "index.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\index.html",
-              "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-05T06:05:13.048Z",
+              "DocumentIndex": 0,
+              "Title": "Instruction.css",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Css\\Instruction.css",
+              "RelativeDocumentMoniker": "Css\\Instruction.css",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Css\\Instruction.css",
+              "RelativeToolTip": "Css\\Instruction.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-07T19:19:18.227Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Text-Diff-Checker.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-Diff-Checker.html",
-              "RelativeDocumentMoniker": "Pages\\Text-Diff-Checker.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-Diff-Checker.html",
-              "RelativeToolTip": "Pages\\Text-Diff-Checker.html",
-              "ViewState": "AgIAAKQAAAAAAAAAAAAqwMAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-05T05:59:36.716Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Text-Metrics-Generator.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-Metrics-Generator.html",
-              "RelativeDocumentMoniker": "Pages\\Text-Metrics-Generator.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-Metrics-Generator.html",
-              "RelativeToolTip": "Pages\\Text-Metrics-Generator.html",
-              "ViewState": "AgIAADIAAAAAAAAAAAAYwEQAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-05T05:59:27.281Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Text-Reverser.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-Reverser.html",
-              "RelativeDocumentMoniker": "Pages\\Text-Reverser.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-Reverser.html",
-              "RelativeToolTip": "Pages\\Text-Reverser.html",
-              "ViewState": "AgIAADsAAAAAAAAAAAAxwEkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-05T05:59:20.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Text-to-Excel.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-to-Excel.html",
-              "RelativeDocumentMoniker": "Pages\\Text-to-Excel.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-to-Excel.html",
-              "RelativeToolTip": "Pages\\Text-to-Excel.html",
-              "ViewState": "AgIAADIAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-05T05:59:14.37Z"
+              "Title": "updateDateTime.js",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Javascript\\JScript\\updateDateTime.js",
+              "RelativeDocumentMoniker": "Javascript\\JScript\\updateDateTime.js",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Javascript\\JScript\\updateDateTime.js",
+              "RelativeToolTip": "Javascript\\JScript\\updateDateTime.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-08-07T04:18:36.949Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Text-To-JSON.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-To-JSON.html",
-              "RelativeDocumentMoniker": "Pages\\Text-To-JSON.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-To-JSON.html",
-              "RelativeToolTip": "Pages\\Text-To-JSON.html",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAAE0AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-05T05:59:03.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Text-to-XML.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-to-XML.html",
-              "RelativeDocumentMoniker": "Pages\\Text-to-XML.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Text-to-XML.html",
-              "RelativeToolTip": "Pages\\Text-to-XML.html",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAAwFMAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-05T05:58:46.605Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TextFile-Merger.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\TextFile-Merger.html",
-              "RelativeDocumentMoniker": "Pages\\TextFile-Merger.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\TextFile-Merger.html",
-              "RelativeToolTip": "Pages\\TextFile-Merger.html",
-              "ViewState": "AgIAAF0AAAAAAAAAAADwv2sAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-05T05:58:26.986Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Mobile-Friendly.css",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Css\\Mobile-Friendly.css",
-              "RelativeDocumentMoniker": "Css\\Mobile-Friendly.css",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Css\\Mobile-Friendly.css",
-              "RelativeToolTip": "Css\\Mobile-Friendly.css",
-              "ViewState": "AgIAACwAAAAAAAAAAIAzwDoAAAAVAAAAAAAAAA==",
+              "Title": "Index.css",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Index.css",
+              "RelativeDocumentMoniker": "Index.css",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Index.css",
+              "RelativeToolTip": "Index.css",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-04T23:02:47.576Z"
+              "WhenOpened": "2025-08-06T02:38:47.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TexttoCSV.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\TexttoCSV.html",
-              "RelativeDocumentMoniker": "Pages\\TexttoCSV.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\TexttoCSV.html",
-              "RelativeToolTip": "Pages\\TexttoCSV.html",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-05T00:38:36.186Z"
+              "DocumentIndex": 2,
+              "Title": "JavaS1.js",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Javascript\\JS\\JavaS1.js",
+              "RelativeDocumentMoniker": "Javascript\\JS\\JavaS1.js",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Javascript\\JS\\JavaS1.js",
+              "RelativeToolTip": "Javascript\\JS\\JavaS1.js",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-08-06T02:09:20.857Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "footer-test.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\footer-test.html",
-              "RelativeDocumentMoniker": "Pages\\footer-test.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\footer-test.html",
-              "RelativeToolTip": "Pages\\footer-test.html",
-              "ViewState": "AgIAADoAAAAAAAAAAAAxwEkAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-04T23:00:40.933Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Template.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Template.html",
-              "RelativeDocumentMoniker": "Pages\\Template.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Template.html",
-              "RelativeToolTip": "Pages\\Template.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-04T23:00:32.474Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "YAML-to-JSON.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\YAML-to-JSON.html",
-              "RelativeDocumentMoniker": "Pages\\YAML-to-JSON.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\YAML-to-JSON.html",
-              "RelativeToolTip": "Pages\\YAML-to-JSON.html",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwB0AAACgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-04T22:57:16.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Roman-Numeral-Converter.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Roman-Numeral-Converter.html",
-              "RelativeDocumentMoniker": "Pages\\Roman-Numeral-Converter.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Roman-Numeral-Converter.html",
-              "RelativeToolTip": "Pages\\Roman-Numeral-Converter.html",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAAAE4AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:39:26.271Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Regex-Tester.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Regex-Tester.html",
-              "RelativeDocumentMoniker": "Pages\\Regex-Tester.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Regex-Tester.html",
-              "RelativeToolTip": "Pages\\Regex-Tester.html",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAYwFsAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:39:20.691Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Png-Webp.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Png-Webp.html",
-              "RelativeDocumentMoniker": "Pages\\Png-Webp.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Png-Webp.html",
-              "RelativeToolTip": "Pages\\Png-Webp.html",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAAAFQAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:39:02.074Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Pythagorean-Theorem-Calculator.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Pythagorean-Theorem-Calculator.html",
-              "RelativeDocumentMoniker": "Pages\\Pythagorean-Theorem-Calculator.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Pythagorean-Theorem-Calculator.html",
-              "RelativeToolTip": "Pages\\Pythagorean-Theorem-Calculator.html",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:39:00.02Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Png-Jpeg.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Png-Jpeg.html",
-              "RelativeDocumentMoniker": "Pages\\Png-Jpeg.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Png-Jpeg.html",
-              "RelativeToolTip": "Pages\\Png-Jpeg.html",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAAAGUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:38:48.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Percentage-Change-Calculator.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Percentage-Change-Calculator.html",
-              "RelativeDocumentMoniker": "Pages\\Percentage-Change-Calculator.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Percentage-Change-Calculator.html",
-              "RelativeToolTip": "Pages\\Percentage-Change-Calculator.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:38:42.782Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Percentage-Calculator.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Percentage-Calculator.html",
-              "RelativeDocumentMoniker": "Pages\\Percentage-Calculator.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Percentage-Calculator.html",
-              "RelativeToolTip": "Pages\\Percentage-Calculator.html",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:38:32.136Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "PDF-WaterMark.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\PDF-WaterMark.html",
-              "RelativeDocumentMoniker": "Pages\\PDF-WaterMark.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\PDF-WaterMark.html",
-              "RelativeToolTip": "Pages\\PDF-WaterMark.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:38:30.302Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Multiple-Image-PDF.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Multiple-Image-PDF.html",
-              "RelativeDocumentMoniker": "Pages\\Multiple-Image-PDF.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Multiple-Image-PDF.html",
-              "RelativeToolTip": "Pages\\Multiple-Image-PDF.html",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:38:17.452Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Mortgage-Calculator.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Mortgage-Calculator.html",
-              "RelativeDocumentMoniker": "Pages\\Mortgage-Calculator.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Mortgage-Calculator.html",
-              "RelativeToolTip": "Pages\\Mortgage-Calculator.html",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:38:11.366Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "MergePDF.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\MergePDF.html",
-              "RelativeDocumentMoniker": "Pages\\MergePDF.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\MergePDF.html",
-              "RelativeToolTip": "Pages\\MergePDF.html",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAAAFoAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:37:56.692Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 1,
               "Title": "Key-Generator.html",
               "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Key-Generator.html",
               "RelativeDocumentMoniker": "Pages\\Key-Generator.html",
               "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Key-Generator.html",
               "RelativeToolTip": "Pages\\Key-Generator.html",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAuwGgAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:37:48.693Z"
+              "WhenOpened": "2025-08-05T19:07:01.556Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "JSON-To-CSV.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\JSON-To-CSV.html",
-              "RelativeDocumentMoniker": "Pages\\JSON-To-CSV.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\JSON-To-CSV.html",
-              "RelativeToolTip": "Pages\\JSON-To-CSV.html",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "CSV-to-Excel.html",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CSV-to-Excel.html",
+              "RelativeDocumentMoniker": "Pages\\CSV-to-Excel.html",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CSV-to-Excel.html",
+              "RelativeToolTip": "Pages\\CSV-to-Excel.html",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAywFUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:37:44.395Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Inflation-Calculator.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Inflation-Calculator.html",
-              "RelativeDocumentMoniker": "Pages\\Inflation-Calculator.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Inflation-Calculator.html",
-              "RelativeToolTip": "Pages\\Inflation-Calculator.html",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:37:40.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Image-Merger.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Image-Merger.html",
-              "RelativeDocumentMoniker": "Pages\\Image-Merger.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Image-Merger.html",
-              "RelativeToolTip": "Pages\\Image-Merger.html",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAAAFIAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:37:27.174Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "HashingGenerator.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\HashingGenerator.html",
-              "RelativeDocumentMoniker": "Pages\\HashingGenerator.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\HashingGenerator.html",
-              "RelativeToolTip": "Pages\\HashingGenerator.html",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:37:19.934Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "GCD-LCM-Calculator.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\GCD-LCM-Calculator.html",
-              "RelativeDocumentMoniker": "Pages\\GCD-LCM-Calculator.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\GCD-LCM-Calculator.html",
-              "RelativeToolTip": "Pages\\GCD-LCM-Calculator.html",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:37:15.296Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Gas-Mileage-Converter.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Gas-Mileage-Converter.html",
-              "RelativeDocumentMoniker": "Pages\\Gas-Mileage-Converter.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Gas-Mileage-Converter.html",
-              "RelativeToolTip": "Pages\\Gas-Mileage-Converter.html",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:37:07.482Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "File-Compression.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\File-Compression.html",
-              "RelativeDocumentMoniker": "Pages\\File-Compression.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\File-Compression.html",
-              "RelativeToolTip": "Pages\\File-Compression.html",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:37:01.354Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Factorial-Calculator.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Factorial-Calculator.html",
-              "RelativeDocumentMoniker": "Pages\\Factorial-Calculator.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Factorial-Calculator.html",
-              "RelativeToolTip": "Pages\\Factorial-Calculator.html",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:36:36.551Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "EXIF-Data-Extractor.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\EXIF-Data-Extractor.html",
-              "RelativeDocumentMoniker": "Pages\\EXIF-Data-Extractor.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\EXIF-Data-Extractor.html",
-              "RelativeToolTip": "Pages\\EXIF-Data-Extractor.html",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:36:30.628Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Excel-PDF.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Excel-PDF.html",
-              "RelativeDocumentMoniker": "Pages\\Excel-PDF.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Excel-PDF.html",
-              "RelativeToolTip": "Pages\\Excel-PDF.html",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAAAFYAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:36:18.522Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Excel-Metadata-Viewer.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Excel-Metadata-Viewer.html",
-              "RelativeDocumentMoniker": "Pages\\Excel-Metadata-Viewer.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Excel-Metadata-Viewer.html",
-              "RelativeToolTip": "Pages\\Excel-Metadata-Viewer.html",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAAAIEAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:36:08.901Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Discount-Calculator.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Discount-Calculator.html",
-              "RelativeDocumentMoniker": "Pages\\Discount-Calculator.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Discount-Calculator.html",
-              "RelativeToolTip": "Pages\\Discount-Calculator.html",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:36:04.081Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Debt-to-Income.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Debt-to-Income.html",
-              "RelativeDocumentMoniker": "Pages\\Debt-to-Income.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Debt-to-Income.html",
-              "RelativeToolTip": "Pages\\Debt-to-Income.html",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAAAFUAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:35:44.631Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Date-Difference-Calculator.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Date-Difference-Calculator.html",
-              "RelativeDocumentMoniker": "Pages\\Date-Difference-Calculator.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\Date-Difference-Calculator.html",
-              "RelativeToolTip": "Pages\\Date-Difference-Calculator.html",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:35:35.542Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "CSV-To-Json.html",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CSV-To-Json.html",
-              "RelativeDocumentMoniker": "Pages\\CSV-To-Json.html",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Pages\\CSV-To-Json.html",
-              "RelativeToolTip": "Pages\\CSV-To-Json.html",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAAAFQAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-03T03:34:49.078Z"
+              "WhenOpened": "2025-08-05T19:04:50.449Z"
             }
           ]
         }

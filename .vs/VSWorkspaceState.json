@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Pages"
+    "\\Javascript",
+    "\\Javascript\\JScript",
+    "\\Pages",
+    "\\Pages\\Dashboards"
   ],
-  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }
