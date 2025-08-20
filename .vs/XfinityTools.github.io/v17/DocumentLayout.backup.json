@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 212,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -71,19 +71,6 @@
               "IsPinned": true
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Instruction.css",
-              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Css\\Instruction.css",
-              "RelativeDocumentMoniker": "Css\\Instruction.css",
-              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Css\\Instruction.css",
-              "RelativeToolTip": "Css\\Instruction.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-07T19:19:18.227Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
@@ -97,6 +84,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Instruction.css",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Css\\Instruction.css",
+              "RelativeDocumentMoniker": "Css\\Instruction.css",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Css\\Instruction.css",
+              "RelativeToolTip": "Css\\Instruction.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-07T19:19:18.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "updateDateTime.js",
               "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\XfinityTools\\XfinityTools.github.io\\Javascript\\JScript\\updateDateTime.js",
@@ -105,8 +105,7 @@
               "RelativeToolTip": "Javascript\\JScript\\updateDateTime.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-08-07T04:18:36.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-07T04:18:36.949Z"
             },
             {
               "$type": "Document",
@@ -130,8 +129,7 @@
               "RelativeToolTip": "Javascript\\JS\\JavaS1.js",
               "ViewState": "AgIAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-08-06T02:09:20.857Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T02:09:20.857Z"
             },
             {
               "$type": "Document",
@@ -143,8 +141,7 @@
               "RelativeToolTip": "Pages\\Key-Generator.html",
               "ViewState": "AgIAAGIAAAAAAAAAAAAuwGgAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-05T19:07:01.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T19:07:01.556Z"
             },
             {
               "$type": "Document",
